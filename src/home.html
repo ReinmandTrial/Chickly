@@ -1,16 +1,91 @@
 <!DOCTYPE html>
-<html lang="ru">
-	@@include('html/_head.htm',{
-	"title":"Главная"
-	})
-	<body>
-		<div class="wrapper">
-			@@include('html/_header.htm',{})
-			<main class="page">
-			</main>
-			@@include('html/_footer.htm',{})
-		</div>
-		@@include('html/_popup.htm',{})
-		@@include('html/_js.htm',{})
-	</body>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Главная"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<div class="home">
+				<div class="home__wrapper">
+					<section class="home__about about">
+						<div class="about__container">
+							<div class="about__content">
+								<div class="about__text-content">
+									<h1 class="about__title">Reliable Investments with<span class="about__title_yellow">BNB</span>
+									</h1>
+									<h2 class="about__subtitle">get <span>+200%</span> up to your deposit</h2>
+									<div class="about__line"></div>
+									<div class="about__list-advantages">
+										<p class="about__advantage">Blockchain decentralized and anonymous platform</p>
+										<p class="about__advantage">Totally secure income based on TRX smart-contract</p>
+										<p class="about__advantage">Smart-conract verified and audited by independent company</p>
+									</div>
+									<div class="about__list-buttons">
+										<button class="about__button about__button_discord">Join Discord</button>
+										<button class="about__button about__button_twitter">Follow Twitter</button>
+										<button class="about__button about__button_wallet">Connect Wallet</button>
+									</div>
+								</div>
+								<div class="about__images-content">
+									<div class="about__chichen">
+										<img src="@img/chicken.svg" alt="chicken">
+									</div>
+									<div class="about__small-coin">
+										<img src="@img/coin.svg" alt="coin">
+									</div>
+									<div class="about__big-coin">
+										<img src="@img/coin.svg" alt="coin">
+									</div>
+									<div class="about__first-dot"><img src="@img/dot.svg" alt="dot"></div>
+									<div class="about__second-dot"><img src="@img/dot.svg" alt="dot"></div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="home__how-it-work how-it-work">
+						<div class="how-it-work__container">
+							<div class="how-it-work__content">
+								<h3 class="how-it-work__title">How it Works?</h3>
+								<div class="how-it-work__steps-list">
+									<div class="how-it-work__step how-it-work__step_one step-how-it-works">
+										<div class="step-how-it-works__top-image">
+											<img src="@img/Home/How-it-works/replenish.svg" alt="replenish">
+										</div>
+										<p class="step-how-it-works__title">Replenish your BNB wallet</p>
+										<p class="step-how-it-works__descr">and connect it to our website</p>
+										<button class="step-how-it-works__button">Invest</button>
+									</div>
+									<div class="how-it-work__step how-it-work__step_two step-how-it-works">
+										<div class="step-how-it-works__top-image">
+											<img src="@img/Home/How-it-works/buy-one.svg" alt="buy-one">
+										</div>
+										<p class="step-how-it-works__title">Buy one</p>
+										<p class="step-how-it-works__descr">of our profitable chickens</p>
+										<div class="step-how-it-works__bottom-img">
+											<img src="@img/Home/How-it-works/triple-cock.svg" alt="triple-cock">
+										</div>
+									</div>
+									<div class="how-it-work__step how-it-work__step_three step-how-it-works">
+										<div class="step-how-it-works__top-image">
+											<img src="@img/Home/How-it-works/replenish.svg" alt="replenish">
+										</div>
+										<p class="step-how-it-works__title">Receive hourly income</p>
+										<p class="step-how-it-works__descr">and instantly withdraw to your wallet</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
 </html>
