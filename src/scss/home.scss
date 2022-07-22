@@ -411,34 +411,35 @@
       }
    }
 
-   @keyframes moveAroundRight {
-      from {
-         transform: rotate(0deg);
-      }
-      to {
-         transform: rotate(360deg);
-      }
-   }
-   @keyframes moveAroundLeft {
-      from {
-         transform: rotate(360deg);
-      }
-      to {
-         transform: rotate(0deg);
-      }
-   }
-   @keyframes float {
-      0% {
-         transform: translate(0px, 0px);
-      }
-      50% {
-         transform: translate(0px, 20px);
-      }
-      100% {
-         transform: translate(0px, 0px);
-      }
-   }
+   // @keyframes moveAroundRight {
+   //    from {
+   //       transform: rotate(0deg);
+   //    }
+   //    to {
+   //       transform: rotate(360deg);
+   //    }
+   // }
+   // @keyframes moveAroundLeft {
+   //    from {
+   //       transform: rotate(360deg);
+   //    }
+   //    to {
+   //       transform: rotate(0deg);
+   //    }
+   // }
+   // @keyframes float {
+   //    0% {
+   //       transform: translate(0px, 0px);
+   //    }
+   //    50% {
+   //       transform: translate(0px, 20px);
+   //    }
+   //    100% {
+   //       transform: translate(0px, 0px);
+   //    }
+   // }
 }
+//========================================================================================================================================================
 
 .step-how-it-works {
    background: #ffffff;
@@ -608,6 +609,204 @@
       }
    }
 }
+//========================================================================================================================================================
+
+.referral-program {
+   &__container {
+   }
+   &__content {
+      background: url('@img/chicken.svg') 100% 93% /291px 293px no-repeat, url('@img/Home/referral-program/bg-pc.svg') no-repeat 50%;
+      color: #ffffff;
+      padding: 77px 0px 77px 0px;
+      padding-right: 20px;
+      @include adaptiveValue('padding-left', 194, 20, 1500, 1250);
+
+      @media (max-width: 1550px) {
+         background-position: 100% 93%, right;
+         margin-right: 20px;
+      }
+      @media (max-width: 1250px) {
+         padding-left: 20px;
+         background-position: 100% 90%, center;
+         margin-right: unset;
+      }
+      @media (max-width: $mobile) {
+         background: url('@img/chicken.svg'), url('@img/Home/referral-program/bg-mob.svg');
+         background-repeat: no-repeat;
+         background-size: 120px 170px, cover;
+         background-position: 90% 70%, 100% 80%;
+         height: 974px;
+         margin: 0px 15px;
+         border-radius: 100px;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         padding: 16px 20px;
+      }
+      @media (max-width: 580px) {
+         background-position: 90% 95%, 100% 80%;
+         background-size: 73px 98px, cover;
+         border-radius: 50px;
+      }
+   }
+
+   &__title {
+      font-weight: 700;
+      font-size: 50px;
+      line-height: 112%;
+      padding-bottom: 34px;
+      margin-bottom: 16px;
+      position: relative;
+      &::after {
+         content: '';
+         height: 1px;
+         width: 350px;
+         background-color: rgba(255, 255, 255, 0.11);
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         @media (max-width: $mobile) {
+            width: 250px;
+            left: 50%;
+            transform: translate(-50%, 0);
+         }
+      }
+      @media (max-width: $tablet) {
+         max-width: 200px;
+      }
+      @media (max-width: $mobile) {
+         font-size: 25px;
+         max-width: none;
+         text-align: center;
+         padding-bottom: 26px;
+      }
+   }
+
+   &__level-list-name {
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 129%;
+      margin-bottom: 30px;
+      @media (max-width: $mobile) {
+         margin-bottom: 20px;
+         font-size: 18px;
+      }
+   }
+
+   &__level-list {
+      font-size: 16px;
+      line-height: 129%;
+      margin-bottom: 30px;
+      @media (max-width: $mobile) {
+         margin-bottom: 20px;
+      }
+      @media (max-width: 400px) {
+         align-self: start;
+      }
+   }
+
+   &__level-list-item {
+      &:not(:last-child) {
+         margin-bottom: 10px;
+      }
+   }
+   &__list-icon {
+      background: #ffbf01;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 25px;
+      height: 25px;
+      margin-right: 42px;
+      position: relative;
+
+      &::after {
+         content: '';
+         position: absolute;
+         height: 1px;
+         width: 20px;
+         right: -30px;
+         background-color: #ffbf01;
+         bottom: 50%;
+         transform: translate(0, -50%);
+      }
+   }
+
+   &__prompt {
+      font-size: 16px;
+      line-height: 129%;
+      max-width: 328px;
+      margin-bottom: 30px;
+      @media (max-width: $mobile) {
+         margin-bottom: 20px;
+      }
+   }
+
+   &__info-block {
+      max-width: 430px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50px;
+      padding: 24px 30px;
+      margin-bottom: 30px;
+      @media (max-width: $mobile) {
+         padding: 20px 20px;
+         margin-bottom: 20px;
+      }
+   }
+
+   &__info-title {
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 129%;
+      margin-bottom: 20px;
+      @media (max-width: $mobile) {
+         font-size: 18px;
+         margin-bottom: 14px;
+      }
+   }
+
+   &__info-point {
+      font-size: 16px;
+      line-height: 129%;
+      &:not(:last-child) {
+         margin-bottom: 5px;
+      }
+   }
+
+   &__button {
+      font-size: 18px;
+      background: linear-gradient(213.08deg, #70e705 28.11%, #0e6b12 96.2%);
+      border-radius: 100px;
+      max-width: 190px;
+      width: 100%;
+      padding: 11px 0px;
+      text-align: center;
+      box-shadow: 0 5px 0px #3c354a;
+      transition: all 0.3s ease 0s;
+      position: relative;
+      &:active {
+         box-shadow: 0 0px 0px #3c354a;
+         transition: all 0.3s ease 0s;
+         top: 3px;
+      }
+      @media (min-width: $tablet) {
+         &:hover {
+            animation: backgroundStepBtn 2s infinite linear;
+         }
+      }
+
+      @keyframes backgroundStepBtn {
+         50% {
+            box-shadow: 0 5px 0px #3c354a, 0 -40px 20px -50px #0e6b12 inset, 0 -210px 70px -120px #0e6b12 inset,
+               0 -280px 70px -120px #0e6b12 inset;
+         }
+      }
+      @media (max-width: 500px) {
+         max-width: 100%;
+      }
+   }
+}
 
 //====================================================================================================
 .home {
@@ -622,5 +821,7 @@
    }
    &__how-it-work {
       margin-bottom: 140px;
+   }
+   &__referral-program {
    }
 }

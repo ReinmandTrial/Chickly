@@ -3,7 +3,7 @@ package-lock.json
 flsStartTemplate/
 .gitignore
 node_modules/
-dist/
+# dist/
 undefined
 **/*.zip
 **/*.rar
