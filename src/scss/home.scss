@@ -411,33 +411,33 @@
       }
    }
 
-   // @keyframes moveAroundRight {
-   //    from {
-   //       transform: rotate(0deg);
-   //    }
-   //    to {
-   //       transform: rotate(360deg);
-   //    }
-   // }
-   // @keyframes moveAroundLeft {
-   //    from {
-   //       transform: rotate(360deg);
-   //    }
-   //    to {
-   //       transform: rotate(0deg);
-   //    }
-   // }
-   // @keyframes float {
-   //    0% {
-   //       transform: translate(0px, 0px);
-   //    }
-   //    50% {
-   //       transform: translate(0px, 20px);
-   //    }
-   //    100% {
-   //       transform: translate(0px, 0px);
-   //    }
-   // }
+   @keyframes moveAroundRight {
+      from {
+         transform: rotate(0deg);
+      }
+      to {
+         transform: rotate(360deg);
+      }
+   }
+   @keyframes moveAroundLeft {
+      from {
+         transform: rotate(360deg);
+      }
+      to {
+         transform: rotate(0deg);
+      }
+   }
+   @keyframes float {
+      0% {
+         transform: translate(0px, 0px);
+      }
+      50% {
+         transform: translate(0px, 20px);
+      }
+      100% {
+         transform: translate(0px, 0px);
+      }
+   }
 }
 //========================================================================================================================================================
 
@@ -615,7 +615,7 @@
    &__container {
    }
    &__content {
-      background: url('@img/chicken.svg') 100% 93% /291px 293px no-repeat, url('@img/Home/referral-program/bg-pc.svg') no-repeat 50%;
+      background: url('@img/chicken.svg') 100% 93% /291px 293px no-repeat, url('@img/Home/referral-program/bg-pc.jpg') no-repeat 50%;
       color: #ffffff;
       padding: 77px 0px 77px 0px;
       padding-right: 20px;
@@ -631,10 +631,10 @@
          margin-right: unset;
       }
       @media (max-width: $mobile) {
-         background: url('@img/chicken.svg'), url('@img/Home/referral-program/bg-mob.svg');
+         background: url('@img/chicken.svg'), url('@img/Home/referral-program/farmer.svg'), url('@img/Home/referral-program/bg-mob.jpg');
          background-repeat: no-repeat;
-         background-size: 120px 170px, cover;
-         background-position: 90% 70%, 100% 80%;
+         background-size: 120px 170px, 207px 267px, cover;
+         background-position: 80% 100%, 10% 100%, 100% 80%;
          height: 974px;
          margin: 0px 15px;
          border-radius: 100px;
@@ -644,8 +644,8 @@
          padding: 16px 20px;
       }
       @media (max-width: 580px) {
-         background-position: 90% 95%, 100% 80%;
-         background-size: 73px 98px, cover;
+         background-position: 90% 95%, 10% 100%, 100% 80%;
+         background-size: 73px 102px, 207px 267px, cover;
          border-radius: 50px;
       }
    }

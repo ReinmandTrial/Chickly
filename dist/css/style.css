@@ -532,6 +532,88 @@ h6 {
           animation: float 3s linear infinite;
 }
 
+@-webkit-keyframes moveAroundRight {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes moveAroundRight {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes moveAroundLeft {
+  from {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes moveAroundLeft {
+  from {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes float {
+  0% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+
+  50% {
+    -webkit-transform: translate(0px, 20px);
+            transform: translate(0px, 20px);
+  }
+
+  100% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+}
+
+@keyframes float {
+  0% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+
+  50% {
+    -webkit-transform: translate(0px, 20px);
+            transform: translate(0px, 20px);
+  }
+
+  100% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+}
+
 .step-how-it-works {
   background: #ffffff;
   -webkit-box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06);
@@ -682,8 +764,10 @@ h6 {
   color: rgba(250, 160, 2, 0.6);
 }
 
+.no-webp .referral-program__content{
+  background: url("../img/chicken.svg") 100% 93%/291px 293px no-repeat, url("../img/Home/referral-program/bg-pc.jpg") no-repeat 50%; }
+
 .referral-program__content {
-  background: url("../img/chicken.svg") 100% 93%/291px 293px no-repeat, url("../img/Home/referral-program/bg-pc.svg") no-repeat 50%;
   color: #ffffff;
   padding: 77px 0px 77px 0px;
   padding-right: 20px;
@@ -1003,8 +1087,8 @@ h6 {
 
 @media (max-width: 580px) {
   .referral-program__content {
-    background-position: 90% 95%, 100% 80%;
-    background-size: 73px 98px, cover;
+    background-position: 90% 95%, 10% 100%, 100% 80%;
+    background-size: 73px 102px, 207px 267px, cover;
     border-radius: 50px;
   }
 }
@@ -1216,11 +1300,13 @@ h6 {
     margin-bottom: 60px;
   }
 
+  .no-webp .referral-program__content{
+    background: url("../img/chicken.svg"), url("../img/Home/referral-program/farmer.svg"), url("../img/Home/referral-program/bg-mob.jpg"); }
+
   .referral-program__content {
-    background: url("../img/chicken.svg"), url("../img/Home/referral-program/bg-mob.svg");
     background-repeat: no-repeat;
-    background-size: 120px 170px, cover;
-    background-position: 90% 70%, 100% 80%;
+    background-size: 120px 170px, 207px 267px, cover;
+    background-position: 80% 100%, 10% 100%, 100% 80%;
     height: 974px;
     margin: 0px 15px;
     border-radius: 100px;
@@ -1278,4 +1364,11 @@ h6 {
   .home__about {
     margin-bottom: 40px;
   }
+}
+
+.webp .referral-program__content{ background: url(../img/chicken.svg) 100% 93%/291px 293px no-repeat, url(../img/Home/referral-program/bg-pc.webp) no-repeat 50%; }
+
+@media (max-width: 47.99875em){
+
+  .webp .referral-program__content{ background: url(../img/chicken.svg), url(../img/Home/referral-program/farmer.svg), url(../img/Home/referral-program/bg-mob.webp); }
 }
