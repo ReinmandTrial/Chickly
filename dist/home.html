@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220723150009">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220723182250">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,17 +25,13 @@
 								<div class="menu__dropdown">
 									<button class="menu__head-dropdown">HOME <img class="menu__head-arrow" src="img/Header/arrow.svg" alt="arrow"></button>
 									<ul class="menu__body-dropdown">
-										<li class="menu__dropdown-item"><a href="#">about</a></li>
-										<li class="menu__dropdown-item"><a href="#">investment</a></li>
-										<li class="menu__dropdown-item"><a href="#">conditions</a></li>
-										<li class="menu__dropdown-item"><a href="#">how it works</a></li>
-										<li class="menu__dropdown-item"><a href="#">referral program</a></li>
-										<li class="menu__dropdown-item"><a href="#">Smart-contract</a></li>
-										<li class="menu__dropdown-item"><a href="#">reviews</a></li>
-										<li class="menu__dropdown-item"><a href="#">new chickens</a></li>
+										<li class="menu__dropdown-item"><button data-goto-header data-goto=".about">about</button></li>
+										<li class="menu__dropdown-item"><button data-goto-header data-goto=".how-it-work">how it works</button></li>
+										<li class="menu__dropdown-item"><button data-goto-header data-goto=".referral-program">referral program</button>
+										</li>
 									</ul>
 								</div>
-								<button class="menu__link">FAQ</button>
+								<!-- <button class="menu__link">FAQ</button> -->
 								<img class="menu__first-coin" src="img/coin.svg" alt="coin">
 								<img class="menu__second-coin" src="img/coin.svg" alt="coin">
 								<img class="menu__first-dot" src="img/dot.svg" alt="dot">
@@ -43,7 +39,7 @@
 							</nav>
 						</div>
 					</div>
-					<button data-da='.menu__body,768' class="header__button">Connect Wallet</button>
+					<button data-da='.menu__body,767.98' class="header__button">Connect Wallet</button>
 				</div>
 			</div>
 		</header>
@@ -64,9 +60,9 @@
 										<p class="about__advantage">Smart-contract verified and audited by independent company</p>
 									</div>
 									<div class="about__list-buttons">
-										<button class="about__button about__button_discord">Join Discord</button>
-										<button class="about__button about__button_twitter">Follow Twitter</button>
-										<button class="about__button about__button_wallet">Connect Wallet</button>
+										<a href="https://discord.gg/chickly" class="about__button about__button_discord">Join Discord</a>
+										<a href="https://twitter.com/chickly_nft" class="about__button about__button_twitter">Follow Twitter</a>
+										<a href="#" class="about__button about__button_wallet">Connect Wallet</a>
 									</div>
 								</div>
 								<div class="about__images-content">
@@ -107,7 +103,7 @@
 										<p class="step-how-it-works__title">Buy one</p>
 										<p class="step-how-it-works__descr">of the profitable chickens</p>
 										<div class="step-how-it-works__bottom-img">
-											<img src="img/Home/How-it-works/triple-cock.svg" alt="triple-cock">
+											<picture><source srcset="img/Home/How-it-works/triple-cock.webp" type="image/webp"><img src="img/Home/How-it-works/triple-cock.png" alt="triple-cock"></picture>
 										</div>
 									</div>
 									<div class="how-it-work__step how-it-work__step_three step-how-it-works">
@@ -161,15 +157,9 @@
 						<div class="footer__links">
 							<p class="footer__block-title ">Links</p>
 							<div class="footer__links-list">
-								<button class="footer__links-item">About</button>
-								<button class="footer__links-item">FAQ</button>
-								<button class="footer__links-item">NFT</button>
-								<button class="footer__links-item">Investment conditions</button>
-								<button class="footer__links-item">How it works</button>
-								<button class="footer__links-item">Referral program</button>
-								<button class="footer__links-item">Smart-contract</button>
-								<button class="footer__links-item">Reviews</button>
-								<button class="footer__links-item">New chickens</button>
+								<button data-goto-header data-goto=".about" class="footer__links-item">About</button>
+								<button data-goto-header data-goto=".how-it-work" class="footer__links-item">How it works</button>
+								<button data-goto-header data-goto=".referral-program" class="footer__links-item">Referral program</button>
 							</div>
 						</div>
 						<div class="footer__contacts">
@@ -182,13 +172,13 @@
 						<div class="footer__social">
 							<p class="footer__block-title">Social</p>
 							<div class="footer__social-list">
-								<a href="#" class="footer__social-item">
+								<a href="https://t.me/chickly_nft" class="footer__social-item">
 									<img src="img/footer/telegram.svg" alt="telegram">
 								</a>
-								<a href="#" class="footer__social-item">
+								<a href="https://twitter.com/chickly_nft" class="footer__social-item">
 									<img src="img/footer/twitter.svg" alt="twitter">
 								</a>
-								<a href="#" class="footer__social-item">
+								<a href="https://discord.gg/chickly" class="footer__social-item">
 									<img src="img/footer/discrod.svg" alt="discrod">
 								</a>
 							</div>
@@ -214,7 +204,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20220723150009"></script>
+	<script src="js/app.min.js?_v=20220723182250"></script>
 </body>
 
 </html>

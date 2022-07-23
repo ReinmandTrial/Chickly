@@ -150,6 +150,9 @@
       max-width: 190px;
       width: 100%;
       height: 48px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       font-size: 18px;
       color: #ffffff;
       position: relative;
@@ -159,7 +162,6 @@
          top: 2px;
       }
       @media (max-width: 1300px) {
-         display: block;
          margin-bottom: 12px;
          max-width: 290px;
       }
@@ -511,40 +513,42 @@
    }
 
    &__button {
+      background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(128, 128, 128, 1) 54%);
+      pointer-events: none;
       font-size: 18px;
       line-height: 100%;
       color: #ffffff;
-      background: linear-gradient(213.08deg, #70e705 28.11%, #0e6b12 96.2%);
+      // background: linear-gradient(213.08deg, #70e705 28.11%, #0e6b12 96.2%);
       border-radius: 100px;
       padding: 11px 0px;
       max-width: 160px;
       width: 100%;
       margin-top: 25px;
-      box-shadow: 0 5px 0px #3c354a;
-      transition: all 0.3s ease 0s;
-      position: relative;
-      &:active {
-         box-shadow: 0 0px 0px #3c354a;
-         transition: all 0.3s ease 0s;
-         top: 3px;
-      }
+      // box-shadow: 0 5px 0px #3c354a;
+      // transition: all 0.3s ease 0s;
+      // position: relative;
+      // &:active {
+      //    box-shadow: 0 0px 0px #3c354a;
+      //    transition: all 0.3s ease 0s;
+      //    top: 3px;
+      // }
       @media (max-width: 1150px) {
          margin-top: 10px;
          padding: 6px 0px;
          max-width: 130px;
       }
-      @media (min-width: $tablet) {
-         &:hover {
-            animation: backgroundStepBtn 2s infinite linear;
-         }
-      }
+      // @media (min-width: $tablet) {
+      //    &:hover {
+      //       animation: backgroundStepBtn 2s infinite linear;
+      //    }
+      // }
 
-      @keyframes backgroundStepBtn {
-         50% {
-            box-shadow: 0 5px 0px #3c354a, 0 -40px 20px -50px #0e6b12 inset, 0 -210px 70px -120px #0e6b12 inset,
-               0 -280px 70px -120px #0e6b12 inset;
-         }
-      }
+      // @keyframes backgroundStepBtn {
+      //    50% {
+      //       box-shadow: 0 5px 0px #3c354a, 0 -40px 20px -50px #0e6b12 inset, 0 -210px 70px -120px #0e6b12 inset,
+      //          0 -280px 70px -120px #0e6b12 inset;
+      //    }
+      // }
    }
 
    &__bottom-img {
@@ -619,7 +623,7 @@
    &__container {
    }
    &__content {
-      background: url('@img/chicken.svg') 100% 93% /291px 293px no-repeat, url('@img/Home/referral-program/bg-pc.jpg') no-repeat 50%;
+      background: url('@img/chicken.svg') 100% 93% / 291px 293px no-repeat, url('@img/Home/referral-program/bg-pc.jpg') 50% no-repeat;
       color: #ffffff;
       padding: 77px 0px 77px 0px;
       padding-right: 20px;
@@ -630,17 +634,16 @@
          margin-right: 20px;
       }
       @media (max-width: 1250px) {
-         padding-left: 20px;
+         padding-left: 20px !important;
          background-position: 100% 90%, center;
          margin-right: unset;
       }
       @media (max-width: $mobile) {
-         background: url('@img/chicken.svg'), url('@img/Home/referral-program/farmer.svg'), url('@img/Home/referral-program/bg-mob.jpg');
-         background-repeat: no-repeat;
-         background-size: 120px 170px, 207px 267px, cover;
-         background-position: 80% 100%, 10% 100%, 100% 80%;
+         background: url('@img/chicken.svg') 80% 100% /120px 170px no-repeat,
+            url('@img/Home/referral-program/farmer.svg') 10% 100% / 207px 267px no-repeat,
+            url('@img/Home/referral-program/bg-mob.jpg') 100% 80% / cover no-repeat;
          height: 974px;
-         margin: 0px 15px;
+         margin: 0px 15px !important;
          border-radius: 100px;
          display: flex;
          flex-direction: column;
@@ -648,9 +651,9 @@
          padding: 16px 20px;
       }
       @media (max-width: 580px) {
-         background-position: 90% 95%, 10% 100%, 100% 80%;
-         background-size: 73px 102px, 207px 267px, cover;
-         border-radius: 50px;
+         background: url('@img/Home/referral-program/farmer.svg') 10% 100% / 207px 267px no-repeat,
+            url('@img/chicken.svg') 90% 95% /73px 102px no-repeat, url('@img/Home/referral-program/bg-mob.jpg') 100% 80% / cover no-repeat !important;
+         border-radius: 50px !important;
       }
    }
 
@@ -779,33 +782,35 @@
    }
 
    &__button {
+      background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(128, 128, 128, 1) 54%);
+      pointer-events: none;
       font-size: 18px;
-      background: linear-gradient(213.08deg, #70e705 28.11%, #0e6b12 96.2%);
+      // background: linear-gradient(213.08deg, #70e705 28.11%, #0e6b12 96.2%);
       border-radius: 100px;
       max-width: 190px;
       width: 100%;
       padding: 11px 0px;
       text-align: center;
-      box-shadow: 0 5px 0px #3c354a;
-      transition: all 0.3s ease 0s;
-      position: relative;
-      &:active {
-         box-shadow: 0 0px 0px #3c354a;
-         transition: all 0.3s ease 0s;
-         top: 3px;
-      }
-      @media (min-width: $tablet) {
-         &:hover {
-            animation: backgroundStepBtn 2s infinite linear;
-         }
-      }
+      // box-shadow: 0 5px 0px #3c354a;
+      // transition: all 0.3s ease 0s;
+      // position: relative;
+      // &:active {
+      //    box-shadow: 0 0px 0px #3c354a;
+      //    transition: all 0.3s ease 0s;
+      //    top: 3px;
+      // }
+      // @media (min-width: $tablet) {
+      //    &:hover {
+      //       animation: backgroundStepBtn 2s infinite linear;
+      //    }
+      // }
 
-      @keyframes backgroundStepBtn {
-         50% {
-            box-shadow: 0 5px 0px #3c354a, 0 -40px 20px -50px #0e6b12 inset, 0 -210px 70px -120px #0e6b12 inset,
-               0 -280px 70px -120px #0e6b12 inset;
-         }
-      }
+      // @keyframes backgroundStepBtn {
+      //    50% {
+      //       box-shadow: 0 5px 0px #3c354a, 0 -40px 20px -50px #0e6b12 inset, 0 -210px 70px -120px #0e6b12 inset,
+      //          0 -280px 70px -120px #0e6b12 inset;
+      //    }
+      // }
       @media (max-width: 500px) {
          max-width: 100%;
       }

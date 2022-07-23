@@ -81,8 +81,9 @@
       // }
       @media (max-width: $mobile) {
          justify-self: end;
-         margin-bottom: 25px;
          z-index: 2;
+         display: block;
+         margin: 0px auto 30px auto;
       }
    }
 }
@@ -102,10 +103,11 @@
          height: 100%;
          background: #ffffff;
          transition: all 0.5s ease 0s;
-         display: flex;
-         flex-direction: column;
          overflow: auto;
          padding-top: 200px;
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
          .menu-open & {
             left: 0;
             transition: all 0.5s ease 0s;
@@ -115,21 +117,19 @@
 
    &__dropdown {
       &:hover {
-         .menu__body-dropdown {
-            visibility: visible;
-            opacity: 1;
-            transition: all 0.3s ease 0s;
-            pointer-events: all;
-         }
-         .menu__head-arrow {
-            transform: rotate(-180deg);
+         @media (min-width: $mobile) {
+            .menu__body-dropdown {
+               visibility: visible;
+               opacity: 1;
+               transition: all 0.3s ease 0s;
+               pointer-events: all;
+            }
+            .menu__head-arrow {
+               transform: rotate(-180deg);
+            }
          }
       }
       @media (max-width: $mobile) {
-         display: flex;
-         align-items: center;
-         justify-content: center;
-         flex-direction: column;
       }
    }
 
@@ -142,13 +142,16 @@
          margin-left: 10px;
       }
       @media (max-width: $mobile) {
+         display: block;
          height: auto;
-         display: inline-flex;
          margin: 0 auto;
          font-size: 25px;
       }
    }
    &__head-arrow {
+      @media (max-width: $mobile) {
+         display: none;
+      }
    }
 
    &__body-dropdown {
@@ -166,17 +169,14 @@
       transform: translate(-50%, 0px);
       z-index: 20;
       @media (max-width: $mobile) {
-         background-color: transparent;
-         display: block;
          visibility: visible;
          opacity: 1;
-         position: relative;
-         top: 50%;
-         left: 50%;
-         transform: translate(-50%, -50%);
+         position: static;
+         transform: translate(0px, 0px);
+         background-color: transparent;
+         display: block;
          box-shadow: none;
          text-align: center;
-         width: 100%;
          overflow: auto;
       }
    }

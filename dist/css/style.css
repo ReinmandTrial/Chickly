@@ -213,21 +213,6 @@ h6 {
           align-items: center;
 }
 
-.menu__dropdown:hover .menu__body-dropdown {
-  visibility: visible;
-  opacity: 1;
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-  pointer-events: all;
-}
-
-.menu__dropdown:hover .menu__head-arrow {
-  -webkit-transform: rotate(-180deg);
-      -ms-transform: rotate(-180deg);
-          transform: rotate(-180deg);
-}
-
 .menu__head-dropdown {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -598,6 +583,15 @@ h6 {
   max-width: 190px;
   width: 100%;
   height: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 18px;
   color: #ffffff;
   position: relative;
@@ -920,45 +914,18 @@ h6 {
 }
 
 .step-how-it-works__button {
+  background: -webkit-gradient(linear, left top, right top, from(rgb(2, 0, 36)), color-stop(54%, rgb(128, 128, 128)));
+  background: -o-linear-gradient(left, rgb(2, 0, 36) 0%, rgb(128, 128, 128) 54%);
+  background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(128, 128, 128) 54%);
+  pointer-events: none;
   font-size: 18px;
   line-height: 100%;
   color: #ffffff;
-  background: -o-linear-gradient(236.92deg, #70e705 28.11%, #0e6b12 96.2%);
-  background: linear-gradient(213.08deg, #70e705 28.11%, #0e6b12 96.2%);
   border-radius: 100px;
   padding: 11px 0px;
   max-width: 160px;
   width: 100%;
   margin-top: 25px;
-  -webkit-box-shadow: 0 5px 0px #3c354a;
-          box-shadow: 0 5px 0px #3c354a;
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-  position: relative;
-}
-
-.step-how-it-works__button:active {
-  -webkit-box-shadow: 0 0px 0px #3c354a;
-          box-shadow: 0 0px 0px #3c354a;
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-  top: 3px;
-}
-
-@-webkit-keyframes backgroundStepBtn {
-  50% {
-    -webkit-box-shadow: 0 5px 0px #3c354a, 0 -40px 20px -50px #0e6b12 inset, 0 -210px 70px -120px #0e6b12 inset, 0 -280px 70px -120px #0e6b12 inset;
-            box-shadow: 0 5px 0px #3c354a, 0 -40px 20px -50px #0e6b12 inset, 0 -210px 70px -120px #0e6b12 inset, 0 -280px 70px -120px #0e6b12 inset;
-  }
-}
-
-@keyframes backgroundStepBtn {
-  50% {
-    -webkit-box-shadow: 0 5px 0px #3c354a, 0 -40px 20px -50px #0e6b12 inset, 0 -210px 70px -120px #0e6b12 inset, 0 -280px 70px -120px #0e6b12 inset;
-            box-shadow: 0 5px 0px #3c354a, 0 -40px 20px -50px #0e6b12 inset, 0 -210px 70px -120px #0e6b12 inset, 0 -280px 70px -120px #0e6b12 inset;
-  }
 }
 
 .step-how-it-works__bottom-img {
@@ -1012,7 +979,7 @@ h6 {
 }
 
 .no-webp .referral-program__content{
-  background: url("../img/chicken.svg") 100% 93%/291px 293px no-repeat, url("../img/Home/referral-program/bg-pc.jpg") no-repeat 50%; }
+  background: url("../img/chicken.svg") 100% 93%/291px 293px no-repeat, url("../img/Home/referral-program/bg-pc.jpg") 50% no-repeat; }
 
 .referral-program__content {
   color: #ffffff;
@@ -1131,36 +1098,16 @@ h6 {
 }
 
 .referral-program__button {
+  background: -webkit-gradient(linear, left top, right top, from(rgb(2, 0, 36)), color-stop(54%, rgb(128, 128, 128)));
+  background: -o-linear-gradient(left, rgb(2, 0, 36) 0%, rgb(128, 128, 128) 54%);
+  background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(128, 128, 128) 54%);
+  pointer-events: none;
   font-size: 18px;
-  background: -o-linear-gradient(236.92deg, #70e705 28.11%, #0e6b12 96.2%);
-  background: linear-gradient(213.08deg, #70e705 28.11%, #0e6b12 96.2%);
   border-radius: 100px;
   max-width: 190px;
   width: 100%;
   padding: 11px 0px;
   text-align: center;
-  -webkit-box-shadow: 0 5px 0px #3c354a;
-          box-shadow: 0 5px 0px #3c354a;
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-  position: relative;
-}
-
-.referral-program__button:active {
-  -webkit-box-shadow: 0 0px 0px #3c354a;
-          box-shadow: 0 0px 0px #3c354a;
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-  top: 3px;
-}
-
-@keyframes backgroundStepBtn {
-  50% {
-    -webkit-box-shadow: 0 5px 0px #3c354a, 0 -40px 20px -50px #0e6b12 inset, 0 -210px 70px -120px #0e6b12 inset, 0 -280px 70px -120px #0e6b12 inset;
-            box-shadow: 0 5px 0px #3c354a, 0 -40px 20px -50px #0e6b12 inset, 0 -210px 70px -120px #0e6b12 inset, 0 -280px 70px -120px #0e6b12 inset;
-  }
 }
 
 .home__about {
@@ -1175,6 +1122,23 @@ h6 {
   margin-bottom: 110px;
 }
 
+@media (min-width: 47.99875em) {
+  .menu__dropdown:hover .menu__body-dropdown {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    pointer-events: all;
+  }
+
+  .menu__dropdown:hover .menu__head-arrow {
+    -webkit-transform: rotate(-180deg);
+        -ms-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+}
+
 @media (min-width: 61.99875em) {
   .about__button_discord:hover {
     -webkit-animation: backgroundDiscord 4s infinite linear;
@@ -1184,16 +1148,6 @@ h6 {
   .about__button_twitter:hover {
     -webkit-animation: backgroundDiscord 4s infinite linear;
             animation: backgroundDiscord 4s infinite linear;
-  }
-
-  .step-how-it-works__button:hover {
-    -webkit-animation: backgroundStepBtn 2s infinite linear;
-            animation: backgroundStepBtn 2s infinite linear;
-  }
-
-  .referral-program__button:hover {
-    -webkit-animation: backgroundStepBtn 2s infinite linear;
-            animation: backgroundStepBtn 2s infinite linear;
   }
 }
 
@@ -1224,7 +1178,6 @@ h6 {
   }
 
   .about__button {
-    display: block;
     margin-bottom: 12px;
     max-width: 290px;
   }
@@ -1280,7 +1233,7 @@ h6 {
 
 @media (max-width: 1250px) {
   .referral-program__content {
-    padding-left: 20px;
+    padding-left: 20px !important;
     background-position: 100% 90%, center;
     margin-right: unset;
   }
@@ -1336,10 +1289,10 @@ h6 {
 }
 
 @media (max-width: 580px) {
+  .no-webp .referral-program__content{
+    background: url("../img/Home/referral-program/farmer.svg") 10% 100%/207px 267px no-repeat, url("../img/chicken.svg") 90% 95%/73px 102px no-repeat, url("../img/Home/referral-program/bg-mob.jpg") 100% 80%/cover no-repeat !important; }
   .referral-program__content {
-    background-position: 90% 95%, 10% 100%, 100% 80%;
-    background-size: 73px 102px, 207px 267px, cover;
-    border-radius: 50px;
+    border-radius: 50px !important;
   }
 }
 
@@ -1543,8 +1496,9 @@ h6 {
   .header__button {
     -ms-grid-column-align: end;
         justify-self: end;
-    margin-bottom: 25px;
     z-index: 2;
+    display: block;
+    margin: 0px auto 30px auto;
   }
 
   .menu__body {
@@ -1557,6 +1511,8 @@ h6 {
     -webkit-transition: all 0.5s ease 0s;
     -o-transition: all 0.5s ease 0s;
     transition: all 0.5s ease 0s;
+    overflow: auto;
+    padding-top: 200px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1564,8 +1520,9 @@ h6 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    overflow: auto;
-    padding-top: 200px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 
   .menu-open .menu__body {
@@ -1575,46 +1532,29 @@ h6 {
     transition: all 0.5s ease 0s;
   }
 
-  .menu__dropdown {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-
   .menu__head-dropdown {
+    display: block;
     height: auto;
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
     margin: 0 auto;
     font-size: 25px;
   }
 
+  .menu__head-arrow {
+    display: none;
+  }
+
   .menu__body-dropdown {
-    background-color: transparent;
-    display: block;
     visibility: visible;
     opacity: 1;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    position: static;
+    -webkit-transform: translate(0px, 0px);
+        -ms-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+    background-color: transparent;
+    display: block;
     -webkit-box-shadow: none;
             box-shadow: none;
     text-align: center;
-    width: 100%;
     overflow: auto;
   }
 
@@ -1788,14 +1728,11 @@ h6 {
   }
 
   .no-webp .referral-program__content{
-    background: url("../img/chicken.svg"), url("../img/Home/referral-program/farmer.svg"), url("../img/Home/referral-program/bg-mob.jpg"); }
+    background: url("../img/chicken.svg") 80% 100%/120px 170px no-repeat, url("../img/Home/referral-program/farmer.svg") 10% 100%/207px 267px no-repeat, url("../img/Home/referral-program/bg-mob.jpg") 100% 80%/cover no-repeat; }
 
   .referral-program__content {
-    background-repeat: no-repeat;
-    background-size: 120px 170px, 207px 267px, cover;
-    background-position: 80% 100%, 10% 100%, 100% 80%;
     height: 974px;
-    margin: 0px 15px;
+    margin: 0px 15px !important;
     border-radius: 100px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1853,9 +1790,14 @@ h6 {
   }
 }
 
-.webp .referral-program__content{ background: url(../img/chicken.svg) 100% 93%/291px 293px no-repeat, url(../img/Home/referral-program/bg-pc.webp) no-repeat 50%; }
+.webp .referral-program__content{ background: url(../img/chicken.svg) 100% 93%/291px 293px no-repeat, url(../img/Home/referral-program/bg-pc.webp) 50% no-repeat; }
+
+@media (max-width: 580px){
+
+  .webp .referral-program__content{ background: url(../img/Home/referral-program/farmer.svg) 10% 100%/207px 267px no-repeat, url(../img/chicken.svg) 90% 95%/73px 102px no-repeat, url(../img/Home/referral-program/bg-mob.webp) 100% 80%/cover no-repeat !important; }
+}
 
 @media (max-width: 47.99875em){
 
-  .webp .referral-program__content{ background: url(../img/chicken.svg), url(../img/Home/referral-program/farmer.svg), url(../img/Home/referral-program/bg-mob.webp); }
+  .webp .referral-program__content{ background: url(../img/chicken.svg) 80% 100%/120px 170px no-repeat, url(../img/Home/referral-program/farmer.svg) 10% 100%/207px 267px no-repeat, url(../img/Home/referral-program/bg-mob.webp) 100% 80%/cover no-repeat; }
 }
