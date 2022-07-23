@@ -14,9 +14,10 @@
    &__content {
       display: flex;
       gap: 16px 24px;
-      padding: 0px 20px;
+      padding: 0px 20px 70px 20px;
       @media (max-width: $mobile) {
          flex-direction: column;
+         padding: 0px 20px;
       }
    }
    //------------------------
@@ -223,17 +224,20 @@
       }
 
       &_wallet {
-         background: linear-gradient(23.83deg, #8345be -11.18%, #ff5037 76.67%);
-         @media (min-width: $tablet) {
-            &:hover {
-               animation: backgroundDiscord 2s infinite linear;
-            }
-         }
-         @keyframes backgroundWallet {
-            50% {
-               box-shadow: 0 200px 200px 200px #8345be inset, 0 -100px -170px -120px #ff5037 inset, 0 80px 30px 20px #8345be inset;
-            }
-         }
+         background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(128, 128, 128, 1) 54%);
+         box-shadow: none;
+         pointer-events: none;
+         // background: linear-gradient(23.83deg, #8345be -11.18%, #ff5037 76.67%);
+         // @media (min-width: $tablet) {
+         //    &:hover {
+         //       animation: backgroundDiscord 2s infinite linear;
+         //    }
+         // }
+         // @keyframes backgroundWallet {
+         //    50% {
+         //       box-shadow: 0 200px 200px 200px #8345be inset, 0 -100px -170px -120px #ff5037 inset, 0 80px 30px 20px #8345be inset;
+         //    }
+         // }
       }
    }
    //---------------------
@@ -823,5 +827,6 @@
       margin-bottom: 140px;
    }
    &__referral-program {
+      margin-bottom: 110px;
    }
 }

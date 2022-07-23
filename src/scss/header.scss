@@ -56,27 +56,29 @@
    }
 
    &__button {
-      background: linear-gradient(110.12deg, #f33800 36.15%, #b00b01 74.94%);
+      // background: linear-gradient(110.12deg, #f33800 36.15%, #b00b01 74.94%);
       border-radius: 100px;
       padding: 11px 0px;
       color: #ffffff;
       width: 160px;
-      position: relative;
-      box-shadow: 0 5px 0px #3c354a;
-      &:active {
-         box-shadow: 0 2px 0px #3c354a;
-         top: 2px;
-      }
-      @media (min-width: $tablet) {
-         &:hover {
-            animation: backgroundDiscord 2s infinite linear;
-         }
-      }
-      @keyframes backgroundWallet {
-         50% {
-            box-shadow: 0 200px 200px 200px #8345be inset, 0 -100px -170px -120px #ff5037 inset, 0 80px 30px 20px #8345be inset;
-         }
-      }
+      background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(128, 128, 128, 1) 54%);
+      pointer-events: none;
+      // position: relative;
+      // box-shadow: 0 5px 0px #3c354a;
+      // &:active {
+      //    box-shadow: 0 2px 0px #3c354a;
+      //    top: 2px;
+      // }
+      // @media (min-width: $tablet) {
+      //    &:hover {
+      //       animation: backgroundDiscord 2s infinite linear;
+      //    }
+      // }
+      // @keyframes backgroundWallet {
+      //    50% {
+      //       box-shadow: 0 200px 200px 200px #8345be inset, 0 -100px -170px -120px #ff5037 inset, 0 80px 30px 20px #8345be inset;
+      //    }
+      // }
       @media (max-width: $mobile) {
          justify-self: end;
          margin-bottom: 25px;

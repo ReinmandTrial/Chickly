@@ -190,35 +190,14 @@ h6 {
 }
 
 .header__button {
-  background: -o-linear-gradient(339.88deg, #f33800 36.15%, #b00b01 74.94%);
-  background: linear-gradient(110.12deg, #f33800 36.15%, #b00b01 74.94%);
   border-radius: 100px;
   padding: 11px 0px;
   color: #ffffff;
   width: 160px;
-  position: relative;
-  -webkit-box-shadow: 0 5px 0px #3c354a;
-          box-shadow: 0 5px 0px #3c354a;
-}
-
-.header__button:active {
-  -webkit-box-shadow: 0 2px 0px #3c354a;
-          box-shadow: 0 2px 0px #3c354a;
-  top: 2px;
-}
-
-@-webkit-keyframes backgroundWallet {
-  50% {
-    -webkit-box-shadow: 0 200px 200px 200px #8345be inset, 0 -100px -170px -120px #ff5037 inset, 0 80px 30px 20px #8345be inset;
-            box-shadow: 0 200px 200px 200px #8345be inset, 0 -100px -170px -120px #ff5037 inset, 0 80px 30px 20px #8345be inset;
-  }
-}
-
-@keyframes backgroundWallet {
-  50% {
-    -webkit-box-shadow: 0 200px 200px 200px #8345be inset, 0 -100px -170px -120px #ff5037 inset, 0 80px 30px 20px #8345be inset;
-            box-shadow: 0 200px 200px 200px #8345be inset, 0 -100px -170px -120px #ff5037 inset, 0 80px 30px 20px #8345be inset;
-  }
+  background: -webkit-gradient(linear, left top, right top, from(rgb(2, 0, 36)), color-stop(54%, rgb(128, 128, 128)));
+  background: -o-linear-gradient(left, rgb(2, 0, 36) 0%, rgb(128, 128, 128) 54%);
+  background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(128, 128, 128) 54%);
+  pointer-events: none;
 }
 
 .menu {
@@ -318,6 +297,7 @@ h6 {
   min-height: 660px;
   background-position: bottom;
   background-size: cover;
+  position: relative;
 }
 
 .footer__container {
@@ -432,6 +412,48 @@ h6 {
   margin-bottom: 16px;
 }
 
+.footer__comeback-arrow {
+  position: absolute;
+  bottom: 20px;
+  right: 242px;
+  -webkit-animation: comeBack 3s infinite linear;
+          animation: comeBack 3s infinite linear;
+}
+
+@-webkit-keyframes comeBack {
+  0% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+
+  50% {
+    -webkit-transform: translate(0px, 10px);
+            transform: translate(0px, 10px);
+  }
+
+  100% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+}
+
+@keyframes comeBack {
+  0% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+
+  50% {
+    -webkit-transform: translate(0px, 10px);
+            transform: translate(0px, 10px);
+  }
+
+  100% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+}
+
 .about {
   background: url("../img/about-bg.svg") 100% 0/auto no-repeat;
 }
@@ -441,7 +463,7 @@ h6 {
   display: -ms-flexbox;
   display: flex;
   gap: 16px 24px;
-  padding: 0px 20px;
+  padding: 0px 20px 70px 20px;
 }
 
 .about__text-content {
@@ -658,15 +680,12 @@ h6 {
 }
 
 .about__button_wallet {
-  background: -o-linear-gradient(66.17deg, #8345be -11.18%, #ff5037 76.67%);
-  background: linear-gradient(23.83deg, #8345be -11.18%, #ff5037 76.67%);
-}
-
-@keyframes backgroundWallet {
-  50% {
-    -webkit-box-shadow: 0 200px 200px 200px #8345be inset, 0 -100px -170px -120px #ff5037 inset, 0 80px 30px 20px #8345be inset;
-            box-shadow: 0 200px 200px 200px #8345be inset, 0 -100px -170px -120px #ff5037 inset, 0 80px 30px 20px #8345be inset;
-  }
+  background: -webkit-gradient(linear, left top, right top, from(rgb(2, 0, 36)), color-stop(54%, rgb(128, 128, 128)));
+  background: -o-linear-gradient(left, rgb(2, 0, 36) 0%, rgb(128, 128, 128) 54%);
+  background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(128, 128, 128) 54%);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  pointer-events: none;
 }
 
 .about__images-content {
@@ -1152,12 +1171,11 @@ h6 {
   margin-bottom: 140px;
 }
 
-@media (min-width: 61.99875em) {
-  .header__button:hover {
-    -webkit-animation: backgroundDiscord 2s infinite linear;
-            animation: backgroundDiscord 2s infinite linear;
-  }
+.home__referral-program {
+  margin-bottom: 110px;
+}
 
+@media (min-width: 61.99875em) {
   .about__button_discord:hover {
     -webkit-animation: backgroundDiscord 4s infinite linear;
             animation: backgroundDiscord 4s infinite linear;
@@ -1166,11 +1184,6 @@ h6 {
   .about__button_twitter:hover {
     -webkit-animation: backgroundDiscord 4s infinite linear;
             animation: backgroundDiscord 4s infinite linear;
-  }
-
-  .about__button_wallet:hover {
-    -webkit-animation: backgroundDiscord 2s infinite linear;
-            animation: backgroundDiscord 2s infinite linear;
   }
 
   .step-how-it-works__button:hover {
@@ -1423,6 +1436,13 @@ h6 {
   }
 }
 
+@media (max-width: 450px) {
+  .footer__copyright {
+    margin: 0px 0px 0px 0px;
+    text-align: left;
+  }
+}
+
 @media (max-width: 400px) {
   .referral-program__level-list {
     -ms-flex-item-align: start;
@@ -1444,6 +1464,16 @@ h6 {
 }
 
 @media (max-width: 61.99875em) {
+  .footer__comeback-arrow {
+    right: 0;
+    bottom: 0;
+  }
+
+  .footer__comeback-arrow img {
+    width: 90px;
+    height: 90px;
+  }
+
   .about__images-content {
     max-width: 328px;
     max-height: 328px;
@@ -1692,7 +1722,7 @@ h6 {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     text-align: center;
-    margin-bottom: 53px;
+    margin-bottom: 73px;
   }
 
   .footer__block-title {
@@ -1724,6 +1754,7 @@ h6 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding: 0px 20px;
   }
 
   .about__text-content {

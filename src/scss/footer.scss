@@ -5,7 +5,7 @@
    min-height: 660px;
    background-position: bottom;
    background-size: cover;
-
+   position: relative;
    &__container {
       max-width: 1110px;
    }
@@ -34,7 +34,7 @@
       @media (max-width: $mobile) {
          grid-template-columns: 1fr;
          text-align: center;
-         margin-bottom: 53px;
+         margin-bottom: 73px;
       }
    }
 
@@ -119,7 +119,36 @@
          max-width: 220px;
          margin: 0px auto 26px auto;
       }
+      @media (max-width: 450px) {
+         margin: 0px 0px 0px 0px;
+         text-align: left;
+      }
    }
+   &__comeback-arrow {
+      position: absolute;
+      bottom: 20px;
+      right: 242px;
+      animation: comeBack 3s infinite linear;
+      @media (max-width: $tablet) {
+         right: 0;
+         bottom: 0;
+         img {
+            width: 90px;
+            height: 90px;
+         }
+      }
+      @keyframes comeBack {
+         0% {
+            transform: translate(0px, 0px);
+         }
+         50% {
+            transform: translate(0px, 10px);
+         }
+         100% {
+            transform: translate(0px, 0px);
+         }
+      }
+   }made a button in the footer
 }
 
 //====================================================================================================
