@@ -9,8 +9,8 @@
    width: 100%;
    z-index: 100;
    &__container {
-      max-width: 1300px;
-      @include adaptiveValue('padding-left', 180, 15, 1920, 1300);
+      max-width: 1110px;
+      // @include adaptiveValue('padding-left', 180, 15, 1920, 1300);
       @media (max-width: 1300px) {
          padding: 0px 15px;
       }
@@ -256,13 +256,15 @@
          position: absolute;
          width: 100%;
          height: rem(2);
-         background-color: #000;
+         background: linear-gradient(213.08deg, #febe01 28.11%, #f37502 96.2%);
       }
       &::before {
          top: 0;
       }
       &::after {
          bottom: 0;
+         width: 15px;
+         left: 0;
       }
       span {
          top: calc(50% - rem(1));
@@ -281,6 +283,7 @@
          &::after {
             bottom: calc(50% - rem(1));
             transform: rotate(45deg);
+            width: 30px;
          }
       }
    }
