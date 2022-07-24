@@ -2,11 +2,11 @@
 
 .about {
    background: url('@img/about-bg.svg') 100% 0 / auto no-repeat;
-   @media (max-width: 1300px) {
+   @media (max-width: rem(1300)) {
       background-size: 60%;
    }
    @media (max-width: $mobile) {
-      background-size: 80%;
+      background-size: 100%;
    }
    &__container {
    }
@@ -14,10 +14,11 @@
    &__content {
       display: flex;
       gap: 16px 24px;
-      padding: 0px 20px 70px 20px;
+      padding: 0px 0px 70px 0px;
+      margin-right: 15px;
       @media (max-width: $mobile) {
          flex-direction: column;
-         padding: 0px 20px;
+         padding: 0px 0px 0px 0px;
       }
    }
    //------------------------
@@ -25,13 +26,13 @@
       flex: 0 1 622px;
       margin-left: 195px;
       margin-top: 105px;
-      @include adaptiveValue('margin-left', 195, 20, 1920, 1300);
+      @include adaptiveValue('margin-left', 195, 15, 1920, 1300, 3);
       @media (max-width: $mobile) {
          order: 2;
          margin-top: 25px;
          margin-bottom: 40px;
       }
-      @media (max-width: 470px) {
+      @media (max-width: rem(470)) {
          margin-top: 0;
       }
    }
@@ -43,7 +44,7 @@
       max-width: 360px;
       margin-bottom: 24px;
       @include adaptiveValue('font-size', 55, 32);
-      @media (max-width: 550px) {
+      @media (max-width: rem(550)) {
          text-align: center;
          max-width: 250px;
          margin: 0px auto 27px auto;
@@ -52,13 +53,13 @@
          position: relative;
          color: #ffb72b;
          padding-left: 80px;
-         @media (max-width: 1170px) {
+         @media (max-width: rem(1170)) {
             display: block;
          }
          @media (max-width: $mobile) {
             padding-left: 55px;
          }
-         @media (max-width: 550px) {
+         @media (max-width: rem(550)) {
             display: inline-block;
             padding-left: 46px;
          }
@@ -75,7 +76,7 @@
             @media (max-width: $mobile) {
                left: 0;
             }
-            @media (max-width: 550px) {
+            @media (max-width: rem(550)) {
                width: 40px;
                height: 40px;
                background-size: 40px 40px;
@@ -148,15 +149,16 @@
    &__button {
       border-radius: 100px;
       max-width: 190px;
+      text-align: center;
       width: 100%;
-      height: 48px;
+      padding: 15px 10px;
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       font-size: 18px;
       color: #ffffff;
-      position: relative;
       box-shadow: 0 5px 0px #3c354a;
+      position: relative;
       &:active {
          box-shadow: 0 2px 0px #3c354a;
          top: 2px;
@@ -168,38 +170,25 @@
 
       &_discord {
          background: linear-gradient(180deg, #5766e3 0%, #2436cb 100%);
-         padding-left: 30px;
          @media (min-width: $tablet) {
             &:hover {
                animation: backgroundDiscord 4s infinite linear;
             }
          }
-
          @keyframes backgroundDiscord {
             50% {
                box-shadow: 0 5px 0px #3c354a, 0 -40px 20px -50px #5766e3 inset, 0 -210px 70px -120px #5766e3 inset,
                   0 -280px 70px -120px #5766e3 inset;
             }
          }
-
          &::before {
-            content: '';
-            background: url('@img/discord .svg');
-            position: absolute;
-            width: 18px;
-            height: 18px;
-            left: 30px;
-            top: 50%;
-            transform: translate(0, -50%);
-            @media (max-width: 1300px) {
-               left: 70px;
-            }
+            font-size: 18px;
+            margin-right: 8px;
          }
       }
 
       &_twitter {
          background: linear-gradient(180deg, #4d9be9 0%, #2c7fd1 100%);
-         padding-left: 30px;
          @media (min-width: $tablet) {
             &:hover {
                animation: backgroundDiscord 4s infinite linear;
@@ -211,17 +200,8 @@
             }
          }
          &::before {
-            content: '';
-            background: url('@img/twitter.svg');
-            position: absolute;
-            width: 18px;
-            height: 18px;
-            left: 30px;
-            top: 50%;
-            transform: translate(0, -50%);
-            @media (max-width: 1300px) {
-               left: 70px;
-            }
+            font-size: 18px;
+            margin-right: 8px;
          }
       }
 
@@ -269,7 +249,7 @@
          margin-top: 90px;
          margin-left: 80px;
       }
-      @media (max-width: 550px) {
+      @media (max-width: $mobileSmall) {
          margin-left: unset;
          align-self: center;
          max-width: 192px;
@@ -294,7 +274,7 @@
          max-width: 180px;
          max-height: 250px;
       }
-      @media (max-width: 550px) {
+      @media (max-width: $mobileSmall) {
          max-width: 111px;
          max-height: 153px;
       }
@@ -387,7 +367,7 @@
       @media (max-width: $tablet) {
          top: 170px;
       }
-      @media (max-width: 550px) {
+      @media (max-width: $mobileSmall) {
          top: 130px;
          img {
             width: 7px;
@@ -457,7 +437,7 @@
    align-items: center;
    position: relative;
    z-index: 10;
-   @media (max-width: 1150px) {
+   @media (max-width: rem(1150)) {
       height: 253px;
    }
    &__number {
@@ -469,7 +449,7 @@
       right: 37px;
       bottom: 33px;
       z-index: 1;
-      @media (max-width: 1150px) {
+      @media (max-width: rem(1150)) {
          right: 28px;
          bottom: 17px;
       }
@@ -477,12 +457,12 @@
    &__top-image {
       transform: translate(0px, -70px);
       max-height: 100px;
-      @media (max-width: 1150px) {
+      @media (max-width: rem(1150)) {
          max-height: 70px;
          transform: translate(0px, -50px);
       }
       img {
-         @media (max-width: 1150px) {
+         @media (max-width: rem(1150)) {
             width: 123px;
             height: 132px;
          }
@@ -498,7 +478,7 @@
       margin-bottom: 20px;
       position: relative;
       z-index: 10;
-      @media (max-width: 1150px) {
+      @media (max-width: rem(1150)) {
          margin-bottom: 15px;
       }
    }
@@ -532,7 +512,7 @@
       //    transition: all 0.3s ease 0s;
       //    top: 3px;
       // }
-      @media (max-width: 1150px) {
+      @media (max-width: rem(1150)) {
          margin-top: 10px;
          padding: 6px 0px;
          max-width: 130px;
@@ -555,7 +535,7 @@
       margin-top: 10px;
       position: relative;
       z-index: 10;
-      @media (max-width: 1150px) {
+      @media (max-width: rem(1150)) {
          img {
             height: 190px;
          }
@@ -587,7 +567,7 @@
       grid-gap: 60px 30px;
       justify-content: center;
       background: url('@img/Home/How-it-works/lines.svg') no-repeat 50%;
-      @media (max-width: 1150px) {
+      @media (max-width: rem(1150)) {
          grid-template-columns: repeat(3, 268px);
          background-size: 48%;
       }
@@ -627,14 +607,13 @@
       color: #ffffff;
       padding: 77px 0px 77px 0px;
       padding-right: 20px;
-      @include adaptiveValue('padding-left', 194, 20, 1500, 1250);
+      @include adaptiveValue('padding-left', 194, 20, 1500, 1250, 3);
 
-      @media (max-width: 1550px) {
+      @media (max-width: rem(1550)) {
          background-position: 100% 93%, right;
          margin-right: 20px;
       }
-      @media (max-width: 1250px) {
-         padding-left: 20px !important;
+      @media (max-width: rem(1250)) {
          background-position: 100% 90%, center;
          margin-right: unset;
       }
@@ -643,17 +622,17 @@
             url('@img/Home/referral-program/farmer.svg') 10% 100% / 207px 267px no-repeat,
             url('@img/Home/referral-program/bg-mob.jpg') 100% 80% / cover no-repeat;
          height: 974px;
-         margin: 0px 15px !important;
+         margin: 0px 15px;
          border-radius: 100px;
          display: flex;
          flex-direction: column;
          align-items: center;
          padding: 16px 20px;
       }
-      @media (max-width: 580px) {
+      @media (max-width: rem(580)) {
          background: url('@img/Home/referral-program/farmer.svg') 10% 100% / 207px 267px no-repeat,
             url('@img/chicken.svg') 90% 95% /73px 102px no-repeat, url('@img/Home/referral-program/bg-mob.jpg') 100% 80% / cover no-repeat !important;
-         border-radius: 50px !important;
+         border-radius: 50px;
       }
    }
 
@@ -707,7 +686,7 @@
       @media (max-width: $mobile) {
          margin-bottom: 20px;
       }
-      @media (max-width: 400px) {
+      @media (max-width: rem(400)) {
          align-self: start;
       }
    }
@@ -811,7 +790,7 @@
       //          0 -280px 70px -120px #0e6b12 inset;
       //    }
       // }
-      @media (max-width: 500px) {
+      @media (max-width: rem(500)) {
          max-width: 100%;
       }
    }
@@ -830,8 +809,14 @@
    }
    &__how-it-work {
       margin-bottom: 140px;
+      @media (max-width:$mobile){
+          margin-bottom: 55px; 
+      }
    }
    &__referral-program {
       margin-bottom: 110px;
+      @media (max-width:$mobile){
+           margin-bottom: 35px;
+      }
    }
 }

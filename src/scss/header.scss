@@ -9,11 +9,6 @@
    width: 100%;
    z-index: 100;
    &__container {
-      max-width: 1110px;
-      // @include adaptiveValue('padding-left', 180, 15, 1920, 1300);
-      @media (max-width: 1300px) {
-         padding: 0px 15px;
-      }
       @media (max-width: $mobile) {
          &::after {
             content: '';
@@ -28,6 +23,9 @@
    }
 
    &__content {
+      @include adaptiveValue('margin-left', 195, 15, 1920, 1300, 3);
+      margin-right: 15px;
+      max-width: 1110px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -37,7 +35,7 @@
    &__logo-menu-block {
       display: flex;
       align-items: center;
-      max-width: 450px;
+      @include adaptiveValue('max-width', 450, 250, 1920, 767, 3);
       width: 100%;
       justify-content: space-between;
       font-size: 18px;
@@ -124,8 +122,11 @@
                transition: all 0.3s ease 0s;
                pointer-events: all;
             }
-            .menu__head-arrow {
-               transform: rotate(-180deg);
+            .menu__head-dropdown {
+               &::before {
+                  transform: rotateX(-180deg);
+                  transition: all 0.3s ease 0s;
+               }
             }
          }
       }
@@ -136,21 +137,22 @@
    &__head-dropdown {
       display: inline-flex;
       align-items: center;
-      margin-right: 30px;
       height: 64px;
-      img {
-         margin-left: 10px;
+      position: relative;
+      &::before {
+         transition: all 0.3s ease 0s;
+         position: absolute;
+         right: -10px;
+         font-size: 12px;
+         @media (max-width: $mobile) {
+            display: none;
+         }
       }
       @media (max-width: $mobile) {
          display: block;
          height: auto;
          margin: 0 auto;
          font-size: 25px;
-      }
-   }
-   &__head-arrow {
-      @media (max-width: $mobile) {
-         display: none;
       }
    }
 
@@ -182,9 +184,15 @@
    }
 
    &__dropdown-item {
-      text-transform: uppercase;
       &:not(:last-child) {
          margin-bottom: 15px;
+      }
+   }
+   &__dropdown-link {
+      text-align: left;
+      text-transform: uppercase;
+      @media (max-width: $mobile) {
+         text-align: center;
       }
    }
 
