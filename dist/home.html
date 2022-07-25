@@ -5,11 +5,10 @@
 	<title>Chickly</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220724231912">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220725195813">
 	<link rel="shortcut icon" href="favicon.ico">
-	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="./sp-push-worker-fb.js" async></script>
 </head>
 
 <body>
@@ -26,6 +25,8 @@
 									<button class="menu__head-dropdown _icon-vertical-arrow">HOME</button>
 									<ul class="menu__body-dropdown">
 										<li class="menu__dropdown-item"><button class="menu__dropdown-link" data-goto-header data-goto=".about">about</button></li>
+										<li class="menu__dropdown-item"><button class="menu__dropdown-link" data-goto-header data-goto=".nft-chicks">NFT</button></li>
+										<li class="menu__dropdown-item"><button class="menu__dropdown-link" data-goto-header data-goto=".conditions">Investment Conditions</button></li>
 										<li class="menu__dropdown-item"><button class="menu__dropdown-link" data-goto-header data-goto=".how-it-work">how it works</button></li>
 										<li class="menu__dropdown-item"><button class="menu__dropdown-link" data-goto-header data-goto=".referral-program">referral program</button>
 										</li>
@@ -126,7 +127,7 @@
 												<img src="img/Home/nft-chicks/2.svg" alt="2">
 											</div>
 											<p class="nft-chicks__price">10$</p>
-											<p class="nft-chicks__profit">+20% profit <span class="nft-chicks__coefficient">х1.7</span></p>
+											<p class="nft-chicks__profit">+20% profit <span class="nft-chicks__coefficient">х1.8</span></p>
 											<button class="nft-chicks__button">Buy</button>
 										</div>
 										<div class="nft-chicks__slide swiper-slide">
@@ -134,7 +135,7 @@
 												<img src="img/Home/nft-chicks/3.svg" alt="3">
 											</div>
 											<p class="nft-chicks__price">10$</p>
-											<p class="nft-chicks__profit">+20% profit <span class="nft-chicks__coefficient">х1.7</span></p>
+											<p class="nft-chicks__profit">+20% profit <span class="nft-chicks__coefficient">х1.9</span></p>
 											<button class="nft-chicks__button">Buy</button>
 										</div>
 										<div class="nft-chicks__slide swiper-slide">
@@ -142,7 +143,7 @@
 												<picture><source srcset="img/Home/nft-chicks/4.webp" type="image/webp"><img src="img/Home/nft-chicks/4.png" alt="4"></picture>
 											</div>
 											<p class="nft-chicks__price">10$</p>
-											<p class="nft-chicks__profit">+20% profit <span class="nft-chicks__coefficient">х1.7</span></p>
+											<p class="nft-chicks__profit">+20% profit <span class="nft-chicks__coefficient">х2</span></p>
 											<button class="nft-chicks__button">Buy</button>
 										</div>
 										<div class="nft-chicks__slide swiper-slide">
@@ -150,12 +151,85 @@
 												<img src="img/Home/nft-chicks/5.svg" alt="5">
 											</div>
 											<p class="nft-chicks__price">10$</p>
-											<p class="nft-chicks__profit">+20% profit <span class="nft-chicks__coefficient">х1.7</span></p>
+											<p class="nft-chicks__profit">+20% profit <span class="nft-chicks__coefficient">х2.2</span></p>
 											<button class="nft-chicks__button">Buy</button>
 										</div>
 									</div>
 									<div class="swiper-pagination"></div>
 								</div>
+							</div>
+						</div>
+					</section>
+					<section class="home__conditions conditions">
+						<div class="conditions__container">
+							<div class="conditions__content">
+								<h3 class="conditions__title">Investment Conditions</h3>
+								<div class="conditions__video-block">
+									<div class="conditions__video">
+										<img class="conditions__video-bg" src=" img/Home/conditions/monitor-mob.png" alt="monitor">
+										<iframe class="conditions__video-item" src="https://www.youtube.com/embed/zyZAMR56mXY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									</div>
+									<div class="conditions__prompt-list">
+										<div class="conditions__prompt  conditions__prompt_1">
+											Working on <span class="conditions__prompt-icon-coin conditions__prompt-bolt-text">BNB</span> network
+											<span data-help="You can buy our NFTs by connecting your wallet. All transactions on the site are carried out only through Binance Smart Chain." class="_icon-question"></span>
+										</div>
+										<div class="conditions__prompt  conditions__prompt_2">
+											Minimal deposit <span class="conditions__prompt-icon-coin conditions__prompt-bolt-text">0.04 BNB</span>
+										</div>
+										<div class="conditions__prompt  conditions__prompt_3">
+											Total income <span class="conditions__prompt-bolt-text">up to 220%</span>
+											<span data-help="The final profit of the NFT depends on the Hen you bought. As you can see in our NFT block, the profit range from 170% to 220%. The last one is the most profitable." class="_icon-question"></span>
+										</div>
+										<div class="conditions__prompt  conditions__prompt_4">
+											Earnings <span class="conditions__prompt-bolt-text">every moment,</span> withdraw any time
+										</div>
+									</div>
+								</div>
+								<div class="conditions__cards-block">
+									<!-- Оболочка слайдера -->
+									<div class="conditions__slider swiper">
+										<!-- Двигающееся часть слайдера -->
+										<div class="conditions__wrapper swiper-wrapper">
+											<!-- Слайд -->
+											<div class="conditions__slide swiper-slide">
+												<p class="conditions__slide-title">BASIC INTEREST RATE</p>
+												<p class="conditions__slide-rate">+1% every 24 hours (+0.0416% hourly)</p>
+												<p class="conditions__slide-descr">BNB smart-contract calculate profit up to every deposit since the
+													ent eee date it was made. Every hour you will get +0.0416%, every day +1%.
+												</p>
+											</div>
+											<div class="conditions__slide swiper-slide">
+												<p class="conditions__slide-title">PERSONAL HOLD-BONUS</p>
+												<p class="conditions__slide-rate">+0.1% for every 24 hours without withdraw
+												</p>
+												<p class="conditions__slide-descr">Smart-contract calculates hold-bonus from your deposit, or last
+													withdraw date. If you did not request payment, it will charge you an
+													additional bonus. After 24 hours +0.1%, after 48 hours +0.2%, after 72
+													hours +0.3% and so on. </p>
+											</div>
+											<div class="conditions__slide swiper-slide">
+												<p class="conditions__slide-title">CONTRACT TOTAL AMOUNT BONUS</p>
+												<p class="conditions__slide-rate">+0.1% for every 200 BNB on</p>
+												<p class="conditions__slide-descr">Smart-contract check its current balance and charge an additional
+													+0.1% up to your earnings for every 200 BNB on balance.
+													<span>Current bonus : 0.0%</span>
+												</p>
+											</div>
+										</div>
+										<div class="swiper-pagination"></div>
+									</div>
+								</div>
+								<div class="conditions__balance-block">
+									<p class="conditions__balance-title">Chicks bought for:</p>
+									<button class="conditions__balance-button _icon-schedule">456456456</button>
+								</div>
+							</div>
+							<div class="conditions__animations">
+								<span class="conditions__rigth-coin-wrap"><img src="img/Home/conditions/coin-animation.svg" alt="coin" class="conditions__rigth-coin"></span>
+								<span class="conditions__rigth-dot-wrap"> <img src="img/Home/conditions/dot-animation.svg" alt="dot" class="conditions__rigth-dot"></span>
+								<span class="conditions__left-coin-wrap"><img src="img/Home/conditions/coin-animation.svg" alt="coin" class="conditions__left-coin"></span>
+								<span class="conditions__left-dot-wrap"><img src="img/Home/conditions/dot-animation.svg" alt="dot" class="conditions__left-dot"></span>
 							</div>
 						</div>
 					</section>
@@ -233,9 +307,11 @@
 					</div>
 					<div class="footer__info-block">
 						<div class="footer__links">
-							<p class="footer__block-title ">Links</p>
+							<p class="footer__block-title ">Home</p>
 							<div class="footer__links-list">
 								<button data-goto-header data-goto=".about" class="footer__links-item">About</button>
+								<button data-goto-header data-goto=".nft-chicks" class="footer__links-item">NFT</button>
+								<button data-goto-header data-goto=".conditions" class="footer__links-item">Investment Conditions</button>
 								<button data-goto-header data-goto=".how-it-work" class="footer__links-item">How it works</button>
 								<button data-goto-header data-goto=".referral-program" class="footer__links-item">Referral program</button>
 							</div>
@@ -279,7 +355,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20220724231912"></script>
+	<script src="js/app.min.js?_v=20220725195813"></script>
 </body>
 
 </html>
