@@ -567,9 +567,7 @@
 
    &__slider {
       padding: 0px 50px;
-      overflow-x: auto !important;
-      @extend %hidescroll;
-      @media (max-width: rem(1919.98)) {
+      @media (max-width: rem(1059.98)) {
          .swiper-pagination {
             bottom: 0;
             display: flex;
@@ -597,10 +595,22 @@
       @media (min-width: rem(1920)) {
          justify-content: center;
       }
+      @media (max-width: em(1700)) {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         gap: 0px 0px;
+         min-height: 780px;
+      }
+      @media (max-width: em(1059.98)){
+           min-height: auto;
+           flex-wrap: nowrap;
+           justify-content: start;
+      }
    }
 
    &__slide {
-      min-width: 336px;
+      min-width: 290px;
       height: 339px;
       background: #ffffff;
       box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06);
@@ -610,10 +620,15 @@
       align-items: center;
       position: relative;
       padding-top: 40px;
+      &:last-child {
+         margin-right: 0 !important;
+      }
       @media (max-width: $mobile) {
          min-width: auto;
          height: 295px;
          padding: 0px 15px;
+      }
+      @media (max-width: em(1700)) {
       }
    }
 
@@ -655,16 +670,16 @@
       align-items: center;
    }
 
-   &__coefficient {
-      font-size: 16px;
-      margin-left: 10px;
-      width: 40px;
-      height: 40px;
-      background: url('@img/Home/nft-chicks/dot.svg') 50% / 40px 40px no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-   }
+   // &__coefficient {
+   //    font-size: 16px;
+   //    margin-left: 10px;
+   //    width: 40px;
+   //    height: 40px;
+   //    background: url('@img/Home/nft-chicks/dot.svg') 50% / 40px 40px no-repeat;
+   //    display: flex;
+   //    align-items: center;
+   //    justify-content: center;
+   // }
 
    &__button {
       font-size: 18px;
@@ -853,6 +868,9 @@
          display: flex;
          align-items: center;
          justify-content: center;
+         .conditions__prompt-bolt-text{
+            margin-left: 5px;
+         }
          @media (max-width: em(1150)) {
             right: unset;
             top: unset;
