@@ -364,10 +364,8 @@ h6 {
 }
 
 .footer {
-  background: url("../img/footer/bg-pc.svg") no-repeat;
+  background: url("../img/footer/bg-pc.svg") top left/100% auto no-repeat;
   min-height: 660px;
-  background-position: bottom;
-  background-size: cover;
   position: relative;
 }
 
@@ -1955,6 +1953,138 @@ h6 {
   text-align: center;
 }
 
+.audit__content {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+.audit__title {
+  font-weight: 700;
+  line-height: 112%;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+@supports (font-size: clamp( 1.5625rem , 1.1387711864rem  +  2.1186440678vw , 3.125rem )) {
+  .audit__title {
+    font-size: clamp( 1.5625rem , 1.1387711864rem  +  2.1186440678vw , 3.125rem );
+  }
+}
+
+@supports not (font-size: clamp( 1.5625rem , 1.1387711864rem  +  2.1186440678vw , 3.125rem )) {
+  .audit__title {
+    font-size: calc(1.5625rem + 1.5625 * (100vw - 20rem) / 73.75);
+  }
+}
+
+.audit__subtitle {
+  font-size: 22px;
+  line-height: 129%;
+  text-align: center;
+}
+
+.audit__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 85px;
+}
+
+.audit__image {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  max-width: 586px;
+  max-height: 471px;
+}
+
+.audit__image img {
+  width: 100%;
+  height: 100%;
+}
+
+.audit__list {
+  padding-top: 88px;
+}
+
+.audit__item {
+  padding: 15px 0px 20px 0px;
+}
+
+.audit__item:first-child {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.11);
+}
+
+.audit__item-title {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 129%;
+  margin-bottom: 15px;
+}
+
+.audit__item-website {
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 129%;
+  text-align: center;
+}
+
+.audit__item-website_company-name {
+  color: #f37502;
+}
+
+.audit__item-website_link {
+  color: #f37502;
+  text-decoration: underline !important;
+}
+
+.audit__item-done {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #f37502;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.audit__item-done::before {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.audit__item-button {
+  display: block;
+  background: -o-linear-gradient(236.92deg, #70e705 28.11%, #0e6b12 96.2%);
+  background: linear-gradient(213.08deg, #70e705 28.11%, #0e6b12 96.2%);
+  border-radius: 100px;
+  font-size: 18px;
+  text-align: center;
+  color: #ffffff;
+  padding: 11px 5px;
+  max-width: 255px;
+  position: relative;
+  width: 100%;
+}
+
+.audit__item-button_flag {
+  padding-left: 25px;
+}
+
+.audit__item-button_flag::before {
+  content: url("../img/Home/audit/flag.png");
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  width: 22px;
+  height: 15px;
+  -webkit-transform: translate(0px, -50%);
+      -ms-transform: translate(0px, -50%);
+          transform: translate(0px, -50%);
+}
+
 .home__about {
   margin-bottom: 30px;
 }
@@ -1976,7 +2106,11 @@ h6 {
 }
 
 .home__referral-program {
-  margin-bottom: 110px;
+  margin-bottom: 140px;
+}
+
+.home__audit {
+  margin-bottom: 30px;
 }
 
 .swiper {
@@ -2061,6 +2195,13 @@ h6 {
   }
 }
 
+@media (max-width: 120em) {
+  .footer {
+    background-position: bottom;
+    background-size: cover;
+  }
+}
+
 @media (max-width: 1300px) {
   .about__list-buttons {
     -webkit-box-orient: vertical;
@@ -2115,6 +2256,12 @@ h6 {
   .about__second-dot {
     right: 20px;
     top: 130px;
+  }
+}
+
+@media (max-width: 64em) {
+  .audit__block {
+    gap: 20px;
   }
 }
 
@@ -2230,6 +2377,12 @@ h6 {
 @media (max-width: 73.125rem) {
   .about__title_yellow {
     display: block;
+  }
+}
+
+@media (max-width: 72.5em) {
+  .audit__content {
+    margin: 0px 15px;
   }
 }
 
@@ -2446,6 +2599,52 @@ h6 {
 
   .referral-program__title {
     max-width: 200px;
+  }
+
+  .audit__title {
+    margin-bottom: 20px;
+  }
+
+  .audit__subtitle {
+    font-size: 18px;
+  }
+
+  .audit__block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 0px;
+  }
+
+  .audit__image {
+    -webkit-box-flex: 1;
+        -ms-flex: auto;
+            flex: auto;
+  }
+
+  .audit__list {
+    padding-top: 0;
+  }
+
+  .audit__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .audit__item-button {
+    max-width: 290px;
   }
 
   .home__benefits {
@@ -2874,7 +3073,11 @@ h6 {
   }
 
   .home__referral-program {
-    margin-bottom: 35px;
+    margin-bottom: 40px;
+  }
+
+  .home__audit {
+    margin-bottom: 15px;
   }
 }
 
