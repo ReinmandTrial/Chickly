@@ -3659,6 +3659,47 @@
                 },
                 on: {}
             });
+            if (document.querySelector(".reviews__slider")) new core(".reviews__slider", {
+                modules: [ Pagination ],
+                observer: true,
+                observeParents: true,
+                speed: 800,
+                loop: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    type: "bullets",
+                    clickable: true
+                },
+                breakpoints: {
+                    320: {
+                        spaceBetween: 10,
+                        slidesPerView: 2
+                    },
+                    700: {
+                        slidesPerView: 2,
+                        spaceBetween: 30
+                    },
+                    1100: {
+                        slidesPerView: 3,
+                        spaceBetween: 30
+                    },
+                    1400: {
+                        slidesPerView: 4,
+                        spaceBetween: 30
+                    },
+                    1700: {
+                        slidesPerView: 5,
+                        spaceBetween: 30,
+                        centeredSlides: true
+                    },
+                    2e3: {
+                        slidesPerView: 6,
+                        spaceBetween: 30,
+                        centeredSlides: true
+                    }
+                },
+                on: {}
+            });
         }
         window.addEventListener("load", (function(e) {
             initSliders();

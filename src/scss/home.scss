@@ -1666,8 +1666,8 @@
       font-weight: 500;
       font-size: 22px;
       margin-bottom: 20px;
-      @media (max-width:$mobile){
-          font-size: 18px; 
+      @media (max-width: $mobile) {
+         font-size: 18px;
       }
    }
 
@@ -1746,6 +1746,102 @@
    &__block-text {
    }
 }
+
+//========================================================================================================================================================
+.reviews {
+   &__container {
+   }
+   &__content {
+   }
+
+   &__title {
+      font-weight: 700;
+      font-size: 50px;
+      line-height: 112%;
+      text-align: center;
+      margin-bottom: 40px;
+      @media (max-width: $mobile) {
+         font-size: 25px;
+         margin-bottom: 25px;
+         padding: 0px 15px;
+      }
+   }
+
+   &__slider {
+      position: relative;
+      padding: 0px 120px;
+      @media (max-width: $mobile) {
+         padding: 0px 15px;
+      }
+      &::before,
+      &::after {
+         content: '';
+         background: linear-gradient(270deg, rgba(255, 255, 255, 0.67) 0%, rgba(255, 255, 255, 0) 173.91%);
+         height: 145px;
+         width: 120px;
+         position: absolute;
+         top: 0;
+         z-index: 10;
+         @media (max-width: $mobile) {
+            display: none;
+         }
+      }
+      &::after {
+         right: 0;
+         border-radius: 50px 0px 0px 50px;
+      }
+      &::before {
+         left: 0;
+         border-radius: 0px 50px 50px 0px;
+      }
+      .swiper-pagination {
+         display: flex;
+         justify-content: center;
+         flex-wrap: wrap;
+         gap: 10px;
+      }
+      .swiper-pagination-bullet {
+         background: rgba(247, 141, 2, 0.08);
+         width: 16px;
+         height: 16px;
+         display: inline-block;
+         border-radius: 50%;
+      }
+      .swiper-pagination-bullet-active {
+         background: #f78d02;
+      }
+   }
+
+   &__wrapper {
+      padding: 10px 0px;
+      margin-bottom: 40px;
+      @media (max-width:$mobile){
+          margin-bottom: 20px; 
+      }
+   }
+
+   &__slide {
+      min-width: 264px;
+      height: 123px;
+      background: #ffffff;
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06);
+      border-radius: 50px;
+      padding: 20px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @media (max-width: $mobile) {
+         min-width: 136px;
+         padding: 20px 5px;
+      }
+   }
+
+   &__logo {
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+   }
+}
 //====================================================================================================
 .home {
    &__wrapper {
@@ -1796,4 +1892,19 @@
          margin-bottom: 55px;
       }
    }
+   &__reviews {
+      margin-bottom: 83px;
+      @media (max-width: $mobile) {
+         margin-bottom: 60px;
+      }
+   }
+}
+
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.swiper-pagination {
 }

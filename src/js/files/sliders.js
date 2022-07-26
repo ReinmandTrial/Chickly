@@ -122,7 +122,6 @@ function initSliders() {
          observeParents: true,
          speed: 800,
 
-
          //touchRatio: 0,
          //simulateTouch: false,
          //loop: true,
@@ -143,7 +142,6 @@ function initSliders() {
             320: {
                slidesPerView: 1,
                spaceBetween: 10,
-               
             },
             700: {
                slidesPerView: 2,
@@ -158,6 +156,67 @@ function initSliders() {
                slidesPerView: 5,
                spaceBetween: 30,
                watchOverflow: true,
+            },
+         },
+
+         // События
+         on: {},
+      });
+   }
+   if (document.querySelector('.reviews__slider')) {
+      // Указываем скласс нужного слайдера
+      // Создаем слайдер
+      new Swiper('.reviews__slider', {
+         // Указываем скласс нужного слайдера
+         // Подключаем модули слайдера
+         // для конкретного случая
+         modules: [Pagination],
+         observer: true,
+         observeParents: true,
+         speed: 800,
+
+         //touchRatio: 0,
+         //simulateTouch: false,
+         loop: true,
+         //preloadImages: false,
+         //lazy: true,
+
+         // Пагинация
+
+         pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true,
+         },
+
+         // Брейкпоинты
+
+         breakpoints: {
+            320: {
+               spaceBetween: 10,
+               slidesPerView: 2,
+            },
+            700: {
+               slidesPerView: 2,
+               spaceBetween: 30,
+            },
+            1100: {
+               slidesPerView: 3,
+               spaceBetween: 30,
+            },
+            1400: {
+               slidesPerView: 4,
+               spaceBetween: 30,
+            },
+            1700: {
+               slidesPerView: 5,
+               spaceBetween: 30,
+               centeredSlides: true,
+            },
+            2000: {
+               slidesPerView: 6,
+               spaceBetween: 30,
+               centeredSlides: true,
             },
          },
 
