@@ -3792,47 +3792,6 @@
             });
         }
         function initSliders() {
-            if (document.querySelector(".nft-chicks__slider")) new core(".nft-chicks__slider", {
-                modules: [ Pagination ],
-                observer: true,
-                observeParents: true,
-                autoHeight: true,
-                speed: 800,
-                pagination: {
-                    el: ".swiper-pagination",
-                    type: "bullets",
-                    clickable: true
-                },
-                navigation: {
-                    prevEl: ".swiper-button-prev",
-                    nextEl: ".swiper-button-next"
-                },
-                breakpoints: {
-                    320: {
-                        slidesPerView: 1,
-                        autoHeight: true,
-                        spaceBetween: 35
-                    },
-                    600: {
-                        slidesPerView: 2,
-                        spaceBetween: 35
-                    },
-                    1200: {
-                        slidesPerView: 3,
-                        spaceBetween: 35
-                    },
-                    1060: {
-                        slidesPerView: 5,
-                        spaceBetween: 35
-                    },
-                    1920: {
-                        slidesPerView: 5,
-                        spaceBetween: 35,
-                        watchOverflow: true
-                    }
-                },
-                on: {}
-            });
             if (document.querySelector(".conditions__slider")) new core(".conditions__slider", {
                 modules: [ Pagination ],
                 observer: true,
