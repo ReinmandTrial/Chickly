@@ -549,8 +549,8 @@
       padding: 0px 50px;
       max-width: 1920px;
       margin: 0 auto;
-      @media (max-width: em(1200)){
-           padding: 0px 15px;
+      @media (max-width: em(1200)) {
+         padding: 0px 15px;
       }
    }
 
@@ -674,8 +674,6 @@
          font-size: 14px;
       }
    }
-
-
 
    &__button {
       font-size: 18px;
