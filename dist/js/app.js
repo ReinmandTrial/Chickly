@@ -4107,24 +4107,6 @@
         };
         const da = new DynamicAdapt("max");
         da.init();
-        const arrayItem = Array.from(document.querySelectorAll(".replenishment__item"));
-        const seeMoreBtn = document.querySelector(".replenishment__button");
-        let i = 0;
-        for (i; 6 !== i; i++) {
-            const element = arrayItem[i];
-            element.classList.add("active", "see");
-        }
-        seeMoreBtn.addEventListener("click", addItem);
-        function addItem() {
-            let res = i + 6;
-            if (i < arrayItem.length) for (i; i !== res; i++) {
-                const element = arrayItem[i];
-                element.classList.add("active");
-                setTimeout((() => {
-                    element.classList.add("see");
-                }), 200);
-            }
-        }
         window["FLS"] = true;
         isWebp();
         menuInit();
