@@ -1746,7 +1746,6 @@
    &__block-text {
    }
 }
-
 //========================================================================================================================================================
 .reviews {
    &__container {
@@ -1815,8 +1814,8 @@
    &__wrapper {
       padding: 10px 0px;
       margin-bottom: 40px;
-      @media (max-width:$mobile){
-          margin-bottom: 20px; 
+      @media (max-width: $mobile) {
+         margin-bottom: 20px;
       }
    }
 
@@ -1842,6 +1841,143 @@
       height: 100%;
    }
 }
+//========================================================================================================================================================
+.replenishment {
+   &__container {
+      max-width: 1140px;
+      padding: 0px 15px;
+   }
+
+   &__content {
+   }
+
+   &__title {
+      font-weight: 700;
+      line-height: 112%;
+      text-align: center;
+      @include adaptiveValue('font-size', 50, 25);
+      margin-bottom: 50px;
+      @media (max-width: $mobile) {
+         margin-bottom: 23px;
+      }
+   }
+
+   &__block {
+   }
+
+   &__list {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+      justify-content: center;
+      @media (max-width: $mobile) {
+         margin-bottom: 20px;
+      }
+   }
+
+   &__item {
+      flex: 0 0 350px;
+      background: #ffffff;
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06);
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      padding: 8px 18px;
+      max-width: 350px;
+      width: 100%;
+      height: 55px;
+      display: none;
+      opacity: 0;
+      &.active {
+         display: flex;
+      }
+      &.see {
+         opacity: 1;
+         transition: all 0.7s ease 0s;
+      }
+      @media (max-width: $mobile) {
+         flex-direction: column;
+         height: 94px;
+         max-width: 290px;
+      }
+   }
+
+   &__price {
+      font-weight: 500;
+      font-size: 22px;
+      position: relative;
+      border-right: 1px solid rgba(0, 0, 0, 0.11);
+      flex: 0 0 50%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-left: 33px;
+      text-align: center;
+      @media (max-width: $mobile) {
+         padding: 0px 70px;
+         border: none;
+         border-bottom: 1px solid rgba(0, 0, 0, 0.11);
+         height: auto;
+         width: 100%;
+      }
+      &::before {
+         content: '';
+         background: url('@img/Home/replenishment/mini-chicken.png') no-repeat;
+         width: 23px;
+         height: 30px;
+         position: absolute;
+         top: 50%;
+         left: 0;
+         transform: translate(0px, -50%);
+         @media (max-width: $mobile) {
+            left: 45px;
+         }
+      }
+   }
+
+   &__bottom-row {
+      flex: 0 0 50%;
+      display: flex;
+      @media (max-width: $mobile) {
+         width: 100%;
+         justify-content: center;
+         align-items: center;
+      }
+   }
+
+   &__code {
+      font-size: 16px;
+      text-align: center;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding-left: 20px;
+      max-width: 120px;
+   }
+
+   &__link {
+      padding-left: 13px;
+      &::before {
+         color: #f37502;
+         font-size: 16px;
+      }
+   }
+
+   &__button {
+      background: linear-gradient(213.08deg, #70e705 28.11%, #0e6b12 96.2%);
+      border-radius: 100px;
+      font-size: 18px;
+      text-align: center;
+      color: #ffffff;
+      padding: 11px 0px;
+      max-width: 190px;
+      width: 100%;
+      margin: 0 auto;
+      display: block;
+   }
+}
+
 //====================================================================================================
 .home {
    &__wrapper {
@@ -1898,13 +2034,10 @@
          margin-bottom: 60px;
       }
    }
-}
-
-.swiper {
-}
-.swiper-wrapper {
-}
-.swiper-slide {
-}
-.swiper-pagination {
+   &__replenishment {
+      margin-bottom: 100px;
+      @media (max-width: $mobile) {
+         margin-bottom: 40px;
+      }
+   }
 }

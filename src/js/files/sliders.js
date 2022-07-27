@@ -174,7 +174,7 @@ function initSliders() {
          observer: true,
          observeParents: true,
          speed: 800,
-
+         grabCursor:true,
          //touchRatio: 0,
          //simulateTouch: false,
          loop: true,
