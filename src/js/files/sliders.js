@@ -7,7 +7,7 @@
 // Подключаем слайдер Swiper из node_modules
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
-import Swiper, { Pagination } from 'swiper';
+import Swiper, { Navigation, Pagination } from 'swiper';
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -91,7 +91,7 @@ function initSliders() {
          observer: true,
          observeParents: true,
          speed: 800,
-         grabCursor:true,
+         grabCursor: true,
          //touchRatio: 0,
          //simulateTouch: false,
          loop: true,
@@ -134,6 +134,107 @@ function initSliders() {
                slidesPerView: 6,
                spaceBetween: 30,
                centeredSlides: true,
+            },
+         },
+
+         // События
+         on: {},
+      });
+   }
+   if (document.querySelector('.video-list__slider')) {
+      // Указываем скласс нужного слайдера
+      // Создаем слайдер
+      new Swiper('.video-list__slider', {
+         // Указываем скласс нужного слайдера
+         // Подключаем модули слайдера
+         // для конкретного случая
+         modules: [Pagination, Navigation],
+         observer: true,
+         observeParents: true,
+         speed: 800,
+         grabCursor: true,
+         //touchRatio: 0,
+         simulateTouch: false,
+         // loop: true,
+         //preloadImages: false,
+         //lazy: true,
+         slidesPerView: 1,
+         initialSlide: 1,
+         centeredSlides: true,
+
+         effect: 'coverflow',
+         coverflowEffect: {
+            speed: 4000,
+            modifier: 1,
+            slideShadows: true,
+         },
+
+         // Пагинация
+
+         pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true,
+         },
+         navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+         },
+
+         // Брейкпоинты
+
+         breakpoints: {
+            320: {
+               spaceBetween: 30,
+               effect: 'slide',
+            },
+            767: {
+               spaceBetween: -300,
+            },
+            830: {
+               spaceBetween: -400,
+            },
+            991: {
+               spaceBetween: -500,
+            },
+            1150: {
+               spaceBetween: -600,
+            },
+            1500: {
+               spaceBetween: -800,
+            },
+            1750: {
+               spaceBetween: -1100,
+            },
+            1810: {
+               spaceBetween: -1200,
+            },
+            1930: {
+               spaceBetween: -1250,
+            },
+            1990: {
+               spaceBetween: -1300,
+            },
+            2045: {
+               spaceBetween: -1350,
+            },
+            2105: {
+               spaceBetween: -1400,
+            },
+            2190: {
+               spaceBetween: -1450,
+            },
+            2250: {
+               spaceBetween: -1500,
+            },
+            2370: {
+               spaceBetween: -1600,
+            },
+            2500: {
+               spaceBetween: -1700,
+            },
+            2700: {
+               spaceBetween: -1900,
             },
          },
 

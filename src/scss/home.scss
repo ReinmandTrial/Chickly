@@ -139,7 +139,8 @@
 
    &__list-buttons {
       display: flex;
-      justify-content: space-between;
+      // justify-content: space-between;
+      gap: 0px 25px;
       @media (max-width: 1300px) {
          flex-direction: column;
          align-items: center;
@@ -394,34 +395,6 @@
             height: 7px;
             display: flex;
          }
-      }
-   }
-
-   @keyframes moveAroundRight {
-      from {
-         transform: rotate(0deg);
-      }
-      to {
-         transform: rotate(360deg);
-      }
-   }
-   @keyframes moveAroundLeft {
-      from {
-         transform: rotate(360deg);
-      }
-      to {
-         transform: rotate(0deg);
-      }
-   }
-   @keyframes float {
-      0% {
-         transform: translate(0px, 0px);
-      }
-      50% {
-         transform: translate(0px, 20px);
-      }
-      100% {
-         transform: translate(0px, 0px);
       }
    }
 }
@@ -720,6 +693,9 @@
       text-align: center;
       margin-bottom: 60px;
       @include adaptiveValue('font-size', 50, 25);
+      @media (max-width: $mobile) {
+         margin-bottom: 0px;
+      }
    }
    &__video-block {
       background: url('@img/Home/conditions/monitor-pc.png') 52% 100% / 677px 559px no-repeat;

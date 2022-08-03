@@ -5,7 +5,7 @@
 	<title>Chickly</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20220727212035">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220803232459">
 	<link rel="shortcut icon" href="favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="./sp-push-worker-fb.js" async></script>
@@ -30,16 +30,18 @@
 										<li class="menu__dropdown-item"><button class="menu__dropdown-link" data-goto-header data-goto=".how-it-work">how it
 												works</button></li>
 										<li class="menu__dropdown-item"><button class="menu__dropdown-link" data-goto-header data-goto=".referral-program">referral program</button>
-										<li class="menu__dropdown-item"><button class="menu__dropdown-link" data-goto-header data-goto=".audit">Smart-contract</button>
-										</li>
-										<li class="menu__dropdown-item"><button class="menu__dropdown-link" data-goto-header data-goto=".reviews">reviews</button>
-										</li>
-										<li class="menu__dropdown-item"><button class="menu__dropdown-link" data-goto-header data-goto=".replenishment">new
-												chickens</button>
-										</li>
+											<!-- <li class="menu__dropdown-item"><button class="menu__dropdown-link" data-goto-header
+										data-goto=".audit">Smart-contract</button>
+								</li>
+								<li class="menu__dropdown-item"><button class="menu__dropdown-link" data-goto-header
+										data-goto=".reviews">reviews</button>
+								</li>
+								<li class="menu__dropdown-item"><button class="menu__dropdown-link" data-goto-header data-goto=".replenishment">new
+										chickens</button>
+								</li> -->
 									</ul>
 								</div>
-								<!-- <button class="menu__link">FAQ</button> -->
+								<a href="faq.html" class="menu__link" data-da='.menu__dropdown,767.98,1'>FAQ</a>
 								<img class="menu__first-coin" src="img/coin.svg" alt="coin">
 								<img class="menu__second-coin" src="img/coin.svg" alt="coin">
 								<img class="menu__first-dot" src="img/dot.svg" alt="dot">
@@ -47,7 +49,7 @@
 							</nav>
 						</div>
 					</div>
-					<button data-da='.menu__body,767.98' class="header__button">Connect Wallet</button>
+					<!-- <button data-da='.menu__body,767.98' class="header__button">Connect Wallet</button> -->
 				</div>
 			</div>
 		</header>
@@ -72,7 +74,7 @@
 											Discord</a>
 										<a href="https://twitter.com/chickly_nft" class="about__button about__button_twitter _icon-twitter">Follow
 											Twitter </a>
-										<a href="#" class="about__button about__button_wallet">Connect Wallet</a>
+										<!-- <a href="#" class="about__button about__button_wallet">Connect Wallet</a> -->
 									</div>
 								</div>
 								<div class="about__images-content">
@@ -120,40 +122,40 @@
 									<div class="nft-chicks__img">
 										<img src="img/Home/nft-chicks/1.svg" alt="1">
 									</div>
-									<p class="nft-chicks__price">10$</p>
-									<p class="nft-chicks__profit">+20% profit </p>
+									<p class="nft-chicks__price">0.04 BNB</p>
+									<p class="nft-chicks__profit">170% profit </p>
 									<button class="nft-chicks__button">Buy</button>
 								</div>
 								<div class="nft-chicks__card">
 									<div class="nft-chicks__img">
 										<img src="img/Home/nft-chicks/5.svg" alt="5">
 									</div>
-									<p class="nft-chicks__price">10$</p>
-									<p class="nft-chicks__profit">+20% profit </p>
+									<p class="nft-chicks__price">0.4 BNB</p>
+									<p class="nft-chicks__profit">180% profit</p>
 									<button class="nft-chicks__button">Buy</button>
 								</div>
 								<div class="nft-chicks__card">
 									<div class="nft-chicks__img">
 										<img src="img/Home/nft-chicks/2.svg" alt="2">
 									</div>
-									<p class="nft-chicks__price">10$</p>
-									<p class="nft-chicks__profit">+20% profit</p>
+									<p class="nft-chicks__price">2 BNB</p>
+									<p class="nft-chicks__profit">190% profit</p>
 									<button class="nft-chicks__button">Buy</button>
 								</div>
 								<div class="nft-chicks__card">
 									<div class="nft-chicks__img">
 										<img src="img/Home/nft-chicks/3.svg" alt="3">
 									</div>
-									<p class="nft-chicks__price">10$</p>
-									<p class="nft-chicks__profit">+20% profit </p>
+									<p class="nft-chicks__price">12 BNB</p>
+									<p class="nft-chicks__profit">+200% profit</p>
 									<button class="nft-chicks__button">Buy</button>
 								</div>
 								<div class="nft-chicks__card">
 									<div class="nft-chicks__img">
 										<picture><source srcset="img/Home/nft-chicks/4.webp" type="image/webp"><img src="img/Home/nft-chicks/4.png" alt="4"></picture>
 									</div>
-									<p class="nft-chicks__price">10$</p>
-									<p class="nft-chicks__profit">+20% profit </p>
+									<p class="nft-chicks__price">40 BNB</p>
+									<p class="nft-chicks__profit">+220% profit</p>
 									<button class="nft-chicks__button">Buy</button>
 								</div>
 							</div>
@@ -167,7 +169,11 @@
 								<div class="conditions__video-block">
 									<div class="conditions__video">
 										<img class="conditions__video-bg" src=" img/Home/conditions/monitor-mob.png" alt="monitor">
-										<iframe class="conditions__video-item" src="https://www.youtube.com/embed/zyZAMR56mXY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+										<video poster="img/Home/conditions/poster.png" class="conditions__video-item" src=""></video>
+										<!-- <iframe class="conditions__video-item" src="https://www.youtube.com/embed/zyZAMR56mXY"
+											title="YouTube video player" frameborder="0"
+											allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+											allowfullscreen></iframe> -->
 									</div>
 									<div class="conditions__prompt-list">
 										<div class="conditions__prompt  conditions__prompt_1">
@@ -220,17 +226,21 @@
 										<div class="swiper-pagination"></div>
 									</div>
 								</div>
-								<div class="conditions__balance-block">
+								<!-- <div class="conditions__balance-block">
 									<p class="conditions__balance-title">Chicks bought for:</p>
-									<button class="conditions__balance-button _icon-schedule">456456456</button>
-								</div>
+									<div class="conditions__balance-button _icon-schedule">456456456</div>
+								</div> -->
 							</div>
-							<div class="conditions__animations">
-								<span class="conditions__rigth-coin-wrap"><img src="img/Home/conditions/coin-animation.svg" alt="coin" class="conditions__rigth-coin"></span>
-								<span class="conditions__rigth-dot-wrap"> <img src="img/Home/conditions/dot-animation.svg" alt="dot" class="conditions__rigth-dot"></span>
-								<span class="conditions__left-coin-wrap"><img src="img/Home/conditions/coin-animation.svg" alt="coin" class="conditions__left-coin"></span>
-								<span class="conditions__left-dot-wrap"><img src="img/Home/conditions/dot-animation.svg" alt="dot" class="conditions__left-dot"></span>
-							</div>
+							<!-- <div class="conditions__animations">
+								<span class="conditions__rigth-coin-wrap"><img src="img/Home/conditions/coin-animation.svg" alt="coin"
+										class="conditions__rigth-coin"></span>
+								<span class="conditions__rigth-dot-wrap"> <img src="img/Home/conditions/dot-animation.svg" alt="dot"
+										class="conditions__rigth-dot"></span>
+								<span class="conditions__left-coin-wrap"><img src="img/Home/conditions/coin-animation.svg" alt="coin"
+										class="conditions__left-coin"></span>
+								<span class="conditions__left-dot-wrap"><img src="img/Home/conditions/dot-animation.svg" alt="dot"
+										class="conditions__left-dot"></span>
+							</div> -->
 						</div>
 					</section>
 					<section class="home__how-it-work how-it-work">
@@ -296,7 +306,7 @@
 							</div>
 						</div>
 					</section>
-					<section class="home__audit audit">
+					<!-- <section class="home__audit audit">
 						<div class="audit__container">
 							<div class="audit__content">
 								<h3 class="audit__title">Honest and Transparent</h3>
@@ -672,7 +682,7 @@
 								</div>
 							</div>
 						</div>
-					</section>
+					</section> -->
 				</div>
 			</div>
 		</main>
@@ -691,9 +701,10 @@
 								<button data-goto-header data-goto=".conditions" class="footer__links-item">Investment Conditions</button>
 								<button data-goto-header data-goto=".how-it-work" class="footer__links-item">How it works</button>
 								<button data-goto-header data-goto=".referral-program" class="footer__links-item">Referral program</button>
-								<button data-goto-header data-goto=".audit" class="footer__links-item">Smart-contract</button>
-								<button data-goto-header data-goto=".reviews" class="footer__links-item">Reviews</button>
-								<button data-goto-header data-goto=".replenishment" class="footer__links-item">New chickens</button>
+								<a href="faq.html" class="footer__links-item">FAQ</a>
+								<!-- <button data-goto-header data-goto=".audit" class="footer__links-item">Smart-contract</button>
+						<button data-goto-header data-goto=".reviews" class="footer__links-item">Reviews</button>
+						<button data-goto-header data-goto=".replenishment" class="footer__links-item">New chickens</button> -->
 							</div>
 						</div>
 						<div class="footer__contacts">
@@ -725,7 +736,17 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20220727212035"></script>
+	<!-- <div id="popup" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">Закрыть</button>
+			<div class="popup__text">
+				Text
+			</div>
+		</div>
+	</div>
+</div> -->
+	<script src="js/app.min.js?_v=20220803232459"></script>
 </body>
 
 </html>
