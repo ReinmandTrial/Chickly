@@ -1,0 +1,376 @@
+.faq-head {
+   &__container {
+   }
+
+   &__content {
+      position: relative;
+      @include adaptiveValue('height', 620, 285);
+   }
+   &__bg-img {
+      position: absolute;
+      top: 0px;
+      left: 50%;
+      transform: translate(-50%, 0px);
+      @include adaptiveValue('width', 652, 320);
+      @include adaptiveValue('height', 500, 310);
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: contain;
+      }
+   }
+
+   &__chickly {
+      position: absolute;
+      @include adaptiveValue('top', 160, 100);
+      @include adaptiveValue('width', 232, 119);
+      @include adaptiveValue('height', 310, 160);
+      left: 50%;
+      transform: translate(-57%, 0px);
+      z-index: 10;
+      img {
+         object-fit: contain;
+         width: 100%;
+         height: 100%;
+      }
+   }
+
+   &__animations {
+   }
+
+   &__big-coin {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      @include adaptiveValue('top', 200, 120);
+      left: 50%;
+      transform: translate(-40%, 0px);
+      animation: moveAroundRight 10s cubic-bezier(0.75, -1, 0.21, -1) infinite;
+      z-index: 10;
+      @media (max-width: em(1300)) {
+         height: 200px;
+         width: 200px;
+      }
+      @media (max-width: $tablet) {
+         height: 150px;
+         width: 150px;
+      }
+      @media (max-width: em(550)) {
+         max-width: 120px;
+         max-height: 120px;
+         right: 0px;
+         bottom: 0px;
+      }
+      img {
+         position: absolute;
+         right: 0;
+         top: 0;
+         width: 67px;
+         height: 67px;
+         animation: moveAroundLeft 2s linear infinite;
+
+         @media (max-width: $tablet) {
+            width: 35px;
+            height: 35px;
+         }
+      }
+   }
+
+   &__small-coin {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      top: 150px;
+      left: 30%;
+      animation: moveAroundLeft 10s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+      @media (max-width: em(1300)) {
+         height: 170px;
+         width: 170px;
+      }
+      @media (max-width: $tablet) {
+         height: 150px;
+         width: 150px;
+      }
+      @media (max-width: em(550)) {
+         max-width: 120px;
+         max-height: 120px;
+         top: 100px;
+         left: 25%;
+      }
+      img {
+         width: 46px;
+         height: 46px;
+         animation: moveAroundRight 2s linear infinite;
+         @media (max-width: em(1300)) {
+            height: 35px;
+            width: 35px;
+         }
+         @media (max-width: $tablet) {
+            height: 25px;
+            width: 25px;
+         }
+      }
+   }
+
+   &__first-dot {
+      position: absolute;
+      top: 250px;
+      @include adaptiveValue('left', 600, 80);
+      animation: float 3s linear infinite;
+      @media (max-width: em(1300)) {
+         top: 210px;
+      }
+      @media (max-width: $tablet) {
+         top: 170px;
+      }
+
+      @media (max-width: $mobileSmall) {
+         img {
+            width: 7px;
+            height: 7px;
+            display: flex;
+         }
+      }
+   }
+
+   &__second-dot {
+      position: absolute;
+      @include adaptiveValue('top', 270, 140);
+      @include adaptiveValue('right', 600, 90);
+      animation: float 3s linear infinite;
+
+      @media (max-width: $mobileSmall) {
+         img {
+            width: 7px;
+            height: 7px;
+            display: flex;
+         }
+      }
+   }
+}
+
+.q-and-a {
+   &__container {
+   }
+
+   &__content {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0px 15px;
+   }
+
+   &__title {
+      font-weight: 700;
+      @include adaptiveValue('margin-bottom', 35, 15);
+      @include adaptiveValue('font-size', 55, 25);
+      text-align: center;
+   }
+
+   &__block {
+      &:not(:last-child) {
+         @include adaptiveValue('margin-bottom', 43, 26);
+      }
+   }
+}
+
+.video-list {
+   background: url('@img/faq/slider-bg.svg') top / 100% no-repeat;
+   &__content {
+      position: relative;
+   }
+
+   &__slider {
+      @include adaptiveValue('padding-top', 160, 76);
+      @include adaptiveValue('height', 1060, 650);
+      transition: all 2s ease 0s;
+      .swiper-slide-active {
+         transform: rotate(0deg) translate(0px, 0px) scale(1);
+         transition: all 1s ease 0s;
+         opacity: 1;
+      }
+      .swiper-slide-prev {
+         transition: all 1s ease 0s;
+         transform: rotate(-7.53deg) translate(0px, 10%) scale(0.7);
+         opacity: 0.6;
+         .video-list__title {
+            opacity: 0;
+            transition: all 1s ease 0s;
+         }
+         .video-list__info {
+            opacity: 0;
+            transition: all 1s ease 0s;
+         }
+      }
+      .swiper-slide-next {
+         transition: all 1s ease 0s;
+         transform: rotate(7.53deg) translate(0px, 10%) scale(0.7);
+         opacity: 0.6;
+         .video-list__title {
+            opacity: 0;
+            transition: all 1s ease 0s;
+         }
+         .video-list__info {
+            opacity: 0;
+            transition: all 1s ease 0s;
+         }
+      }
+      .swiper-pagination {
+         position: absolute;
+         bottom: 0;
+         left: 50%;
+         transform: translate(-50%, 0px);
+         display: flex;
+         gap: 10px;
+      }
+      .swiper-pagination-bullet {
+         background: rgba(247, 141, 2, 0.08);
+         width: 16px;
+         height: 16px;
+         display: inline-block;
+         border-radius: 50%;
+      }
+      .swiper-pagination-bullet-active {
+         background: #f78d02;
+      }
+   }
+
+   &__wrapper {
+   }
+
+   &__slide {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: all 1s ease 0s;
+      opacity: 0.6;
+
+   }
+
+   &__title {
+      font-weight: 700;
+      line-height: 112%;
+      text-align: center;
+      margin-bottom: 50px;
+      opacity: 1;
+      transition: all 1s ease 0s;
+      @include adaptiveValue('font-size', 50, 25);
+      @include adaptiveValue('margin-bottom', 56, 23);
+   }
+
+   &__video-content {
+      position: relative;
+   }
+   &__video-bg {
+      position: absolute;
+      @include adaptiveValue('top', -50, 0);
+      left: 50%;
+      transform: translate(-50%, 0px);
+      @include adaptiveValue('width', 764, 290);
+      @include adaptiveValue('height', 626, 222);
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: contain;
+      }
+   }
+
+   &__video-monitor {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, 0px);
+      @include adaptiveValue('width', 722, 290);
+      @include adaptiveValue('height', 554, 222);
+
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: contain;
+      }
+   }
+
+   &__video {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, 0px);
+      @include adaptiveValue('margin-top', 10, 5);
+      @include adaptiveValue('width', 710, 277);
+      @include adaptiveValue('height', 400, 156);
+
+      iframe,
+      video {
+         width: 100%;
+         height: 100%;
+         @include adaptiveValue('padding', 5, 0);
+      }
+   }
+
+   &__info {
+      width: 100%;
+      @include adaptiveValue('max-width', 624, 290);
+      @include adaptiveValue('margin-top', 600, 250);
+      text-align: center;
+      opacity: 1;
+      transition: all 0.3s ease 0s;
+   }
+
+   &__info-title {
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 129%;
+      margin-bottom: 15px;
+   }
+
+   &__info-descr {
+      font-size: 16px;
+      line-height: 129%;
+   }
+
+   &__nav {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(213.08deg, #febe01 28.11%, #f37502 96.2%);
+      border-radius: 50%;
+      top: 50%;
+      transform: translate(0px, -50%);
+      @media (max-width: $tablet) {
+         width: 50px;
+         height: 50px;
+      }
+      @media (max-width: $mobile) {
+         display: none;
+      }
+      ._icon-vertical-arrow {
+         font-size: 20px;
+         color: #ffffff;
+      }
+      &_prev {
+         left: 10%;
+         transform: rotate(90deg);
+      }
+
+      &_next {
+         right: 10%;
+         transform: rotate(-90deg);
+      }
+   }
+}
+
+//========================================================================================================================================================
+
+.faq {
+   &__wrapper {
+   }
+   &__head {
+   }
+   &__q-and-a {
+      @include adaptiveValue('margin-bottom', 100, 60);
+   }
+   &__video-list {
+      @include adaptiveValue('margin-bottom', 80, 50);
+   }
+}

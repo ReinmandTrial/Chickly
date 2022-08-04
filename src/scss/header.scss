@@ -35,7 +35,7 @@
    &__logo-menu-block {
       display: flex;
       align-items: center;
-      @include adaptiveValue('max-width', 450, 250, 1920, 767, 3);
+      @include adaptiveValue('max-width', 450, 350, 1920, 767, 3);
       width: 100%;
       justify-content: space-between;
       font-size: 18px;
@@ -93,6 +93,7 @@
    &__body {
       display: flex;
       align-items: center;
+      gap: 30px;
       @media (max-width: $mobile) {
          position: fixed;
          top: 0;
@@ -197,15 +198,17 @@
    }
 
    &__link {
+      display: block;
+      line-height: 100%;
       @media (max-width: $mobile) {
-         margin-top: 33px;
-         display: block;
          font-size: 25px;
-         margin-bottom: 100px;
+         text-align: center;
+         padding: 20px 0px 10px 0px;
       }
    }
    &__first-coin {
       display: none;
+
       @media (max-width: $mobile) {
          display: block;
          position: absolute;
