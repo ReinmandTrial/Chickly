@@ -1,170 +1,752 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+	<title>Chickly</title>
 	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220804201051">
+	<link rel="shortcut icon" href="favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Верстка «Chickly»</title>
+	<script src="./sp-push-worker-fb.js" async></script>
 </head>
 
 <body>
-	<div class="rootpage">
-		<h1>Верстка «Chickly»</h1>
-		<div class="rootpage__info">
-			Особенности проекта
-		</div>
-		<h2>Готовые страницы:</h2>
-		<ol class="rootpage__list">
-			<li><a target="_blank" href="home.html">Главная</a></li>
-			<li><a target="_blank" href="faq.html">FAQ</a></li>
-		</ol>
-		<h2>Попапы:</h2>
-		<ol class="rootpage__list">
-			<li><a target="_blank" href="home.html#"></a></li>
-		</ol>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="header__content">
+					<div class="header__logo-menu-block">
+						<a href="index.html" class="header__logo"><img src="img/Header/logo.svg" alt="logo"></a>
+						<div class="header__menu menu">
+							<button type="button" class="menu__icon icon-menu"><span></span></button>
+							<nav class="menu__body">
+								<div class="menu__dropdown">
+									<button class="menu__head-dropdown _icon-vertical-arrow">HOME</button>
+									<ul class="menu__body-dropdown">
+										<li class="menu__dropdown-item"><button class="menu__dropdown-link" data-goto-header data-goto=".about">about</button></li>
+										<li class="menu__dropdown-item"><button class="menu__dropdown-link" data-goto-header data-goto=".nft-chicks">NFT</button></li>
+										<li class="menu__dropdown-item"><button class="menu__dropdown-link" data-goto-header data-goto=".conditions">Investment Conditions</button></li>
+										<li class="menu__dropdown-item"><button class="menu__dropdown-link" data-goto-header data-goto=".how-it-work">how it
+												works</button></li>
+										<li class="menu__dropdown-item"><button class="menu__dropdown-link" data-goto-header data-goto=".referral-program">referral program</button>
+											<!-- <li class="menu__dropdown-item"><button class="menu__dropdown-link" data-goto-header
+										data-goto=".audit">Smart-contract</button>
+								</li>
+								<li class="menu__dropdown-item"><button class="menu__dropdown-link" data-goto-header
+										data-goto=".reviews">reviews</button>
+								</li>
+								<li class="menu__dropdown-item"><button class="menu__dropdown-link" data-goto-header data-goto=".replenishment">new
+										chickens</button>
+								</li> -->
+									</ul>
+								</div>
+								<a href="faq.html" class="menu__link" data-da='.menu__dropdown,767.98,1'>FAQ</a>
+								<img class="menu__first-coin" src="img/coin.svg" alt="coin">
+								<img class="menu__second-coin" src="img/coin.svg" alt="coin">
+								<img class="menu__first-dot" src="img/dot.svg" alt="dot">
+								<img class="menu__second-dot" src="img/dot.svg" alt="dot">
+							</nav>
+						</div>
+					</div>
+					<!-- <button data-da='.menu__body,767.98' class="header__button">Connect Wallet</button> -->
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<div class="home">
+				<div class="home__wrapper">
+					<section class="home__about about">
+						<div class="about__container">
+							<div class="about__content">
+								<div class="about__text-content">
+									<h1 class="about__title">Reliable Investments with<span class="about__title_yellow">BNB</span>
+									</h1>
+									<h2 class="about__subtitle">Earn up to <span>+220%</span> of your NFT cost</h2>
+									<div class="about__line"></div>
+									<div class="about__list-advantages">
+										<p class="about__advantage">Blockchain decentralized platform</p>
+										<p class="about__advantage">Totally secure income based on BNB smart-contract</p>
+										<p class="about__advantage">Smart-contract verified and audited by independent company</p>
+									</div>
+									<div class="about__list-buttons">
+										<a href="https://discord.gg/chickly" class="about__button about__button_discord _icon-discord">Join
+											Discord</a>
+										<a href="https://twitter.com/chickly_nft" class="about__button about__button_twitter _icon-twitter">Follow
+											Twitter </a>
+										<!-- <a href="#" class="about__button about__button_wallet">Connect Wallet</a> -->
+									</div>
+								</div>
+								<div class="about__images-content">
+									<div class="about__chichen">
+										<img src="img/chicken.svg" alt="chicken">
+									</div>
+									<div class="about__small-coin">
+										<img src="img/coin.svg" alt="coin">
+									</div>
+									<div class="about__big-coin">
+										<img src="img/coin.svg" alt="coin">
+									</div>
+									<div class="about__first-dot"><img src="img/dot.svg" alt="dot"></div>
+									<div class="about__second-dot"><img src="img/dot.svg" alt="dot"></div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="home__benefits benefits">
+						<img src="img/Home/benefits/home-bg.svg" alt="bg" class="benefits__home-bg">
+						<div class="benefits__container">
+							<div class="benefits__content">
+								<div class="benefits__main-text">BNB Chain boasts over <span>3+ Million Weekly Unique Active Users</span></div>
+								<div class="benefits__card">
+									<div class="benefits__card-bg">
+										<img src="img/Home/benefits/item-img.svg" alt="most" class="benefits__card-img">
+									</div>
+									<p class="benefits__card-text">First most profitable project on NFT</p>
+								</div>
+								<div class="benefits__card">
+									<div class="benefits__card-bg">
+										<p class="benefits__card-bg-text">220% + Profit</p>
+									</div>
+									<p class="benefits__card-text">Unlimited earnings with ever-growing rates
+									</p>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="home__nft-chicks nft-chicks">
+						<div class="nft-chicks__content">
+							<h3 class="nft-chicks__title">Profitable NFT chicks</h3>
+							<div class="nft-chicks__block">
+								<div class="nft-chicks__card">
+									<div class="nft-chicks__img">
+										<img src="img/Home/nft-chicks/1.svg" alt="1">
+									</div>
+									<p class="nft-chicks__price">0.04 BNB</p>
+									<p class="nft-chicks__profit">170% profit </p>
+									<button class="nft-chicks__button">Buy</button>
+								</div>
+								<div class="nft-chicks__card">
+									<div class="nft-chicks__img">
+										<img src="img/Home/nft-chicks/5.svg" alt="5">
+									</div>
+									<p class="nft-chicks__price">0.4 BNB</p>
+									<p class="nft-chicks__profit">180% profit</p>
+									<button class="nft-chicks__button">Buy</button>
+								</div>
+								<div class="nft-chicks__card">
+									<div class="nft-chicks__img">
+										<img src="img/Home/nft-chicks/2.svg" alt="2">
+									</div>
+									<p class="nft-chicks__price">2 BNB</p>
+									<p class="nft-chicks__profit">190% profit</p>
+									<button class="nft-chicks__button">Buy</button>
+								</div>
+								<div class="nft-chicks__card">
+									<div class="nft-chicks__img">
+										<img src="img/Home/nft-chicks/3.svg" alt="3">
+									</div>
+									<p class="nft-chicks__price">12 BNB</p>
+									<p class="nft-chicks__profit">+200% profit</p>
+									<button class="nft-chicks__button">Buy</button>
+								</div>
+								<div class="nft-chicks__card">
+									<div class="nft-chicks__img">
+										<picture><source srcset="img/Home/nft-chicks/4.webp" type="image/webp"><img src="img/Home/nft-chicks/4.png" alt="4"></picture>
+									</div>
+									<p class="nft-chicks__price">40 BNB</p>
+									<p class="nft-chicks__profit">+220% profit</p>
+									<button class="nft-chicks__button">Buy</button>
+								</div>
+							</div>
 
+						</div>
+					</section>
+					<section class="home__conditions conditions">
+						<div class="conditions__container">
+							<div class="conditions__content">
+								<h3 class="conditions__title">Investment Conditions</h3>
+								<div class="conditions__video-block">
+									<div class="conditions__video">
+										<img class="conditions__video-bg" src=" img/Home/conditions/monitor-mob.png" alt="monitor">
+										<video poster="img/Home/conditions/poster.png" class="conditions__video-item" src=""></video>
+										<!-- <iframe class="conditions__video-item" src="https://www.youtube.com/embed/zyZAMR56mXY"
+											title="YouTube video player" frameborder="0"
+											allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+											allowfullscreen></iframe> -->
+									</div>
+									<div class="conditions__prompt-list">
+										<div class="conditions__prompt  conditions__prompt_1">
+											Working on <span class="conditions__prompt-icon-coin conditions__prompt-bolt-text">BNB</span> network
+											<span data-help="You can buy our NFTs by connecting your wallet. All transactions on the site are carried out only through Binance Smart Chain." class="_icon-question"></span>
+										</div>
+										<div class="conditions__prompt  conditions__prompt_2">
+											Minimal deposit <span class="conditions__prompt-icon-coin conditions__prompt-bolt-text">0.04 BNB</span>
+										</div>
+										<div class="conditions__prompt  conditions__prompt_3">
+											Total income <span class="conditions__prompt-bolt-text">up to 220%</span>
+											<span data-help="The final profit of the NFT depends on the Hen you bought. As you can see in our NFT block, the profit range from 170% to 220%. The last one is the most profitable." class="_icon-question"></span>
+										</div>
+										<div class="conditions__prompt  conditions__prompt_4">
+											Earnings <span class="conditions__prompt-bolt-text">every moment,</span> withdraw any time
+										</div>
+									</div>
+								</div>
+								<div class="conditions__cards-block">
+									<!-- Оболочка слайдера -->
+									<div class="conditions__slider swiper">
+										<!-- Двигающееся часть слайдера -->
+										<div class="conditions__wrapper swiper-wrapper">
+											<!-- Слайд -->
+											<div class="conditions__slide swiper-slide">
+												<p class="conditions__slide-title">BASIC INTEREST RATE</p>
+												<p class="conditions__slide-rate">+1% every 24 hours (+0.0416% hourly)</p>
+												<p class="conditions__slide-descr">BNB smart-contract calculate profit up to every deposit since the
+													ent eee date it was made. Every hour you will get +0.0416%, every day +1%.
+												</p>
+											</div>
+											<div class="conditions__slide swiper-slide">
+												<p class="conditions__slide-title">PERSONAL HOLD-BONUS</p>
+												<p class="conditions__slide-rate">+0.1% for every 24 hours without withdraw
+												</p>
+												<p class="conditions__slide-descr">Smart-contract calculates hold-bonus from your deposit, or last
+													withdraw date. If you did not request payment, it will charge you an
+													additional bonus. After 24 hours +0.1%, after 48 hours +0.2%, after 72
+													hours +0.3% and so on. </p>
+											</div>
+											<div class="conditions__slide swiper-slide">
+												<p class="conditions__slide-title">CONTRACT TOTAL AMOUNT BONUS</p>
+												<p class="conditions__slide-rate">+0.1% for every 200 BNB on</p>
+												<p class="conditions__slide-descr">Smart-contract check its current balance and charge an additional
+													+0.1% up to your earnings for every 200 BNB on balance.
+													<span>Current bonus : 0.0%</span>
+												</p>
+											</div>
+										</div>
+										<div class="swiper-pagination"></div>
+									</div>
+								</div>
+								<!-- <div class="conditions__balance-block">
+									<p class="conditions__balance-title">Chicks bought for:</p>
+									<div class="conditions__balance-button _icon-schedule">456456456</div>
+								</div> -->
+							</div>
+							<!-- <div class="conditions__animations">
+								<span class="conditions__rigth-coin-wrap"><img src="img/Home/conditions/coin-animation.svg" alt="coin"
+										class="conditions__rigth-coin"></span>
+								<span class="conditions__rigth-dot-wrap"> <img src="img/Home/conditions/dot-animation.svg" alt="dot"
+										class="conditions__rigth-dot"></span>
+								<span class="conditions__left-coin-wrap"><img src="img/Home/conditions/coin-animation.svg" alt="coin"
+										class="conditions__left-coin"></span>
+								<span class="conditions__left-dot-wrap"><img src="img/Home/conditions/dot-animation.svg" alt="dot"
+										class="conditions__left-dot"></span>
+							</div> -->
+						</div>
+					</section>
+					<section class="home__how-it-work how-it-work">
+						<div class="how-it-work__container">
+							<div class="how-it-work__content">
+								<h3 class="how-it-work__title">How it Works?</h3>
+								<div class="how-it-work__steps-list">
+									<div class="how-it-work__step how-it-work__step_one step-how-it-works">
+										<span class="step-how-it-works__number">1</span>
+										<div class="step-how-it-works__top-image">
+											<img src="img/Home/How-it-works/replenish.svg" alt="replenish">
+										</div>
+										<p class="step-how-it-works__title">Replenish your BNB wallet</p>
+										<p class="step-how-it-works__descr">and connect it to our website</p>
+										<button class="step-how-it-works__button">Connect</button>
+									</div>
+									<div class="how-it-work__step how-it-work__step_two step-how-it-works">
+										<span class="step-how-it-works__number">2</span>
+										<div class="step-how-it-works__top-image">
+											<img src="img/Home/How-it-works/buy-one.svg" alt="buy-one">
+										</div>
+										<p class="step-how-it-works__title">Buy one</p>
+										<p class="step-how-it-works__descr">of the profitable chickens</p>
+										<div class="step-how-it-works__bottom-img">
+											<picture><source srcset="img/Home/How-it-works/triple-cock.webp" type="image/webp"><img src="img/Home/How-it-works/triple-cock.png" alt="triple-cock"></picture>
+										</div>
+									</div>
+									<div class="how-it-work__step how-it-work__step_three step-how-it-works">
+										<span class="step-how-it-works__number">3</span>
+										<div class="step-how-it-works__top-image">
+											<img src="img/Home/How-it-works/replenish.svg" alt="replenish">
+										</div>
+										<p class="step-how-it-works__title">Receive hourly income</p>
+										<p class="step-how-it-works__descr">and instantly withdraw to your wallet</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="home__referral-program referral-program">
+						<div class="referral-program__container">
+							<div class="referral-program__content">
+								<div class="referral-program__title">Referral Program</div>
+								<p class="referral-program__level-list-name">3 levels of affiliate rewards</p>
+								<ul class="referral-program__level-list">
+									<li class="referral-program__level-list-item"><span class="referral-program__list-icon">1</span>7% - 1st Level
+									</li>
+									<li class="referral-program__level-list-item"><span class="referral-program__list-icon">2</span>2% - 2nd Level
+									</li>
+									<li class="referral-program__level-list-item"><span class="referral-program__list-icon">3</span>1% - 3rd Level
+									</li>
+								</ul>
+								<p class="referral-program__prompt">* Referral rewards come instantly on your balance and can be withdrawn any time
+									along with earnings.
+								</p>
+								<div class="referral-program__info-block">
+									<p class="referral-program__info-title">Every 5 BNB earned as a referral bonus increases
+									</p>
+									<p class="referral-program__info-point">1 level for 0.2% ( max bonus 15% )</p>
+									<p class="referral-program__info-point">2 level by 0.05% ( max bonus 4% )</p>
+								</div>
+								<button class="referral-program__button">Join</button>
+							</div>
+						</div>
+					</section>
+					<!-- <section class="home__audit audit">
+						<div class="audit__container">
+							<div class="audit__content">
+								<h3 class="audit__title">Honest and Transparent</h3>
+								<h4 class="audit__subtitle">Smart-contract Independent auditions and reviews</h4>
+								<div class="audit__block">
+									<div class="audit__image"><picture><source srcset="img/Home/audit/laptop.webp" type="image/webp"><img src="img/Home/audit/laptop.png" alt="laptop"></picture></div>
+									<div class="audit__list">
+										<div class="audit__item">
+											<p class="audit__item-title">Independent company</p>
+											<div class="audit__item-website">
+												<span class="audit__item-website_company-name">GROX Solutions</span>
+												(Website:
+												<a target="_blank" href="#" class="audit__item-website_link">grox.solutions</a>
+												)
+											</div>
+											<a target="_blank" href="#" class="audit__item-button">Audit consulsion (PDF)</a>
+										</div>
+										<div class="audit__item">
+											<p class="audit__item-title">Audition status </p>
+											<p class="audit__item-done _icon-check">Successfully passed</p>
+											<a target="_blank" href="#" class="audit__item-button audit__item-button_flag">Audit consulsion (PDF)</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="home__code code">
+						<div class="code__container">
+							<div class="code__content">
+								<h4 class="code__title">Smart-contract code:</h4>
+								<div class="code__block-list">
+									<div class="code__block code__block_black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+										officia natus, minus
+										dolores cum, autem sint harum aspernatur, nam perspiciatis quo consectetur? Magnam, deserunt cum dolorem
+										eligendi obcaecati aliquam magni qui, consequatur totam deleniti quas tenetur mollitia temporibus? Ipsam natus
+										beatae aspernatur facilis nulla laudantium repellendus voluptates quaerat quasi non officiis ipsum provident
+										consequuntur consectetur nisi deleniti enim facere similique fugit, blanditiis molestiae et odit alias
+										corporis. Voluptates molestiae quidem explicabo ullam ex quasi voluptatum ipsum officia, iusto sequi repellat
+										maxime nisi sunt quam iure pariatur vel accusantium praesentium? Rem facilis asperiores animi iure nam ad
+										officia natus, minus
+										dolores cum, autem sint harum aspernatur, nam perspiciatis quo consectetur? Magnam, deserunt cum dolorem
+										eligendi obcaecati aliquam magni qui, consequatur totam deleniti quas tenetur mollitia temporibus? Ipsam natus
+										beatae aspernatur facilis nulla laudantium repellendus voluptates quaerat quasi non officiis ipsum provident
+										consequuntur consectetur nisi deleniti enim facere similique fugit, blanditiis molestiae et odit alias
+										corporis. Voluptates molestiae quidem explicabo ullam ex quasi voluptatum ipsum officia, iusto sequi repellat
+										maxime nisi sunt quam iure pariatur vel accusantium praesentium? Rem facilis asperiores animi iure nam ad
+										officia natus, minus
+										dolores cum, autem sint harum aspernatur, nam perspiciatis quo consectetur? Magnam, deserunt cum dolorem
+										eligendi obcaecati aliquam magni qui, consequatur totam deleniti quas tenetur mollitia temporibus? Ipsam natus
+										beatae aspernatur facilis nulla laudantium repellendus voluptates quaerat quasi non officiis ipsum provident
+										consequuntur consectetur nisi deleniti enim facere similique fugit, blanditiis molestiae et odit alias
+										corporis. Voluptates molestiae quidem explicabo ullam ex quasi voluptatum ipsum officia, iusto sequi repellat
+										maxime nisi sunt quam iure pariatur vel accusantium praesentium? Rem facilis asperiores animi iure nam ad
+										officia natus, minus
+										dolores cum, autem sint harum aspernatur, nam perspiciatis quo consectetur? Magnam, deserunt cum dolorem
+										eligendi obcaecati aliquam magni qui, consequatur totam deleniti quas tenetur mollitia temporibus? Ipsam natus
+										beatae aspernatur facilis nulla laudantium repellendus voluptates quaerat quasi non officiis ipsum provident
+										consequuntur consectetur nisi deleniti enim facere similique fugit, blanditiis molestiae et odit alias
+										corporis. Voluptates molestiae quidem explicabo ullam ex quasi voluptatum ipsum officia, iusto sequi repellat
+										maxime nisi sunt quam iure pariatur vel accusantium praesentium? Rem facilis asperiores animi iure nam ad
+										distinctio natus dolores quasi.</div>
+									<div class="code__block code__block_red">
+										<img src="img/coin.svg" alt="coin" class="code__block-img">
+										<p class="code__block-text">BNB platform smart-contract is published on BNB blockchain.
+											Nobody can change its rules or algorithms, even administration. This provides our participants
+											unconditional confidence in safety of their
+											funds. Anyone can check smart-contract code and be sure that BNB ploatform is honest.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="home__reviews reviews">
+						<div class="reviews__content">
+							<h3 class="reviews__title">Reviews and Mentionings</h3>
+							<div class="reviews__slider swiper">
+								<div class="reviews__wrapper swiper-wrapper">
+									<div class="reviews__slide swiper-slide">
+										<img src="img/Home/reviews/1.svg" alt="logo" class="reviews__logo">
+									</div>
+									<div class="reviews__slide swiper-slide">
+										<img src="img/Home/reviews/1.svg" alt="logo" class="reviews__logo">
+									</div>
+									<div class="reviews__slide swiper-slide">
+										<img src="img/Home/reviews/2.svg" alt="logo" class="reviews__logo">
+									</div>
+									<div class="reviews__slide swiper-slide">
+										<img src="img/Home/reviews/1.svg" alt="logo" class="reviews__logo">
+									</div>
+									<div class="reviews__slide swiper-slide">
+										<img src="img/Home/reviews/1.svg" alt="logo" class="reviews__logo">
+									</div>
+									<div class="reviews__slide swiper-slide">
+										<img src="img/Home/reviews/2.svg" alt="logo" class="reviews__logo">
+									</div>
+									<div class="reviews__slide swiper-slide">
+										<img src="img/chicken.svg" alt="logo" class="reviews__logo">
+									</div>
+									<div class="reviews__slide swiper-slide">
+										<img src="img/Home/reviews/1.svg" alt="logo" class="reviews__logo">
+									</div>
+									<div class="reviews__slide swiper-slide">
+										<img src="img/Home/reviews/2.svg" alt="logo" class="reviews__logo">
+									</div>
+									<div class="reviews__slide swiper-slide">
+										<img src="img/Home/reviews/1.svg" alt="logo" class="reviews__logo">
+									</div>
+									<div class="reviews__slide swiper-slide">
+										<img src="img/Home/reviews/1.svg" alt="logo" class="reviews__logo">
+									</div>
+									<div class="reviews__slide swiper-slide">
+										<img src="img/Home/reviews/1.svg" alt="logo" class="reviews__logo">
+									</div>
+									<div class="reviews__slide swiper-slide">
+										<img src="img/Home/reviews/1.svg" alt="logo" class="reviews__logo">
+									</div>
+									<div class="reviews__slide swiper-slide">
+										<img src="img/Home/reviews/1.svg" alt="logo" class="reviews__logo">
+									</div>
+									<div class="reviews__slide swiper-slide">
+										<img src="img/Home/reviews/1.svg" alt="logo" class="reviews__logo">
+									</div>
+									<div class="reviews__slide swiper-slide">
+										<img src="img/Home/reviews/1.svg" alt="logo" class="reviews__logo">
+									</div>
+									<div class="reviews__slide swiper-slide">
+										<img src="img/Home/reviews/1.svg" alt="logo" class="reviews__logo">
+									</div>
+									<div class="reviews__slide swiper-slide">
+										<img src="img/Home/reviews/1.svg" alt="logo" class="reviews__logo">
+									</div>
+									<div class="reviews__slide swiper-slide">
+										<img src="img/Home/reviews/1.svg" alt="logo" class="reviews__logo">
+									</div>
+									<div class="reviews__slide swiper-slide">
+										<img src="img/Home/reviews/1.svg" alt="logo" class="reviews__logo">
+									</div>
+									<div class="reviews__slide swiper-slide">
+										<img src="img/Home/reviews/1.svg" alt="logo" class="reviews__logo">
+									</div>
+									<div class="reviews__slide swiper-slide">
+										<img src="img/Home/reviews/1.svg" alt="logo" class="reviews__logo">
+									</div>
+									<div class="reviews__slide swiper-slide">
+										<img src="img/Home/reviews/1.svg" alt="logo" class="reviews__logo">
+									</div>
+								</div>
+								<div class="swiper-pagination"></div>
+							</div>
+						</div>
+					</section>
+					<section class="home__replenishment replenishment">
+						<div class="replenishment__container">
+							<div class="replenishment__content">
+								<h3 class="replenishment__title">Replenishment of Our Farm</h3>
+								<div class="replenishment__block">
+									<ul class="replenishment__list">
+										<li class="replenishment__item">
+											<p class="replenishment__price">10002323 TRX</p>
+											<div class="replenishment__bottom-row">
+												<p class="replenishment__code">6ac78789..baac78789..baac78789..ba </p>
+												<a href="#" class="replenishment__link _icon-eye"></a>
+											</div>
+										</li>
+										<li class="replenishment__item">
+											<p class="replenishment__price">1000 TRX</p>
+											<div class="replenishment__bottom-row">
+												<p class="replenishment__code">6ac78789..baac78789..baac78789..ba </p>
+												<a href="#" class="replenishment__link _icon-eye"></a>
+											</div>
+										</li>
+										<li class="replenishment__item">
+											<p class="replenishment__price">1000 TRX</p>
+											<div class="replenishment__bottom-row">
+												<p class="replenishment__code">6ac78789..baac78789..baac78789..ba </p>
+												<a href="#" class="replenishment__link _icon-eye"></a>
+											</div>
+										</li>
+										<li class="replenishment__item">
+											<p class="replenishment__price">1000 TRX</p>
+											<div class="replenishment__bottom-row">
+												<p class="replenishment__code">6ac78789..baac78789..baac78789..ba </p>
+												<a href="#" class="replenishment__link _icon-eye"></a>
+											</div>
+										</li>
+										<li class="replenishment__item">
+											<p class="replenishment__price">1000 TRX</p>
+											<div class="replenishment__bottom-row">
+												<p class="replenishment__code">6ac78789..baac78789..baac78789..ba </p>
+												<a href="#" class="replenishment__link _icon-eye"></a>
+											</div>
+										</li>
+										<li class="replenishment__item">
+											<p class="replenishment__price">1000 TRX</p>
+											<div class="replenishment__bottom-row">
+												<p class="replenishment__code">6ac78789..baac78789..baac78789..ba </p>
+												<a href="#" class="replenishment__link _icon-eye"></a>
+											</div>
+										</li>
+										<li class="replenishment__item">
+											<p class="replenishment__price">1000 TRX</p>
+											<div class="replenishment__bottom-row">
+												<p class="replenishment__code">6ac78789..baac78789..baac78789..ba </p>
+												<a href="#" class="replenishment__link _icon-eye"></a>
+											</div>
+										</li>
+										<li class="replenishment__item">
+											<p class="replenishment__price">1000 TRX</p>
+											<div class="replenishment__bottom-row">
+												<p class="replenishment__code">6ac78789..baac78789..baac78789..ba </p>
+												<a href="#" class="replenishment__link _icon-eye"></a>
+											</div>
+										</li>
+										<li class="replenishment__item">
+											<p class="replenishment__price">1000 TRX</p>
+											<div class="replenishment__bottom-row">
+												<p class="replenishment__code">6ac78789..baac78789..baac78789..ba </p>
+												<a href="#" class="replenishment__link _icon-eye"></a>
+											</div>
+										</li>
+										<li class="replenishment__item">
+											<p class="replenishment__price">1000 TRX</p>
+											<div class="replenishment__bottom-row">
+												<p class="replenishment__code">6ac78789..baac78789..baac78789..ba </p>
+												<a href="#" class="replenishment__link _icon-eye"></a>
+											</div>
+										</li>
+										<li class="replenishment__item">
+											<p class="replenishment__price">1000 TRX</p>
+											<div class="replenishment__bottom-row">
+												<p class="replenishment__code">6ac78789..baac78789..baac78789..ba </p>
+												<a href="#" class="replenishment__link _icon-eye"></a>
+											</div>
+										</li>
+										<li class="replenishment__item">
+											<p class="replenishment__price">1000 TRX</p>
+											<div class="replenishment__bottom-row">
+												<p class="replenishment__code">6ac78789..baac78789..baac78789..ba </p>
+												<a href="#" class="replenishment__link _icon-eye"></a>
+											</div>
+										</li>
+										<li class="replenishment__item">
+											<p class="replenishment__price">1000 TRX</p>
+											<div class="replenishment__bottom-row">
+												<p class="replenishment__code">6ac78789..baac78789..baac78789..ba </p>
+												<a href="#" class="replenishment__link _icon-eye"></a>
+											</div>
+										</li>
+										<li class="replenishment__item">
+											<p class="replenishment__price">1000 TRX</p>
+											<div class="replenishment__bottom-row">
+												<p class="replenishment__code">6ac78789..baac78789..baac78789..ba </p>
+												<a href="#" class="replenishment__link _icon-eye"></a>
+											</div>
+										</li>
+										<li class="replenishment__item">
+											<p class="replenishment__price">1000 TRX</p>
+											<div class="replenishment__bottom-row">
+												<p class="replenishment__code">6ac78789..baac78789..baac78789..ba </p>
+												<a href="#" class="replenishment__link _icon-eye"></a>
+											</div>
+										</li>
+										<li class="replenishment__item">
+											<p class="replenishment__price">1000 TRX</p>
+											<div class="replenishment__bottom-row">
+												<p class="replenishment__code">6ac78789..baac78789..baac78789..ba </p>
+												<a href="#" class="replenishment__link _icon-eye"></a>
+											</div>
+										</li>
+										<li class="replenishment__item">
+											<p class="replenishment__price">1000 TRX</p>
+											<div class="replenishment__bottom-row">
+												<p class="replenishment__code">6ac78789..baac78789..baac78789..ba </p>
+												<a href="#" class="replenishment__link _icon-eye"></a>
+											</div>
+										</li>
+										<li class="replenishment__item">
+											<p class="replenishment__price">1000 TRX</p>
+											<div class="replenishment__bottom-row">
+												<p class="replenishment__code">6ac78789..baac78789..baac78789..ba </p>
+												<a href="#" class="replenishment__link _icon-eye"></a>
+											</div>
+										</li>
+										<li class="replenishment__item">
+											<p class="replenishment__price">1000 TRX</p>
+											<div class="replenishment__bottom-row">
+												<p class="replenishment__code">6ac78789..baac78789..baac78789..ba </p>
+												<a href="#" class="replenishment__link _icon-eye"></a>
+											</div>
+										</li>
+										<li class="replenishment__item">
+											<p class="replenishment__price">1000 TRX</p>
+											<div class="replenishment__bottom-row">
+												<p class="replenishment__code">6ac78789..baac78789..baac78789..ba </p>
+												<a href="#" class="replenishment__link _icon-eye"></a>
+											</div>
+										</li>
+										<li class="replenishment__item">
+											<p class="replenishment__price">1000 TRX</p>
+											<div class="replenishment__bottom-row">
+												<p class="replenishment__code">6ac78789..baac78789..baac78789..ba </p>
+												<a href="#" class="replenishment__link _icon-eye"></a>
+											</div>
+										</li>
+										<li class="replenishment__item">
+											<p class="replenishment__price">1000 TRX</p>
+											<div class="replenishment__bottom-row">
+												<p class="replenishment__code">6ac78789..baac78789..baac78789..ba </p>
+												<a href="#" class="replenishment__link _icon-eye"></a>
+											</div>
+										</li>
+										<li class="replenishment__item">
+											<p class="replenishment__price">1000 TRX</p>
+											<div class="replenishment__bottom-row">
+												<p class="replenishment__code">6ac78789..baac78789..baac78789..ba </p>
+												<a href="#" class="replenishment__link _icon-eye"></a>
+											</div>
+										</li>
+										<li class="replenishment__item">
+											<p class="replenishment__price">1000 TRX</p>
+											<div class="replenishment__bottom-row">
+												<p class="replenishment__code">6ac78789..baac78789..baac78789..ba </p>
+												<a href="#" class="replenishment__link _icon-eye"></a>
+											</div>
+										</li>
+										<li class="replenishment__item">
+											<p class="replenishment__price">1000 TRX</p>
+											<div class="replenishment__bottom-row">
+												<p class="replenishment__code">6ac78789..baac78789..baac78789..ba </p>
+												<a href="#" class="replenishment__link _icon-eye"></a>
+											</div>
+										</li>
+										<li class="replenishment__item">
+											<p class="replenishment__price">1000 TRX</p>
+											<div class="replenishment__bottom-row">
+												<p class="replenishment__code">6ac78789..baac78789..baac78789..ba </p>
+												<a href="#" class="replenishment__link _icon-eye"></a>
+											</div>
+										</li>
+										<li class="replenishment__item">
+											<p class="replenishment__price">1000 TRX</p>
+											<div class="replenishment__bottom-row">
+												<p class="replenishment__code">6ac78789..baac78789..baac78789..ba </p>
+												<a href="#" class="replenishment__link _icon-eye"></a>
+											</div>
+										</li>
+										<li class="replenishment__item">
+											<p class="replenishment__price">1000 TRX</p>
+											<div class="replenishment__bottom-row">
+												<p class="replenishment__code">6ac78789..baac78789..baac78789..ba </p>
+												<a href="#" class="replenishment__link _icon-eye"></a>
+											</div>
+										</li>
+										<li class="replenishment__item">
+											<p class="replenishment__price">1000 TRX</p>
+											<div class="replenishment__bottom-row">
+												<p class="replenishment__code">6ac78789..baac78789..baac78789..ba </p>
+												<a href="#" class="replenishment__link _icon-eye"></a>
+											</div>
+										</li>
+										<li class="replenishment__item">
+											<p class="replenishment__price">1000 TRX</p>
+											<div class="replenishment__bottom-row">
+												<p class="replenishment__code">6ac78789..baac78789..baac78789..ba </p>
+												<a href="#" class="replenishment__link _icon-eye"></a>
+											</div>
+										</li>
+									</ul>
+									<button class="replenishment__button">
+										See more
+									</button>
+								</div>
+							</div>
+						</div>
+					</section> -->
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__content">
+					<div class="footer__logo-block">
+						<a href="index.html" class="footer__logo"><img src="img/Header/logo.svg" alt="logo"></a>
+					</div>
+					<div class="footer__info-block">
+						<div class="footer__links">
+							<p class="footer__block-title ">Home</p>
+							<div class="footer__links-list">
+								<button data-goto-header data-goto=".about" class="footer__links-item">About</button>
+								<button data-goto-header data-goto=".nft-chicks" class="footer__links-item">NFT</button>
+								<button data-goto-header data-goto=".conditions" class="footer__links-item">Investment Conditions</button>
+								<button data-goto-header data-goto=".how-it-work" class="footer__links-item">How it works</button>
+								<button data-goto-header data-goto=".referral-program" class="footer__links-item">Referral program</button>
+								<a href="faq.html" class="footer__links-item">FAQ</a>
+								<!-- <button data-goto-header data-goto=".audit" class="footer__links-item">Smart-contract</button>
+						<button data-goto-header data-goto=".reviews" class="footer__links-item">Reviews</button>
+						<button data-goto-header data-goto=".replenishment" class="footer__links-item">New chickens</button> -->
+							</div>
+						</div>
+						<div class="footer__contacts">
+							<p class="footer__block-title">Contacts</p>
+							<a href="mailto:support@chickly.io" class="footer__contacts-link _icon-email">support@chickly.io </a>
+						</div>
+						<div class="footer__social">
+							<p class="footer__block-title">Social</p>
+							<div class="footer__social-list">
+								<a href="https://t.me/chickly_nft" class="footer__social-item">
+									<img src="img/footer/telegram.svg" alt="telegram">
+								</a>
+								<a href="https://twitter.com/chickly_nft" class="footer__social-item">
+									<img src="img/footer/twitter.svg" alt="twitter">
+								</a>
+								<a href="https://discord.gg/chickly" class="footer__social-item">
+									<img src="img/footer/discrod.svg" alt="discrod">
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="footer__copyright">
+						Copyright © 2022 Logotype. All rights reserved.
+					</div>
+					<button data-goto=".header" class="footer__comeback-arrow">
+						<img src="img/footer/comeback.svg" alt="comeback">
+					</button>
+				</div>
+			</div>
+		</footer>
 	</div>
+	<!-- <div id="popup" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">Закрыть</button>
+			<div class="popup__text">
+				Text
+			</div>
+		</div>
+	</div>
+</div> -->
+	<script src="js/app.min.js?_v=20220804201051"></script>
 </body>
-<style>
-	@charset "UTF-8";
-	@import url("https://fonts.googleapis.com/css?family=Montserrat:regular,700&display=swap");
-
-	*,
-	*::before,
-	*::after {
-		padding: 0px;
-		margin: 0px;
-		border: 0px;
-		box-sizing: border-box;
-	}
-
-	html,
-	body {
-		height: 100%;
-		margin: 0;
-		padding: 0;
-		min-width: 320px;
-		width: 100%;
-		color: #fff;
-		background-color: #5e5373;
-	}
-
-	body {
-		font-family: Montserrat;
-		font-size: 100%;
-		line-height: 1;
-		font-size: 1rem;
-	}
-
-	a {
-		text-decoration: underline;
-		color: #ebe691
-	}
-
-	a:visited {
-		text-decoration: underline;
-		color: #aaa768;
-	}
-
-	a:hover {
-		text-decoration: none;
-	}
-
-	ul li {
-		list-style: none;
-	}
-
-	img {
-		vertical-align: top;
-	}
-
-	.wrapper {
-		width: 100%;
-		min-height: 100%;
-		overflow: hidden;
-	}
-
-	.rootpage {
-		padding: 30px;
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-	}
-
-	@media (max-width: 767px) {
-		.rootpage {
-			padding: 30px 15px;
-		}
-	}
-
-	h1 {
-		color: #ebe691;
-		font-size: 2.5rem;
-		margin: 0px 0px 1.25rem 0px;
-	}
-
-	@media (max-width: 767px) {
-		h1 {
-			font-size: 1.85rem;
-			margin: 0px 0px 1.25rem 0px;
-		}
-	}
-
-	h2 {
-		color: #ebe691;
-		font-size: 1.25rem;
-		margin: 0px 0px 1rem 0px;
-	}
-
-	@media (max-width: 767px) {
-		h2 {
-			font-size: 1.125rem;
-			margin: 0px 0px 1rem 0px;
-		}
-	}
-
-	.rootpage__info {
-		line-height: 140%;
-		margin: 0px 0px 1.5rem 0px;
-	}
-
-	.rootpage__list {
-		margin: 0px 0px 2.25rem 1.25rem;
-	}
-
-	.rootpage__list li:not(:last-child) {
-		margin: 0px 0px 15px 0px;
-	}
-
-	.rootpage__contacts,
-	.rootpage__tnx {
-		border-radius: 200px;
-		padding: 20px 65px;
-		line-height: 140%;
-	}
-
-	@media (max-width: 767px) {
-
-		.rootpage__contacts,
-		.rootpage__tnx {
-			border-radius: 40px;
-			padding: 20px;
-		}
-	}
-
-	.rootpage__contacts {
-		background: #32b5a4;
-
-	}
-
-	.rootpage__contacts a {
-		color: #ebe691;
-	}
-
-	.rootpage__tnx {
-		background: #c22d63;
-		margin: 0px 0px 1rem 0px;
-	}
-</style>
 
 </html>
