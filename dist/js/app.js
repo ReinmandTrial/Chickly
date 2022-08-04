@@ -413,6 +413,49 @@
                 if (window.FLS) console.log(message);
             }), 0);
         }
+        function uniqArray(array) {
+            return array.filter((function(item, index, self) {
+                return self.indexOf(item) === index;
+            }));
+        }
+        function dataMediaQueries(array, dataSetValue) {
+            const media = Array.from(array).filter((function(item, index, self) {
+                if (item.dataset[dataSetValue]) return item.dataset[dataSetValue].split(",")[0];
+            }));
+            if (media.length) {
+                const breakpointsArray = [];
+                media.forEach((item => {
+                    const params = item.dataset[dataSetValue];
+                    const breakpoint = {};
+                    const paramsArray = params.split(",");
+                    breakpoint.value = paramsArray[0];
+                    breakpoint.type = paramsArray[1] ? paramsArray[1].trim() : "max";
+                    breakpoint.item = item;
+                    breakpointsArray.push(breakpoint);
+                }));
+                let mdQueries = breakpointsArray.map((function(item) {
+                    return "(" + item.type + "-width: " + item.value + "px)," + item.value + "," + item.type;
+                }));
+                mdQueries = uniqArray(mdQueries);
+                const mdQueriesArray = [];
+                if (mdQueries.length) {
+                    mdQueries.forEach((breakpoint => {
+                        const paramsArray = breakpoint.split(",");
+                        const mediaBreakpoint = paramsArray[1];
+                        const mediaType = paramsArray[2];
+                        const matchMedia = window.matchMedia(paramsArray[0]);
+                        const itemsArray = breakpointsArray.filter((function(item) {
+                            if (item.value === mediaBreakpoint && item.type === mediaType) return true;
+                        }));
+                        mdQueriesArray.push({
+                            itemsArray,
+                            matchMedia
+                        });
+                    }));
+                    return mdQueriesArray;
+                }
+            }
+        }
         var smooth_scroll_polyfills_min = __webpack_require__(2);
         let gotoblock_gotoBlock = (targetBlock, noHeader = false, speed = 500, offsetTop = 0) => {
             const targetBlockElement = document.querySelector(targetBlock);
@@ -4163,25 +4206,23 @@
         };
         const da = new DynamicAdapt("max");
         da.init();
-        {
-            const arrayItem = Array.from(document.querySelectorAll(".replenishment__item"));
-            const seeMoreBtn = document.querySelector(".replenishment__button");
-            let i = 0;
-            if (arrayItem.length > 0) {
-                for (i; 6 !== i; i++) {
+        const arrayItem = Array.from(document.querySelectorAll(".replenishment__item"));
+        const seeMoreBtn = document.querySelector(".replenishment__button");
+        let i = 0;
+        if (arrayItem.length > 0) {
+            for (i; 6 !== i; i++) {
+                const element = arrayItem[i];
+                element.classList.add("active", "see");
+            }
+            seeMoreBtn.addEventListener("click", addItem);
+            function addItem() {
+                let res = i + 6;
+                if (i < arrayItem.length) for (i; i !== res; i++) {
                     const element = arrayItem[i];
-                    element.classList.add("active", "see");
-                }
-                seeMoreBtn.addEventListener("click", addItem);
-                function addItem() {
-                    let res = i + 6;
-                    if (i < arrayItem.length) for (i; i !== res; i++) {
-                        const element = arrayItem[i];
-                        element.classList.add("active");
-                        setTimeout((() => {
-                            element.classList.add("see");
-                        }), 200);
-                    }
+                    element.classList.add("active");
+                    setTimeout((() => {
+                        element.classList.add("see");
+                    }), 200);
                 }
             }
         }
@@ -4189,7 +4230,6 @@
         isWebp();
         menuInit();
         spollers();
-        showMore();
         pageNavigation();
     })();
 })();
