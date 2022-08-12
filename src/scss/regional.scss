@@ -1,0 +1,212 @@
+.regional {
+   &__wrapper {
+   }
+
+   &__head {
+   }
+
+   &__main {
+   }
+}
+
+//========================================================================================================================================================
+
+.main-regional {
+   &__container {
+   }
+
+   &__content {
+      padding: rem(0) rem(15);
+   }
+
+   &__title {
+      font-weight: 700;
+      @include adaptiveValue('font-size', 55, 25);
+      line-height: 112%;
+      text-align: center;
+      margin-bottom: rem(27);
+      @media (max-width: $mobileSmall) {
+         margin-bottom: rem(18);
+      }
+   }
+
+   &__sub-title {
+      line-height: 129%;
+      text-align: center;
+      max-width: rem(730);
+      margin: 0 auto;
+      margin-bottom: rem(25);
+   }
+
+   &__select-block {
+      display: flex;
+      align-items: center;
+      gap: rem(35);
+      justify-content: center;
+      border-bottom: rem(2) solid rgba(199, 199, 199, 0.2);
+      padding-bottom: rem(35);
+   }
+
+   &__select-title {
+      font-size: rem(16);
+      font-weight: 700;
+      line-height: 129%;
+   }
+
+   &__select {
+   }
+   &__list {
+      margin-bottom: rem(60);
+   }
+   &__pagination {
+      margin-bottom: rem(30);
+   }
+}
+
+.regional-list {
+   @media (max-width: $mobile) {
+      margin-top: rem(20);
+   }
+   &__top-line {
+      display: grid;
+      grid-template-columns: 14% 14% 14% 14% 15% 14% 15%;
+      padding: rem(42) rem(0) rem(14) rem(0);
+      @media (max-width: $mobile) {
+         display: none;
+      }
+   }
+
+   &__top-item {
+      font-weight: 700;
+      font-size: rem(16);
+      line-height: 129%;
+      text-align: center;
+   }
+
+   &__main-content {
+   }
+
+   &__item {
+      &:not(:last-child) {
+         margin-bottom: rem(10);
+      }
+   }
+}
+.regional-item {
+   display: grid;
+   grid-template-columns: 14% 14% 14% 14% 15% 14% 15%;
+   background: #ffffff;
+   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06);
+   border-radius: rem(20);
+   @media (max-width: $mobile) {
+      display: block;
+      padding: rem(0) rem(12);
+   }
+   &__row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: rem(12) rem(0);
+      padding: rem(0) rem(5);
+      word-break: break-word;
+      &:not(:last-child) {
+         border-right: 1px solid #dadada;
+         @media (max-width: $mobile) {
+            border: none;
+            border-bottom: 1px solid #dadada;
+         }
+      }
+      @media (max-width: $mobile) {
+         display: flex;
+         margin: rem(0) rem(0);
+         padding: rem(0) rem(0) rem(0) rem(0);
+      }
+   }
+
+   &__col-top {
+      font-weight: 700;
+      font-size: rem(16);
+      line-height: 129%;
+      flex: 0 0 30%;
+      border-right: 1px solid #dadada;
+      height: 100%;
+      padding: rem(12) rem(5) rem(12) rem(0);
+      @media (max-width: em(360)) {
+         font-size: rem(14);
+      }
+      @media (min-width: $mobile) {
+         display: none;
+      }
+   }
+
+   &__col {
+      font-size: rem(16);
+      line-height: 129%;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: rem(12) rem(0);
+      @media (max-width: $mobile) {
+         flex: 0 0 70%;
+      }
+      &_coutry {
+         gap: rem(7);
+      }
+      &_social {
+         gap: rem(9);
+      }
+   }
+
+   &__flag {
+   }
+
+   &__country {
+   }
+
+   &__phone {
+   }
+
+   &__social-item {
+   }
+
+   &__link-ref {
+   }
+}
+
+.main-regional {
+}
+.pagination {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   &__content {
+      display: flex;
+      gap: rem(10);
+   }
+
+   &__item {
+      width: rem(25);
+      height: rem(25);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      color: #9e9ea8;
+      button {
+         display: block;
+      }
+      &.active {
+         background: linear-gradient(213.08deg, #f0da15 28.11%, #d86800 85.01%);
+         color: #ffffff;
+      }
+      &.disable {
+      }
+      &_prev {
+      }
+
+      &_next {
+      }
+   }
+}
