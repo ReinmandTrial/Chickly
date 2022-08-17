@@ -64,6 +64,7 @@
       font-size: 18px;
       text-align: left;
       display: block;
+      max-width: max-content;
       &:not(:last-child) {
          margin-bottom: 10px;
       }

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Interest scheme"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header-faq.htm',{})
+		<main class="page">
+			<div class="interest-scheme">
+				<div id="interestScreme" class="interest-scheme__wrapper">
+					<section class="interest-scheme__head head-chickly-block">
+						<div class="head-chickly-block__container">
+							<div class="head-chickly-block__content">
+								<div class="head-chickly-block__bg-img"><img src="@img/regional/head-bg.png"></div>
+								<div class="head-chickly-block__chickly"><img src="@img/scheme/chickly.svg"></div>
+								<div class="head-chickly-block__animations">
+									<div class="head-chickly-block__small-coin"><img src="@img/coin.svg" alt="coin">
+									</div>
+									<div class="head-chickly-block__big-coin"><img src="@img/coin.svg" alt="coin">
+									</div>
+									<div class="head-chickly-block__first-dot"><img src="@img/dot.svg" alt="dot"></div>
+									<div class="head-chickly-block__second-dot"><img src="@img/dot.svg" alt="dot"></div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="interest-scheme__calc interest-calc">
+						<div class="interest-calc__container">
+							<div class="interest-calc__content">
+								<h2 class="interest-calc__title">Interest scheme</h2>
+								<div class="interest-calc__block-calc">
+									<div class="interest-calc__card interest-calc__card_first">
+										<div class="interest-calc__card-title">
+											<span>BNB turnover</span>
+											<span data-tippy-content="Click Withdraw button, and you will get instantly all your " class="_icon-info"></span>
+										</div>
+										<div class="interest-calc__card-counter">
+											<button id="calcBnbPlus" type="button" class="interest-calc__card-counter-icon _icon-plus"></button>
+											<input id="calcInputBnb" placeholder="Enter the number" class="interest-calc__card-counter-input" type="text">
+											<p data-da=".interest-calc__card_first,480,2" class="interest-calc__card-counter-meaning">BNB</p>
+											<button id="calcBnbMinus" type="button" class="interest-calc__card-counter-icon _icon-minus"></button>
+										</div>
+										<p class="interest-calc__card-result">
+											+<span id="calcBnbResult">0.1</span>%
+										</p>
+									</div>
+									<span class="interest-calc__combination">+</span>
+									<div class="interest-calc__card interest-calc__card_second">
+										<div class="interest-calc__card-title">
+											<span>If you do not withdraw profit</span>
+											<span data-tippy-content="Click Withdraw button, and you will get instantly all your " class="_icon-info"></span>
+										</div>
+										<div class="interest-calc__card-counter">
+											<button id="calcDaysPlus" type="button" class="interest-calc__card-counter-icon _icon-plus"></button>
+											<input id="calcInputDays" placeholder="Enter the number" class="interest-calc__card-counter-input" type="text">
+											<p data-da=".interest-calc__card_second,480,2" class="interest-calc__card-counter-meaning">Days</p>
+											<button id="calcDaysMinus" type="button" class="interest-calc__card-counter-icon _icon-minus"></button>
+										</div>
+										<p class="interest-calc__card-result">
+											+<span id="calcDaysResult">0.1</span>%
+										</p>
+									</div>
+								</div>
+								<p class="interest-calc__text interest-calc__text_small">Your funds are credited to the wallet instantly and no one can stop them,
+									freeze them or anything else,
+									so you can be calm for their safety
+								</p>
+								<p class="interest-calc__equals">=</p>
+								<div class="interest-calc__block-profit">
+									<p class="interest-calc__profit-percent">Your daily profit <span>+<span id="calcTotalPercent">1</span>%</span></p>
+									<div class="interest-calc__profit-calc">
+										<input id="calcInvestmentSum" placeholder="Investment amount" class="interest-calc__profit-input" type="text">
+										<p class="interest-calc__profit-daily">Daily profit <span id="profitSum">0</span>$</p>
+									</div>
+								</div>
+								<p class="interest-calc__text ">It is a fully decentralized project written on a smart contract in the BSC network</p>
+								<button type="button" class="interest-calc__button">Smart contract</button>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</main>
+		@@include('html/_footer-faq.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+
+</html>

@@ -15,30 +15,39 @@
    }
 }
 
-._icon-youtube:before {
-  content: "\e908";
-}
-._icon-email:before {
-  content: "\e900";
-}
-._icon-vertical-arrow:before {
-  content: "\e901";
-}
-._icon-twitter:before {
-  content: "\e902";
-}
-._icon-schedule:before {
-  content: "\e903";
-}
-._icon-question:before {
-  content: "\e904";
-}
-._icon-eye:before {
-  content: "\e905";
-}
 ._icon-check:before {
-  content: "\e906";
+   content: '\e900';
 }
 ._icon-discord:before {
-  content: "\e907";
+   content: '\e901';
+}
+._icon-email:before {
+   content: '\e902';
+}
+._icon-eye:before {
+   content: '\e903';
+}
+._icon-info:before {
+   content: '\e904';
+}
+._icon-minus:before {
+   content: '\e905';
+}
+._icon-plus:before {
+   content: '\e906';
+}
+._icon-question:before {
+   content: '\e907';
+}
+._icon-schedule:before {
+   content: '\e908';
+}
+._icon-twitter:before {
+   content: '\e909';
+}
+._icon-vertical-arrow:before {
+   content: '\e90a';
+}
+._icon-youtube:before {
+   content: '\e90b';
 }
