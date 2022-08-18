@@ -3,6 +3,9 @@
    }
 
    &__head {
+      .head-chickly-block__content {
+         @include adaptiveValue('height', 520, 285);
+      }
    }
 
    &__calc {
@@ -10,7 +13,7 @@
 }
 
 .interest-calc {
-   background: url('@img/scheme/bg.png') 0 0 / 100% auto no-repeat;
+   background: url('@img/scheme/bg.png') bottom / 100% auto no-repeat;
    padding-bottom: rem(200);
    margin-bottom: rem(-200);
    &__container {
