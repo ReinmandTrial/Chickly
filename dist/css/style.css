@@ -737,8 +737,9 @@ h6 {
 }
 
 .header__content {
-  margin-right: 15px;
-  max-width: 1110px;
+  margin-right: 0.9375rem;
+  max-width: 69.375rem;
+  gap: 1.875rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -748,7 +749,8 @@ h6 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 64px;
+  position: relative;
+  z-index: 5;
 }
 
 @supports (margin-left: clamp( 0.9375rem , -22.6512096774rem  +  29.0322580645vw , 12.1875rem )) {
@@ -770,18 +772,34 @@ h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 28.125rem;
   width: 100%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   font-size: 18px;
-  line-height: 100%;
+}
+
+@supports (gap: clamp( 1.25rem , -9.2138472033rem  +  21.8281036835vw , 11.25rem )) {
+  .header__logo-menu-block {
+    gap: clamp( 1.25rem , -9.2138472033rem  +  21.8281036835vw , 11.25rem );
+  }
+}
+
+@supports not (gap: clamp( 1.25rem , -9.2138472033rem  +  21.8281036835vw , 11.25rem )) {
+  .header__logo-menu-block {
+    gap: calc(1.25rem + 10 * (100vw - 47.9375rem) / 45.8125);
+  }
 }
 
 .header__logo {
   position: relative;
   z-index: 100;
+}
+
+.header__menu {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .header__button {
@@ -793,6 +811,9 @@ h6 {
   background: -o-linear-gradient(left, rgb(2, 0, 36) 0%, rgb(128, 128, 128) 54%);
   background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(128, 128, 128) 54%);
   pointer-events: none;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
 }
 
 .menu {
@@ -806,7 +827,9 @@ h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 30px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px 30px;
 }
 
 .menu__head-dropdown {
@@ -842,11 +865,8 @@ h6 {
   border-radius: 10px;
   padding: 14px 14px;
   width: 175px;
-  left: 50%;
-  top: 100%;
-  -webkit-transform: translate(-50%, 0px);
-      -ms-transform: translate(-50%, 0px);
-          transform: translate(-50%, 0px);
+  left: 0;
+  top: calc(100% + 0.3125rem);
   z-index: 20;
 }
 
@@ -1443,7 +1463,7 @@ h6 {
 .benefits__card-bg-text {
   font-weight: 700;
   font-size: 35px;
-  line-height: 96%;
+  line-height: 140%;
   text-align: center;
   max-width: 100px;
   background: -o-linear-gradient(236.92deg, #70e705 28.11%, #0e6b12 96.2%);
@@ -3853,6 +3873,12 @@ h6 {
   margin: 0 auto;
 }
 
+.interest-calc__button:disabled {
+  background: -webkit-gradient(linear, left top, right top, from(rgb(2, 0, 36)), color-stop(54%, rgb(128, 128, 128)));
+  background: -o-linear-gradient(left, rgb(2, 0, 36) 0%, rgb(128, 128, 128) 54%);
+  background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(128, 128, 128) 54%);
+}
+
 .tippy-box[data-animation=fade][data-state=hidden] {
   opacity: 0;
 }
@@ -4578,7 +4604,17 @@ h6 {
   }
 
   .header__logo-menu-block {
+    padding: 0.5625rem 0rem;
     max-width: none;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .header__menu {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
   }
 
   .header__button {
@@ -4611,9 +4647,15 @@ h6 {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
   }
 
   .menu-open .menu__body {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    gap: 0;
     left: 0;
     -webkit-transition: all 0.5s ease 0s;
     -o-transition: all 0.5s ease 0s;
@@ -4625,7 +4667,7 @@ h6 {
   }
 
   .menu__head-dropdown {
-    display: block;
+    display: none;
     height: auto;
     margin: 0 auto;
     font-size: 25px;
@@ -4635,9 +4677,6 @@ h6 {
     visibility: visible;
     opacity: 1;
     position: static;
-    -webkit-transform: translate(0px, 0px);
-        -ms-transform: translate(0px, 0px);
-            transform: translate(0px, 0px);
     background-color: transparent;
     display: block;
     -webkit-box-shadow: none;
@@ -4653,7 +4692,7 @@ h6 {
   .menu__link {
     font-size: 25px;
     text-align: center;
-    padding: 20px 0px 10px 0px;
+    padding: 0.625rem 0rem 0.625rem 0rem;
   }
 
   .menu__first-coin {
@@ -4852,7 +4891,6 @@ h6 {
 
   .benefits__card-bg-text {
     font-size: 20px;
-    line-height: 141%;
   }
 
   .nft-chicks__title {
@@ -5205,6 +5243,12 @@ h6 {
   .interest-calc__button {
     padding: 0.5625rem 0.9375rem;
     max-width: 18.125rem;
+  }
+}
+
+@media (max-width: 47.9375em) {
+  .header__logo-menu-block {
+    gap: inherit;
   }
 }
 

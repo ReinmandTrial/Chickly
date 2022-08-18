@@ -24,24 +24,26 @@
 
    &__content {
       @include adaptiveValue('margin-left', 195, 15, 1920, 1300, 3);
-      margin-right: 15px;
-      max-width: 1110px;
+      margin-right: rem(15);
+      max-width: rem(1110);
+      gap: rem(30);
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 64px;
+      position: relative;
+      z-index: 5;
    }
 
    &__logo-menu-block {
       display: flex;
+      @include adaptiveValue('gap', 180, 20, 1500, 767, 0);
       align-items: center;
-      max-width: rem(450);
       width: 100%;
-      justify-content: space-between;
       font-size: 18px;
-      line-height: 100%;
       @media (max-width: $mobile) {
+         padding: rem(9) rem(0);
          max-width: none;
+         justify-content: space-between;
       }
    }
 
@@ -51,6 +53,11 @@
    }
 
    &__menu {
+      flex: auto;
+      display: flex;
+      @media (max-width: $mobile) {
+         flex: none;
+      }
    }
 
    &__button {
@@ -61,6 +68,7 @@
       width: 160px;
       background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(128, 128, 128, 1) 54%);
       pointer-events: none;
+      flex: none;
       // position: relative;
       // box-shadow: 0 5px 0px #3c354a;
       // &:active {
@@ -93,7 +101,8 @@
    &__body {
       display: flex;
       align-items: center;
-      gap: 30px;
+      flex-wrap: wrap;
+      gap: 10px 30px;
       @media (max-width: $mobile) {
          position: fixed;
          top: 0;
@@ -107,7 +116,10 @@
          display: flex;
          flex-direction: column;
          justify-content: space-between;
+         flex-wrap: nowrap;
          .menu-open & {
+            justify-content: flex-start;
+            gap: 0;
             left: 0;
             transition: all 0.5s ease 0s;
          }
@@ -150,7 +162,7 @@
          }
       }
       @media (max-width: $mobile) {
-         display: block;
+         display: none;
          height: auto;
          margin: 0 auto;
          font-size: 25px;
@@ -167,15 +179,13 @@
       border-radius: 10px;
       padding: 14px 14px;
       width: 175px;
-      left: 50%;
-      top: 100%;
-      transform: translate(-50%, 0px);
+      left: 0;
+      top: calc(100% + rem(5));
       z-index: 20;
       @media (max-width: $mobile) {
          visibility: visible;
          opacity: 1;
          position: static;
-         transform: translate(0px, 0px);
          background-color: transparent;
          display: block;
          box-shadow: none;
@@ -203,7 +213,7 @@
       @media (max-width: $mobile) {
          font-size: 25px;
          text-align: center;
-         padding: 20px 0px 10px 0px;
+         padding: rem(10) rem(0) rem(10) rem(0);
       }
    }
    &__first-coin {

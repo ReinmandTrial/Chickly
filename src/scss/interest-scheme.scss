@@ -284,6 +284,9 @@
       color: #ffffff;
       display: block;
       margin: 0 auto;
+      &:disabled {
+         background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(128, 128, 128) 54%);
+      }
       @media (max-width: $mobile) {
          padding: rem(9) rem(15);
          max-width: rem(290);

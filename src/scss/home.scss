@@ -502,7 +502,7 @@
    &__card-bg-text {
       font-weight: 700;
       font-size: 35px;
-      line-height: 96%;
+      line-height: 140%;
       text-align: center;
       max-width: 100px;
       background: linear-gradient(213.08deg, #70e705 28.11%, #0e6b12 96.2%);
@@ -512,7 +512,6 @@
       text-fill-color: transparent;
       @media (max-width: $mobile) {
          font-size: 20px;
-         line-height: 141%;
       }
    }
 }
