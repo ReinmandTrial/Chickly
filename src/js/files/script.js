@@ -5,44 +5,61 @@ import { flsModules } from './modules.js';
 
 //========================================================================================================================================================
 
-{
-   const arrayItem = Array.from(document.querySelectorAll('.replenishment__item'));
+const newChickListArr = document.querySelectorAll('.replenishment__item');
+if (newChickListArr.length !== 0) {
    const seeMoreBtn = document.querySelector('.replenishment__button');
-   let i = 0;
+   seeMoreBtn.addEventListener('click', openChunk);
+   let i;
 
-   if (arrayItem.length > 0) {
-      for (i; i !== 6; i++) {
-         const element = arrayItem[i];
+   initNewChick();
+
+   function initNewChick() {
+      for (i = 0; i < (newChickListArr.length > 6 ? 6 : newChickListArr.length); i++) {
+         const element = newChickListArr[i];
          element.classList.add('active', 'see');
       }
+      if (newChickListArr.length <= 6) {
+         hiddenBtn();
+      }
+   }
 
-      seeMoreBtn.addEventListener('click', addItem);
+   function hiddenBtn() {
+      seeMoreBtn.classList.add('_hidden');
+   }
 
-      function addItem() {
-         let res = i + 6;
-         if (i < arrayItem.length) {
-            for (i; i !== res; i++) {
-               const element = arrayItem[i];
-               element.classList.add('active');
-               setTimeout(() => {
-                  element.classList.add('see');
-               }, 200);
-            }
+   function openChunk() {
+      const itemIsHidden = newChickListArr.length - document.querySelectorAll('.replenishment__item.active').length;
+      const needRender = i + 6;
+      if (itemIsHidden > 6) {
+         for (i; i < needRender; i++) {
+            const element = newChickListArr[i];
+            element.classList.add('active');
+            setTimeout(() => {
+               element.classList.add('see');
+            }, 100);
          }
+      } else {
+         const lastRender = i + itemIsHidden;
+         for (i; i < lastRender; i++) {
+            const element = newChickListArr[i];
+            element.classList.add('active');
+            setTimeout(() => {
+               element.classList.add('see');
+            }, 0);
+         }
+         hiddenBtn();
       }
    }
 }
 
 //regional========================================================================================================================================================
-
-const product = document.querySelector('.regional-list__main-content');
-if (product) {
+const regionaProduct = document.querySelector('.regional-list__main-content');
+if (regionaProduct) {
    const lengthPart = 6; // количество элементов в 1 части
-   const pagination = document.querySelector('.pagination__content');
+   const regionalPaginationEl = document.querySelector('.regional-pagination');
 
-   let data = [...product.children]; // Тут храним все `.card`, типо аналог БД, т.е исходные данные.
+   let data = [...regionaProduct.children]; // Тут храним все `.card`, типо аналог БД, т.е исходные данные.
    let chunks = SplitParts(data); // Тут храним части. Ниже описание функции.
-
    RenderChunks(0); // Рендерим первую часть. Описание функии ниже.
    RenderPagination(); // Рендерим пагинацию. Описание тоже ниже.
 
@@ -53,48 +70,15 @@ if (product) {
       if (curVal === 'ALL') {
          chunks = SplitParts(data);
       } else {
-         let curArr = [SplitParts(data.filter((elem) => elem.classList.contains(curVal)))];
-         chunks = curArr;
+         chunks = SplitParts(
+            data.filter(function (elem) {
+               return elem.classList.contains(curVal);
+            })
+         );
       }
 
       RenderChunks(0); // После отработки фильтра важно перерендерить части..
       RenderPagination(); // и пагинацию
-   });
-
-   // Механика работы пагинации
-   pagination.addEventListener('click', (e) => {
-      e.preventDefault();
-      let item = e.target.closest('.pagination__item'); // Тут тоже делегирование, как в механике выше.
-      if (item) {
-         let active = pagination.querySelector('.pagination__item.active'), // получим активную страницу
-            part; // сюда запишем номер части, для проверок пагинации
-         if (item.classList.contains('pagination__item_prev') || item.classList.contains('pagination__item_next')) {
-            // если нажата кнопка "вперёд" или "назад"
-            if (item.classList.contains('disable')) return false; // Если кнопка имеет класс `disable`, то прекращаем выполнение кода ниже
-            part = +active.dataset.part; // записываем номер части активной страницы.
-            part = item.classList.contains('pagination__item_prev') ? part - 1 : part + 1; // Если нажата кнопка "назад", то отнимаем единицу активной старница, если "вперёд", то прибавляем.
-
-            RenderChunks(part); // Рендерим страница
-            // Меняем в пагинации активную страницу
-            active.classList.remove('active'); // Находим активную и удаляем класс `active`
-            pagination.querySelector(`.pagination__item[data-part="${part}"]`).classList.add('active'); // находим страницу с `data-part`, который равен активной странице и добавляем ему класс `active`
-         } else {
-            // Если нажаты кнопки страницы (1, 2, 3 и т.п.)
-            active.classList.remove('active'); // удаляем класс `active` у активной.
-            item.classList.add('active'); // добавляем нажатой кнопке класс `active`
-            part = +item.dataset.part; // получаем её номер части
-            RenderChunks(part); // Рендерим страницу.
-         }
-         // Тут запрещаем или разрешаем использовать кнопки "вперёд" или "назад", в зависимости от того, какая часть сейчас активна.
-         let prev = pagination.querySelector('.pagination__item.pagination__item_prev'),
-            next = pagination.querySelector('.pagination__item.pagination__item_next');
-
-         // Сначала удалим у них класс `disable`, если он есть
-         if (prev.classList.contains('disable')) prev.classList.remove('disable');
-         if (next.classList.contains('disable')) next.classList.remove('disable');
-         if (part === 0) prev.classList.add('disable'); // Проверим является ли активная страница началом частей, если да, то запретим использовать кнопку "назад"
-         if (part === chunks.length - 1) next.classList.add('disable'); // если активная является концом частей, то запрещаем "вперёд".
-      }
    });
 
    // Функция которая делит массив на части.
@@ -102,7 +86,7 @@ if (product) {
       // передаём массив, который нужно разбить
       if (arr.length > lengthPart) {
          // проверяем, имеет ли переданный массив длину больше, чем длина части
-         var _chunks = [],
+         const _chunks = [],
             // подготавливаем возращаемый массив с частями
             parts = Math.floor(arr.length / lengthPart); // сколько частей получится
 
@@ -112,7 +96,7 @@ if (product) {
          } // добавляем часть в массив с частями
 
          return _chunks; // возвращаем массив
-      } else return arr; // если получаемый массив меньше длины части, то возвращаем его же.
+      } else return [arr]; // если получаемый массив меньше длины части, то возвращаем его же.
    }
 
    // Функция для вывода конкретно части в HTML
@@ -120,31 +104,95 @@ if (product) {
       // передаём порядковый номер части
       if (part >= 0 && part < chunks.length) {
          // если номер части > 0 и < длины частей
-         product.innerHTML = ''; // очищаем элемент, куда будем выводить части
+         regionaProduct.innerHTML = ''; // очищаем элемент, куда будем выводить части
 
          chunks[part].map(function (elem) {
-            return product.append(elem);
+            return regionaProduct.append(elem);
          }); // Выводим т.к. в исходном массиве уже сразу Element, то мы можем добавить его через .append
       } else return false;
    }
 
+   // Механика работы пагинации
+   regionalPaginationEl.addEventListener('click', (e) => {
+      e.preventDefault();
+      let item = e.target;
+      if (item.classList.contains('regional-pagination__item') || item.classList.contains('regional-pagination__arrow')) {
+         let active = regionalPaginationEl.querySelector('.regional-pagination__item._active'); // получим активную страницу
+         let part; // сюда запишем номер части, для проверок пагинации
+         if (item.classList.contains('regional-pagination__arrow')) {
+            // если нажата кнопка "вперёд" или "назад"
+            if (item.classList.contains('_disable')) return false; // Если кнопка имеет класс `_disable`, то прекращаем выполнение кода ниже
+            part = +active.dataset.part; // записываем номер части активной страницы.
+            part = item.classList.contains('regional-pagination__arrow_prev') ? part - 1 : part + 1; // Если нажата кнопка "назад", то отнимаем единицу активной старница, если "вперёд", то прибавляем.
+            RenderChunks(part); // Рендерим страница
+            // Меняем в пагинации активную страницу
+            active.classList.remove('_active'); // Находим активную и удаляем класс `active`
+            regionalPaginationEl.querySelector(`.regional-pagination__item[data-part="${part}"]`).classList.add('_active'); // находим страницу с `data-part`, который равен активной странице и добавляем ему класс `active`
+         } else {
+            // Если нажаты кнопки страницы (1, 2, 3 и т.п.)
+            active.classList.remove('_active'); // удаляем класс `active` у активной.
+            item.classList.add('_active'); // добавляем нажатой кнопке класс `active`
+            part = +item.dataset.part; // получаем её номер части
+            RenderChunks(part); // Рендерим страницу.
+         }
+         // Тут запрещаем или разрешаем использовать кнопки "вперёд" или "назад", в зависимости от того, какая часть сейчас активна.
+         let prev = regionalPaginationEl.querySelector('.regional-pagination__arrow_prev');
+         let next = regionalPaginationEl.querySelector('.regional-pagination__arrow_next');
+
+         // Сначала удалим у них класс `_disable`, если он есть
+         if (prev.classList.contains('_disable')) prev.classList.remove('_disable');
+         if (next.classList.contains('_disable')) next.classList.remove('_disable');
+         if (part === 0) prev.classList.add('_disable'); // Проверим является ли активная страница началом частей, если да, то запретим использовать кнопку "назад"
+         if (part === chunks.length - 1) next.classList.add('_disable'); // если активная является концом частей, то запрещаем "вперёд".
+         hideOverPages();
+      }
+   });
+
    function RenderPagination() {
-      pagination.innerHTML = '';
+      regionalPaginationEl.innerHTML = '';
       if (chunks.length > 1) {
+         regionalPaginationEl.innerHTML = '<div class="regional-pagination__list"></div>';
+         const regionalPaginationList = document.querySelector('.regional-pagination__list');
          // Добавляем кнопки
-         chunks.map((elem, i) =>
-            pagination.insertAdjacentHTML(
+         chunks.map((e, i) =>
+            regionalPaginationList.insertAdjacentHTML(
                'beforeend',
-               `<button class="pagination__item ${i === 0 ? ' active' : ''}" data-part="${i}">${i + 1}</button>`
+               `<button class="regional-pagination__item ${i === 0 ? '_active' : ''}" data-part="${i}">${i + 1}</button>`
             )
          );
+
          // Добавляем кнопки "вперёд" и "назад"
-         pagination.insertAdjacentHTML('afterbegin', '<button class="pagination__item pagination__item_prev disable"><</button>'); // Т.к. данная функция создаёт пагинацию у которой первая страница активна, то сразу запрещаем кнопке "назад" работать.
-         pagination.insertAdjacentHTML('beforeend', '<button class="pagination__item pagination__item_next">></button>');
+         regionalPaginationEl.insertAdjacentHTML(
+            'afterbegin',
+            '<button type="button"  class="regional-pagination__arrow regional-pagination__arrow_prev _icon-arrow-bottom _disable"></button>'
+         ); // Т.к. данная функция создаёт пагинацию у которой первая страница активна, то сразу запрещаем кнопке "назад" работать.
+         regionalPaginationEl.insertAdjacentHTML(
+            'beforeend',
+            '<button type="button" class="regional-pagination__arrow regional-pagination__arrow_next _icon-arrow-bottom"></button>'
+         );
+      }
+      hideOverPages();
+   }
+   function hideOverPages() {
+      const regionalPaginationList = document.querySelector('.regional-pagination__list');
+      const active = regionalPaginationEl.querySelector('.regional-pagination__item._active'); // получим активную страницу
+      if (regionalPaginationList) {
+         let items = [...regionalPaginationList.children];
+         if (items.length > 5) {
+            items.forEach((item) => item.classList.add('_hide'));
+            items[0].classList.remove('_hide');
+            if (active.previousElementSibling) {
+               active.previousElementSibling.classList.remove('_hide');
+            }
+            active.classList.remove('_hide');
+            if (active.nextElementSibling) {
+               active.nextElementSibling.classList.remove('_hide');
+            }
+            items[items.length - 1].classList.remove('_hide');
+         }
       }
    }
 }
-
 //========================================================================================================================================================
 
 //calc START========================================================================================================================================================
@@ -178,6 +226,8 @@ if (MAIN_CALC_EL) {
    function calcInit() {
       calcBnbInputEL.value = '400';
       calcDaysInputEL.value = '1';
+      calcBnbResultEl.textContent = 1.15;
+      calcDaysResultEl.textContent = 0.1;
       calcTotalPercent();
    }
    //========================================================================================================================================================
@@ -197,8 +247,64 @@ if (MAIN_CALC_EL) {
    }
    function calcBnbPercent() {
       const resultBnb = Math.trunc(+calcBnbInputEL.value / 400);
-      calcBnbResultEl.textContent = resultBnb / 10;
+      let bnbResult = 1;
+      const stepsNow = stepsCounter(resultBnb);
+      firstStep();
+      calcBnbResultEl.textContent = bnbResult.toFixed(3);
       calcTotalPercent();
+
+      function firstStep() {
+         let curVal = stepsNow.get();
+         if (curVal >= 7) {
+            bnbResult += 1.05;
+            stepsNow.sub(7);
+            secondStep();
+         } else {
+            bnbResult += curVal * 0.15;
+         }
+      }
+      function secondStep() {
+         let curVal = stepsNow.get();
+         if (curVal >= 14) {
+            bnbResult += 0.98;
+            stepsNow.sub(14);
+            thirdStep();
+         } else {
+            bnbResult += curVal * 0.07;
+         }
+      }
+      function thirdStep() {
+         let curVal = stepsNow.get();
+         if (curVal >= 28) {
+            bnbResult += 0.98;
+            stepsNow.sub(28);
+            fourthStep();
+         } else {
+            bnbResult += curVal * 0.035;
+         }
+      }
+      function fourthStep() {
+         let curVal = stepsNow.get();
+         if (curVal >= 50) {
+            bnbResult += 1;
+            stepsNow.sub(50);
+            fifthStep();
+         } else {
+            bnbResult += curVal * 0.02;
+         }
+      }
+      function fifthStep() {
+         let curVal = stepsNow.get();
+         bnbResult += curVal * 0.01;
+      }
+   }
+
+   function stepsCounter(val) {
+      let result = val;
+      return {
+         sub: (n) => (result -= n),
+         get: () => result,
+      };
    }
 
    //========================================================================================================================================================
@@ -218,15 +324,16 @@ if (MAIN_CALC_EL) {
    }
    function calcDaysPercent() {
       const resultDays = calcDaysInputEL.value / 10;
-      calcDaysResultEl.textContent = resultDays;
+      calcDaysResultEl.textContent = resultDays.toFixed(3);
       calcTotalPercent();
    }
+   //========================================================================================================================================================
 
    //========================================================================================================================================================
 
    function calcTotalPercent() {
-      const resultPercent = +calcBnbResultEl.textContent + +calcDaysResultEl.textContent + 1;
-      calcTotalPercentEl.textContent = resultPercent.toFixed(1);
+      const resultPercent = +calcBnbResultEl.textContent + +calcDaysResultEl.textContent;
+      calcTotalPercentEl.textContent = resultPercent.toFixed(3);
       calcDailyProfit();
    }
 
@@ -235,9 +342,59 @@ if (MAIN_CALC_EL) {
 
    function calcDailyProfit() {
       const profit = (calcInvestmentSumInputEl.value / 100) * +calcTotalPercentEl.textContent;
-      calcProfitSumEl.textContent = profit.toFixed(1);
+      calcProfitSumEl.textContent = `${profit.toFixed(3)}$`;
    }
 
    //calc END========================================================================================================================================================
 }
 
+//languages START========================================================================================================================================================
+import { translations, mobListTranslations } from './translations.js';
+
+{
+   const langHeadEL = document.querySelector('.language-block__flag');
+   const langHeadFlagImgEl = document.querySelector('.language-block__flag-head-img');
+   const langListLEl = document.querySelector('.language-block__body');
+
+   let lang = (window.hasOwnProperty('localStorage') && window.localStorage.getItem('lang')) || 'eng';
+   let flagLang = (window.hasOwnProperty('localStorage') && window.localStorage.getItem('flagLang')) || 'img/Header/eng.png';
+
+   setLang();
+
+   langListLEl.addEventListener('click', (e) => {
+      if (e.target.classList.contains('language-block__item')) {
+         lang = e.target.querySelector('.language-block__item-text').textContent;
+         flagLang = e.target.querySelector('.language-block__flag-img').getAttribute('src');
+         window.localStorage.setItem('lang', lang);
+         window.localStorage.setItem('flagLang', flagLang);
+         location.reload();
+         setLang();
+      }
+   });
+
+   function setLang() {
+      langHeadFlagImgEl.setAttribute('src', flagLang);
+      if (langHeadEL.querySelector('source')) {
+         langHeadEL.querySelector('source').setAttribute('srcset', flagLang);
+      }
+      for (let p in translations[lang]) {
+         if (document.getElementById(p)) {
+            document.getElementById(p).innerHTML = translations[lang][p];
+         }
+         if (document.querySelector(`.${p}[data-placeholder]`)) {
+            document.querySelector(`.${p}[data-placeholder]`).setAttribute('placeholder', translations[lang][p]);
+         }
+      }
+      translateListMob();
+   }
+
+   function translateListMob() {
+      for (let p in mobListTranslations[lang]) {
+         document.querySelectorAll('.' + p).forEach((el) => {
+            el.innerHTML = mobListTranslations[lang][p];
+         });
+      }
+   }
+}
+
+//languages END========================================================================================================================================================

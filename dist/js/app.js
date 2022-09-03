@@ -6729,93 +6729,849 @@
         };
         const da = new DynamicAdapt("max");
         da.init();
-        {
-            const arrayItem = Array.from(document.querySelectorAll(".replenishment__item"));
+        const translations = {
+            eng: {
+                headerHome: 'Home <span class="_icon-arrow-bottom"></span>',
+                headerAbout: "About",
+                headerNft: "NFT",
+                headerCondition: "Investment Conditions",
+                headerHowWork: "How it works",
+                headerReferral: "Referral program",
+                headerScheme: "Interest scheme",
+                headerRegional: "Regional",
+                headerFaq: "FAQ",
+                headerSmartContract: "Smart-contract",
+                headerReviews: "Reviews",
+                headerNewChickens: "New chickens",
+                headerBtn: "Connect Wallet",
+                otherHeaderHome: 'Home <span class="_icon-arrow-bottom"></span>',
+                otherHeaderAbout: "About",
+                otherHeaderNft: "NFT",
+                otherHeaderCondition: "Investment Conditions",
+                otherHeaderHowWork: "How it works",
+                otherHeaderReferral: "Referral program",
+                otherHeaderScheme: "Interest scheme",
+                otherHeaderRegional: "Regional",
+                otherHeaderFaq: "FAQ",
+                otherHeaderSmartContract: "Smart-contract",
+                otherHeaderReviews: "Reviews",
+                otherHeaderNewChickens: "New chickens",
+                otherHeaderBtn: "Connect Wallet",
+                aboutTitle: "Reliable Investments with",
+                aboutSubTitle: "Earn up to <span>+220%</span> of your NFT cost",
+                aboutItem1: "Blockchain decentralized platform",
+                aboutItem2: "Totally secure income based on BNB smart-contract",
+                aboutItem3: "Smart-contract verified and audited by independent company",
+                aboutBtnDiscrord: "Join Discord",
+                aboutBtnTwitter: "Follow Twitter",
+                aboutBtnConnect: "Connect Wallet",
+                benefitsTitle: "BNB Chain boasts over <span>3+ Million Weekly Unique Active Users</span>",
+                benefitsItem1: "First most profitable project on NFT ",
+                benefitsItem2: "Unlimited earnings with ever-growing rates ",
+                nftTitle: "Profitable NFT chicks",
+                nftProfit1: "profit",
+                nftProfit2: "profit",
+                nftProfit3: "profit",
+                nftProfit4: "profit",
+                nftProfit5: "profit",
+                nftBuy1: "Buy",
+                nftBuy2: "Buy",
+                nftBuy3: "Buy",
+                nftBuy4: "Buy",
+                nftBuy5: "Buy",
+                conditionTitle: "Investment Conditions",
+                conditionItem1: 'Working on <span class="conditions__prompt-icon-coin conditions__prompt-bolt-text">BNB</span> network <span data-help="You can buy our NFTs by connecting your wallet. All transactions on the site are carried out only through Binance Smart Chain."class="_icon-question "></span>',
+                conditionItem2: '\tMinimal deposit <span class="conditions__prompt-icon-coin conditions__prompt-bolt-text">0.04 BNB</span>',
+                conditionItem3: 'Total income <span class="conditions__prompt-bolt-text">up to 220%</span> <span data-help="The final profit of the NFT depends on the Hen you bought. As you can see in our NFT block, the profit range from 170% to 220%. The last one is the most profitable."class="_icon-question"></span>',
+                conditionItem4: '\tEarnings <span class="conditions__prompt-bolt-text">every moment,</span> withdraw any time',
+                conditionSlideTitle1: "BASIC INTEREST RATE",
+                conditionSlideSubTitle1: "+1% every 24 hours (+0.0416% hourly)",
+                conditionSlideSubText1: "BNB smart-contract calculate profit up to every NFT since the date it was bought. Every hour you will get +0.0416%, every day +1%.",
+                conditionSlideTitle2: "PERSONAL HOLD-BONUS",
+                conditionSlideSubTitle2: "+0.1% for every 24 hours without withdraw",
+                conditionSlideSubText2: "Smart-contract calculates hold-bonus from your deposit, or last withdraw date. If you did not request payment, it will charge you an additional bonus. After 24 hours +0.1%, after 48 hours +0.2%, after 72 hours +0.3% and so on.",
+                conditionSlideTitle3: "CONTRACT TOTAL AMOUNT BONUS",
+                conditionSlideSubTitle3: "+0.15% for every 400 BNB on smart-contract",
+                conditionSlideSubText3: "Smart-contract check its current balance and charge an additional +0.15% up to your earnings for every 400 BNB on balance. Current bonus : 0.0%",
+                howWorkTitle: "How it Works?",
+                howWorkItemTitle1: "Replenish your BNB wallet",
+                howWorkItemText1: "and connect it to our website",
+                howWorkItemBtn1: "Connect",
+                howWorkItemTitle2: "Buy one",
+                howWorkItemText2: "of the profitable chickens",
+                howWorkItemTitle3: "Receive hourly income",
+                howWorkItemText3: "and instantly withdraw to your wallet",
+                referralTitle: "Referral Program",
+                referralSubTitle: "3 levels of affiliate rewards",
+                referralPersent1: "7% - 1st Level ",
+                referralPersent2: "2% - 2nd Level",
+                referralPersent3: "1% - 3rd Level ",
+                referralPersentPrompt: "* Referral rewards come instantly on your balance and can be withdrawn any time along with earnings.",
+                referralBigText: "Every 5 BNB earned as a referral bonus increases",
+                referralItem1: "1 level for 0.2% ( max bonus 15% )",
+                referralItem2: "2 level by 0.05% ( max bonus 4% )",
+                referralBtn: "Join",
+                auditTitle: "Honest and Transparent",
+                auditSubTitle: "Smart-contract Independent auditions and reviews",
+                auditItemTitle1: "Independent company",
+                auditWebsite: "(Website:",
+                auditBtn1: "Audit Report (PDF)",
+                auditItemTitle2: "Audition status",
+                auditSuccesfull: "Successfully passed",
+                auditBtn2: "Audit Report (PDF)",
+                codeTitle: "Smart-contract code:",
+                codeItemText: "BNB platform smart-contract is published on BNB Network.Nobody can change its rules or algorithms, even its developers. This provides our participants unconditional confidence in safety of their funds. Anyone can check smart-contract code and be sure that BNB platform is honest",
+                reviewsTitle: "Reviews and Mentionings",
+                replenishmentTitle: "Replenishment of Our Farm",
+                replenishmentSeeMore: "See more",
+                footerBlockTitle1: "Links",
+                footerBlockTitle2: "Contacts",
+                footerBlockTitle3: "Social",
+                footerAbout: "About",
+                footerNft: "NFT",
+                footerCondition: "Investment Conditions",
+                footerHowWork: "How it works",
+                footerReferral: "Referral program",
+                footerScheme: "Interest scheme",
+                footerRegional: "Regional",
+                footerFaq: "FAQ",
+                footerSmartContract: "Smart-contract",
+                footerReviews: "Reviews",
+                footerNewChickens: "New chickens",
+                otherFooterBlockTitle1: "Links",
+                otherFooterBlockTitle2: "Contacts",
+                otherFooterBlockTitle3: "Social",
+                otherFooterAbout: "About",
+                otherFooterNft: "NFT",
+                otherFooterCondition: "Investment Conditions",
+                otherFooterHowWork: "How it works",
+                otherFooterReferral: "Referral program",
+                otherFooterScheme: "Interest scheme",
+                otherFooterRegional: "Regional",
+                otherFooterFaq: "FAQ",
+                otherFooterSmartContract: "Smart-contract",
+                otherFooterReviews: "Reviews",
+                otherFooterNewChickens: "New chickens",
+                schemeTitle: "Interest scheme",
+                schemeCardTitle1: '<span>BNB turnover</span> <span data-help="Click Withdraw button, and you will get instantly all your " class="_icon-info"></span>',
+                schemeCardTitle2: '<span>If you do not withdraw profit</span> <span data-help="Click Withdraw button, and you will get instantly all your " class="_icon-info"></span>',
+                schemeCardName2: "Days",
+                schemePrompt: "Your funds are credited to the wallet instantly and no one can stop them, freeze them or anything else, so you can be calm for their safety",
+                schemeDailyProfit: "Your daily profit",
+                "interest-calc__profit-input": "Investment amount",
+                schemeDailySum: "Daily profit",
+                schemeInvestText: "It is a fully decentralized project written on a smart contract in the BSC network",
+                schemeBtn: "Smart contract",
+                regionalTitle: "Regional representatives",
+                regionalSubTitle: "Regional representatives are well-known followers of Chikly NFT from different countries and regions. So, you can meet the famours holders of Chickly NFT among your favorite influencers in your country and language group. In addition, you can use their referral link when purchasing Chickly NFT or contact them with questions.",
+                regionalChoose: "Choose country",
+                select__option: "ALL",
+                regionalName: "Name",
+                regionalCountry: "Country",
+                regionalCity: "City",
+                regionalLanguage: "Language",
+                regionalPhone: "Phone number",
+                regionalSocial: "Social links",
+                regionalReferral: "Referral link",
+                faqBlockTitle1: "ABOUT CHICKLY",
+                faqItemTitle1: "What is NFT?",
+                faqItemText1: "NFT stands for Non-Fungible Token, a one-of-a-kind digital asset that is not interchangeable with another similar item. This means that each has its own set of metadata proving its uniqueness and ownership, which is encrypted on the blockchain. It is a unique digital item that users can buy, own and trade.",
+                faqItemTitle2: "What is Chickly",
+                faqItemText2: "Chicky is your small dream farm in your pocket or at your desktop. Place where you can get stable earning. Basically Chickly is a game. An idle game, where you buy our chicks to earn more over time.",
+                faqItemTitle3: "What is the use of Chickly?",
+                faqItemText3: "When you buy our NFTs, you will earn profit hourly. The final profit depends on the purchased NFT. The percentage of profit depends on several conditions: how long ago you withdraw the profit and how much money went through the smart contract.",
+                faqItemTitle4: "Where can I buy Chickly NFTs?",
+                faqItemText4: "You can buy Chikly NFTs only on the official website. Repurchase and resale are not foreseen and therefore impossible.",
+                faqItemTitle5: "When can i get it?",
+                faqItemText5: "We will announce the start of sales on social networks. You can also subscribe to our browser notifications. We will not spam unnecessary information or share your information with third parties.",
+                faqItemTitle6: "Why chickens?",
+                faqItemText6: "They are beneficial. And the yolk of the egg is golden in color like BNB, it`s obvious!",
+                faqBLockTitle2: "FINANCIAL QUESTIONS",
+                faqItemTitle7: "How can I make money with you?",
+                faqItemText7: "By having purchased a Chikly NFT you will receive profit hourly. Remember to feed the chickens every day to get as much profit as possible!",
+                faqItemTitle8: "What currencies do you work with?",
+                faqItemText8: "You can only buy Chiclky NFTs with BNB by connecting to your Binance Smart Chain wallet.",
+                faqItemTitle9: "What is the minimum purchase amount?",
+                faqItemText9: "The price of Chikly NFTs starts from 0.04 BNB.",
+                faqItemTitle10: "When can I withdraw profit?",
+                faqItemText10: "You can withdraw profits at any time, but keep in mind that this will burn out the bonus percentage of daily profits.",
+                faqItemTitle11: "How can I increase my profit?",
+                faqItemText11: "The final profit depends on the type of the token bought. The daily profit increases by 0.1% every day, provided that you feed the hens and keep the profit on the balance sheet. Morevoer, the daily profit increases by 0.1% for every 400 BNB  the smart contract address received.",
+                faqItemTitle12: "How to feed chickens and what will it give me?",
+                faqItemText12: 'The "Feed the Chickens" button is located in the Users` Private Office above the list of all of their NFTs. Feeding the chickends must be done daily in order to receive increased profits.'
+            },
+            esp: {
+                headerHome: 'Hogar <span class="_icon-arrow-bottom"></span>',
+                headerAbout: "Sobre",
+                headerNft: "NFT",
+                headerCondition: "Condiciones de Inversión",
+                headerHowWork: "¿Cómo funciona?",
+                headerReferral: "Programa de Recomendación",
+                headerScheme: "Esquema de interés",
+                headerRegional: "Regionales",
+                headerFaq: "FAQ",
+                headerSmartContract: "Contrato inteligente",
+                headerReviews: "Reseñas",
+                headerNewChickens: "Pollos Nuevos",
+                headerBtn: "Conectar Billetera",
+                otherHeaderHome: 'Hogar <span class="_icon-arrow-bottom"></span>',
+                otherHeaderAbout: "Sobre",
+                otherHeaderNft: "NFT",
+                otherHeaderCondition: "Condiciones de Inversión",
+                otherHeaderHowWork: "¿Cómo funciona?",
+                otherHeaderReferral: "Programa de Recomendación",
+                otherHeaderScheme: "Esquema de interés",
+                otherHeaderRegional: "Regionales",
+                otherHeaderFaq: "FAQ",
+                otherHeaderSmartContract: "Contrato inteligente",
+                otherHeaderReviews: "Reseñas",
+                otherHeaderNewChickens: "Pollos Nuevos",
+                otherHeaderBtn: "Conectar Billetera",
+                aboutTitle: "Inversiones Confiables en BNB",
+                aboutSubTitle: "Gane hasta un <span>+220%</span> del costo de su NFT",
+                aboutItem1: "Plataforma de blockchain descentralizada",
+                aboutItem2: "Ganancia totalmente segura basada en un contrato inteligente de BNB",
+                aboutItem3: "Contrato inteligente verificado y auditado por una compañía independiente",
+                aboutBtnDiscrord: "Únase a Discord",
+                aboutBtnTwitter: "Síganos en Twitter",
+                aboutBtnConnect: "Conectar Billetera",
+                benefitsTitle: "BNB Chain ostenta más de <span>3 millones de Usuarios Activos Únicos Semanales</span>",
+                benefitsItem1: "El proyecto NFT más rentable ",
+                benefitsItem2: "Ganancias ilimitadas con tasas en aumento constante ",
+                nftTitle: "Gallinas NFT rentables",
+                nftProfit1: "ganancia",
+                nftProfit2: "ganancia",
+                nftProfit3: "ganancia",
+                nftProfit4: "ganancia",
+                nftProfit5: "ganancia",
+                nftBuy1: "Adquisición",
+                nftBuy2: "Adquisición",
+                nftBuy3: "Adquisición",
+                nftBuy4: "Adquisición",
+                nftBuy5: "Adquisición",
+                conditionTitle: "Condiciones de Inversión",
+                conditionItem1: 'Trabajar para la red <span class="conditions__prompt-icon-coin conditions__prompt-bolt-text">BNB</span> <span data-help="Puede adquirir nuestros NFTs conectando su billetera. Todas las transacciones del sitio se llevan a cabo solamente por medio de la cadena inteligente Binance."class="_icon-question "></span>',
+                conditionItem2: '\tDepósito mínimo <span class="conditions__prompt-icon-coin conditions__prompt-bolt-text">0.04 BNB</span>',
+                conditionItem3: 'Ingresos totales <span class="conditions__prompt-bolt-text">hasta 220%</span> <span data-help="El beneficio final del NFT depende de la Gallina que adquirió. Como puede ver en nuestro bloque NFT, el beneficio varía entre 170% y 220%. El último es el más rentable."class="_icon-question"></span>',
+                conditionItem4: '\tGanancias <span class="conditions__prompt-bolt-text">todo el tiempo,</span> retiros en cualquier momento',
+                conditionSlideTitle1: "TASA DE INTERÉS BÁSICA",
+                conditionSlideSubTitle1: "+1% cada 24 horas (+0.0416% por hora)",
+                conditionSlideSubText1: "El contrato inteligente de BNB calcula el beneficio de cada NFT desde la fecha de adquisición. Por hora recibirá +0.0416%, por día +1%.",
+                conditionSlideTitle12: "BONIFICACIÓN POR PERMANENCIA DE FONDOS",
+                conditionSlideSubTitle2: "+0.1% por cada 24 horas sin extracción",
+                conditionSlideSubText2: "El contrato inteligente calcula el beneficio por permanencia de su depósito, o la fecha de su última extracción. Si no solicitó un pago, recibirá una bonificación adicional. Después de 24 horas +0.1%, después de 48 horas +0.2%, después de 72 horas +0.3% y así sucesivamente.",
+                conditionSlideTitle3: "BONIFICACIÓN POR CONTRATO DE MONTO TOTAL",
+                conditionSlideSubTitle3: "+0.15% por cada 400 BNB en contrato inteligente",
+                conditionSlideSubText3: "El contrato inteligente controla its su balance corriente y suma un +0.15% más a sus ganancias por cada 400 BNB del balance.Bonificación corriente: 0.0%",
+                howWorkTitle: "¿Cómo funciona?",
+                howWorkItemTitle1: "Recargue su billetera",
+                howWorkItemText1: "y conéctela a nuestro sitio web",
+                howWorkItemBtn1: "Conéstese",
+                howWorkItemTitle2: "Adquiera una",
+                howWorkItemText2: "de nuestras gallinas redituables",
+                howWorkItemTitle3: "Obtenga ingresos cada hora",
+                howWorkItemText3: "y transfiera instantáneamente a su billetera",
+                referralTitle: "Programa de Recomendación",
+                referralSubTitle: "3 niveles de recompensas por recomendación",
+                referralPersent1: "7% - 1° Nivel  ",
+                referralPersent2: " 2% - 2° Nivel",
+                referralPersent3: " 1% - 3° Nivel ",
+                referralPersentPrompt: "* Las recompensas por recomendación se acreditan instantáneamente y pueden retirarse en cualquier momento con las ganancias.",
+                referralBigText: "Cada 5 BNB acreditados como recompensa la bonificación se incrementa",
+                referralItem1: "1 nivel por 0.2% ( máx. bonif. 15% )",
+                referralItem2: " 2 nivel por 0.05% ( máx. bonif. 4% )",
+                referralBtn: "Regístrese",
+                auditTitle: "para Honestas y Transparentes",
+                auditSubTitle: "Auditorías y reseñas independientes de contratos inteligentes",
+                auditItemTitle1: "Compañía Independiente",
+                auditWebsite: "(Sitio web:",
+                auditBtn1: "Reporte de Auditoría (PDF)",
+                auditItemTitle2: "Estado de Auditoría",
+                auditSuccesfull: "Auditoría aprobada",
+                auditBtn2: "Reporte de Auditoría (PDF)",
+                codeTitle: "Código de contrato inteligente:",
+                codeItemText: "El contrato inteligente de la plataforma BNB está disponible en BNB Network.Nadie puede cambiar sus reglas o algoritmos, ni siquiera los desarrolladores. Así, nuestros participantes confían incondicionalmente en la seguridad de sus fondos. Cualquiera puede revisar el reglamento del contrato inteligente y cerciorarse de que la plataforma BNB es honesta.",
+                reviewsTitle: "Reseñas y Menciones",
+                replenishmentTitle: "Recarga de Nuestra Granja",
+                replenishmentSeeMore: "Ver más",
+                footerBlockTitle1: "Vínculos",
+                footerBlockTitle2: "Contactos",
+                footerBlockTitle3: "Sociales",
+                footerAbout: "Sobre",
+                footerNft: "NFT",
+                footerCondition: "Condiciones de Inversión",
+                footerHowWork: "¿Cómo funciona?",
+                footerReferral: "Programa de Recomendación",
+                footerScheme: "Esquema de interés",
+                footerRegional: "Regionales",
+                footerFaq: "FAQ",
+                footerSmartContract: "Contrato inteligente",
+                footerReviews: "Reseñas",
+                footerNewChickens: "Pollos Nuevos",
+                otherFooterBlockTitle1: "Vínculos",
+                otherFooterBlockTitle2: "Contactos",
+                otherFooterBlockTitle3: "Sociales",
+                otherFooterAbout: "Sobre",
+                otherFooterNft: "NFT",
+                otherFooterCondition: "Condiciones de Inversión",
+                otherFooterHowWork: "¿Cómo funciona?",
+                otherFooterReferral: "Programa de Recomendación",
+                otherFooterScheme: "Esquema de interés",
+                otherFooterRegional: "Regionales",
+                otherFooterFaq: "FAQ",
+                otherFooterSmartContract: "Contrato inteligente",
+                otherFooterReviews: "Reseñas",
+                otherFooterNewChickens: "Pollos Nuevos",
+                schemeTitle: "Esquema de interés",
+                schemeCardTitle1: '<span>Volumen de BNB</span> <span data-help="Haga click en el botón de Retiro para obtener todas las ganancias de sus depósitos y bonificaciones asociadas en una sola transacción. Su bonificación de permanencia de fondos se reiniciará." class="_icon-info"></span>',
+                schemeCardTitle2: '<span>Si no se retiran ganancias</span> <span data-help="Haga click en el botón de Retiro para obtener todas las ganancias de sus depósitos y bonificaciones asociadas en una sola transacción. Su bonificación de permanencia de fondos se reiniciará." class="_icon-info"></span>',
+                schemeCardName2: "Días",
+                schemePrompt: "Your funds are credited to the wallet instantly and no one can stop them, freeze them or anything else, so you can be calm for their safety",
+                schemeDailyProfit: "Su ganancia diaria",
+                "interest-calc__profit-input": "Monto de inversión",
+                schemeDailySum: "Ganancia diaria",
+                schemeInvestText: "Es un proyecto completamente descentralizado asentado en un contrato inteligentet en la red BSC",
+                schemeBtn: "Contrato inteligente",
+                regionalTitle: "Representantes regionales",
+                regionalSubTitle: "Los representantes regionales son seguidores reconocidos de Chickly NFT de diferentes países y regiones. Usted puede encontrar a famosos tenedores de Chickly NFT entre sus influencers favoritos de su país y su idioma. Además, puede usar sus vínculos de recomendación al comprar Chickly NFT o contactarlos si tiene dudas.",
+                regionalChoose: "Elija el país",
+                select__option: "TODOS",
+                regionalName: "Nombre",
+                regionalCountry: "País",
+                regionalCity: "Ciudad",
+                regionalLanguage: "Idioma",
+                regionalPhone: "Número telefónico",
+                regionalSocial: "Vínculos sociales",
+                regionalReferral: "Vínculo de recomendación",
+                faqBlockTitle1: "SOBRE CHICKLY",
+                faqItemTitle1: "¿Qué es NFT?",
+                faqItemText1: "NFT es la sigla de Token No Fungible, un activo digital único no intercambiable con otro artículo similar. Esto significa que cada uno tiene un conjunto de metadatos que prueban su unicidad y pertenencia, encriptados en el blockchain. Es un artículo digital exclusivo que los usuarios pueden arquirir, poseer y comercializar.",
+                faqItemTitle2: "Qué is Chickly?",
+                faqItemText2: "Chickly es una pequeña granja de fantasía en su bolsillo o escritorio. Un sitio que puede proporcionarle ingresos constantes. Básicamente, Chickly es un juego. Un pasatiempo, en el que compra nuestras gallinas para generar ganancias con el transcurso del tiempo.",
+                faqItemTitle3: "¿Cómo funciona Chickly?",
+                faqItemText3: "Cuando compra nuestros NFTs, tendrá ganancias cada hora. El beneficio final depende del NFT adquirido. El porcentaje del beneficio depende de varias condiciones: el tiempo transcurrido desde su última extracción y del monto extraído del contrato inteligente.",
+                faqItemTitle4: "¿Dónde se adquieren NFTs de Chickly?",
+                faqItemText4: "Los NFTs de Chickly se adquieren solo en el sitio web oficial. La recompra y la reventa no están previstas y por lo tanto son imposibles.",
+                faqItemTitle5: "¿Cuándo se adquiere?",
+                faqItemText5: "Anunciaremos el inicio de las ventas en redes sociales. También puede suscribirse a nuestras notificaciones de navegador. No habrá publicaciones innecesarias ni divulgaremos su información a terceros.",
+                faqItemTitle6: "¿Por qué gallinas?",
+                faqItemText6: "Son beneficiosas. Y la yema del huevo es dorada, como BNB, ¡obvio!",
+                faqBLockTitle2: "PREGUNTAS FINANCIERAS",
+                faqItemTitle7: "¿Cómo ganar dinero con ustedes?",
+                faqItemText7: "Al comprar un NFT de Chickly NFT se reciben ganancias a cada hora. ¡Recuerde alimentar a las gallinas a diario para ganar lo más posible!",
+                faqItemTitle8: "¿Con qué monedas trabajan?",
+                faqItemText8: "Solo se pueden comprar NFTs de Chickly con BNB en conexión con su billetera de cadena inteligente Binance.",
+                faqItemTitle9: "¿Cuál es la compra mínima?",
+                faqItemText9: "El precio base de los NFTs de Chickly es 0,04 BNB.",
+                faqItemTitle10: "¿Cuándo se puede retirar ganancias?",
+                faqItemText10: "Se puede retirar ganancias en cualquier momento, pero recuerde que así perderá el porcentaje de bonificación de ganancias diarias.",
+                faqItemTitle11: "¿Cómo se puede aumentar la ganancia?",
+                faqItemText11: "La ganancia final depende del tipo de token adquirido. La ganancia diaria aumenta un 0.1% cada día, si alimenta a las gallinas y mantiene el balance positivo. Además, la ganancia diaria aumenta un 0.1% por cada 400 BNB que reciba la dirección del contrato inteligente.",
+                faqItemTitle12: "¿Cómo se alimentan las gallinas y qué entregan?",
+                faqItemText12: 'El botón "Alimentar a las Gallinas" está en la Oficina Privada del Usuario sobre la lista de todos sus NFTs. Se debe alimentar a las gallinas diariamente para aumentar las ganancias.'
+            },
+            vnm: {
+                headerHome: 'Nhà <span class="_icon-arrow-bottom"></span>',
+                headerAbout: "Về",
+                headerNft: "NFT",
+                headerCondition: "Điều kiện đầu tư",
+                headerHowWork: "Cách thức hoạt động",
+                headerReferral: "Chương trình giới thiệu",
+                headerScheme: "Cơ cấu lãi suất",
+                headerRegional: "Khu vực",
+                headerFaq: "FAQ",
+                headerSmartContract: "Hợp đồng thông minh",
+                headerReviews: "Nhận xét",
+                headerNewChickens: "Gà mới",
+                headerBtn: "Kêt nối Ví",
+                otherHeaderHome: 'Nhà <span class="_icon-arrow-bottom"></span>',
+                otherHeaderAbout: "Về",
+                otherHeaderNft: "NFT",
+                otherHeaderCondition: "Điều kiện đầu tư",
+                otherHeaderHowWork: "Cách thức hoạt động",
+                otherHeaderReferral: "Chương trình giới thiệu",
+                otherHeaderScheme: "Cơ cấu lãi suất",
+                otherHeaderRegional: "Khu vực",
+                otherHeaderFaq: "FAQ",
+                otherHeaderSmartContract: "Hợp đồng thông minh",
+                otherHeaderReviews: "Nhận xét",
+                otherHeaderNewChickens: "Gà mới",
+                otherHeaderBtn: "Kêt nối Ví",
+                aboutTitle: "Khoản đầu tư tin cậy với BNB",
+                aboutSubTitle: "Lợi nhuận lên tới <span>+220%</span> so với giá mua NFT của bạn",
+                aboutItem1: "Nền tảng blockchain phi tập",
+                aboutItem2: "Thu nhập được đảm bảo an toàn tuyệt đối dựa vào hợp đồng thông minh BNB",
+                aboutItem3: "Hợp đồng thông minh được xác nhận và kiểm tra bởi một công ty độc lập",
+                aboutBtnDiscrord: "Tham gia Discord",
+                aboutBtnTwitter: "Theo dõi Twitter",
+                aboutBtnConnect: "Kêt nối Ví",
+                benefitsTitle: "BNB Chain có hơn <span>3 triệu người dùng duy nhất hoạt động hàng tuần</span>",
+                benefitsItem1: "Dự án đầu tiên về NFT mang lại nhiều lợi nhất",
+                benefitsItem2: "Thu nhập không giới hạn với tỷ lệ ngày càng tăng",
+                nftTitle: "NFT gà con có lợi nhuận",
+                nftProfit1: "Lợi nhuận",
+                nftProfit2: "Lợi nhuận",
+                nftProfit3: "Lợi nhuận",
+                nftProfit4: "Lợi nhuận",
+                nftProfit5: "Lợi nhuận",
+                nftBuy1: "Mua",
+                nftBuy2: "Mua",
+                nftBuy3: "Mua",
+                nftBuy4: "Mua",
+                nftBuy5: "Mua",
+                conditionTitle: "Điều kiện đầu tư",
+                conditionItem1: 'Hoạt động trên mạng lưới <span class="conditions__prompt-icon-coin conditions__prompt-bolt-text">BNB</span> <span data-help="Bạn có thể mua NFT của chúng tôi bằng cách kết nối ví của bạn. Tất cả các giao dịch trên trang web được thực hiện thông qua Binance Smart Chain."class="_icon-question "></span>',
+                conditionItem2: '\tNạp tối thiểu <span class="conditions__prompt-icon-coin conditions__prompt-bolt-text">0.04 BNB</span>',
+                conditionItem3: '<span> Tổng thu nhập<span class="conditions__prompt-bolt-text">lên tới 220%</span> <span data-help="Lợi nhuận cuối cùng của NFT phụ thuộc vào Gà Mái mà bạn mua. Lợi nhuận từ 170% đến 220%, bạn có thể thấy trong khối NFT của chúng tôi.  NFT cuối cùng có lợi nhuận nhiều nhất."class="_icon-question"></span> </span>',
+                conditionItem4: '\tMang liên tục, <span class="conditions__prompt-bolt-text">lại thu nhập ,</span> rút tiền bất cứ lúc nào ',
+                conditionSlideTitle1: "TỶ LỆ LÃI SUẤT CƠ BẢN",
+                conditionSlideSubTitle1: "+1% mỗi 24 giờ (+0.0416% mỗi giờ)",
+                conditionSlideSubText1: "Hợp đồng thông minh BNB tính toán lợi nhuận cho mọi NFT từ thời điểm mà bạn mua. Bạn sẽ nhận +0.0416% mỗi giờ, +1% mỗi ngày.",
+                conditionSlideTitle12: "THƯỞNG GIỮ LỢI NHUẬN CÁ NHÂN",
+                conditionSlideSubTitle2: ".+0.1% for every 24 hours without withdraw",
+                conditionSlideSubText2: "Hợp đồng thông minh tính toán thưởng cho việc giữ lợi nhuận từ số tiền nạp hoặc ngày rút cuối cùng. Nếu bạn không yêu cầu thanh toán, nó sẽ cộng cho bạn một khoản thưởng. Sau 24 giờ +0.1%, sau 48 giờ +0.2%, sau 72 giờ +0.3% và tiếp tục như vậy.",
+                conditionSlideTitle3: "THƯỞNG TỔNG TIỀN TRÊN HỢP ĐỒNG THÔNG MINH",
+                conditionSlideSubTitle3: "+0.15% cho mỗi 400 BNB trên hợp đồng thông minh",
+                conditionSlideSubText3: "Hợp đồng thông minh kiểm tra số dư hiện tại và cộng thêm +0.15% vào thu nhập của bạn cho mỗi 400 BNB trên số dư. Thưởng hiện tại: 0.0%",
+                howWorkTitle: "Cách thức hoạt động?",
+                howWorkItemTitle1: "Thêm BNB vào ví của bạn",
+                howWorkItemText1: "và kết nối nó vào trang web của chúng tôi",
+                howWorkItemBtn1: "Kết nối",
+                howWorkItemTitle2: "Mua một",
+                howWorkItemText2: "trong những gà mang lại lợi nhuận",
+                howWorkItemTitle3: "Nhận thu nhập mỗi giờ",
+                howWorkItemText3: "và rút ngay lập tức về ví của bạn",
+                referralTitle: "Chương trình giới thiệu",
+                referralSubTitle: "3 cấp độ thưởng của tiếp thị liên kết",
+                referralPersent1: "7% - Cấp độ 1 ",
+                referralPersent2: "2% - Cấp độ 2",
+                referralPersent3: "1% - Cấp độ 3",
+                referralPersentPrompt: "* Phần thưởng giới thiệu sẽ thêm vào số dư của bạn ngay lập tức và có thể rút bất cứ lúc nào cùng với thu nhập của bạn.",
+                referralBigText: "Mỗi 5 BNB tăng lên từ chương trình giới thiệu",
+                referralItem1: "Cấp độ 1 là 0.2% ( thưởng tối đa 15% )",
+                referralItem2: "Cấp độ 2 là 0.05% ( thưởng tối đa 4% )",
+                referralBtn: "Tham gia",
+                auditTitle: "Trung thực và minh bạch",
+                auditSubTitle: "Hợp đồng thông minh được kiểm tra và đánh giá độc lập",
+                auditItemTitle1: "Công ty độc lập",
+                auditWebsite: "(Trang web:",
+                auditBtn1: "Báo cáo kiểm tra (PDF)",
+                auditItemTitle2: "Trạng thái kiểm tra",
+                auditSuccesfull: "Đã vượt qua bài kiểm tra thành công",
+                auditBtn2: "Báo cáo kiểm tra (PDF)",
+                codeTitle: "Mã hợp đồng thông minh:",
+                codeItemText: "Hợp đồng thông minh trên nền tảng BNB được công khai trên mạng lưới BNB.Không ai có thể thay đổi luật và thuật toán, kể cả nhà phát triển. Điều này sẽ làm cho người tham gia tin tưởng vì khoản đầu tư của họ luôn được giữ an toàn. Bất kỳ ai cũng có thể kiểm tra mã của hợp đồng thông minh và đảm bảo tính trung thực của nền tảng BNB.",
+                reviewsTitle: "Đánh giá và theo dõi",
+                replenishmentTitle: "Bổ sung trong nông trại của chúng tôi",
+                replenishmentSeeMore: "Xem thêm",
+                footerBlockTitle1: "Liên kết",
+                footerBlockTitle2: "Liên hệ",
+                footerBlockTitle3: "Mạng xã hội",
+                footerAbout: "Về",
+                footerNft: "NFT",
+                footerCondition: "Điều kiện đầu tư",
+                footerHowWork: "Cách thức hoạt động",
+                footerReferral: "Chương trình giới thiệu",
+                footerScheme: "Cơ cấu lãi suất",
+                footerRegional: "Khu vực",
+                footerFaq: "FAQ",
+                footerSmartContract: "Hợp đồng thông minh",
+                footerReviews: "Nhận xét",
+                footerNewChickens: "Gà mới",
+                otherFooterBlockTitle1: "Liên kết",
+                otherFooterBlockTitle2: "Liên hệ",
+                otherFooterBlockTitle3: "Mạng xã hội",
+                otherFooterAbout: "Về",
+                otherFooterNft: "NFT",
+                otherFooterCondition: "Điều kiện đầu tư",
+                otherFooterHowWork: "Cách thức hoạt động",
+                otherFooterReferral: "Chương trình giới thiệu",
+                otherFooterScheme: "Cơ cấu lãi suất",
+                otherFooterRegional: "Khu vực",
+                otherFooterFaq: "FAQ",
+                otherFooterSmartContract: "Hợp đồng thông minh",
+                otherFooterReviews: "Nhận xét",
+                otherFooterNewChickens: "Gà mới",
+                schemeTitle: "Cơ cấu lãi suất",
+                schemeCardTitle1: '<span>Doanh số BNB</span> <span data-help="Nhấn nút Rút để nhận tất cả thu nhập từ số tiền nạp vào để đầu tư và thưởng giới thiệu chỉ với một giao dịch. Thưởng cho việc giữ lợi nhuận của bạn sẽ bị đặt lại." class="_icon-info"></span>',
+                schemeCardTitle2: '<span>Nếu bạn không rút lợi nhuận</span> <span data-help="Nhấn nút Rút để nhận tất cả thu nhập từ số tiền nạp vào để đầu tư và thưởng giới thiệu chỉ với một giao dịch. Thưởng cho việc giữ lợi nhuận của bạn sẽ bị đặt lại." class="_icon-info"></span>',
+                schemeCardName2: "Ngày",
+                schemePrompt: "Tiền của bạn sẽ được cộng vào ví ngay lập tức và không ai có thể dừng lại, đóng băng hoặc làm bất cứ điều gì khác. Do vậy, bạn có thể yên tâm về sự an toàn của chúng.",
+                schemeDailyProfit: "Lợi nhuận hàng ngày của bạn",
+                "interest-calc__profit-input": "Số tiền đầu tư",
+                schemeDailySum: "Lợi nhuận hàng ngày",
+                schemeInvestText: "Nó là một dự án hoàn toàn phi tập trung được viết trên hợp đồng thông minh của mạng lưới BSC",
+                schemeBtn: "Hợp đồng thông minh",
+                regionalTitle: "Đại diện khu vực",
+                regionalSubTitle: "Đại diện khu vực của Chickly có rất nhiều người theo dõi đến từ nhiều quốc gia và vùng lãnh thổ khác nhau. Do đó, bạn có thể gặp những người nổi tiếng đang nắm giữ NFT của Chickly tại các quốc gia hoặc các nhóm sử dụng ngôn ngữ của bạn. Bạn cũng có thể dùng liên kết giới thiệu của họ khi mua NFT hoặc liên hệ họ nếu có bất kỳ câu hỏi nào.",
+                regionalChoose: "Chọn quốc gia",
+                select__option: "TẤT CẢ CÁC",
+                regionalName: "Tên",
+                regionalCountry: "Quốc gia",
+                regionalCity: "Thành phố",
+                regionalLanguage: "Ngôn ngữ",
+                regionalPhone: "Số điện thoại",
+                regionalSocial: "Liên kết mạng xã hội",
+                regionalReferral: "Liên kết giới thiệu",
+                faqBlockTitle1: "GIỚI THIỆU CHICKLY",
+                faqItemTitle1: "NFT là gì?",
+                faqItemText1: "NFT là từ viết tắt của Non-Fungible Token, là một loại tài sản số. Nó không thể thay thế bằng một vật phẩm khác tương tự. Điều này có nghĩa là mỗi NFT có một bộ dữ liệu riêng để chứng minh cho tính độc nhất và quyền sơ hữu nó trên blockchain. Người dùng có thể mua, sỡ hữu và giao dịch loại vật phẩm có tính duy nhất này.",
+                faqItemTitle2: "Chickly là gì",
+                faqItemText2: "Chickly là một nông trại mơ ước nhỏ ở trong túi hoặc máy tính của bạn. Bạn có thể kiếm thu nhập ổn định với nông trại này. Nói một cách đơn giản thì Chickly là một trò chơi. Bạn có thể chơi lúc rảnh rỗi và mua những con gà con của chúng tôi để có thêm thu nhập theo thời gian.",
+                faqItemTitle3: "Ứng dụng của Chickly là gì?",
+                faqItemText3: "Khi bạn mua NFT của chúng tôi, bạn sẽ có lợi nhuận mỗi giờ. Lợi nhuận sau cùng phụ thuộc vào NFT mà bạn mua. Phần trăm lợi nhuận phụ thuộc vào những điều kiện như: lần rút tiền gần nhất  là khi nào và số tiền thông qua hợp đồng thông minh là bao nhiêu.",
+                faqItemTitle4: "Bạn có thể mua NFT của Chickly ở đâu?",
+                faqItemText4: "Bạn có thể mua NFT của Chickly ở một nơi duy nhất là trang web chính thức của chúng tôi. Việc mua bán lại NFT thì chưa biết, do vậy không thể nói chính xác.",
+                faqItemTitle5: "Khi nào tôi có thể mua nó?",
+                faqItemText5: "Chúng tôi sẽ thông báo khi bắt đầu bán trên các trang mạng xã hội. Bạn cũng có thể đăng ký nhận thông báo của chúng tôi trên trình duyệt. Chúng tôi sẽ không thông báo những thông tin không cần thiết hoặc chia sẻ những thông tin của bên thứ ba cho bạn.",
+                faqItemTitle6: "Tại sao lại là gà?",
+                faqItemText6: "Chúng mang lại lợi nhuận và lòng đỏ trứng gà cũng có màu vàng giống BNB!",
+                faqBLockTitle2: "CÂU HỎI TÀI CHÍNH",
+                faqItemTitle7: "Tôi có thể kiếm tiền với bạn như thế nào?",
+                faqItemText7: "Bạn sẽ nhận lợi nhuận hàng giờ bằng cách mua một NFT của Chickly. Hãy nhớ cho gà ăn mỗi ngày để có được nhiều lợi nhuận nhất!",
+                faqItemTitle8: "Bạn sử dụng loại tiền tệ nào?",
+                faqItemText8: "Bạn chỉ có thể mua NFT của Chickly với BNB bằng cách kết nối ví Binance Smart Chain của bạn.",
+                faqItemTitle9: "Số lượng mua tối thiểu là bao nhiêu?",
+                faqItemText9: "Giá NFT của Chickly bắt đầu từ 0.04 BNB.",
+                faqItemTitle10: "Khi nào tôi có thể rút lợi nhuận?",
+                faqItemText10: "Bạn có thể rút lợi nhuận bất cứ lúc nào, nhưng hãy nhớ nó sẽ ảnh hưởng đến phần trăm thưởng lợi nhuận hàng ngày của bạn.",
+                faqItemTitle11: "Làm cách nào để tôi tăng lợi nhuận?",
+                faqItemText11: "Lợi nhuận cuối cùng phụ thuộc vào loại NFT mà bạn đã mua. Lợi nhuận hàng ngày tăng thêm 0.1% với điều kiện là bạn cho gà ăn và giữ số dư lợi nhuận. Thêm nữa, lợi nhuận hàng ngày tăng thêm 0.1% cho mỗi 400 BNB mà địa chỉ hợp đồng thông minh nhận được.",
+                faqItemTitle12: "Cách cho gà ăn như thế nào và tôi sẽ nhận lại được gì?",
+                faqItemText12: 'Nút "Cho gà ăn" tại Tài Khoản Cá Nhân của người dùng, phía trên danh sách NFT. Cho gà ăn phải được thực hiện theo ngày để tăng lợi nhuận.'
+            },
+            prt: {
+                headerHome: 'Casa <span class="_icon-arrow-bottom"></span>',
+                headerAbout: "Sobre",
+                headerNft: "NFT",
+                headerCondition: "Condições de investimento",
+                headerHowWork: "Como funciona",
+                headerReferral: "Programa de indicação",
+                headerScheme: "Esquema de juros",
+                headerRegional: "Regionais",
+                headerFaq: "FAQ",
+                headerSmartContract: "Contrato inteligente",
+                headerReviews: "Avaliações",
+                headerNewChickens: "Novas galinhas",
+                headerBtn: "Conectar Carteira",
+                otherHeaderHome: 'Casa <span class="_icon-arrow-bottom"></span>',
+                otherHeaderAbout: "Sobre",
+                otherHeaderNft: "NFT",
+                otherHeaderCondition: "Condições de investimento",
+                otherHeaderHowWork: "Como funciona",
+                otherHeaderReferral: "Programa de indicação",
+                otherHeaderScheme: "Esquema de juros",
+                otherHeaderRegional: "Regionais",
+                otherHeaderFaq: "FAQ",
+                otherHeaderSmartContract: "Contrato inteligente",
+                otherHeaderReviews: "Avaliações",
+                otherHeaderNewChickens: "Novas galinhas",
+                otherHeaderBtn: "Conectar Carteira",
+                aboutTitle: "Investimentos confiáveis com BNB",
+                aboutSubTitle: "Ganhe até <span>+220%</span>  ou mais do custo de seu NFT",
+                aboutItem1: "Plataforma descentralizada na Blockchain",
+                aboutItem2: "Renda totalmente segura com base no contrato inteligente de BNB",
+                aboutItem3: "Contrato inteligente verificado e auditado por empresa independente",
+                aboutBtnDiscrord: "Entre no Discord",
+                aboutBtnTwitter: "Siga o Twitter",
+                aboutBtnConnect: "Conectar Carteira",
+                benefitsTitle: "A BNB Chain possui mais de <span>3 milhões de usuários ativos únicos semanais</span>",
+                benefitsItem1: "O primeiro projeto mais rentável em NFT",
+                benefitsItem2: "Ganhos ilimitados com taxas cada vez maiores",
+                nftTitle: "NFT de pintinhos lucrativos",
+                nftProfit1: "lucro",
+                nftProfit2: "lucro",
+                nftProfit3: "lucro",
+                nftProfit4: "lucro",
+                nftProfit5: "lucro",
+                nftBuy1: "Comprar",
+                nftBuy2: "Comprar",
+                nftBuy3: "Comprar",
+                nftBuy4: "Comprar",
+                nftBuy5: "Comprar",
+                conditionTitle: "Condições de investimento",
+                conditionItem1: 'Trabalhando na rede <span class="conditions__prompt-icon-coin conditions__prompt-bolt-text">BNB</span><span data-help="Você pode comprar nossos NFT conectando sua carteira. Todas as transações no site são realizadas apenas através da Binance Smart Chain."class="_icon-question "></span>',
+                conditionItem2: '\tDepósito mínimo de <span class="conditions__prompt-icon-coin conditions__prompt-bolt-text">0.04 BNB</span>',
+                conditionItem3: 'Renda total <span class="conditions__prompt-bolt-text">de até 220%</span> <span data-help="O lucro final do NFT depende da galinha que você comprou. Como você pode ver em nosso bloco NFT, o lucro varia de 170% a 220%. O último é o mais lucrativo."class="_icon-question"></span>',
+                conditionItem4: 'Ganhos <span class="conditions__prompt-bolt-text"> a cada momento,</span> saque quando quiser',
+                conditionSlideTitle1: "TAXA DE JURO BÁSICA",
+                conditionSlideSubTitle1: "+1% a cada 24 horas (+0,0416% por hora)",
+                conditionSlideSubText1: "O contrato inteligente do BNB calcula o lucro por cada NFT desde a data em que foi comprado. A cada hora você receberá +0,0416%, todos os dias + de 1%.",
+                conditionSlideTitle12: "BÔNUS DE HOLD PESSOAL",
+                conditionSlideSubTitle2: "+0,1% a cada 24 horas sem saque",
+                conditionSlideSubText2: "O contrato inteligente calcula o bônus de hold do seu depósito, ou da última data de saque. Se você não solicitou o pagamento, ele cobrará uma taxa bônus adicional. Após 24 horas +0,1%, após 48 horas +0,2%, após 72 horas +0,3% e assim por diante.",
+                conditionSlideTitle3: "BÔNUS DO VALOR TOTAL DO CONTRATO",
+                conditionSlideSubTitle3: "+0,15% para cada 400 BNB em contrato inteligente",
+                conditionSlideSubText3: "O contrato inteligente verifica seu saldo atual e cobra um adicional de +0,15% até seus ganhos para cada 400 BNB no saldo.Bônus atual : 0,0%",
+                howWorkTitle: "Como funciona?",
+                howWorkItemTitle1: "Reabasteça sua carteira de BNB",
+                howWorkItemText1: "e a conecte ao nosso site",
+                howWorkItemBtn1: "Conectar",
+                howWorkItemTitle2: "Compre uma",
+                howWorkItemText2: "das galinhas rentáveis",
+                howWorkItemTitle3: "Receba renda por hora",
+                howWorkItemText3: "e saque instantaneamente para sua carteira",
+                referralTitle: "Programa de indicação",
+                referralSubTitle: "3 níveis de recompensas de afiliados",
+                referralPersent1: "7% - 1º Nível",
+                referralPersent2: "2% - 2º Nível",
+                referralPersent3: "1% - 3º Nível",
+                referralPersentPrompt: "* As recompensas por indicação chegam instantaneamente ao seu saldo e podem ser sacadas a qualquer momento junto com os ganhos.",
+                referralBigText: "A cada 5 BNB ganhos como bônus de indicação aumenta",
+                referralItem1: "1º nível por 0,2% (bônus máximo de 15%)",
+                referralItem2: "2º nível por 0,05% (bônus máximo de 4%)",
+                referralBtn: "Se unir",
+                auditTitle: "Honesto e Transparente",
+                auditSubTitle: "Audições e avaliações independentes de contrato inteligente",
+                auditItemTitle1: "Empresa independente",
+                auditWebsite: "(Site: ",
+                auditBtn1: "Relatório de Auditoria (PDF)",
+                auditItemTitle2: "Status da auditoria",
+                auditSuccesfull: "Aprovado com sucesso",
+                auditBtn2: "Relatório de Auditoria (PDF)",
+                codeTitle: "Código do contrato inteligente:",
+                codeItemText: "O contrato inteligente da plataforma BNB é publicado na Rede BNB. Ninguém pode mudar suas regras ou algoritmos, nem mesmo seus desenvolvedores. Isso proporciona aos nossos participantes confiança incondicional na segurança de seus fundos. Qualquer um pode verificar o código do contrato inteligente e ter certeza de que a plataforma BNB é honesta.",
+                reviewsTitle: "Avaliações e menções",
+                replenishmentTitle: "Reabastecimento de Nossa Farm",
+                replenishmentSeeMore: "Ver mais",
+                footerBlockTitle1: "Links",
+                footerBlockTitle2: "Contatos",
+                footerBlockTitle3: "Social",
+                footerAbout: "Sobre",
+                footerNft: "NFT",
+                footerCondition: "Condições de investimento",
+                footerHowWork: "Como funciona",
+                footerReferral: "Programa de indicação",
+                footerScheme: "Esquema de juros",
+                footerRegional: "Regionais",
+                footerFaq: "FAQ",
+                footerSmartContract: "Contrato inteligente",
+                footerReviews: "Avaliações",
+                footerNewChickens: "Novas galinhas",
+                otherFooterBlockTitle1: "Links",
+                otherFooterBlockTitle2: "Contatos",
+                otherFooterBlockTitle3: "Social",
+                otherFooterAbout: "Sobre",
+                otherFooterNft: "NFT",
+                otherFooterCondition: "Condições de investimento",
+                otherFooterHowWork: "Como funciona",
+                otherFooterReferral: "Programa de indicação",
+                otherFooterScheme: "Esquema de juros",
+                otherFooterRegional: "Regionais",
+                otherFooterFaq: "FAQ",
+                otherFooterSmartContract: "Contrato inteligente",
+                otherFooterReviews: "Avaliações",
+                otherFooterNewChickens: "Novas galinhas",
+                schemeTitle: "Esquema de juros",
+                schemeCardTitle1: '<span>Volume de negociações de BNB</span> <span data-help="Clique no botão Sacar para obter todos os seus ganhos de depósitos e bônus de afiliados de uma só vez com uma única transação. Seu bônus pessoal de hold será redefinido dessa forma." class="_icon-info"></span>',
+                schemeCardTitle2: '<span>Se você não sacar o lucro</span> <span data-help="Clique no botão Sacar para obter todos os seus ganhos de depósitos e bônus de afiliados de uma só vez com uma única transação. Seu bônus pessoal de hold será redefinido dessa forma." class="_icon-info"></span>',
+                schemeCardName2: "Dias",
+                schemePrompt: "Seus fundos são creditados na carteira instantaneamente e ninguém pode pará-los, congelá-los ou qualquer outra coisa, então você pode ficar tranquilo com a segurança deles",
+                schemeDailyProfit: "Seu lucro diário",
+                "interest-calc__profit-input": "Valor do investimento",
+                schemeDailySum: "Lucro diário",
+                schemeInvestText: "É um projeto totalmente descentralizado escrito em um contrato inteligente na rede BSC",
+                schemeBtn: "Contrato inteligente",
+                regionalTitle: "Representantes regionais",
+                regionalSubTitle: "Os representantes regionais são seguidores conhecidos do Chikly NFT de diferentes países e regiões. Assim, você pode conhecer os famosos holders do Chickly NFT entre seus influenciadores favoritos em seu país e grupo de idioma. Além disso, você pode usar o link de indicação deles ao comprar o NFT do Chickly ou contatá-los com dúvidas.",
+                regionalChoose: "Escolha o país",
+                select__option: "TUDO",
+                regionalName: "Nome",
+                regionalCountry: "País",
+                regionalCity: "Cidade",
+                regionalLanguage: "Idioma",
+                regionalPhone: "Número de telefone",
+                regionalSocial: "Links sociais",
+                regionalReferral: "Link de indicação",
+                faqBlockTitle1: "SOBRE O CHICKLY",
+                faqItemTitle1: "O que é um NFT?",
+                faqItemText1: "NFT significa token não fungível, um ativo digital único que não é intercambiável com outro item similar. Isso significa que cada um tem seu próprio conjunto de metadados que comprovam sua exclusividade e propriedade, que é criptografado na blockchain. É um item digital exclusivo que os usuários podem comprar, possuir e fazer trade.",
+                faqItemTitle2: "O que é o Chickly",
+                faqItemText2: "O Chicky é sua pequena farm dos sonhos no seu bolso ou na sua área de trabalho. Um lugar onde você pode obter ganhos estáveis. Basicamente Chickly é um jogo. Um jogo ocioso, onde você compra nossos pintinhos para ganhar mais com o tempo.",
+                faqItemTitle3: "Para que serve o Chickly?",
+                faqItemText3: "Ao comprar nossos NFT, você terá lucro por hora. O lucro final depende do NFT adquirido. A porcentagem de lucro depende de várias condições: há quanto tempo você saca o lucro e quanto dinheiro passou pelo contrato inteligente.",
+                faqItemTitle4: "Onde posso comprar NFT do Chickly?",
+                faqItemText4: "Você pode comprar NFT do Chikly apenas no site oficial. A recompra e a revenda não estão previstas e, portanto, impossíveis.",
+                faqItemTitle5: "Quando posso conseguir?",
+                faqItemText5: "Anunciaremos o início das vendas nas redes sociais. Você também pode assinar nossas notificações do navegador. Não enviaremos informações desnecessárias ou compartilharemos suas informações com terceiros.",
+                faqItemTitle6: "Por que galinhas?",
+                faqItemText6: "Elas são benéficas. E a gema do ovo é dourada como o BNB, obviamente!",
+                faqBLockTitle2: "PERGUNTAS FINANCEIRAS",
+                faqItemTitle7: "Como posso ganhar dinheiro com você?",
+                faqItemText7: "Ao comprar um NFT do Chikly, você receberá lucro por hora. Lembre-se de alimentar as galinhas todos os dias para obter o máximo de lucro possível!",
+                faqItemTitle8: "Com quais moedas você trabalha?",
+                faqItemText8: "Você só pode comprar NFT do Chiclky com BNB conectando-se à sua carteira da Binance Smart Chain.",
+                faqItemTitle9: "Qual o valor mínimo de compra?",
+                faqItemText9: "O preço dos NFT do Chikly começa em 0,04 BNB.",
+                faqItemTitle10: "Quando posso sacar o lucro?",
+                faqItemText10: "Você pode sacar os lucros a qualquer momento, mas lembre-se de que isso queimará a porcentagem de bônus dos lucros diários.",
+                faqItemTitle11: "Como posso aumentar meu lucro?",
+                faqItemText11: "O lucro final depende do tipo de token comprado. O lucro diário aumenta 0,1% a cada dia, desde que você alimente as galinhas e mantenha o lucro na folha de balanço. Além disso, o lucro diário aumenta em 0,1% para cada 400 BNB que o endereço do contrato inteligente recebeu.",
+                faqItemTitle12: "Como alimentar galinhas e o que isso me dará?",
+                faqItemText12: 'O botão "Alimente as Galinhas" está localizado no Escritório Privado dos Usuários acima da lista de todos os seus NFT. A alimentação das galinhas deve ser feita diariamente para aumentar os lucros.'
+            }
+        };
+        const mobListTranslations = {
+            eng: {
+                "regional-item__col-top_name": "Name",
+                "regional-item__col-top_country": "Country",
+                "regional-item__col-top_city": "City",
+                "regional-item__col-top_language": "Language",
+                "regional-item__col-top_phone": "Phone number",
+                "regional-item__col-top_social": "Social links",
+                "regional-item__col-top_referral": "Referral link"
+            },
+            esp: {
+                "regional-item__col-top_name": "Nombre",
+                "regional-item__col-top_country": "País",
+                "regional-item__col-top_city": "Ciudad",
+                "regional-item__col-top_language": "Idioma",
+                "regional-item__col-top_phone": "Número telefónico",
+                "regional-item__col-top_social": "Vínculos sociales",
+                "regional-item__col-top_referral": "Vínculo de recomendación"
+            },
+            vnm: {
+                "regional-item__col-top_name": "Tên",
+                "regional-item__col-top_country": "Quốc gia",
+                "regional-item__col-top_city": "Thành phố",
+                "regional-item__col-top_language": "Ngôn ngữ",
+                "regional-item__col-top_phone": "Số điện thoại",
+                "regional-item__col-top_social": "Liên kết mạng xã hội",
+                "regional-item__col-top_referral": "Liên kết giới thiệu"
+            },
+            prt: {
+                "regional-item__col-top_name": "Nome",
+                "regional-item__col-top_country": "País",
+                "regional-item__col-top_city": "Cidade",
+                "regional-item__col-top_language": "Idioma",
+                "regional-item__col-top_phone": "Número de telefone",
+                "regional-item__col-top_social": "Links sociais",
+                "regional-item__col-top_referral": "Link de indicação"
+            }
+        };
+        const newChickListArr = document.querySelectorAll(".replenishment__item");
+        if (0 !== newChickListArr.length) {
             const seeMoreBtn = document.querySelector(".replenishment__button");
-            let i = 0;
-            if (arrayItem.length > 0) {
-                for (i; 6 !== i; i++) {
-                    const element = arrayItem[i];
+            seeMoreBtn.addEventListener("click", openChunk);
+            let i;
+            initNewChick();
+            function initNewChick() {
+                for (i = 0; i < (newChickListArr.length > 6 ? 6 : newChickListArr.length); i++) {
+                    const element = newChickListArr[i];
                     element.classList.add("active", "see");
                 }
-                seeMoreBtn.addEventListener("click", addItem);
-                function addItem() {
-                    let res = i + 6;
-                    if (i < arrayItem.length) for (i; i !== res; i++) {
-                        const element = arrayItem[i];
+                if (newChickListArr.length <= 6) hiddenBtn();
+            }
+            function hiddenBtn() {
+                seeMoreBtn.classList.add("_hidden");
+            }
+            function openChunk() {
+                const itemIsHidden = newChickListArr.length - document.querySelectorAll(".replenishment__item.active").length;
+                const needRender = i + 6;
+                if (itemIsHidden > 6) for (i; i < needRender; i++) {
+                    const element = newChickListArr[i];
+                    element.classList.add("active");
+                    setTimeout((() => {
+                        element.classList.add("see");
+                    }), 100);
+                } else {
+                    const lastRender = i + itemIsHidden;
+                    for (i; i < lastRender; i++) {
+                        const element = newChickListArr[i];
                         element.classList.add("active");
                         setTimeout((() => {
                             element.classList.add("see");
-                        }), 200);
+                        }), 0);
                     }
+                    hiddenBtn();
                 }
             }
         }
-        const product = document.querySelector(".regional-list__main-content");
-        if (product) {
+        const regionaProduct = document.querySelector(".regional-list__main-content");
+        if (regionaProduct) {
             const lengthPart = 6;
-            const pagination = document.querySelector(".pagination__content");
-            let data = [ ...product.children ];
+            const regionalPaginationEl = document.querySelector(".regional-pagination");
+            let data = [ ...regionaProduct.children ];
             let chunks = SplitParts(data);
             RenderChunks(0);
             RenderPagination();
             document.addEventListener("selectCallback", (function(e) {
                 const currentSelect = e.detail.select;
                 const curVal = currentSelect.value;
-                if ("ALL" === curVal) chunks = SplitParts(data); else {
-                    let curArr = [ SplitParts(data.filter((elem => elem.classList.contains(curVal)))) ];
-                    chunks = curArr;
-                }
+                if ("ALL" === curVal) chunks = SplitParts(data); else chunks = SplitParts(data.filter((function(elem) {
+                    return elem.classList.contains(curVal);
+                })));
                 RenderChunks(0);
                 RenderPagination();
             }));
-            pagination.addEventListener("click", (e => {
-                e.preventDefault();
-                let item = e.target.closest(".pagination__item");
-                if (item) {
-                    let part, active = pagination.querySelector(".pagination__item.active");
-                    if (item.classList.contains("pagination__item_prev") || item.classList.contains("pagination__item_next")) {
-                        if (item.classList.contains("disable")) return false;
-                        part = +active.dataset.part;
-                        part = item.classList.contains("pagination__item_prev") ? part - 1 : part + 1;
-                        RenderChunks(part);
-                        active.classList.remove("active");
-                        pagination.querySelector(`.pagination__item[data-part="${part}"]`).classList.add("active");
-                    } else {
-                        active.classList.remove("active");
-                        item.classList.add("active");
-                        part = +item.dataset.part;
-                        RenderChunks(part);
-                    }
-                    let prev = pagination.querySelector(".pagination__item.pagination__item_prev"), next = pagination.querySelector(".pagination__item.pagination__item_next");
-                    if (prev.classList.contains("disable")) prev.classList.remove("disable");
-                    if (next.classList.contains("disable")) next.classList.remove("disable");
-                    if (0 === part) prev.classList.add("disable");
-                    if (part === chunks.length - 1) next.classList.add("disable");
-                }
-            }));
             function SplitParts(arr) {
                 if (arr.length > lengthPart) {
-                    var _chunks = [];
+                    const _chunks = [];
                     Math.floor(arr.length / lengthPart);
                     for (var i = 0; i < arr.length; i += lengthPart) _chunks.push(arr.slice(i, i + lengthPart));
                     return _chunks;
-                } else return arr;
+                } else return [ arr ];
             }
             function RenderChunks(part) {
                 if (part >= 0 && part < chunks.length) {
-                    product.innerHTML = "";
+                    regionaProduct.innerHTML = "";
                     chunks[part].map((function(elem) {
-                        return product.append(elem);
+                        return regionaProduct.append(elem);
                     }));
                 } else return false;
             }
+            regionalPaginationEl.addEventListener("click", (e => {
+                e.preventDefault();
+                let item = e.target;
+                if (item.classList.contains("regional-pagination__item") || item.classList.contains("regional-pagination__arrow")) {
+                    let active = regionalPaginationEl.querySelector(".regional-pagination__item._active");
+                    let part;
+                    if (item.classList.contains("regional-pagination__arrow")) {
+                        if (item.classList.contains("_disable")) return false;
+                        part = +active.dataset.part;
+                        part = item.classList.contains("regional-pagination__arrow_prev") ? part - 1 : part + 1;
+                        RenderChunks(part);
+                        active.classList.remove("_active");
+                        regionalPaginationEl.querySelector(`.regional-pagination__item[data-part="${part}"]`).classList.add("_active");
+                    } else {
+                        active.classList.remove("_active");
+                        item.classList.add("_active");
+                        part = +item.dataset.part;
+                        RenderChunks(part);
+                    }
+                    let prev = regionalPaginationEl.querySelector(".regional-pagination__arrow_prev");
+                    let next = regionalPaginationEl.querySelector(".regional-pagination__arrow_next");
+                    if (prev.classList.contains("_disable")) prev.classList.remove("_disable");
+                    if (next.classList.contains("_disable")) next.classList.remove("_disable");
+                    if (0 === part) prev.classList.add("_disable");
+                    if (part === chunks.length - 1) next.classList.add("_disable");
+                    hideOverPages();
+                }
+            }));
             function RenderPagination() {
-                pagination.innerHTML = "";
+                regionalPaginationEl.innerHTML = "";
                 if (chunks.length > 1) {
-                    chunks.map(((elem, i) => pagination.insertAdjacentHTML("beforeend", `<button class="pagination__item ${0 === i ? " active" : ""}" data-part="${i}">${i + 1}</button>`)));
-                    pagination.insertAdjacentHTML("afterbegin", '<button class="pagination__item pagination__item_prev disable"><</button>');
-                    pagination.insertAdjacentHTML("beforeend", '<button class="pagination__item pagination__item_next">></button>');
+                    regionalPaginationEl.innerHTML = '<div class="regional-pagination__list"></div>';
+                    const regionalPaginationList = document.querySelector(".regional-pagination__list");
+                    chunks.map(((e, i) => regionalPaginationList.insertAdjacentHTML("beforeend", `<button class="regional-pagination__item ${0 === i ? "_active" : ""}" data-part="${i}">${i + 1}</button>`)));
+                    regionalPaginationEl.insertAdjacentHTML("afterbegin", '<button type="button"  class="regional-pagination__arrow regional-pagination__arrow_prev _icon-arrow-bottom _disable"></button>');
+                    regionalPaginationEl.insertAdjacentHTML("beforeend", '<button type="button" class="regional-pagination__arrow regional-pagination__arrow_next _icon-arrow-bottom"></button>');
+                }
+                hideOverPages();
+            }
+            function hideOverPages() {
+                const regionalPaginationList = document.querySelector(".regional-pagination__list");
+                const active = regionalPaginationEl.querySelector(".regional-pagination__item._active");
+                if (regionalPaginationList) {
+                    let items = [ ...regionalPaginationList.children ];
+                    if (items.length > 5) {
+                        items.forEach((item => item.classList.add("_hide")));
+                        items[0].classList.remove("_hide");
+                        if (active.previousElementSibling) active.previousElementSibling.classList.remove("_hide");
+                        active.classList.remove("_hide");
+                        if (active.nextElementSibling) active.nextElementSibling.classList.remove("_hide");
+                        items[items.length - 1].classList.remove("_hide");
+                    }
                 }
             }
         }
@@ -6840,6 +7596,8 @@
             function calcInit() {
                 calcBnbInputEL.value = "400";
                 calcDaysInputEL.value = "1";
+                calcBnbResultEl.textContent = 1.15;
+                calcDaysResultEl.textContent = .1;
                 calcTotalPercent();
             }
             calcBnbInputEL.addEventListener("input", calcBnbPercent);
@@ -6857,8 +7615,54 @@
             }
             function calcBnbPercent() {
                 const resultBnb = Math.trunc(+calcBnbInputEL.value / 400);
-                calcBnbResultEl.textContent = resultBnb / 10;
+                let bnbResult = 1;
+                const stepsNow = stepsCounter(resultBnb);
+                firstStep();
+                calcBnbResultEl.textContent = bnbResult.toFixed(3);
                 calcTotalPercent();
+                function firstStep() {
+                    let curVal = stepsNow.get();
+                    if (curVal >= 7) {
+                        bnbResult += 1.05;
+                        stepsNow.sub(7);
+                        secondStep();
+                    } else bnbResult += .15 * curVal;
+                }
+                function secondStep() {
+                    let curVal = stepsNow.get();
+                    if (curVal >= 14) {
+                        bnbResult += .98;
+                        stepsNow.sub(14);
+                        thirdStep();
+                    } else bnbResult += .07 * curVal;
+                }
+                function thirdStep() {
+                    let curVal = stepsNow.get();
+                    if (curVal >= 28) {
+                        bnbResult += .98;
+                        stepsNow.sub(28);
+                        fourthStep();
+                    } else bnbResult += .035 * curVal;
+                }
+                function fourthStep() {
+                    let curVal = stepsNow.get();
+                    if (curVal >= 50) {
+                        bnbResult += 1;
+                        stepsNow.sub(50);
+                        fifthStep();
+                    } else bnbResult += .02 * curVal;
+                }
+                function fifthStep() {
+                    let curVal = stepsNow.get();
+                    bnbResult += .01 * curVal;
+                }
+            }
+            function stepsCounter(val) {
+                let result = val;
+                return {
+                    sub: n => result -= n,
+                    get: () => result
+                };
             }
             calcDaysInputEL.addEventListener("input", calcDaysPercent);
             calcDaysBtnPlusEL.addEventListener("click", addDaysInput);
@@ -6875,18 +7679,50 @@
             }
             function calcDaysPercent() {
                 const resultDays = calcDaysInputEL.value / 10;
-                calcDaysResultEl.textContent = resultDays;
+                calcDaysResultEl.textContent = resultDays.toFixed(3);
                 calcTotalPercent();
             }
             function calcTotalPercent() {
-                const resultPercent = +calcBnbResultEl.textContent + +calcDaysResultEl.textContent + 1;
-                calcTotalPercentEl.textContent = resultPercent.toFixed(1);
+                const resultPercent = +calcBnbResultEl.textContent + +calcDaysResultEl.textContent;
+                calcTotalPercentEl.textContent = resultPercent.toFixed(3);
                 calcDailyProfit();
             }
             calcInvestmentSumInputEl.addEventListener("input", calcDailyProfit);
             function calcDailyProfit() {
                 const profit = calcInvestmentSumInputEl.value / 100 * +calcTotalPercentEl.textContent;
-                calcProfitSumEl.textContent = profit.toFixed(1);
+                calcProfitSumEl.textContent = `${profit.toFixed(3)}$`;
+            }
+        }
+        {
+            const langHeadEL = document.querySelector(".language-block__flag");
+            const langHeadFlagImgEl = document.querySelector(".language-block__flag-head-img");
+            const langListLEl = document.querySelector(".language-block__body");
+            let lang = window.hasOwnProperty("localStorage") && window.localStorage.getItem("lang") || "eng";
+            let flagLang = window.hasOwnProperty("localStorage") && window.localStorage.getItem("flagLang") || "img/Header/eng.png";
+            setLang();
+            langListLEl.addEventListener("click", (e => {
+                if (e.target.classList.contains("language-block__item")) {
+                    lang = e.target.querySelector(".language-block__item-text").textContent;
+                    flagLang = e.target.querySelector(".language-block__flag-img").getAttribute("src");
+                    window.localStorage.setItem("lang", lang);
+                    window.localStorage.setItem("flagLang", flagLang);
+                    location.reload();
+                    setLang();
+                }
+            }));
+            function setLang() {
+                langHeadFlagImgEl.setAttribute("src", flagLang);
+                if (langHeadEL.querySelector("source")) langHeadEL.querySelector("source").setAttribute("srcset", flagLang);
+                for (let p in translations[lang]) {
+                    if (document.getElementById(p)) document.getElementById(p).innerHTML = translations[lang][p];
+                    if (document.querySelector(`.${p}[data-placeholder]`)) document.querySelector(`.${p}[data-placeholder]`).setAttribute("placeholder", translations[lang][p]);
+                }
+                translateListMob();
+            }
+            function translateListMob() {
+                for (let p in mobListTranslations[lang]) document.querySelectorAll("." + p).forEach((el => {
+                    el.innerHTML = mobListTranslations[lang][p];
+                }));
             }
         }
         window["FLS"] = true;
