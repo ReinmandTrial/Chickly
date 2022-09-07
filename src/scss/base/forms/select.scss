@@ -56,14 +56,21 @@
    }
    // .select__option
    &__option {
+      display: flex;
+      justify-content: space-between;
+      gap: rem(10);
+      align-items: center;
       word-break: break-word;
-      display: block;
       width: 100%;
       font-size: 16px;
       line-height: 100%;
       padding: rem(7) rem(15);
       background-color: transparent;
       text-align: left;
+      span {
+         color: rgba(199, 199, 199, 1);
+         flex: none;
+      }
       @media (any-hover: hover) {
          &:hover {
             background-color: rgba(199, 199, 199, 0.8);

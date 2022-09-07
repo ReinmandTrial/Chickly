@@ -6927,7 +6927,7 @@
                 otherHeaderReviews: "Reseñas",
                 otherHeaderNewChickens: "Pollos Nuevos",
                 otherHeaderBtn: "Conectar Billetera",
-                aboutTitle: "Inversiones Confiables en BNB",
+                aboutTitle: "Inversiones Confiables en",
                 aboutSubTitle: "Gane hasta un <span>+220%</span> del costo de su NFT",
                 aboutItem1: "Plataforma de blockchain descentralizada",
                 aboutItem2: "Ganancia totalmente segura basada en un contrato inteligente de BNB",
@@ -7097,7 +7097,7 @@
                 otherHeaderReviews: "Nhận xét",
                 otherHeaderNewChickens: "Gà mới",
                 otherHeaderBtn: "Kêt nối Ví",
-                aboutTitle: "Khoản đầu tư tin cậy với BNB",
+                aboutTitle: "Khoản đầu tư tin cậy với",
                 aboutSubTitle: "Lợi nhuận lên tới <span>+220%</span> so với giá mua NFT của bạn",
                 aboutItem1: "Nền tảng blockchain phi tập",
                 aboutItem2: "Thu nhập được đảm bảo an toàn tuyệt đối dựa vào hợp đồng thông minh BNB",
@@ -7267,7 +7267,7 @@
                 otherHeaderReviews: "Avaliações",
                 otherHeaderNewChickens: "Novas galinhas",
                 otherHeaderBtn: "Conectar Carteira",
-                aboutTitle: "Investimentos confiáveis com BNB",
+                aboutTitle: "Investimentos confiáveis com",
                 aboutSubTitle: "Ganhe até <span>+220%</span>  ou mais do custo de seu NFT",
                 aboutItem1: "Plataforma descentralizada na Blockchain",
                 aboutItem2: "Renda totalmente segura com base no contrato inteligente de BNB",
@@ -7493,6 +7493,7 @@
             const regionalPaginationEl = document.querySelector(".regional-pagination");
             let data = [ ...regionaProduct.children ];
             let chunks = SplitParts(data);
+            countAmountUserInRegion();
             RenderChunks(0);
             RenderPagination();
             document.addEventListener("selectCallback", (function(e) {
@@ -7573,6 +7574,16 @@
                         items[items.length - 1].classList.remove("_hide");
                     }
                 }
+            }
+            function countAmountUserInRegion() {
+                const regionSelectList = document.querySelectorAll(".select__option");
+                regionSelectList.forEach((reg => {
+                    const curVal = data.filter((el => {
+                        if ("ALL" === reg.dataset.value) return data.length;
+                        return reg.dataset.value === el.classList[2];
+                    }));
+                    reg.insertAdjacentHTML("beforeend", `<span>(${curVal.length})</span>`);
+                }));
             }
         }
         const MAIN_CALC_EL = document.getElementById("interestScreme");

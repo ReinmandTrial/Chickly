@@ -283,14 +283,30 @@ h6 {
 }
 
 .select__option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 0.625rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   word-break: break-word;
-  display: block;
   width: 100%;
   font-size: 16px;
   line-height: 100%;
   padding: 0.4375rem 0.9375rem;
   background-color: transparent;
   text-align: left;
+}
+
+.select__option span {
+  color: rgb(199, 199, 199);
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
 }
 
 .select._select-open {
