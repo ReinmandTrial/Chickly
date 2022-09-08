@@ -7128,7 +7128,7 @@
                 conditionSlideSubTitle1: "+1% mỗi 24 giờ (+0.0416% mỗi giờ)",
                 conditionSlideSubText1: "Hợp đồng thông minh BNB tính toán lợi nhuận cho mọi NFT từ thời điểm mà bạn mua. Bạn sẽ nhận +0.0416% mỗi giờ, +1% mỗi ngày.",
                 conditionSlideTitle2: "THƯỞNG GIỮ LỢI NHUẬN CÁ NHÂN",
-                conditionSlideSubTitle2: "+0.1% for every 24 hours without withdraw",
+                conditionSlideSubTitle2: "+0.1% cho mỗi 24 giờ không rút",
                 conditionSlideSubText2: "Hợp đồng thông minh tính toán thưởng cho việc giữ lợi nhuận từ số tiền nạp hoặc ngày rút cuối cùng. Nếu bạn không yêu cầu thanh toán, nó sẽ cộng cho bạn một khoản thưởng. Sau 24 giờ +0.1%, sau 48 giờ +0.2%, sau 72 giờ +0.3% và tiếp tục như vậy.",
                 conditionSlideTitle3: "THƯỞNG TỔNG TIỀN TRÊN HỢP ĐỒNG THÔNG MINH",
                 conditionSlideSubTitle3: "+0.15% cho mỗi 400 BNB trên hợp đồng thông minh",

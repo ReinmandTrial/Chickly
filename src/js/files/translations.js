@@ -160,7 +160,7 @@ export const translations = {
       regionalSubTitle:
          'Regional representatives are well-known followers of Chikly NFT from different countries and regions. So, you can meet the famours holders of Chickly NFT among your favorite influencers in your country and language group. In addition, you can use their referral link when purchasing Chickly NFT or contact them with questions.',
       regionalChoose: 'Choose country',
-      'select__option': 'ALL',
+      select__option: 'ALL',
       regionalName: 'Name',
       regionalCountry: 'Country',
       regionalCity: 'City',
@@ -367,7 +367,7 @@ export const translations = {
       regionalSubTitle:
          'Los representantes regionales son seguidores reconocidos de Chickly NFT de diferentes países y regiones. Usted puede encontrar a famosos tenedores de Chickly NFT entre sus influencers favoritos de su país y su idioma. Además, puede usar sus vínculos de recomendación al comprar Chickly NFT o contactarlos si tiene dudas.',
       regionalChoose: 'Elija el país',
-      'select__option': 'TODOS',
+      select__option: 'TODOS',
       regionalName: 'Nombre',
       regionalCountry: 'País',
       regionalCity: 'Ciudad',
@@ -479,7 +479,7 @@ export const translations = {
       conditionSlideSubText1:
          'Hợp đồng thông minh BNB tính toán lợi nhuận cho mọi NFT từ thời điểm mà bạn mua. Bạn sẽ nhận +0.0416% mỗi giờ, +1% mỗi ngày.',
       conditionSlideTitle2: 'THƯỞNG GIỮ LỢI NHUẬN CÁ NHÂN',
-      conditionSlideSubTitle2: '+0.1% for every 24 hours without withdraw',
+      conditionSlideSubTitle2: '+0.1% cho mỗi 24 giờ không rút',
       conditionSlideSubText2:
          'Hợp đồng thông minh tính toán thưởng cho việc giữ lợi nhuận từ số tiền nạp hoặc ngày rút cuối cùng. Nếu bạn không yêu cầu thanh toán, nó sẽ cộng cho bạn một khoản thưởng. Sau 24 giờ +0.1%, sau 48 giờ +0.2%, sau 72 giờ +0.3% và tiếp tục như vậy.',
       conditionSlideTitle3: 'THƯỞNG TỔNG TIỀN TRÊN HỢP ĐỒNG THÔNG MINH',
@@ -574,7 +574,7 @@ export const translations = {
       regionalSubTitle:
          'Đại diện khu vực của Chickly có rất nhiều người theo dõi đến từ nhiều quốc gia và vùng lãnh thổ khác nhau. Do đó, bạn có thể gặp những người nổi tiếng đang nắm giữ NFT của Chickly tại các quốc gia hoặc các nhóm sử dụng ngôn ngữ của bạn. Bạn cũng có thể dùng liên kết giới thiệu của họ khi mua NFT hoặc liên hệ họ nếu có bất kỳ câu hỏi nào.',
       regionalChoose: 'Chọn quốc gia',
-      'select__option': 'TẤT CẢ CÁC',
+      select__option: 'TẤT CẢ CÁC',
       regionalName: 'Tên',
       regionalCountry: 'Quốc gia',
       regionalCity: 'Thành phố',
@@ -781,7 +781,7 @@ export const translations = {
       regionalSubTitle:
          'Os representantes regionais são seguidores conhecidos do Chikly NFT de diferentes países e regiões. Assim, você pode conhecer os famosos holders do Chickly NFT entre seus influenciadores favoritos em seu país e grupo de idioma. Além disso, você pode usar o link de indicação deles ao comprar o NFT do Chickly ou contatá-los com dúvidas.',
       regionalChoose: 'Escolha o país',
-      'select__option': 'TUDO',
+      select__option: 'TUDO',
       regionalName: 'Nome',
       regionalCountry: 'País',
       regionalCity: 'Cidade',
