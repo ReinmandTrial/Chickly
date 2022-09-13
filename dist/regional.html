@@ -5,7 +5,7 @@
 	<title>Regional</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20220908140957">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220913174456">
 	<link rel="shortcut icon" href="favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -60,13 +60,13 @@
 								<button type="button" class="language-block__head"><span class="language-block__flag"><picture><source srcset="img/Header/eng.webp" type="image/webp"><img class="language-block__flag-head-img" src="img/Header/eng.png" alt=""></picture></span> <span class="_icon-arrow-bottom"></span>
 								</button>
 								<div class="language-block__body">
-									<button id="langEng" type="button" class="language-block__item"><span class="language-block__flag"><picture><source srcset="img/Header/eng.webp" type="image/webp"><img class="language-block__flag-img" src="img/Header/eng.png" alt=""></picture></span><span class="language-block__item-text">eng</span>
+									<button data-lang="eng" id="langEng" type="button" class="language-block__item"><span class="language-block__flag"><picture><source srcset="img/Header/eng.webp" type="image/webp"><img class="language-block__flag-img" src="img/Header/eng.png" alt=""></picture></span><span class="language-block__item-text">eng</span>
 									</button>
-									<button id="langEsp" type="button" class="language-block__item"><span class="language-block__flag"><picture><source srcset="img/Header/esp.webp" type="image/webp"><img class="language-block__flag-img" src="img/Header/esp.png" alt=""></picture></span><span class="language-block__item-text">esp</span>
+									<button data-lang="esp" id="langEsp" type="button" class="language-block__item"><span class="language-block__flag"><picture><source srcset="img/Header/esp.webp" type="image/webp"><img class="language-block__flag-img" src="img/Header/esp.png" alt=""></picture></span><span class="language-block__item-text">esp</span>
 									</button>
-									<button id="langVnm" type="button" class="language-block__item"><span class="language-block__flag"><picture><source srcset="img/Header/vnm.webp" type="image/webp"><img class="language-block__flag-img" src="img/Header/vnm.png" alt=""></picture></span><span class="language-block__item-text">vnm</span>
+									<button data-lang="vnm" id="langVnm" type="button" class="language-block__item"><span class="language-block__flag"><picture><source srcset="img/Header/vnm.webp" type="image/webp"><img class="language-block__flag-img" src="img/Header/vnm.png" alt=""></picture></span><span class="language-block__item-text">vnm</span>
 									</button>
-									<button id="langPrt" type="button" class="language-block__item"><span class="language-block__flag"><picture><source srcset="img/Header/prt.webp" type="image/webp"><img class="language-block__flag-img" src="img/Header/prt.png" alt=""></picture></span><span class="language-block__item-text">prt</span>
+									<button data-lang="prt" id="langPrt" type="button" class="language-block__item"><span class="language-block__flag"><picture><source srcset="img/Header/prt.webp" type="image/webp"><img class="language-block__flag-img" src="img/Header/prt.png" alt=""></picture></span><span class="language-block__item-text">prt</span>
 									</button>
 								</div>
 							</div>
@@ -779,17 +779,18 @@
 						<div class="footer__links">
 							<p id="otherFooterBlockTitle1" class="footer__block-title ">Links</p>
 							<div class="footer__links-list">
-								<a id="otherFooterAbout" href="index.html#about" class="footer__links-item">About</a>
+								<a id="otherFooterAbout" href="index.html#about" class="footer__links-item"><span class="_icon-check"></span> About</a>
 								<a id="otherFooterNft" href="index.html#nft-chicks" class="footer__links-item">NFT</a>
 								<a id="otherFooterCondition" href="index.html#conditions" class="footer__links-item">Investment Conditions</a>
 								<a id="otherFooterHowWork" href="index.html#how-it-work" class="footer__links-item">How it works</a>
 								<a id="otherFooterReferral" href="index.html#referral-program" class="footer__links-item">Referral program</a>
-								<a id="otherFooterScheme" href="interest-scheme.html" class="footer__links-item">Interest scheme</a>
-								<a id="otherFooterRegional" href="regional.html" class="footer__links-item">Regional</a>
-								<a id="otherFooterFaq" href="faq.html" class="footer__links-item">FAQ</a>
 								<a id="otherFooterSmartContract" data-goto-header data-goto=".audit" class="footer__links-item">Smart-contract</a>
 								<a id="otherFooterReviews" data-goto-header data-goto=".reviews" class="footer__links-item">Reviews</a>
 								<a id="otherFooterNewChickens" data-goto-header data-goto=".replenishment" class="footer__links-item">New chickens</a>
+								<a id="otherFooterScheme" href="interest-scheme.html" class="footer__links-item">Interest scheme</a>
+								<a id="otherFooterRegional" href="regional.html" class="footer__links-item">Regional</a>
+								<a id="otherFooterFaq" href="faq.html" class="footer__links-item">FAQ</a>
+								<button data-popup="#popupTermsOfUse" type="button" class="footer__links-item">Term Of Use</button>
 							</div>
 						</div>
 						<div class="footer__contacts">
@@ -814,14 +815,14 @@
 					<div class="footer__copyright">
 						Copyright © 2022 Logotype. All rights reserved.
 					</div>
-					<button data-goto=".header" class="footer__comeback-arrow">
+					<button data-goto-speed="2000" data-goto=".header" class="footer__comeback-arrow">
 						<img src="img/footer/comeback.svg" alt="comeback">
 					</button>
 				</div>
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20220908140957"></script>
+	<script src="js/app.min.js?_v=20220913174456"></script>
 </body>
 
 

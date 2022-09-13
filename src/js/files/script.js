@@ -60,7 +60,7 @@ if (regionaProduct) {
 
    let data = [...regionaProduct.children]; // Тут храним все `.card`, типо аналог БД, т.е исходные данные.
    let chunks = SplitParts(data); // Тут храним части. Ниже описание функции.
-   countAmountUserInRegion();
+   // countAmountUserInRegion();
    RenderChunks(0); // Рендерим первую часть. Описание функии ниже.
    RenderPagination(); // Рендерим пагинацию. Описание тоже ниже.
 
@@ -194,16 +194,16 @@ if (regionaProduct) {
       }
    }
 
-   function countAmountUserInRegion() {
-      const regionSelectList = document.querySelectorAll('.select__option');
-      regionSelectList.forEach((reg) => {
-         const curVal = data.filter((el) => {
-            if (reg.dataset.value === 'ALL') return data.length;
-            return reg.dataset.value === el.classList[2];
-         });
-         reg.insertAdjacentHTML('beforeend', `<span>(${curVal.length})</span>`);
-      });
-   }
+   // function countAmountUserInRegion() {
+   //    const regionSelectList = document.querySelectorAll('.select__option');
+   //    regionSelectList.forEach((reg) => {
+   //       const curVal = data.filter((el) => {
+   //          if (reg.dataset.value === 'ALL') return data.length;
+   //          return reg.dataset.value === el.classList[2];
+   //       });
+   //       reg.insertAdjacentHTML('beforeend', `<span>(${curVal.length})</span>`);
+   //    });
+   // }
 }
 //========================================================================================================================================================
 
@@ -369,7 +369,8 @@ import { translations, mobListTranslations } from './translations.js';
    const langListLEl = document.querySelector('.language-block__body');
 
    let lang = (window.hasOwnProperty('localStorage') && window.localStorage.getItem('lang')) || 'eng';
-   let flagLang = (window.hasOwnProperty('localStorage') && window.localStorage.getItem('flagLang')) || 'img/Header/eng.png';
+   let flagLang = document.querySelector(`.language-block__item[data-lang = ${lang}] .language-block__flag-img`).getAttribute('src');
+   console.log(flagLang);
 
    setLang();
 
@@ -378,7 +379,6 @@ import { translations, mobListTranslations } from './translations.js';
          lang = e.target.querySelector('.language-block__item-text').textContent;
          flagLang = e.target.querySelector('.language-block__flag-img').getAttribute('src');
          window.localStorage.setItem('lang', lang);
-         window.localStorage.setItem('flagLang', flagLang);
          location.reload();
          setLang();
       }

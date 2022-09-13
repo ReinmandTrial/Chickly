@@ -66,6 +66,10 @@
       max-width: max-content;
       &:not(:last-child) {
          margin-bottom: rem(10);
+         margin-left: rem(15);
+         @media (max-width: $mobile) {
+            margin-left: auto;
+         }
       }
       @media (max-width: $mobile) {
          margin: 0 auto;
@@ -74,6 +78,65 @@
 
       &:hover {
          text-decoration: underline;
+      }
+      &_page {
+         text-transform: uppercase;
+         font-weight: 600;
+         margin-top: rem(20);
+         position: relative;
+         margin-left: 0 !important;
+         @media (max-width: $mobile) {
+            margin-left: auto !important;
+         }
+      }
+      &_popup {
+         margin-top: rem(30);
+         font-size: rem(16);
+         color: rgba(0, 0, 0, 0.6);
+         position: relative;
+         &::before {
+            content: '';
+            width: rem(200);
+            height: 1px;
+            position: absolute;
+            top: rem(-10);
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            @media (max-width: $mobile) {
+               left: 50%;
+               transform: translate(-50%, 0px);
+            }
+         }
+      }
+      &_first {
+         position: relative;
+         @media (max-width: $mobile) {
+            &::before {
+               content: '';
+               width: 100px;
+               height: 1px;
+               background-color: rgba(0, 0, 0, 0.4);
+               position: absolute;
+               top: -5px;
+               left: 50%;
+               transform: translate(-50%, 0px);
+            }
+         }
+      }
+      &_last {
+         position: relative;
+         @media (max-width: $mobile) {
+            &::before {
+               content: '';
+               width: 100px;
+               height: 1px;
+               background-color: rgba(0, 0, 0, 0.4);
+               position: absolute;
+               bottom: -5px;
+               left: 50%;
+               transform: translate(-50%, 0px);
+            }
+         }
       }
    }
 
@@ -84,8 +147,11 @@
    }
 
    &__contacts-link {
-      display: inline-flex;
+      display: flex;
       align-items: center;
+      @media (max-width: $mobile) {
+         justify-content: center;
+      }
       &::before {
          font-size: rem(16);
          margin-right: rem(11);

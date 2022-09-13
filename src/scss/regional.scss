@@ -85,6 +85,10 @@
    }
 
    &__main-content {
+      min-height: rem(488);
+      @media (max-width:$mobile){
+          min-height: auto; 
+      }
    }
 
    &__item {

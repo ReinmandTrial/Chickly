@@ -238,9 +238,9 @@ class Popup {
 
 				this.isOpen = true;
 
-				setTimeout(() => {
-					this._focusTrap();
-				}, 50);
+				// setTimeout(() => {
+				// 	this._focusTrap();
+				// }, 50);
 
 				// После открытия
 				this.options.on.afterOpen(this);
@@ -300,9 +300,9 @@ class Popup {
 			}
 		}));
 
-		setTimeout(() => {
-			this._focusTrap();
-		}, 50);
+		// setTimeout(() => {
+		// 	this._focusTrap();
+		// }, 50);
 
 		this.popupLogging(`Закрыл попап`);
 	}
@@ -342,14 +342,14 @@ class Popup {
 			e.preventDefault();
 		}
 	}
-	_focusTrap() {
-		const focusable = this.previousOpen.element.querySelectorAll(this._focusEl);
-		if (!this.isOpen && this.lastFocusEl) {
-			this.lastFocusEl.focus();
-		} else {
-			focusable[0].focus();
-		}
-	}
+	// _focusTrap() {
+	// 	const focusable = this.previousOpen.element.querySelectorAll(this._focusEl);
+	// 	if (!this.isOpen && this.lastFocusEl) {
+	// 		this.lastFocusEl.focus();
+	// 	} else {
+	// 		focusable[0].focus();
+	// 	}
+	// }
 	// Функция вывода в консоль
 	popupLogging(message) {
 		this.options.logging ? FLS(`[Попапос]: ${message}`) : null;
