@@ -1270,7 +1270,7 @@ body::after {
 }
 
 .footer__content {
-  padding: 10.625rem 0.9375rem 0rem 0.9375rem;
+  padding: 4.375rem 0.9375rem 0rem 0.9375rem;
 }
 
 .footer__logo-block {
@@ -1289,7 +1289,7 @@ body::after {
   -ms-grid-columns: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 1.25rem;
-  margin-bottom: 7.5rem;
+  margin-bottom: 3.125rem;
 }
 
 .footer__block-title {
@@ -1311,7 +1311,7 @@ body::after {
 }
 
 .footer__links-item:not(:last-child) {
-  margin-bottom: 0.625rem;
+  margin-bottom: 0.3125rem;
   margin-left: 0.9375rem;
 }
 
@@ -1322,9 +1322,13 @@ body::after {
 .footer__links-item_page {
   text-transform: uppercase;
   font-weight: 600;
-  margin-top: 1.25rem;
+  margin-top: 0.9375rem;
   position: relative;
   margin-left: 0 !important;
+}
+
+.footer__links-item_page:first-child {
+  margin-bottom: 0.9375rem;
 }
 
 .footer__links-item_popup {
@@ -1401,7 +1405,7 @@ body::after {
 .footer__comeback-arrow {
   position: absolute;
   bottom: 1.25rem;
-  right: 15.3125rem;
+  right: 2.8125rem;
   -webkit-animation: comeBack 3s infinite linear;
           animation: comeBack 3s infinite linear;
 }
@@ -3313,13 +3317,20 @@ body::after {
   display: none;
 }
 
-.social-sticky-block {
+.stick-blocks {
   position: fixed;
   right: 0;
   top: 50%;
   -webkit-transform: translate(0px, -50%);
       -ms-transform: translate(0px, -50%);
           transform: translate(0px, -50%);
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  z-index: 50;
+}
+
+.stick-blocks__social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3327,23 +3338,20 @@ body::after {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 1.25rem;
-  padding: 1.25rem;
+  gap: 20px;
+  padding: 20px;
   background: #fff;
   -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4), 0px 4px 8px rgba(0, 0, 0, 0.06);
           box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4), 0px 4px 8px rgba(0, 0, 0, 0.06);
-  border-radius: 0.625rem 0 0 0.625rem;
+  border-radius: 10px 0 0 10px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: all 0.7s ease 0s;
-  -o-transition: all 0.7s ease 0s;
-  transition: all 0.7s ease 0s;
-  z-index: 50;
+  margin-bottom: 5px;
 }
 
-.social-sticky-block__item {
-  width: 2.8125rem;
+.stick-blocks__soc-item {
+  width: 45px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3358,38 +3366,33 @@ body::after {
   transition: all 0.3s ease 0s;
 }
 
-.social-sticky-block__item img {
+.stick-blocks__soc-item img {
   max-width: 100%;
 }
 
-.calc-sticky-block {
-  position: fixed;
-  right: -5.9375rem;
-  right: 0;
-  top: calc(67% + 5px);
+.stick-blocks__calc {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 1.25rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
   background: #fff;
   -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4), 0px 4px 8px rgba(0, 0, 0, 0.06);
           box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4), 0px 4px 8px rgba(0, 0, 0, 0.06);
   border-radius: 0.625rem 0 0 0.625rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-transition: all 0.7s ease 0s;
   -o-transition: all 0.7s ease 0s;
   transition: all 0.7s ease 0s;
   z-index: 50;
 }
 
-.calc-sticky-block__item {
-  width: 2.8125rem;
+.stick-blocks__calc-item {
+  width: 45px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3404,7 +3407,7 @@ body::after {
   transition: all 0.3s ease 0s;
 }
 
-.calc-sticky-block__item img {
+.stick-blocks__calc-item img {
   max-width: 100%;
 }
 
@@ -4701,6 +4704,22 @@ body::after {
   }
 }
 
+@media (max-width: 1300px) {
+  .stick-blocks {
+    opacity: 0.3;
+    -webkit-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+  }
+
+  .stick-blocks:hover {
+    -webkit-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+    opacity: 1;
+  }
+}
+
 @media (max-width: 75em) {
   .nft-chicks__content {
     padding: 0rem 0.9375rem;
@@ -4884,34 +4903,6 @@ body::after {
   .about__second-dot {
     right: 1.25rem;
     top: 8.125rem;
-  }
-
-  .social-sticky-block {
-    opacity: 0.3;
-    -webkit-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
-  }
-
-  .social-sticky-block:hover {
-    -webkit-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
-    opacity: 1;
-  }
-
-  .calc-sticky-block {
-    opacity: 0.3;
-    -webkit-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
-  }
-
-  .calc-sticky-block:hover {
-    -webkit-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
-    opacity: 1;
   }
 }
 
@@ -5414,11 +5405,7 @@ body::after {
     padding: 1.25rem 0.75rem 1.25rem 1.25rem;
   }
 
-  .social-sticky-block {
-    display: none;
-  }
-
-  .calc-sticky-block {
+  .stick-blocks {
     display: none;
   }
 
@@ -5462,14 +5449,13 @@ body::after {
   }
 
   .footer__content {
-    padding-top: 5rem;
+    padding-top: 4.375rem;
   }
 
   .footer__info-block {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     text-align: center;
-    margin-bottom: 4.5625rem;
   }
 
   .footer__block-title {
@@ -6181,7 +6167,7 @@ body::after {
     background-color: rgba(199, 199, 199, 0.8);
   }
 
-  .social-sticky-block__item:hover {
+  .stick-blocks__soc-item:hover {
     -webkit-transform: scale(1.2);
         -ms-transform: scale(1.2);
             transform: scale(1.2);
@@ -6190,7 +6176,7 @@ body::after {
     transition: all 0.3s ease 0s;
   }
 
-  .calc-sticky-block__item:hover {
+  .stick-blocks__calc-item:hover {
     -webkit-transform: scale(1.2);
         -ms-transform: scale(1.2);
             transform: scale(1.2);

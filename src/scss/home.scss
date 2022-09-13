@@ -1946,35 +1946,38 @@
    }
 }
 
-.social-sticky-block {
+.stick-blocks {
    position: fixed;
    right: 0;
    top: 50%;
    transform: translate(0px, -50%);
-   display: flex;
-   flex-direction: column;
-   gap: rem(20);
-   padding: rem(20);
-   background: #fff;
-   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4), 0px 4px 8px rgba(0, 0, 0, 0.06);
-   border-radius: rem(10) 0 0 rem(10);
-   align-items: center;
-   transition: all 0.7s ease 0s;
+   transition: all 0.3s ease 0s;
    z-index: 50;
-   @media (max-width: em(1300)) {
+   @media (max-width: 1300px) {
       opacity: 0.3;
-      transition: all 0.3s ease 0s;
+      transition: all 0.5s ease 0s;
       &:hover {
-         transition: all 0.3s ease 0s;
+         transition: all 0.5s ease 0s;
          opacity: 1;
       }
    }
    @media (max-width: $tablet) {
       display: none;
    }
+   &__social {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4), 0px 4px 8px rgba(0, 0, 0, 0.06);
+      border-radius: 10px 0 0 10px;
+      align-items: center;
+      margin-bottom: 5px;
+   }
 
-   &__item {
-      width: rem(45);
+   &__soc-item {
+      width: 45px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1989,36 +1992,22 @@
          }
       }
    }
-}
 
-.calc-sticky-block {
-   position: fixed;
-   right: rem(-95);
-   right: 0;
-   top: calc(67% + 5px);
-   display: flex;
-   flex-direction: column;
-   padding: rem(20);
-   background: #fff;
-   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4), 0px 4px 8px rgba(0, 0, 0, 0.06);
-   border-radius: rem(10) 0 0 rem(10);
-   align-items: center;
-   transition: all 0.7s ease 0s;
-   z-index: 50;
-   @media (max-width: em(1300)) {
-      opacity: 0.3;
-      transition: all 0.3s ease 0s;
-      &:hover {
-         transition: all 0.3s ease 0s;
-         opacity: 1;
-      }
-   }
-   @media (max-width: $tablet) {
-      display: none;
+   &__calc {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4), 0px 4px 8px rgba(0, 0, 0, 0.06);
+      border-radius: rem(10) 0 0 rem(10);
+      transition: all 0.7s ease 0s;
+      z-index: 50;
+
    }
 
-   &__item {
-      width: rem(45);
+   &__calc-item {
+      width: 45px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -2097,8 +2086,6 @@
          margin-bottom: rem(40);
       }
    }
-   &__social {
-   }
-   &__calc-sticky {
+   &__stick-blocks {
    }
 }
