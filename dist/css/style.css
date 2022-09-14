@@ -1322,7 +1322,7 @@ body::after {
 .footer__links-item_page {
   text-transform: uppercase;
   font-weight: 600;
-  margin-top: 0.9375rem;
+  margin-top: 0.9375rem !important;
   position: relative;
   margin-left: 0 !important;
 }
@@ -5468,7 +5468,8 @@ body::after {
   }
 
   .footer__links-item {
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
   }
 

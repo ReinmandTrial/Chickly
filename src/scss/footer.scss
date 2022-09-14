@@ -71,7 +71,8 @@
          }
       }
       @media (max-width: $mobile) {
-         margin: 0 auto;
+         margin-left: auto;
+         margin-right: auto;
          text-align: center;
       }
 
@@ -81,10 +82,10 @@
       &_page {
          text-transform: uppercase;
          font-weight: 600;
-         margin-top: rem(15);
+         margin-top: rem(15) !important;
          position: relative;
          margin-left: 0 !important;
-         &:first-child{
+         &:first-child {
             margin-bottom: rem(15);
          }
          @media (max-width: $mobile) {
