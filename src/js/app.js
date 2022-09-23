@@ -219,6 +219,7 @@ import {update_counters,connect,buyNFT} from "./files/contract.js"
 
 window.addEventListener('load', async () => {
   document.getElementById('aboutBtnConnect').onclick=connect
+  document.getElementById('howWorkItemBtn1').onclick=connect
   document.getElementById('nftBuy1').onclick=buyNFT
   document.getElementById('nftBuy2').onclick=buyNFT
   document.getElementById('nftBuy3').onclick=buyNFT
