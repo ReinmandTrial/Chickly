@@ -215,3 +215,18 @@ import "./libs/dynamic_adapt.js";
 /* Подключаем файлы со своим кодом */
 import "./files/script.js";
 //============================================================================================================================================================================================================================================
+import {update_counters,connect,buyNFT} from "./files/contract.js"
+
+window.addEventListener('load', async () => {
+  document.getElementById('aboutBtnConnect').onclick=connect
+  document.getElementById('nftBuy1').onclick=buyNFT
+  document.getElementById('nftBuy2').onclick=buyNFT
+  document.getElementById('nftBuy3').onclick=buyNFT
+  document.getElementById('nftBuy4').onclick=buyNFT
+  document.getElementById('nftBuy5').onclick=buyNFT
+  update_counters()
+  connect()
+
+})
+
+
