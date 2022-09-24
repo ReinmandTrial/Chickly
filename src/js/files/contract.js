@@ -1,7 +1,7 @@
 import Web3 from "web3"
 const CHAIN_ID = "0x61"
 const BSCSCAN = "https://testnet.bscscan.com"
-const CONTRACT_ADDR="0xEF1FF89B24608950a8b471E506Db859C1013cf94"
+const CONTRACT_ADDR="0x514e1aaD22fc73a58BEE17Fb53B203C4fCBaE8b7"
 import abi from "../chickly.json"
 
 let accounts=[]
