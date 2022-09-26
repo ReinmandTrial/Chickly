@@ -1,7 +1,7 @@
 import Web3 from "web3"
 const CHAIN_ID = "0x61"
 const BSCSCAN = "https://testnet.bscscan.com"
-const CONTRACT_ADDR="0x514e1aaD22fc73a58BEE17Fb53B203C4fCBaE8b7"
+const CONTRACT_ADDR="0x53CC070Fa0E87c20F7e5485a4042ce78d5B43baC"
 import abi from "../chickly.json"
 
 let accounts=[]
@@ -39,21 +39,10 @@ export const connect=async(e)=>{
     await update_balance()
     }
     else{
-        document.getElementById("ethToPay").innerHTML = "0"
+//
         }
   }
   return false;
-}
-
-const copytext=async()=>{
-var copyText = document.getElementById("ref_link");
-copyText.select();
-copyText.setSelectionRange(0, 99999);
-if (navigator.clipboard){
-    await navigator.clipboard.writeText(copyText.value)
-}else{
-     document.execCommand("copy")
-    }
 }
 
 
@@ -73,8 +62,6 @@ export const buyNFT=async(e)=>{
 export const update_counters=async()=>{
     const web3= new Web3(window.ethereum || 'https://data-seed-prebsc-1-s1.binance.org:8545')
     const contract=new web3.eth.Contract(abi, CONTRACT_ADDR )
-
-
 }
 
 
