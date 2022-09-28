@@ -207,27 +207,38 @@ flsScroll.pageNavigation();
 import "./libs/dynamic_adapt.js";
 
 /* Форматирование чисел */
-// import './libs/wNumb.min.js';
+// 
 
 // ========================================================================================================================================================================================================================================================
 // Прочее ========================================================================================================================================================================================================================================================
 // ========================================================================================================================================================================================================================================================
 /* Подключаем файлы со своим кодом */
-//import "./files/script.js";
+//
 //============================================================================================================================================================================================================================================
-import {update_counters,connect,buyNFT} from "./files/contract.js"
+import {connect,buyNFT, update_events, next_events} from "./files/contract.js"
 
 window.addEventListener('load', async () => {
-  document.getElementById('aboutBtnConnect').onclick=connect
-  document.getElementById('howWorkItemBtn1').onclick=connect
+  if (document.getElementById('aboutBtnConnect')){
+    document.getElementById('aboutBtnConnect').onclick=connect
+    document.getElementById('howWorkItemBtn1').onclick=connect
+    document.getElementById('headerBtn').onclick=connect
+
+  document.getElementById('replenishmentSeeMore').onclick=async()=>{
+    await next_events()
+  }
   document.getElementById('nftBuy1').onclick=buyNFT
   document.getElementById('nftBuy2').onclick=buyNFT
   document.getElementById('nftBuy3').onclick=buyNFT
   document.getElementById('nftBuy4').onclick=buyNFT
   document.getElementById('nftBuy5').onclick=buyNFT
-  update_counters()
-  connect()
+  update_events()
+  }else{
+
+    document.getElementById('headerBtn').onclick=connect
+  }
+
+  //connect()
 
 })
-
-
+import './libs/wNumb.min.js';
+import "./files/script.js";
