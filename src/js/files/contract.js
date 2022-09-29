@@ -187,7 +187,10 @@ export const connect=async(e)=>{
 
 
 export const buyNFT=async(e)=>{
-    if (!is_connected) return
+    if (!is_connected){
+        await connect()
+        if (!is_connected) return
+    }
   try{
     const plan_id=e.target.attributes.plan_id.value
     const priceBNB=e.target.attributes.price.value
@@ -197,7 +200,7 @@ export const buyNFT=async(e)=>{
     const contract=new web3.eth.Contract(abi, CONTRACT_ADDR )
     const value=web3.utils.toWei(priceBNB)
     const result= await contract.methods.buyNFT(plan_id,1,referrer?referrer:"0x0000000000000000000000000000000000000000").send({from:accounts[0], value:value.toString()})
-
+    window.location.href='/cabinet.html'
   }catch(e){
     console.log(e)
     alert(e.message)

@@ -7,7 +7,7 @@ import { path } from "./config/gulp-settings.js";
 
 // Передаем значения в глобальную переменную
 global.app = {
-	isBuild: process.argv.includes('--build'),
+	isBuild: !process.argv.includes('--build'),
 	isDev: !process.argv.includes('--build'),
 	isWebP: !process.argv.includes('--nowebp'),
 	isFontsReW: process.argv.includes('--rewrite'),
@@ -61,9 +61,3 @@ export { deployZIP }
 
 // Выполнение сценария по умолчанию
 gulp.task('default', development);
-
-
-
-
-
-

@@ -47027,7 +47027,10 @@ object-assign
             return false;
         };
         const buyNFT = async e => {
-            if (!is_connected) return;
+            if (!is_connected) {
+                await connect();
+                if (!is_connected) return;
+            }
             try {
                 const plan_id = e.target.attributes.plan_id.value;
                 const priceBNB = e.target.attributes.price.value;
@@ -47040,6 +47043,7 @@ object-assign
                     from: accounts[0],
                     value: value.toString()
                 });
+                window.location.href = "/cabinet.html";
             } catch (e) {
                 console.log(e);
                 alert(e.message);
@@ -48078,8 +48082,8 @@ object-assign
             const langHeadFlagImgEl = document.querySelector(".language-block__flag-head-img");
             const langListLEl = document.querySelector(".language-block__body");
             let lang = window.hasOwnProperty("localStorage") && window.localStorage.getItem("lang") || "eng";
+            lang = !document.querySelector(`.language-block__item[data-lang = ${lang}] .language-block__flag-img`) ? lang : "eng";
             let flagLang = document.querySelector(`.language-block__item[data-lang = ${lang}] .language-block__flag-img`).getAttribute("src");
-            console.log(flagLang);
             setLang();
             langListLEl.addEventListener("click", (e => {
                 if (e.target.classList.contains("language-block__item")) {

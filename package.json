@@ -9,7 +9,7 @@
 	"scripts": {
 		"start": "npm i --legacy-peer-deps",
 		"dev": "gulp && webpack serve --progress -c config/webpack.dev.js",
-		"build": "gulp build --build",
+		"build": "gulp build --build  -c config/webpack.dev.js",
 		"sprite": "gulp sprite",
 		"fonts": "gulp fonts --rewrite",
 		"deploy": "gulp deployFTP --build",

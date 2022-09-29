@@ -368,9 +368,9 @@ import { translations, mobListTranslations } from './translations.js';
    const langHeadFlagImgEl = document.querySelector('.language-block__flag-head-img');
    const langListLEl = document.querySelector('.language-block__body');
 
-   let lang = (window.hasOwnProperty('localStorage') && window.localStorage.getItem('lang')) || 'eng';
+   let lang = (window.hasOwnProperty('localStorage') && window.localStorage.getItem('lang')) || 'eng'
+   lang=!document.querySelector(`.language-block__item[data-lang = ${lang}] .language-block__flag-img`)?lang:'eng'
    let flagLang = document.querySelector(`.language-block__item[data-lang = ${lang}] .language-block__flag-img`).getAttribute('src');
-   console.log(flagLang);
 
    setLang();
 
