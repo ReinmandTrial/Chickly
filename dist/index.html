@@ -5,7 +5,7 @@
 	<title>Chickly</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20220929202909">
+
 	<link rel="shortcut icon" href="favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -62,16 +62,16 @@
 								<button id="headerBtn" type="button" class="menu__connect-button">Connect Wallet</button>
 							</div>
 							<div class="menu__language language-block">
-								<button type="button" class="language-block__head"><span class="language-block__flag"><picture><source srcset="img/Header/eng.webp" type="image/webp"><img class="language-block__flag-head-img" src="img/Header/eng.png" alt=""></picture></span> <span class="_icon-arrow-bottom"></span>
+								<button type="button" class="language-block__head"><span class="language-block__flag"><img class="language-block__flag-head-img" src="img/Header/eng.png" alt=""></span> <span class="_icon-arrow-bottom"></span>
 								</button>
 								<div class="language-block__body">
-									<button data-lang="eng" id="langEng" type="button" class="language-block__item"><span class="language-block__flag"><picture><source srcset="img/Header/eng.webp" type="image/webp"><img class="language-block__flag-img" src="img/Header/eng.png" alt=""></picture></span><span class="language-block__item-text">eng</span>
+									<button data-lang="eng" id="langEng" type="button" class="language-block__item"><span class="language-block__flag"><img class="language-block__flag-img" src="img/Header/eng.png" alt=""></span><span class="language-block__item-text">eng</span>
 									</button>
-									<button data-lang="esp" id="langEsp" type="button" class="language-block__item"><span class="language-block__flag"><picture><source srcset="img/Header/esp.webp" type="image/webp"><img class="language-block__flag-img" src="img/Header/esp.png" alt=""></picture></span><span class="language-block__item-text">esp</span>
+									<button data-lang="esp" id="langEsp" type="button" class="language-block__item"><span class="language-block__flag"><img class="language-block__flag-img" src="img/Header/esp.png" alt=""></span><span class="language-block__item-text">esp</span>
 									</button>
-									<button data-lang="vnm" id="langVnm" type="button" class="language-block__item"><span class="language-block__flag"><picture><source srcset="img/Header/vnm.webp" type="image/webp"><img class="language-block__flag-img" src="img/Header/vnm.png" alt=""></picture></span><span class="language-block__item-text">vnm</span>
+									<button data-lang="vnm" id="langVnm" type="button" class="language-block__item"><span class="language-block__flag"><img class="language-block__flag-img" src="img/Header/vnm.png" alt=""></span><span class="language-block__item-text">vnm</span>
 									</button>
-									<button data-lang="prt" id="langPrt" type="button" class="language-block__item"><span class="language-block__flag"><picture><source srcset="img/Header/prt.webp" type="image/webp"><img class="language-block__flag-img" src="img/Header/prt.png" alt=""></picture></span><span class="language-block__item-text">prt</span>
+									<button data-lang="prt" id="langPrt" type="button" class="language-block__item"><span class="language-block__flag"><img class="language-block__flag-img" src="img/Header/prt.png" alt=""></span><span class="language-block__item-text">prt</span>
 									</button>
 								</div>
 							</div>
@@ -80,7 +80,7 @@
 								<a target="_blank" href="https://discord.gg/chickly" class="menu__social-item"><img src="img/discord.svg" alt=""></a>
 								<a target="_blank" href="#" class="menu__social-item"><img src="img/telegram-1.svg" alt=""></a>
 								<a target="_blank" href="#" class="menu__social-item"><img src="img/telegram-2.svg" alt=""></a>
-								<a target="_blank" href="#" class="menu__social-item"><img src="img/instagram.svg" alt=""></a>
+								<a target="_blank" href="#" class="menu__social-item" style="display: none"><img src="img/instagram.svg" alt=""></a>
 							</div>
 						</nav>
 					</div>
@@ -186,7 +186,7 @@
 								</div>
 								<div class="nft-chicks__card">
 									<div class="nft-chicks__img">
-										<picture><source srcset="img/Home/nft-chicks/4.webp" type="image/webp"><img src="img/Home/nft-chicks/4.png" alt="4"></picture>
+										<img src="img/Home/nft-chicks/4.png" alt="4">
 									</div>
 									<p class="nft-chicks__price">40 BNB</p>
 									<p class="nft-chicks__profit">+220% <span id="nftProfit5">profit</span></p>
@@ -265,10 +265,18 @@
 										<div class="swiper-pagination"></div>
 									</div>
 								</div>
-								<!-- <div class="conditions__balance-block">
-									<p class="conditions__balance-title">Chicks bought for:</p>
-									<div class="conditions__balance-button _icon-schedule">456456456</div>
-								</div> -->
+                              <div class="conditions__wrapper swiper-wrapper">
+								<div class="conditions__balance-block">
+									<p class="conditions__balance-title">Current platform balance BNB:</p>
+									<div id="site_balance" class="conditions__balance-button _icon-schedule">0</div>
+								</div>
+
+								<div class="conditions__balance-block">
+									<p class="conditions__balance-title">Current platform users:</p>
+									<div id="site_users" class="conditions__balance-button _icon-schedule">0</div>
+								</div>
+                              </div>
+
 							</div>
 							<!-- <div class="conditions__animations">
 								<span class="conditions__rigth-coin-wrap"><img src="img/Home/conditions/coin-animation.svg" alt="coin"
@@ -304,7 +312,7 @@
 										<p id="howWorkItemTitle2" class="step-how-it-works__title">Buy one</p>
 										<p id="howWorkItemText2" class="step-how-it-works__descr">of the profitable chickens</p>
 										<div class="step-how-it-works__bottom-img">
-											<picture><source srcset="img/Home/How-it-works/triple-cock.webp" type="image/webp"><img src="img/Home/How-it-works/triple-cock.png" alt="triple-cock"></picture>
+											<img src="img/Home/How-it-works/triple-cock.png" alt="triple-cock">
 										</div>
 									</div>
 									<div class="how-it-work__step how-it-work__step_three step-how-it-works">
@@ -355,7 +363,7 @@
 								<h3 id="auditTitle" class="audit__title">Honest and Transparent</h3>
 								<h4 id="auditSubTitle" class="audit__subtitle">Smart-contract Independent auditions and reviews</h4>
 								<div class="audit__block">
-									<div class="audit__image"><picture><source srcset="img/Home/audit/laptop.webp" type="image/webp"><img src="img/Home/audit/laptop.png" alt="laptop"></picture></div>
+									<div class="audit__image"><img src="img/Home/audit/laptop.png" alt="laptop"></div>
 									<div class="audit__list">
 										<div class="audit__item">
 											<p id="auditItemTitle1" class="audit__item-title">Independent company</p>
@@ -817,7 +825,7 @@
 							</div>
 						</div>
 				</div>
-				<script src="js/app.min.js?_v=20220929202909"></script>
+				<script src="js/app.min.js"></script>
 </body>
 
 </html>

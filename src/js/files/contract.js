@@ -93,7 +93,7 @@ const update_balance=async()=>{
 let last_block=0;
 
 const load_events=async(toBlock)=>{
-    const web3= new Web3('https://data-seed-prebsc-1-s1.binance.org:8545')
+    const web3= new Web3('https://data-seed-prebsc-1-s3.binance.org:8545')
     const contract=new web3.eth.Contract(abi, CONTRACT_ADDR )
     const events = await contract.getPastEvents('allEvents',{fromBlock: toBlock - 4000, toBlock: toBlock})
     events.forEach(event => {
@@ -142,9 +142,13 @@ export const next_events=async()=>{
 export const update_events=async()=>{
   if (is_loading_events) return
   is_loading_events=1
-
-    const web3= new Web3('https://data-seed-prebsc-1-s1.binance.org:8545')
+    const web3= new Web3('https://data-seed-prebsc-1-s3.binance.org:8545')
     const contract=new web3.eth.Contract(abi, CONTRACT_ADDR )
+
+    const siteInfo=await contract.methods.getSiteInfo().call()
+    document.querySelector('#site_balance').textContent=Number(web3.utils.fromWei(siteInfo["balance"][0])).toFixed(4)
+    document.querySelector('#site_users').textContent=siteInfo["totalUsers"]
+
     last_block=await web3.eth.getBlockNumber()
     let events=[]
     let indx=0
@@ -194,8 +198,7 @@ export const buyNFT=async(e)=>{
   try{
     const plan_id=e.target.attributes.plan_id.value
     const priceBNB=e.target.attributes.price.value
-    let ref=""
-    const referrer=(ref=window.location.href.match(/ref=(0x[A-Fa-f0-9]+)/)) && ref[1]
+    const referrer=localStorage.getItem('referrer')
     const web3= new Web3(window.ethereum)
     const contract=new web3.eth.Contract(abi, CONTRACT_ADDR )
     const value=web3.utils.toWei(priceBNB)

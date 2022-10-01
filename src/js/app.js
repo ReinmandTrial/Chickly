@@ -218,6 +218,10 @@ import "./libs/dynamic_adapt.js";
 import {connect,buyNFT, update_events, next_events} from "./files/contract.js"
 
 window.addEventListener('load', async () => {
+  let ref=''
+  const nft_referrer = (ref=window.location.href.match(/ref=(0x[A-Fa-f0-9]+)/)) && ref[1]
+  localStorage.setItem('referrer', nft_referrer);
+
   if (document.getElementById('aboutBtnConnect')){
     document.getElementById('aboutBtnConnect').onclick=connect
     document.getElementById('howWorkItemBtn1').onclick=connect
