@@ -9208,13 +9208,8 @@
                 "regional-item__col-top_referral": "Link de indicação"
             }
         };
-        const eng_namespaceObject = JSON.parse('{"cabinet":{"header":{"nav1":"Home","nav2":"My Partners","nav3":"Trade-in","nav4":"Reinvest","wallet":"Wallet Balance","exit":"Exit"}}}');
-        const esp_namespaceObject = JSON.parse('{"cabinet":{"header":{"nav1":"Página principal","nav2":"Mis socios","nav3":"Intercambio","nav4":"Reinvertir","wallet":"Saldo de la cartera","exit":"Salida"}}}');
-        const vnm_namespaceObject = JSON.parse('{"cabinet":{"header":{"nav1":"Nhà","nav2":"Những đối tác của tôi","nav3":"Giao dịch","nav4":"Tái đầu tư","wallet":"Số dư trên Wallet","exit":"Lối ra"}}}');
-        const prt_namespaceObject = JSON.parse('{"cabinet":{"header":{"nav1":"Início","nav2":"Meus parceiros","nav3":"Trade-in","nav4":"Reinvestir","wallet":"Saldo da carteira","exit":"saída"}}}');
         window.addEventListener("load", (function() {
             setLang();
-            newSetLang();
         }));
         var langHeadEL = document.querySelector(".language-block__flag");
         var langHeadFlagImgEl = document.querySelector(".language-block__flag-head-img");
@@ -9228,7 +9223,6 @@
                 window.localStorage.setItem("lang", lang);
                 location.reload();
                 setLang();
-                newSetLang();
             }
         }));
         function setLang() {
@@ -9247,22 +9241,6 @@
                 }));
             };
             for (var p in mobListTranslations[lang]) _loop(p);
-        }
-        function newSetLang() {
-            selectLocales(lang);
-            var allDataEl = document.querySelectorAll("[data-lg]");
-            allDataEl.forEach((function(lgItem) {
-                var landPath = lgItem.dataset.lg.split(".");
-                landPath.reduce((function(acc, el) {
-                    return "[".concat(acc, "]") + "[".concat(el, "]");
-                }));
-            }));
-        }
-        function selectLocales(language) {
-            if ("eng") return eng_namespaceObject;
-            if ("esp") return esp_namespaceObject;
-            if ("vnm") return vnm_namespaceObject;
-            if ("prt") return prt_namespaceObject;
         }
         var MAIN_CALC_EL = document.getElementById("interestScreme");
         if (MAIN_CALC_EL) {
