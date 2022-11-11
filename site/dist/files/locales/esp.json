@@ -1,4 +1,10 @@
 {
+   "landing": {
+      "banners": {
+         "title": "Pancartas de afiliados",
+         "label": "Tu enlace de referencia"
+      }
+   },
    "cabinet": {
       "header": {
          "nav1": "Página principal",
@@ -7,6 +13,101 @@
          "nav4": "Reinvertir",
          "wallet": "Saldo de la cartera",
          "exit": "Salida"
+      },
+      "aside": {
+         "profit": {
+            "title": "Su ganancia diaria vigente",
+            "link": "Cómo <br> funciona",
+            "basic": "Ganancia básica",
+            "hold": "Bonificación de permanencia",
+            "contract": "Bonificación de contrato"
+         },
+         "balance": {
+            "investment": "Balance de inversión",
+            "referral": "Balance de recomendación",
+            "btn": "Retiro",
+            "text": "Haga click en el botón de Retiro para obtener todas las ganancias de sus depósitos y bonificaciones asociadas en una sola transacción. Su bonificación de permanencia de fondos se reiniciará."
+         },
+         "statistic": {
+            "number": "Número de depósitos",
+            "last": "Última fecha de depósito",
+            "invested": "Monto invertido",
+            "earned": "Total ganado",
+            "withdrawn": "Total retirado"
+         },
+         "referral": {
+            "title": "Compartir mi enlace de referencia con la gente",
+            "btn": "Panel de socio"
+         }
+      },
+      "home": {
+         "title": "Adquirir NFT",
+         "nft": {
+            "profit": "ganancia",
+            "input": "Ingrese el monto",
+            "btn": "Adquirir",
+            "earnings": "Ganancias"
+         },
+         "feed": {
+            "btn": "Alimento",
+            "text": "Los pollos deben ser alimentados para que su propietario reciba un porcentaje diario completo de la acumulación de ganancias. Para alimentar a un pollo, debe ir a su cuenta personal y presionar el botón derecho."
+         },
+         "active": {
+            "title": "NFT activo",
+            "search": "Búsqueda",
+            "name": "Nombre",
+            "progress": "Progreso",
+            "profit": "Ganancia diaria",
+            "accrued": "Acumulado",
+            "date": "Fecha"
+         }
+      },
+      "partners": {
+         "title": "Recomendar a Amigos y Recibir Bonificación",
+         "level": "Nivel",
+         "text": "Cada 2 BNB obtenidos en forma de bonificación por recomendación aumenta la tasa de recomendación de primer nivel en un 1 %.",
+         "refTitle": "Envíe su vínculo de recomendación a amigos",
+         "refBtn": "Copiar vínculo",
+         "refLink": "Material de promoción",
+         "active": "Recomendaciones activas",
+         "total": "Total de bonificaciones por recomendación",
+         "historyTitle": "Historial de recomendaciones",
+         "all": "Todos",
+         "item": {
+            "ref": "Recomendaciones ",
+            "level": "Nivel de recomendaciones",
+            "purchase": "Monto adquirido",
+            "bonus": "Sus bonificaciones",
+            "date": "Fecha"
+         }
+      },
+      "trade-in": {
+         "title": "TIntercambio",
+         "profit": "ganancia",
+         "btn": "Activar"
+      },
+      "reinvest": {
+         "title": "Reinvertir",
+         "nft": {
+            "profit": "ganancia",
+            "input": "Ingrese el monto",
+            "btn": "Adquirir",
+            "earnings": "Ganancias",
+            "blocked": "Fondos insuficientes"
+         },
+         "text": "Haga clic en el botón Retirar y obtendrá instantáneamente todas las ganancias de sus depósitos y bonos de afiliados con un solo"
+      },
+      "popups": {
+         "copied": "Link copiado al portapapeles",
+         "withdraw": {
+            "title": "Confirmar retiro",
+            "subTitle": "¿Dónde se enviará el dinero?",
+            "input": "Ingrese la cantidad",
+            "text": "Al retirar fondos de este saldo, su bonificación de retención se restablecerá a cero.",
+            "btn1": "Confirmar",
+            "btn2": "Cancelar"
+         },
+         "feed": "¡Has alimentado con éxito a tus pollitos! ¡Están felices y llenos! Por favor, no olvide alimentarlos de nuevo más tarde."
       }
    }
 }

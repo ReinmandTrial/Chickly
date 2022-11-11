@@ -1,0 +1,139 @@
+.banners {
+   margin: rem(105) rem(0) rem(105) rem(0);
+   padding: rem(0) rem(15);
+   @media (max-width: $mobile) {
+      margin: rem(105) rem(0) rem(50) rem(0);
+   }
+   &__container-small {
+   }
+
+   &__title {
+      font-weight: 700;
+      font-size: 55px;
+      text-align: center;
+      margin-bottom: 30px;
+      @media (max-width: $mobile) {
+         font-size: rem(28);
+      }
+   }
+
+   &__content {
+   }
+
+   &__block {
+      background: #f8f5eb;
+      border-radius: 20px;
+      padding: rem(30) rem(30);
+      &:not(:last-child) {
+         margin-bottom: 30px;
+      }
+      @media (max-width: $mobile) {
+         padding: rem(20) rem(10);
+      }
+   }
+
+   &__top-line {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex: auto;
+      margin-bottom: rem(25);
+      @media (max-width: $mobile) {
+         display: block;
+      }
+   }
+
+   &__label {
+      font-weight: 700;
+      font-size: 16px;
+      flex: 0 0 140px;
+      text-align: center;
+      @media (max-width: $mobile) {
+         margin-bottom: 20px;
+         font-size: rem(22);
+         padding: rem(0) rem(15);
+      }
+   }
+
+   &__box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #ffffff;
+      border-radius: 100px;
+      width: calc(100% - 160px);
+      @media (max-width: $mobile) {
+         width: auto;
+         display: block;
+         border-radius: 0;
+         background: none;
+         overflow: visible;
+      }
+   }
+
+   &__link {
+      font-size: 18px;
+      opacity: 0.6;
+      padding: rem(10) rem(20) rem(10) rem(30);
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      min-height: 40px;
+      @media (max-width: $mobile) {
+         font-size: 16px;
+         background: #ffffff;
+         border-radius: 100px;
+         margin-bottom: 10px;
+      }
+   }
+
+   &__btn {
+      background: linear-gradient(213.08deg, #70e705 28.11%, #0e6b12 96.2%);
+      border-radius: 100px;
+      transition: all 0.3s ease 0s;
+      color: #fff;
+      padding: rem(9) rem(20);
+      font-size: rem(26);
+      @media (max-width: $mobile) {
+         display: block;
+         margin: auto;
+         max-width: 140px;
+         width: 100%;
+         padding: rem(7) rem(20);
+      }
+      &:hover {
+         box-shadow: 0px 4px 4px #42ad0b;
+         transition: all 0.3s ease 0s;
+      }
+      &:active {
+         transition: all 0.1s ease 0s;
+         box-shadow: none;
+         transform: translate(0px, 1px);
+      }
+   }
+
+   &__banner {
+      &_1 {
+         height: 160px;
+         width: 160px;
+         @media (max-width: $mobile) {
+            margin: auto;
+         }
+      }
+
+      &_2 {
+         max-width: 720px;
+         width: 100%;
+      }
+
+      &_3 {
+         max-width: 1045px;
+         width: 100%;
+      }
+      img {
+         object-fit: contain;
+         height: 100%;
+         width: 100%;
+      }
+   }
+}

@@ -506,6 +506,7 @@
       text-overflow: ellipsis;
       overflow: hidden;
       min-height: 40px;
+      white-space: nowrap;
       @media (max-width: $mobileSmall) {
          font-size: rem(16);
       }

@@ -8254,18 +8254,8 @@
         }();
         var da = new DynamicAdapt("max");
         da.init();
-        var _eng, _esp, _vnm, _prt;
-        function translations_defineProperty(obj, key, value) {
-            if (key in obj) Object.defineProperty(obj, key, {
-                value,
-                enumerable: true,
-                configurable: true,
-                writable: true
-            }); else obj[key] = value;
-            return obj;
-        }
         var translations = {
-            eng: (_eng = {
+            eng: {
                 headerHome: "Home",
                 headerAbout: "About",
                 headerNft: "NFT",
@@ -8451,46 +8441,8 @@
                 faqItemText11: "The final profit depends on the type of the token bought. The daily profit increases by 0.1% every day, provided that you feed the hens and keep the profit on the balance sheet. Morevoer, the daily profit increases by 0.1% for every 400 BNB  the smart contract address received.",
                 faqItemTitle12: "How to feed chickens and what will it give me?",
                 faqItemText12: 'The "Feed the Chickens" button is located in the Users` Private Office above the list of all of their NFTs. Feeding the chickends must be done daily in order to receive increased profits.'
-            }, translations_defineProperty(_eng, "headerHome", "Home"), translations_defineProperty(_eng, "headerMyPartners", "My Partners"), 
-            translations_defineProperty(_eng, "headerTradeIn", "Trade-in"), translations_defineProperty(_eng, "headerReinvest", "Reinvest"), 
-            translations_defineProperty(_eng, "headerWallet1", "Wallet Balance"), translations_defineProperty(_eng, "headerWallet2", "Wallet Balance"), 
-            translations_defineProperty(_eng, "headerExit", "Exit"), translations_defineProperty(_eng, "asideCurProfit", "Your current daily profit"), 
-            translations_defineProperty(_eng, "asideHowItWork", "   How <br> It works"), translations_defineProperty(_eng, "asideBasicProfit", "Basic profit"), 
-            translations_defineProperty(_eng, "asideHoldBonus", "Hold-bonus"), translations_defineProperty(_eng, "asideContrBonus", "Contract bonus"), 
-            translations_defineProperty(_eng, "asideInvBalance", "Investment balance"), translations_defineProperty(_eng, "asideBtn1", "Withdraw"), 
-            translations_defineProperty(_eng, "asideBtn2", "Withdraw"), translations_defineProperty(_eng, "asideBtn3", "Withdraw"), 
-            translations_defineProperty(_eng, "asideBtn4", "Withdraw"), translations_defineProperty(_eng, "asideText1", "Click Withdraw button to get all your deposits earnings and affiliate bonuses at once with a single transaction. Your personal hold-bonus will be reset therefore."), 
-            translations_defineProperty(_eng, "asideRefferalBal", "Referral balance "), translations_defineProperty(_eng, "asideInfo1", "Invested"), 
-            translations_defineProperty(_eng, "asideInfo2", "Number of deposits"), translations_defineProperty(_eng, "asideInfo3", "Last deposit date"), 
-            translations_defineProperty(_eng, "asideInfo4", "Total earned"), translations_defineProperty(_eng, "asideInfo5", "Total withdrawn"), 
-            translations_defineProperty(_eng, "asideLink", "Share my referral link with friends"), 
-            translations_defineProperty(_eng, "asideDashbord", "Partner dashboard"), translations_defineProperty(_eng, "homeBuyNft", "Buy NFT"), 
-            translations_defineProperty(_eng, "homeFeed", "Feed"), translations_defineProperty(_eng, "homeFeedText", "Chickens need to be fed so that their owner receives a full daily percentage of profit accrual. To feed a chicken, you need to go to your personal account and press the right button."), 
-            translations_defineProperty(_eng, "homeActiveNft", "Active NFT"), translations_defineProperty(_eng, "homeItemProfit170", "profit"), 
-            translations_defineProperty(_eng, "homeItemProfit180", "profit"), translations_defineProperty(_eng, "homeItemProfit190", "profit"), 
-            translations_defineProperty(_eng, "homeItemProfit200", "profit"), translations_defineProperty(_eng, "homeItemProfit220", "profit"), 
-            translations_defineProperty(_eng, "homeItemInput170", "Enter amount"), translations_defineProperty(_eng, "homeItemInput180", "Enter amount"), 
-            translations_defineProperty(_eng, "homeItemInput190", "Enter amount"), translations_defineProperty(_eng, "homeItemInput200", "Enter amount"), 
-            translations_defineProperty(_eng, "homeItemInput220", "Enter amount"), translations_defineProperty(_eng, "homeItemButton170", "Buy"), 
-            translations_defineProperty(_eng, "homeItemButton180", "Buy"), translations_defineProperty(_eng, "homeItemButton190", "Buy"), 
-            translations_defineProperty(_eng, "homeItemButton200", "Buy"), translations_defineProperty(_eng, "homeItemButton220", "Buy"), 
-            translations_defineProperty(_eng, "affTitle", "Refer Friends & Earn Bonus"), translations_defineProperty(_eng, "affLevel1", "1 Level"), 
-            translations_defineProperty(_eng, "affLevel2", "2 Level"), translations_defineProperty(_eng, "affLevel3", "3 Level"), 
-            translations_defineProperty(_eng, "affText", "Every 2 BNB earned in the form of a referral bonus increases the first level referral rate by 1%"), 
-            translations_defineProperty(_eng, "affShareLink", "Share your referral link with friends"), 
-            translations_defineProperty(_eng, "affCopyLink", "Copy link"), translations_defineProperty(_eng, "affPromMat", "Promotional materials"), 
-            translations_defineProperty(_eng, "affItem1", "Active referrals"), translations_defineProperty(_eng, "affItem2", "Raised money"), 
-            translations_defineProperty(_eng, "affItem3", "Total referral bonus"), translations_defineProperty(_eng, "affRefHistory", "Referral history"), 
-            translations_defineProperty(_eng, "affCol1", "Referral "), translations_defineProperty(_eng, "affCol2", "Referral level "), 
-            translations_defineProperty(_eng, "affCol3", "Purchase amount"), translations_defineProperty(_eng, "affCol4", "Your bonus"), 
-            translations_defineProperty(_eng, "affCol5", "Date"), translations_defineProperty(_eng, "tradeTitle", "Trade-in"), 
-            translations_defineProperty(_eng, "tradeNoItems", "No items"), translations_defineProperty(_eng, "textCopied", "Link copied to clipboard"), 
-            translations_defineProperty(_eng, "withdrawPopupTitle", "Confirm withdrawal"), translations_defineProperty(_eng, "withdrawPopupSubTitle", "Where will the money be sent"), 
-            translations_defineProperty(_eng, "cabinet-popup__input", "Enter amount"), translations_defineProperty(_eng, "withdrawPopupText", "When withdrawing funds from this balance, your Hold Bonus will reset to zero."), 
-            translations_defineProperty(_eng, "withdrawPopupConfirmBtn", "Confirm"), translations_defineProperty(_eng, "withdrawPopupCancelBtn", "Cancel"), 
-            translations_defineProperty(_eng, "sucFeed", "You`ve successfully fed your chicks! They`re happy and full! Please don`t forget to feed them again later."), 
-            _eng),
-            esp: (_esp = {
+            },
+            esp: {
                 headerHome: "Hogar",
                 headerAbout: "Sobre",
                 headerNft: "NFT",
@@ -8676,49 +8628,8 @@
                 faqItemText11: "La ganancia final depende del tipo de token adquirido. La ganancia diaria aumenta un 0.1% cada día, si alimenta a las gallinas y mantiene el balance positivo. Además, la ganancia diaria aumenta un 0.1% por cada 400 BNB que reciba la dirección del contrato inteligente.",
                 faqItemTitle12: "¿Cómo se alimentan las gallinas y qué entregan?",
                 faqItemText12: 'El botón "Alimentar a las Gallinas" está en la Oficina Privada del Usuario sobre la lista de todos sus NFTs. Se debe alimentar a las gallinas diariamente para aumentar las ganancias.'
-            }, translations_defineProperty(_esp, "headerHome", "Página principal"), translations_defineProperty(_esp, "headerMyPartners", "Mis socios"), 
-            translations_defineProperty(_esp, "headerTradeIn", "Intercambio"), translations_defineProperty(_esp, "headerReinvest", "Reinvertir"), 
-            translations_defineProperty(_esp, "headerWallet1", "Saldo de la cartera"), translations_defineProperty(_esp, "headerWallet2", "Saldo de la cartera"), 
-            translations_defineProperty(_esp, "headerExit", "Salida"), translations_defineProperty(_esp, "asideCurProfit", "Su ganancia diaria vigente"), 
-            translations_defineProperty(_esp, "asideHowItWork", "   Cómo <br> funciona"), translations_defineProperty(_esp, "asideBasicProfit", "Ganancia básica"), 
-            translations_defineProperty(_esp, "asideHoldBonus", "Bonificación de permanencia"), 
-            translations_defineProperty(_esp, "asideContrBonus", "Bonificación de contrato"), 
-            translations_defineProperty(_esp, "asideInvBalance", "Balance de inversión"), translations_defineProperty(_esp, "asideBtn1", "Retiro"), 
-            translations_defineProperty(_esp, "asideBtn2", "Retiro"), translations_defineProperty(_esp, "asideBtn3", "Retiro"), 
-            translations_defineProperty(_esp, "asideBtn4", "Retiro"), translations_defineProperty(_esp, "asideText1", "Haga click en el botón de Retiro para obtener todas las ganancias de sus depósitos y bonificaciones asociadas en una sola transacción. Su bonificación de permanencia de fondos se reiniciará."), 
-            translations_defineProperty(_esp, "asideRefferalBal", "Balance de recomendación"), 
-            translations_defineProperty(_esp, "asideInfo1", "Monto invertido"), translations_defineProperty(_esp, "asideInfo2", "Número de depósitos"), 
-            translations_defineProperty(_esp, "asideInfo3", "Última fecha de depósito"), translations_defineProperty(_esp, "asideInfo4", "Total ganado"), 
-            translations_defineProperty(_esp, "asideInfo5", "Total retirado"), translations_defineProperty(_esp, "asideLink", "Compartir mi enlace de referencia con la gente"), 
-            translations_defineProperty(_esp, "asideDashbord", "Panel de socio"), translations_defineProperty(_esp, "homeBuyNft", "Adquirir NFT"), 
-            translations_defineProperty(_esp, "homeFeed", "Alimento"), translations_defineProperty(_esp, "homeFeedText", "Los pollos deben ser alimentados para que su propietario reciba un porcentaje diario completo de la acumulación de ganancias. Para alimentar a un pollo, debe ir a su cuenta personal y presionar el botón derecho."), 
-            translations_defineProperty(_esp, "homeActiveNft", "NFT activo"), translations_defineProperty(_esp, "homeItemProfit170", "ganancia"), 
-            translations_defineProperty(_esp, "homeItemProfit180", "ganancia"), translations_defineProperty(_esp, "homeItemProfit190", "ganancia"), 
-            translations_defineProperty(_esp, "homeItemProfit200", "ganancia"), translations_defineProperty(_esp, "homeItemProfit220", "ganancia"), 
-            translations_defineProperty(_esp, "homeItemInput170", "Ingrese el monto"), translations_defineProperty(_esp, "homeItemInput180", "Ingrese el monto"), 
-            translations_defineProperty(_esp, "homeItemInput190", "Ingrese el monto"), translations_defineProperty(_esp, "homeItemInput200", "Ingrese el monto"), 
-            translations_defineProperty(_esp, "homeItemInput220", "Ingrese el monto"), translations_defineProperty(_esp, "homeItemButton170", "Adquirir"), 
-            translations_defineProperty(_esp, "homeItemButton180", "Adquirir"), translations_defineProperty(_esp, "homeItemButton190", "Adquirir"), 
-            translations_defineProperty(_esp, "homeItemButton200", "Adquirir"), translations_defineProperty(_esp, "homeItemButton220", "Adquirir"), 
-            translations_defineProperty(_esp, "affTitle", "Recomendar a Amigos y Recibir Bonificación"), 
-            translations_defineProperty(_esp, "affLevel1", "1 Nivel"), translations_defineProperty(_esp, "affLevel2", "2 Nivel"), 
-            translations_defineProperty(_esp, "affLevel3", "3 Nivel"), translations_defineProperty(_esp, "affText", "Cada 2 BNB obtenidos en forma de bonificación por recomendación aumenta la tasa de recomendación de primer nivel en un 1 %."), 
-            translations_defineProperty(_esp, "affShareLink", "Envíe su vínculo de recomendación a amigos"), 
-            translations_defineProperty(_esp, "affCopyLink", "Copiar vínculo"), translations_defineProperty(_esp, "affPromMat", "Material de promoción"), 
-            translations_defineProperty(_esp, "affItem1", "Recomendaciones activas"), translations_defineProperty(_esp, "affItem2", "Dinero reunido"), 
-            translations_defineProperty(_esp, "affItem3", "Total de bonificaciones por recomendación"), 
-            translations_defineProperty(_esp, "affRefHistory", "Historial de recomendaciones"), 
-            translations_defineProperty(_esp, "affCol1", "Recomendaciones"), translations_defineProperty(_esp, "affCol2", "Nivel de recomendaciones"), 
-            translations_defineProperty(_esp, "affCol3", "Monto adquirido"), translations_defineProperty(_esp, "affCol4", "Sus bonificaciones"), 
-            translations_defineProperty(_esp, "affCol5", "Fecha"), translations_defineProperty(_esp, "tradeTitle", "Intercambio"), 
-            translations_defineProperty(_esp, "tradeNoItems", "No hay artículos"), translations_defineProperty(_esp, "textCopied", "Link copiado al portapapeles"), 
-            translations_defineProperty(_esp, "withdrawPopupTitle", "Confirmar retiro"), translations_defineProperty(_esp, "withdrawPopupSubTitle", "¿Dónde se enviará el dinero?"), 
-            translations_defineProperty(_esp, "cabinet-popup__input", "Ingrese la cantidad"), 
-            translations_defineProperty(_esp, "withdrawPopupText", "Al retirar fondos de este saldo, su bonificación de retención se restablecerá a cero."), 
-            translations_defineProperty(_esp, "withdrawPopupConfirmBtn", "Confirmar"), translations_defineProperty(_esp, "withdrawPopupCancelBtn", "Cancelar"), 
-            translations_defineProperty(_esp, "sucFeed", "¡Has alimentado con éxito a tus pollitos! ¡Están felices y llenos! Por favor, no olvide alimentarlos de nuevo más tarde."), 
-            _esp),
-            vnm: (_vnm = {
+            },
+            vnm: {
                 headerHome: "Nhà",
                 headerAbout: "Về",
                 headerNft: "NFT",
@@ -8904,47 +8815,8 @@
                 faqItemText11: "Lợi nhuận cuối cùng phụ thuộc vào loại NFT mà bạn đã mua. Lợi nhuận hàng ngày tăng thêm 0.1% với điều kiện là bạn cho gà ăn và giữ số dư lợi nhuận. Thêm nữa, lợi nhuận hàng ngày tăng thêm 0.1% cho mỗi 400 BNB mà địa chỉ hợp đồng thông minh nhận được.",
                 faqItemTitle12: "Cách cho gà ăn như thế nào và tôi sẽ nhận lại được gì?",
                 faqItemText12: 'Nút "Cho gà ăn" tại Tài Khoản Cá Nhân của người dùng, phía trên danh sách NFT. Cho gà ăn phải được thực hiện theo ngày để tăng lợi nhuận.'
-            }, translations_defineProperty(_vnm, "headerHome", "Nhà"), translations_defineProperty(_vnm, "headerMyPartners", "Những đối tác của tôi"), 
-            translations_defineProperty(_vnm, "headerTradeIn", "Giao dịch"), translations_defineProperty(_vnm, "headerReinvest", "Tái đầu tư"), 
-            translations_defineProperty(_vnm, "headerWallet1", "Số dư trên Wallet"), translations_defineProperty(_vnm, "headerWallet2", "Số dư trên Wallet"), 
-            translations_defineProperty(_vnm, "headerExit", "Lối ra"), translations_defineProperty(_vnm, "asideCurProfit", "Lợi nhuận hàng ngày hiện tại của bạn"), 
-            translations_defineProperty(_vnm, "asideHowItWork", "   Làm thế nào  <br> nó hoạt động"), 
-            translations_defineProperty(_vnm, "asideBasicProfit", "Lợi nhuận cơ bản"), translations_defineProperty(_vnm, "asideHoldBonus", "Thưởng giữ lợi nhuận"), 
-            translations_defineProperty(_vnm, "asideContrBonus", "Thưởng hợp đồng thông minh"), 
-            translations_defineProperty(_vnm, "asideInvBalance", "Số dư đầu tư"), translations_defineProperty(_vnm, "asideBtn1", "Rút"), 
-            translations_defineProperty(_vnm, "asideBtn2", "Rút"), translations_defineProperty(_vnm, "asideBtn3", "Rút"), 
-            translations_defineProperty(_vnm, "asideBtn4", "Rút"), translations_defineProperty(_vnm, "asideText1", "Nhấn nút Rút để nhận tất cả thu nhập từ số tiền nạp vào để đầu tư và thưởng giới thiệu chỉ với một giao dịch. Thưởng cho việc giữ lợi nhuận của bạn sẽ bị đặt lại."), 
-            translations_defineProperty(_vnm, "asideRefferalBal", "Số dư giới thiệu"), translations_defineProperty(_vnm, "asideInfo1", "Đã đầu tư"), 
-            translations_defineProperty(_vnm, "asideInfo2", "Số lần nạp"), translations_defineProperty(_vnm, "asideInfo3", "Ngày nạp cuối cùng"), 
-            translations_defineProperty(_vnm, "asideInfo4", "Tổng số tiền kiếm được"), translations_defineProperty(_vnm, "asideInfo5", "Tổng số tiền đã rút"), 
-            translations_defineProperty(_vnm, "asideLink", "Chia sẻ liên kết giới thiệu của tôi với mọi người"), 
-            translations_defineProperty(_vnm, "asideDashbord", "Trang tổng quan đối tác"), translations_defineProperty(_vnm, "homeBuyNft", "Mua NFT"), 
-            translations_defineProperty(_vnm, "homeFeed", "cho ăn"), translations_defineProperty(_vnm, "homeFeedText", "Gà cần được cho ăn để người sở hữu chúng nhận được đầy đủ phần trăm thưởng tích lũy mỗi ngày. Bạn cần đi đến phần tài khoản cá nhân và nhấn nút bên phải để cho gà ăn."), 
-            translations_defineProperty(_vnm, "homeActiveNft", "Kích hoạt NFT"), translations_defineProperty(_vnm, "homeItemProfit170", "lợi nhuận"), 
-            translations_defineProperty(_vnm, "homeItemProfit180", "lợi nhuận"), translations_defineProperty(_vnm, "homeItemProfit190", "lợi nhuận"), 
-            translations_defineProperty(_vnm, "homeItemProfit200", "lợi nhuận"), translations_defineProperty(_vnm, "homeItemProfit220", "lợi nhuận"), 
-            translations_defineProperty(_vnm, "homeItemInput170", "Nhập số lượng"), translations_defineProperty(_vnm, "homeItemInput180", "Nhập số lượng"), 
-            translations_defineProperty(_vnm, "homeItemInput190", "Nhập số lượng"), translations_defineProperty(_vnm, "homeItemInput200", "Nhập số lượng"), 
-            translations_defineProperty(_vnm, "homeItemInput220", "Nhập số lượng"), translations_defineProperty(_vnm, "homeItemButton170", "Mua"), 
-            translations_defineProperty(_vnm, "homeItemButton180", "Mua"), translations_defineProperty(_vnm, "homeItemButton190", "Mua"), 
-            translations_defineProperty(_vnm, "homeItemButton200", "Mua"), translations_defineProperty(_vnm, "homeItemButton220", "Mua"), 
-            translations_defineProperty(_vnm, "affTitle", "Giới thiệu bạn & Kiếm tiền thưởng"), 
-            translations_defineProperty(_vnm, "affLevel1", "1 Cấp độ"), translations_defineProperty(_vnm, "affLevel2", "2 Cấp độ"), 
-            translations_defineProperty(_vnm, "affLevel3", "3 Cấp độ"), translations_defineProperty(_vnm, "affText", "Cứ mỗi 2 BNB kiếm được dưới dạng tiền thưởng giới thiệu sẽ tăng tỷ lệ giới thiệu cấp đầu tiên lên 1%"), 
-            translations_defineProperty(_vnm, "affShareLink", "Chia sẻ liên kết giới thiệu với bạn bè"), 
-            translations_defineProperty(_vnm, "affCopyLink", "Sao chép liên kết"), translations_defineProperty(_vnm, "affPromMat", "Tài liệu quảng bá"), 
-            translations_defineProperty(_vnm, "affItem1", "Người giới thiệu hoạt động"), translations_defineProperty(_vnm, "affItem2", "Số tiền được huy động"), 
-            translations_defineProperty(_vnm, "affItem3", "Tổng tiền thưởng giới thiệu"), translations_defineProperty(_vnm, "affRefHistory", "Lịch sử giới thiệu"), 
-            translations_defineProperty(_vnm, "affCol1", "Giới thiệu"), translations_defineProperty(_vnm, "affCol2", "Cấp độ giới thiệu"), 
-            translations_defineProperty(_vnm, "affCol3", "Số tiền mua"), translations_defineProperty(_vnm, "affCol4", "Thưởng của bạn"), 
-            translations_defineProperty(_vnm, "affCol5", "Ngày"), translations_defineProperty(_vnm, "tradeTitle", "Giao dịch"), 
-            translations_defineProperty(_vnm, "tradeNoItems", "Không có sản phẩm"), translations_defineProperty(_vnm, "textCopied", "Liên kết được sao chép vào khay nhớ tạm"), 
-            translations_defineProperty(_vnm, "withdrawPopupTitle", "Xác nhận rút tiền"), translations_defineProperty(_vnm, "withdrawPopupSubTitle", "Tiền sẽ được gửi đến đâu"), 
-            translations_defineProperty(_vnm, "cabinet-popup__input", "Nhập số tiền"), translations_defineProperty(_vnm, "withdrawPopupText", "Khi rút tiền từ số dư này, Tiền thưởng Giữ lại của bạn sẽ đặt lại về 0."), 
-            translations_defineProperty(_vnm, "withdrawPopupConfirmBtn", "Xác nhận"), translations_defineProperty(_vnm, "withdrawPopupCancelBtn", "Hủy bỏ"), 
-            translations_defineProperty(_vnm, "sucFeed", "Bạn đã cho gà con ăn thành công! Họ đang hạnh phúc và đầy đủ! Xin đừng quên cho chúng ăn lại sau này."), 
-            _vnm),
-            prt: (_prt = {
+            },
+            prt: {
                 headerHome: "Casa",
                 headerAbout: "Sobre",
                 headerNft: "NFT",
@@ -9130,45 +9002,7 @@
                 faqItemText11: "O lucro final depende do tipo de token comprado. O lucro diário aumenta 0,1% a cada dia, desde que você alimente as galinhas e mantenha o lucro na folha de balanço. Além disso, o lucro diário aumenta em 0,1% para cada 400 BNB que o endereço do contrato inteligente recebeu.",
                 faqItemTitle12: "Como alimentar galinhas e o que isso me dará?",
                 faqItemText12: 'O botão "Alimente as Galinhas" está localizado no Escritório Privado dos Usuários acima da lista de todos os seus NFT. A alimentação das galinhas deve ser feita diariamente para aumentar os lucros.'
-            }, translations_defineProperty(_prt, "headerHome", "Início"), translations_defineProperty(_prt, "headerMyPartners", "Meus parceiros"), 
-            translations_defineProperty(_prt, "headerTradeIn", "Trade-in"), translations_defineProperty(_prt, "headerReinvest", "Reinvestir"), 
-            translations_defineProperty(_prt, "headerWallet1", "Saldo da carteira"), translations_defineProperty(_prt, "headerWallet2", "Saldo da carteira"), 
-            translations_defineProperty(_prt, "headerExit", "saída"), translations_defineProperty(_prt, "asideCurProfit", "Seu lucro diário atual"), 
-            translations_defineProperty(_prt, "asideHowItWork", "Como <br> funciona"), translations_defineProperty(_prt, "asideBasicProfit", "Lucro básico"), 
-            translations_defineProperty(_prt, "asideHoldBonus", "Bônus de hold"), translations_defineProperty(_prt, "asideContrBonus", "Bônus de contrato"), 
-            translations_defineProperty(_prt, "asideInvBalance", "Saldo do investimento"), translations_defineProperty(_prt, "asideBtn1", "Sacar"), 
-            translations_defineProperty(_prt, "asideBtn2", "Sacar"), translations_defineProperty(_prt, "asideBtn3", "Sacar"), 
-            translations_defineProperty(_prt, "asideBtn4", "Sacar"), translations_defineProperty(_prt, "asideText1", "Clique no botão Sacar para obter todos 0os seus ganhos de depósitos e bônus de afiliados de uma só vez com uma única transação. Seu bônus pessoal de hold será redefinido dessa forma."), 
-            translations_defineProperty(_prt, "asideRefferalBal", "Saldo de indicação"), translations_defineProperty(_prt, "asideInfo1", "Investido"), 
-            translations_defineProperty(_prt, "asideInfo2", "Número de depósitos"), translations_defineProperty(_prt, "asideInfo3", "Data do último depósito"), 
-            translations_defineProperty(_prt, "asideInfo4", "Total ganho"), translations_defineProperty(_prt, "asideInfo5", "Total sacado"), 
-            translations_defineProperty(_prt, "asideLink", "Compartilhar meu link de referência com as pessoas"), 
-            translations_defineProperty(_prt, "asideDashbord", "Painel do parceiro"), translations_defineProperty(_prt, "homeBuyNft", "Comprar NFT"), 
-            translations_defineProperty(_prt, "homeFeed", "Alimentação"), translations_defineProperty(_prt, "homeFeedText", "As galinhas precisam ser alimentadas para que seu proprietário receba uma porcentagem diária completa do acúmulo de lucro. Para alimentar uma galinha, você precisa acessar sua conta pessoal e pressionar o botão direito."), 
-            translations_defineProperty(_prt, "homeActiveNft", "NFT ativo"), translations_defineProperty(_prt, "homeItemProfit170", "lucro"), 
-            translations_defineProperty(_prt, "homeItemProfit180", "lucro"), translations_defineProperty(_prt, "homeItemProfit190", "lucro"), 
-            translations_defineProperty(_prt, "homeItemProfit200", "lucro"), translations_defineProperty(_prt, "homeItemProfit220", "lucro"), 
-            translations_defineProperty(_prt, "homeItemInput170", "Insira o valor"), translations_defineProperty(_prt, "homeItemInput180", "Insira o valor"), 
-            translations_defineProperty(_prt, "homeItemInput190", "Insira o valor"), translations_defineProperty(_prt, "homeItemInput200", "Insira o valor"), 
-            translations_defineProperty(_prt, "homeItemInput220", "Insira o valor"), translations_defineProperty(_prt, "homeItemButton170", "Comprar"), 
-            translations_defineProperty(_prt, "homeItemButton180", "Comprar"), translations_defineProperty(_prt, "homeItemButton190", "Comprar"), 
-            translations_defineProperty(_prt, "homeItemButton200", "Comprar"), translations_defineProperty(_prt, "homeItemButton220", "Comprar"), 
-            translations_defineProperty(_prt, "affTitle", "Indique amigos & ganhe bônus"), translations_defineProperty(_prt, "affLevel1", "1 Nível"), 
-            translations_defineProperty(_prt, "affLevel2", "2 Nível"), translations_defineProperty(_prt, "affLevel3", "3 Nível"), 
-            translations_defineProperty(_prt, "affText", "Cada 2 BNB ganhos na forma de bônus de indicação aumenta a taxa de indicação de primeiro nível em 1%"), 
-            translations_defineProperty(_prt, "affShareLink", "Compartilhe seu link de indicação com amigos"), 
-            translations_defineProperty(_prt, "affCopyLink", "Copiar link"), translations_defineProperty(_prt, "affPromMat", "Materiais promocionais"), 
-            translations_defineProperty(_prt, "affItem1", "Indicações ativas"), translations_defineProperty(_prt, "affItem2", "Dinheiro arrecadado"), 
-            translations_defineProperty(_prt, "affItem3", "Bônus de indicação total"), translations_defineProperty(_prt, "affRefHistory", "Histórico de indicação"), 
-            translations_defineProperty(_prt, "affCol1", "Indicação"), translations_defineProperty(_prt, "affCol2", "Nível de indicação"), 
-            translations_defineProperty(_prt, "affCol3", "Valor da compra"), translations_defineProperty(_prt, "affCol4", "Seu bônus"), 
-            translations_defineProperty(_prt, "affCol5", "Data"), translations_defineProperty(_prt, "tradeTitle", "Trade-in"), 
-            translations_defineProperty(_prt, "tradeNoItems", "Nenhum item"), translations_defineProperty(_prt, "textCopied", "Link copiado para a área de transferência"), 
-            translations_defineProperty(_prt, "withdrawPopupTitle", "Confirmar retirada"), translations_defineProperty(_prt, "withdrawPopupSubTitle", "Para onde será enviado o dinheiro"), 
-            translations_defineProperty(_prt, "cabinet-popup__input", "Insira o valor"), translations_defineProperty(_prt, "withdrawPopupText", "Ao retirar fundos desse saldo, seu bônus de retenção será zerado."), 
-            translations_defineProperty(_prt, "withdrawPopupConfirmBtn", "Сonfirme"), translations_defineProperty(_prt, "withdrawPopupCancelBtn", "Cancelar"), 
-            translations_defineProperty(_prt, "sucFeed", "Você alimentou com sucesso seus filhotes! Eles estão felizes e cheios! Por favor, não se esqueça de alimentá-los novamente mais tarde."), 
-            _prt)
+            }
         };
         var mobListTranslations = {
             eng: {
@@ -9208,8 +9042,13 @@
                 "regional-item__col-top_referral": "Link de indicação"
             }
         };
+        const eng_namespaceObject = JSON.parse('{"landing":{"banners":{"title":"Affiliate banners","label":"Your referral link"}},"cabinet":{"header":{"nav1":"Home","nav2":"My Partners","nav3":"Trade-in","nav4":"Reinvest","wallet":"Wallet Balance","exit":"Exit"},"aside":{"profit":{"title":"Your current daily profit","link":"How <br> It works","basic":"Basic profit","hold":"Hold-bonus","contract":"Contract bonus"},"balance":{"investment":"Investment balance","referral":"Referral balance","btn":"Withdraw","text":"Click Withdraw button to get all your deposits earnings and affiliate bonuses at once with a single transaction. Your personal hold-bonus will be reset therefore."},"statistic":{"number":"Number of deposits","last":"Last deposit date","invested":"Invested","earned":"Total earned","withdrawn":"Total withdrawn"},"referral":{"title":"Share my referral link with friends","btn":"Partner dashboard"}},"home":{"title":"Buy NFT","nft":{"profit":"profit","input":"Enter amount","btn":"Buy","earnings":"Earnings"},"feed":{"btn":"Feed","text":"Chickens need to be fed so that their owner receives a full daily percentage of profit accrual. To feed a chicken, you need to go to your personal account and press the right button."},"active":{"title":"Active NFT","search":"Search","name":"Name","progress":"Progress","profit":"Daily profit","accrued":"Accrued","date":"Date"}},"partners":{"title":"Refer Friends & Earn Bonus","level":"Level","text":"Every 2 BNB earned in the form of a referral bonus increases the first level referral rate by 1%","refTitle":"Share your referral link with friends","refBtn":"Copy link","refLink":"Promotional materials","active":"Active referrals","total":"Total referral bonus","historyTitle":"Referral history","all":"All","item":{"ref":"Referral ","level":"Referral level ","purchase":"Purchase amount","bonus":"Your bonus","date":"Date"}},"trade-in":{"title":"Trade-in","profit":"profit","btn":"Activate"},"reinvest":{"title":"Reinvest","nft":{"profit":"profit","input":"Enter amount","btn":"Buy","earnings":"Earnings","blocked":"Insufficient funds"},"text":"Click Withdraw button, and you will get instantly all your deposits earnings and affiliate bonuses with a single"},"popups":{"copied":"Link copied to clipboard","withdraw":{"title":"Confirm withdrawal","subTitle":"Where will the money be sent","input":"Enter amount","text":"When withdrawing funds from this balance, your Hold Bonus will reset to zero.","btn1":"Confirm","btn2":"Cancel"},"feed":"You`ve successfully fed your chicks! They`re happy and full! Please don`t forget to feed them again later."}}}');
+        const esp_namespaceObject = JSON.parse('{"landing":{"banners":{"title":"Pancartas de afiliados","label":"Tu enlace de referencia"}},"cabinet":{"header":{"nav1":"Página principal","nav2":"Mis socios","nav3":"Intercambio","nav4":"Reinvertir","wallet":"Saldo de la cartera","exit":"Salida"},"aside":{"profit":{"title":"Su ganancia diaria vigente","link":"Cómo <br> funciona","basic":"Ganancia básica","hold":"Bonificación de permanencia","contract":"Bonificación de contrato"},"balance":{"investment":"Balance de inversión","referral":"Balance de recomendación","btn":"Retiro","text":"Haga click en el botón de Retiro para obtener todas las ganancias de sus depósitos y bonificaciones asociadas en una sola transacción. Su bonificación de permanencia de fondos se reiniciará."},"statistic":{"number":"Número de depósitos","last":"Última fecha de depósito","invested":"Monto invertido","earned":"Total ganado","withdrawn":"Total retirado"},"referral":{"title":"Compartir mi enlace de referencia con la gente","btn":"Panel de socio"}},"home":{"title":"Adquirir NFT","nft":{"profit":"ganancia","input":"Ingrese el monto","btn":"Adquirir","earnings":"Ganancias"},"feed":{"btn":"Alimento","text":"Los pollos deben ser alimentados para que su propietario reciba un porcentaje diario completo de la acumulación de ganancias. Para alimentar a un pollo, debe ir a su cuenta personal y presionar el botón derecho."},"active":{"title":"NFT activo","search":"Búsqueda","name":"Nombre","progress":"Progreso","profit":"Ganancia diaria","accrued":"Acumulado","date":"Fecha"}},"partners":{"title":"Recomendar a Amigos y Recibir Bonificación","level":"Nivel","text":"Cada 2 BNB obtenidos en forma de bonificación por recomendación aumenta la tasa de recomendación de primer nivel en un 1 %.","refTitle":"Envíe su vínculo de recomendación a amigos","refBtn":"Copiar vínculo","refLink":"Material de promoción","active":"Recomendaciones activas","total":"Total de bonificaciones por recomendación","historyTitle":"Historial de recomendaciones","all":"Todos","item":{"ref":"Recomendaciones ","level":"Nivel de recomendaciones","purchase":"Monto adquirido","bonus":"Sus bonificaciones","date":"Fecha"}},"trade-in":{"title":"TIntercambio","profit":"ganancia","btn":"Activar"},"reinvest":{"title":"Reinvertir","nft":{"profit":"ganancia","input":"Ingrese el monto","btn":"Adquirir","earnings":"Ganancias","blocked":"Fondos insuficientes"},"text":"Haga clic en el botón Retirar y obtendrá instantáneamente todas las ganancias de sus depósitos y bonos de afiliados con un solo"},"popups":{"copied":"Link copiado al portapapeles","withdraw":{"title":"Confirmar retiro","subTitle":"¿Dónde se enviará el dinero?","input":"Ingrese la cantidad","text":"Al retirar fondos de este saldo, su bonificación de retención se restablecerá a cero.","btn1":"Confirmar","btn2":"Cancelar"},"feed":"¡Has alimentado con éxito a tus pollitos! ¡Están felices y llenos! Por favor, no olvide alimentarlos de nuevo más tarde."}}}');
+        const vnm_namespaceObject = JSON.parse('{"landing":{"banners":{"title":"Biểu ngữ liên kết","label":"Liên kết giới thiệu của bạn"}},"cabinet":{"header":{"nav1":"Nhà","nav2":"Những đối tác của tôi","nav3":"Giao dịch","nav4":"Tái đầu tư","wallet":"Số dư trên Wallet","exit":"Lối ra"},"aside":{"profit":{"title":"Lợi nhuận hàng ngày hiện tại của bạn","link":"Làm thế nào  <br> nó hoạt động","basic":"Lợi nhuận cơ bản","hold":"Thưởng giữ lợi nhuận","contract":"Thưởng hợp đồng thông minh"},"balance":{"investment":"Số dư đầu tư","referral":"Số dư giới thiệu","btn":"Rút","text":"Nhấn nút Rút để nhận tất cả thu nhập từ số tiền nạp vào để đầu tư và thưởng giới thiệu chỉ với một giao dịch. Thưởng cho việc giữ lợi nhuận của bạn sẽ bị đặt lại."},"statistic":{"number":"Số lần nạp","last":"Ngày nạp cuối cùng","invested":"Đã đầu tư","earned":"Tổng số tiền kiếm được","withdrawn":"Tổng số tiền đã rút"},"referral":{"title":"Chia sẻ liên kết giới thiệu của tôi với mọi người","btn":"Trang tổng quan đối tác"}},"home":{"title":"Mua NFT","nft":{"profit":"lợi nhuận","input":"Nhập số lượng","btn":"Mua","earnings":"Thu nhập"},"feed":{"btn":"Cho ăn","text":"Gà cần được cho ăn để người sở hữu chúng nhận được đầy đủ phần trăm thưởng tích lũy mỗi ngày. Bạn cần đi đến phần tài khoản cá nhân và nhấn nút bên phải để cho gà ăn."},"active":{"title":"Kích hoạt NFT","search":"Tìm kiếm","name":"Tên","progress":"Tiến triển","profit":"Lợi nhuận hàng ngày","accrued":"Đã tích lũy","date":"Ngày"}},"partners":{"title":"Giới thiệu bạn & Kiếm tiền thưởng","level":"Cấp độ","text":"Cứ mỗi 2 BNB kiếm được dưới dạng tiền thưởng giới thiệu sẽ tăng tỷ lệ giới thiệu cấp đầu tiên lên 1%","refTitle":"Chia sẻ liên kết giới thiệu với bạn bè","refBtn":"Sao chép liên kết","refLink":"Tài liệu quảng bá","active":"Người giới thiệu hoạt động","total":"Tổng tiền thưởng giới thiệu","historyTitle":"Lịch sử giới thiệu","all":"Tất cả các","item":{"ref":"Giới thiệu ","level":"Cấp độ giới thiệu","purchase":"Số tiền mua","bonus":"Thưởng của bạn","date":"Ngày"}},"trade-in":{"title":"Giao dịch","profit":"lợi nhuận","btn":"Hoạt động"},"reinvest":{"title":"Tái đầu tư","nft":{"profit":"lợi nhuận","input":"Nhập số lượng","btn":"Mua","earnings":"Thu nhập","blocked":"Không đủ tiền"},"text":"Nhấp vào nút Rút tiền, và bạn sẽ nhận được ngay lập tức tất cả các khoản thu nhập từ tiền gửi và tiền thưởng liên kết chỉ với một lần duy nhất"},"popups":{"copied":"Liên kết được sao chép vào khay nhớ tạm","withdraw":{"title":"Xác nhận rút tiền","subTitle":"Tiền sẽ được gửi đến đâu","input":"Nhập số tiền","text":"Khi rút tiền từ số dư này, Tiền thưởng Giữ lại của bạn sẽ đặt lại về 0.","btn1":"Xác nhận","btn2":"Hủy bỏ"},"feed":"Bạn đã cho gà con ăn thành công! Họ đang hạnh phúc và đầy đủ! Xin đừng quên cho chúng ăn lại sau này."}}}');
+        const prt_namespaceObject = JSON.parse('{"landing":{"banners":{"title":"Banners de afiliados","label":"Seu link de referência"}},"cabinet":{"header":{"nav1":"Início","nav2":"Meus parceiros","nav3":"Trade-in","nav4":"Reinvestir","wallet":"Saldo da carteira","exit":"saída"},"aside":{"profit":{"title":"Seu lucro diário atual","link":"Como <br> funciona","basic":"Lucro básico","hold":"Bônus de hold","contract":"Bônus de contrato"},"balance":{"investment":"Saldo do investimento","referral":"Saldo de indicação","btn":"Sacar","text":"Clique no botão Sacar para obter todos os seus ganhos de depósitos e bônus de afiliados de uma só vez com uma única transação. Seu bônus pessoal de hold será redefinido dessa forma."},"statistic":{"number":"Número de depósitos","last":"Data do último depósito","invested":"Investido","earned":"Total ganho","withdrawn":"Total sacado"},"referral":{"title":"Compartilhar meu link de referência com as pessoas","btn":"Painel do parceiro"}},"home":{"title":"Comprar NFT","nft":{"profit":"lucro","input":"Insira o valor","btn":"Comprar","earnings":"Ganhos"},"feed":{"btn":"Alimentação","text":"As galinhas precisam ser alimentadas para que seu proprietário receba uma porcentagem diária completa do acúmulo de lucro. Para alimentar uma galinha, você precisa acessar sua conta pessoal e pressionar o botão direito."},"active":{"title":"NFT ativo","search":"Procurar","name":"Nome","progress":"Progresso","profit":"Lucro diário","accrued":"Acumulado","date":"Encontro"}},"partners":{"title":"Indique amigos & ganhe bônus","level":"Nível","text":"Cada 2 BNB ganhos na forma de bônus de indicação aumenta a taxa de indicação de primeiro nível em 1%","refTitle":"Compartilhe seu link de indicação com amigos","refBtn":"Copiar link","refLink":"Materiais promocionais","active":"Indicações ativas","total":"Total referral bonus","historyTitle":"Referral history","all":"Tudo","item":{"ref":"Indicação ","level":"Nível de indicação","purchase":"Valor da compra","bonus":"Seu bônus","date":"Data"}},"trade-in":{"title":"Trade-in","profit":"lucro","btn":"Ativar"},"reinvest":{"title":"Reinvestir","nft":{"profit":"lucro","input":"Insira o valor","btn":"Comprar","earnings":"Ganhos","blocked":"Fundos insuficientes"},"text":"Clique no botão Retirar e você receberá instantaneamente todos os seus ganhos de depósitos e bônus de afiliados com um único"},"popups":{"copied":"Link copiado para a área de transferência","withdraw":{"title":"Confirmar retirada","subTitle":"Para onde será enviado o dinheiro","input":"Insira o valor","text":"Ao retirar fundos desse saldo, seu bônus de retenção será zerado.","btn1":"Сonfirme","btn2":"Cancelar"},"feed":"Você alimentou com sucesso seus filhotes! Eles estão felizes e cheios! Por favor, não se esqueça de alimentá-los novamente mais tarde."}}}');
         window.addEventListener("load", (function() {
             setLang();
+            newSetLang();
         }));
         var langHeadEL = document.querySelector(".language-block__flag");
         var langHeadFlagImgEl = document.querySelector(".language-block__flag-head-img");
@@ -9223,6 +9062,7 @@
                 window.localStorage.setItem("lang", lang);
                 location.reload();
                 setLang();
+                newSetLang();
             }
         }));
         function setLang() {
@@ -9241,6 +9081,38 @@
                 }));
             };
             for (var p in mobListTranslations[lang]) _loop(p);
+        }
+        function newSetLang() {
+            var locales = selectLocales(lang);
+            var allDataEl = document.querySelectorAll("[data-lg]");
+            var allDataElPlaceholder = document.querySelectorAll("[data-lg-placeholder]");
+            allDataEl.forEach((function(lgItem) {
+                var landPath = lgItem.dataset.lg.split(".");
+                var curVal = getTransfer(locales, landPath);
+                lgItem.innerHTML = curVal;
+            }));
+            allDataElPlaceholder.forEach((function(lgItem) {
+                var landPath = lgItem.dataset.lgPlaceholder.split(".");
+                var curVal = getTransfer(locales, landPath);
+                lgItem.setAttribute("placeholder", curVal);
+            }));
+        }
+        function selectLocales(language) {
+            if ("eng" === language) return eng_namespaceObject;
+            if ("esp" === language) return esp_namespaceObject;
+            if ("vnm" === language) return vnm_namespaceObject;
+            if ("prt" === language) return prt_namespaceObject;
+        }
+        function getTransfer(obj, way) {
+            var result;
+            runner(obj, way);
+            function runner(obj, way) {
+                var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+                if (way.length === n) return;
+                result = obj[way[n]];
+                runner(obj[way[n]], way, n += 1);
+            }
+            return result;
         }
         var MAIN_CALC_EL = document.getElementById("interestScreme");
         if (MAIN_CALC_EL) {

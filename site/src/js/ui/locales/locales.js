@@ -2,7 +2,7 @@ import { translations, mobListTranslations } from './translations.js';
 
 window.addEventListener('load', () => {
    setLang();
-   // newSetLang();
+   newSetLang();
 });
 const langHeadEL = document.querySelector('.language-block__flag');
 const langHeadFlagImgEl = document.querySelector('.language-block__flag-head-img');
@@ -18,7 +18,7 @@ langListLEl.addEventListener('click', (e) => {
       window.localStorage.setItem('lang', lang);
       location.reload();
       setLang();
-      // newSetLang();
+      newSetLang();
    }
 });
 
@@ -48,26 +48,41 @@ function translateListMob() {
 
 //Locales new========================================================================================================================================================
 
-// import engLocales from '../../../files/locales/eng.json';
-// import espLocales from '../../../files/locales/esp.json';
-// import vnmLocales from '../../../files/locales/vnm.json';
-// import prtLocales from '../../../files/locales/prt.json';
+import engLocales from '../../../files/locales/eng.json';
+import espLocales from '../../../files/locales/esp.json';
+import vnmLocales from '../../../files/locales/vnm.json';
+import prtLocales from '../../../files/locales/prt.json';
 
-// function newSetLang() {
-//    const locales = selectLocales(lang);
-//    const allDataEl = document.querySelectorAll('[data-lg]');
-//    allDataEl.forEach((lgItem) => {
-//       const landPath = lgItem.dataset.lg.split('.');
-//       const path = landPath.reduce((acc, el) => {
-//          return `[${acc}]` + `[${el}]`;
-//       });
-//       // lgItem.innerHTML = locales[landPath];
-//    });
-// }
+function newSetLang() {
+   const locales = selectLocales(lang);
+   const allDataEl = document.querySelectorAll('[data-lg]');
+   const allDataElPlaceholder = document.querySelectorAll('[data-lg-placeholder]');
+   allDataEl.forEach((lgItem) => {
+      const landPath = lgItem.dataset.lg.split('.');
+      const curVal = getTransfer(locales, landPath);
+      lgItem.innerHTML = curVal;
+   });
+   allDataElPlaceholder.forEach((lgItem) => {
+      const landPath = lgItem.dataset.lgPlaceholder.split('.');
+      const curVal = getTransfer(locales, landPath);
+      lgItem.setAttribute('placeholder', curVal);
+   });
+}
 
-// function selectLocales(language) {
-//    if ((language = 'eng')) return engLocales;
-//    if ((language = 'esp')) return espLocales;
-//    if ((language = 'vnm')) return vnmLocales;
-//    if ((language = 'prt')) return prtLocales;
-// }
+function selectLocales(language) {
+   if (language === 'eng') return engLocales;
+   if (language === 'esp') return espLocales;
+   if (language === 'vnm') return vnmLocales;
+   if (language === 'prt') return prtLocales;
+}
+
+function getTransfer(obj, way) {
+   let result;
+   runner(obj, way);
+   function runner(obj, way, n = 0) {
+      if (way.length === n) return;
+      result = obj[way[n]];
+      runner(obj[way[n]], way, (n += 1));
+   }
+   return result;
+}

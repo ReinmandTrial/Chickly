@@ -86,9 +86,6 @@
    &__chickly-list.swiper-wrapper {
       display: flex;
       justify-content: space-between;
-      @media (max-width: em(1700)) {
-         justify-content: center;
-      }
       @media (max-width: em(1150)) {
          justify-content: start;
       }
@@ -104,5 +101,8 @@
       padding: rem(30) rem(20);
       text-align: center;
       color: rgba(40, 40, 40, 0.5);
+      @media (max-width:$tablet){
+         margin: rem(0) rem(15);
+      }
    }
 }

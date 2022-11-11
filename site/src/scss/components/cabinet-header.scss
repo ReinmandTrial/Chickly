@@ -307,6 +307,10 @@
    width: rem(155);
    padding: rem(5) rem(15);
    overflow: hidden;
+   display: flex;
+   flex-direction: column;
+   gap: 5px;
+   justify-content: center;
    @media (max-width: $tablet) {
       max-height: 70px;
       padding: rem(10) rem(25);
@@ -316,16 +320,13 @@
       font-size: 18px;
       text-overflow: ellipsis;
       overflow: hidden;
-      margin-bottom: rem(3);
-      @media (max-width: $tablet) {
-         margin-bottom: 10px;
-      }
    }
 
    &__logout {
       display: flex;
       align-items: center;
       gap: rem(5);
+      max-width: fit-content;
       @media (max-width: $tablet) {
          font-size: 18px;
       }
