@@ -1,5 +1,4 @@
 import { menuClose } from '../../base/libs/functions.js';
-import CircleType from 'circletype';
 
 //header balance dropdown========================================================================================================================================================
 currencyMagager();

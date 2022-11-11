@@ -1,0 +1,46 @@
+{
+   "eng": {
+      "cabinet": {
+         "header": {
+            "nav1": "Home",
+            "nav2": "My Partners",
+            "nav3": "Trade-in",
+            "nav4": "Reinvest",
+            "wallet": "Wallet Balance"
+         }
+      }
+   },
+   "esp": {
+      "cabinet": {
+         "header": {
+            "nav1": "Página principal",
+            "nav2": "Mis socios",
+            "nav3": "Intercambio",
+            "nav4": "Reinvertir",
+            "wallet": "Saldo de la cartera"
+         }
+      }
+   },
+   "vnm": {
+      "cabinet": {
+         "header": {
+            "nav1": "Nhà",
+            "nav2": "Những đối tác của tôi",
+            "nav3": "Giao dịch",
+            "nav4": "Tái đầu tư",
+            "wallet": "Số dư trên Wallet"
+         }
+      }
+   },
+   "prt": {
+      "cabinet": {
+         "header": {
+            "nav1": "Início",
+            "nav2": "Meus parceiros",
+            "nav3": "Trade-in",
+            "nav4": "Reinvestir",
+            "wallet": "Saldo da carteira"
+         }
+      }
+   }
+}

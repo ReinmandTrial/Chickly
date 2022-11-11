@@ -1,0 +1,12 @@
+{
+   "cabinet": {
+      "header": {
+         "nav1": "Página principal",
+         "nav2": "Mis socios",
+         "nav3": "Intercambio",
+         "nav4": "Reinvertir",
+         "wallet": "Saldo de la cartera",
+         "exit": "Salida"
+      }
+   }
+}
