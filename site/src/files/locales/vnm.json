@@ -1,0 +1,12 @@
+{
+   "cabinet": {
+      "header": {
+         "nav1": "Nhà",
+         "nav2": "Những đối tác của tôi",
+         "nav3": "Giao dịch",
+         "nav4": "Tái đầu tư",
+         "wallet": "Số dư trên Wallet",
+         "exit": "Lối ra"
+      }
+   }
+}

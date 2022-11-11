@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{ "title":"Chickly" })
+
+<body>
+   <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page">
+         <div class="home">
+            <div class="home__wrapper">
+               <section class="home__about about">
+                  <div class="about__container">
+                     <div class="about__content">
+                        <div class="about__text-content">
+                           <h1 class="about__title">
+                              <span id="aboutTitle">Reliable Investments with</span><span class="about__title_yellow">BNB</span>
+                           </h1>
+                           <h2 class="about__subtitle" id="aboutSubTitle">Earn up to <span>+220%</span> of your NFT cost</h2>
+                           <div class="about__line"></div>
+                           <div class="about__list-advantages">
+                              <p id="aboutItem1" class="about__advantage">Blockchain decentralized platform</p>
+                              <p id="aboutItem2" class="about__advantage">Totally secure income based on BNB smart-contract</p>
+                              <p id="aboutItem3" class="about__advantage">Smart-contract verified and audited by independent company</p>
+                           </div>
+                           <div class="about__buttons__block">
+                              <div class="about__list-buttons">
+                                 <a id="aboutBtnDiscrord" target="_blank" href="https://discord.gg/chickly"
+                                    class="about__button about__button_discord _icon-discord">Join Discord</a>
+                                 <a id="aboutBtnTwitter" target="_blank" href="https://twitter.com/Chickly_"
+                                    class="about__button about__button_twitter _icon-twitter">Follow Twitter
+                                 </a>
+                                 <a href="/cabinet.html" id="aboutBtnConnect" class="about__button about__button_wallet">Connect Wallet</a>
+                              </div>
+                              <div class="about__paper">
+                                 <p class="about__paper-title">White Paper</p>
+                                 <div class="about__paper-buttons">
+                                    <a target="_blank" href="https://chickly-nft.gitbook.io/chickly/intro/what-is-chikly" type="button"
+                                       class="about__paper-btn about__paper-btn_gitbook">
+                                       <i class="_icon-gitbook"></i>
+                                       Gitbook
+                                       <i class="_icon-resize"></i>
+                                    </a>
+                                    <a target="_blank" href="https://telegra.ph/Chickly-NFT-10-27" type="button"
+                                       class="about__paper-btn about__paper-btn_telegraph">
+                                       <i class="_icon-telegraph"></i>
+                                       Telegraph
+                                       <i class="_icon-resize"></i>
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="about__images-content">
+                           <div class="about__chichen">
+                              <img src="@img/chicken.svg" alt="chicken" />
+                           </div>
+                           <div class="about__small-coin">
+                              <img src="@img/coin.svg" alt="coin" />
+                           </div>
+                           <div class="about__big-coin">
+                              <img src="@img/coin.svg" alt="coin" />
+                           </div>
+                           <div class="about__first-dot"><img src="@img/dot.svg" alt="dot" /></div>
+                           <div class="about__second-dot"><img src="@img/dot.svg" alt="dot" /></div>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+               <section class="home__benefits benefits">
+                  <img src="@img/Home/benefits/home-bg.svg" alt="bg" class="benefits__home-bg" />
+                  <div class="benefits__container">
+                     <div class="benefits__content">
+                        <p id="benefitsTitle" class="benefits__main-text">
+                           BNB Chain boasts over <span>3+ Million Weekly Unique Active Users</span>
+                        </p>
+                        <div class="benefits__card">
+                           <div class="benefits__card-bg">
+                              <img src="@img/Home/benefits/item-img.svg" alt="most" class="benefits__card-img" />
+                           </div>
+                           <p id="benefitsItem1" class="benefits__card-text">First most profitable project on NFT</p>
+                        </div>
+                        <div class="benefits__card">
+                           <div class="benefits__card-bg">
+                              <p class="benefits__card-bg-text">220% Profit</p>
+                           </div>
+                           <p id="benefitsItem2" class="benefits__card-text">Unlimited earnings with ever-growing rates</p>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+               <section class="home__nft-chicks nft-chicks">
+                  <div class="nft-chicks__content">
+                     <h3 id="nftTitle" class="nft-chicks__title">Profitable NFT chicks</h3>
+                     <div data-tabs data-tabs-animate="300" class="nft-chicks__tabs">
+                        <nav data-tabs-titles class="nft-chicks__tabs-navigation">
+                           <button type="button" class="nft-chicks__tabs-title _tab-active">
+                              <img src="@img/bnb.png" alt="" /> BNB
+                           </button>
+                           <button type="button" class="nft-chicks__tabs-title">
+                              <img src="@img/busd.png" alt="" />
+                              BUSD
+                           </button>
+                        </nav>
+                        <div data-tabs-body class="nft-chicks__tabs-content">
+                           <div class="nft-chicks__tabs-body">
+                              <div class="nft-chicks__card">
+                                 <p class="nft-chicks__named">Bennie</p>
+                                 <div class="nft-chicks__img">
+                                    <img src="@img/Home/nft-chicks/1.svg" alt="1" />
+                                 </div>
+                                 <p class="nft-chicks__price nft-chicks__price_bnb">0.04 <span>BNB</span></p>
+                                 <p class="nft-chicks__profit">170% <span id="nftProfit1">profit</span></p>
+                                 <a href="/cabinet.html" id="nftBuy1" class="nft-chicks__button" plan_id="1" price="0.04">Buy</a>
+                              </div>
+                              <div class="nft-chicks__card">
+                                 <p class="nft-chicks__named">Salsa</p>
+                                 <div class="nft-chicks__img">
+                                    <img src="@img/Home/nft-chicks/5.svg" alt="5" />
+                                 </div>
+                                 <p class="nft-chicks__price nft-chicks__price_bnb">0.4 <span>BNB</span></p>
+                                 <p class="nft-chicks__profit">180% <span id="nftProfit2">profit</span></p>
+                                 <a href="/cabinet.html" id="nftBuy2" class="nft-chicks__button" plan_id="2" price="0.4">Buy</a>
+                              </div>
+                              <div class="nft-chicks__card">
+                                 <p class="nft-chicks__named">Fluffy</p>
+                                 <div class="nft-chicks__img">
+                                    <img src="@img/Home/nft-chicks/2.svg" alt="2" />
+                                 </div>
+                                 <p class="nft-chicks__price nft-chicks__price_bnb">2 <span>BNB</span></p>
+                                 <p class="nft-chicks__profit">190% <span id="nftProfit3">profit</span></p>
+                                 <a href="/cabinet.html" id="nftBuy3" class="nft-chicks__button" plan_id="3" price="2">Buy</a>
+                              </div>
+                              <div class="nft-chicks__card">
+                                 <p class="nft-chicks__named">Zazu</p>
+                                 <div class="nft-chicks__img">
+                                    <img src="@img/Home/nft-chicks/3.svg" alt="3" />
+                                 </div>
+                                 <p class="nft-chicks__price nft-chicks__price_bnb">12 <span>BNB</span></p>
+
+                                 <p class="nft-chicks__profit">200% <span id="nftProfit4">profit</span></p>
+                                 <a href="/cabinet.html" id="nftBuy4" class="nft-chicks__button" plan_id="4" price="12">Buy</a>
+                              </div>
+                              <div class="nft-chicks__card">
+                                 <p class="nft-chicks__named">Goldie</p>
+                                 <div class="nft-chicks__img">
+                                    <img src="@img/Home/nft-chicks/4.png" alt="4" />
+                                 </div>
+                                 <p class="nft-chicks__price nft-chicks__price_bnb">40 <span>BNB</span></p>
+
+                                 <p class="nft-chicks__profit">220% <span id="nftProfit5">profit</span></p>
+                                 <a href="/cabinet.html" id="nftBuy5" class="nft-chicks__button" plan_id="5" price="40">Buy</a>
+                              </div>
+                           </div>
+                           <div class="nft-chicks__tabs-body">
+                              <div class="nft-chicks__card">
+                                 <p class="nft-chicks__named">Bennie</p>
+                                 <div class="nft-chicks__img">
+                                    <img src="@img/Home/nft-chicks/1.svg" alt="1" />
+                                 </div>
+                                 <p class="nft-chicks__price nft-chicks__price_busd">10 <span>BUSD</span></p>
+                                 <p class="nft-chicks__profit">170% <span id="nftProfit6">profit</span></p>
+                                 <a href="/cabinet.html" id="nftBuy6" class="nft-chicks__button" plan_id="1" price="0.04">Buy</a>
+                              </div>
+                              <div class="nft-chicks__card">
+                                 <p class="nft-chicks__named">Salsa</p>
+                                 <div class="nft-chicks__img">
+                                    <img src="@img/Home/nft-chicks/5.svg" alt="5" />
+                                 </div>
+                                 <p class="nft-chicks__price nft-chicks__price_busd">100 <span>BUSD</span></p>
+                                 <p class="nft-chicks__profit">180% <span id="nftProfit7">profit</span></p>
+                                 <a href="/cabinet.html" id="nftBuy7" class="nft-chicks__button" plan_id="2" price="0.4">Buy</a>
+                              </div>
+                              <div class="nft-chicks__card">
+                                 <p class="nft-chicks__named">Fluffy</p>
+                                 <div class="nft-chicks__img">
+                                    <img src="@img/Home/nft-chicks/2.svg" alt="2" />
+                                 </div>
+                                 <p class="nft-chicks__price nft-chicks__price_busd">500 <span>BUSD</span></p>
+                                 <p class="nft-chicks__profit">190% <span id="nftProfit8">profit</span></p>
+                                 <a href="/cabinet.html" id="nftBuy8" class="nft-chicks__button" plan_id="3" price="2">Buy</a>
+                              </div>
+                              <div class="nft-chicks__card">
+                                 <p class="nft-chicks__named">Zazu</p>
+                                 <div class="nft-chicks__img">
+                                    <img src="@img/Home/nft-chicks/3.svg" alt="3" />
+                                 </div>
+                                 <p class="nft-chicks__price nft-chicks__price_busd">3000 <span>BUSD</span></p>
+
+                                 <p class="nft-chicks__profit">200% <span id="nftProfit9">profit</span></p>
+                                 <a href="/cabinet.html" id="nftBuy9" class="nft-chicks__button" plan_id="4" price="12">Buy</a>
+                              </div>
+                              <div class="nft-chicks__card">
+                                 <p class="nft-chicks__named">Goldie</p>
+                                 <div class="nft-chicks__img">
+                                    <img src="@img/Home/nft-chicks/4.png" alt="4" />
+                                 </div>
+                                 <p class="nft-chicks__price nft-chicks__price_busd">10000 <span>BUSD</span></p>
+
+                                 <p class="nft-chicks__profit">220% <span id="nftProfit10">profit</span></p>
+                                 <a href="/cabinet.html" id="nftBuy10" class="nft-chicks__button" plan_id="5" price="40">Buy</a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+               <section class="home__conditions conditions">
+                  <div class="conditions__container">
+                     <div class="conditions__content">
+                        <h3 id="conditionTitle" class="conditions__title">Investment Conditions</h3>
+                        <div class="conditions__video-block">
+                           <div class="conditions__video">
+                              <img class="conditions__video-bg" src=" @img/Home/conditions/monitor-mob.png" alt="monitor" />
+                              <iframe class="conditions__video-item" src="https://www.youtube.com/embed/EujOS4EXD3E" title="YouTube video player"
+                                 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                 allowfullscreen></iframe>
+                           </div>
+                           <div class="conditions__prompt-list">
+                              <div id="conditionItem1" class="conditions__prompt conditions__prompt_1">
+                                 Working on <span class="conditions__prompt-icon-coin conditions__prompt-bolt-text">BNB</span> network
+                                 <span
+                                    data-help="You can buy our NFTs by connecting your wallet. All transactions on the site are carried out only through Binance Smart Chain."
+                                    class="_icon-question"></span>
+                              </div>
+                              <div id="conditionItem2" class="conditions__prompt conditions__prompt_2">
+                                 Minimal deposit <span class="conditions__prompt-icon-coin conditions__prompt-bolt-text">0.04 BNB</span>
+                              </div>
+                              <div id="conditionItem3" class="conditions__prompt conditions__prompt_3">
+                                 Total income <span class="conditions__prompt-bolt-text">up to 220%</span>
+                                 <span
+                                    data-help="The final profit of the NFT depends on the Hen you bought. As you can see in our NFT block, the profit range from 170% to 220%. The last one is the most profitable."
+                                    class="_icon-question"></span>
+                              </div>
+                              <div id="conditionItem4" class="conditions__prompt conditions__prompt_4">
+                                 Earnings <span class="conditions__prompt-bolt-text">every moment,</span> withdraw any time
+                              </div>
+                           </div>
+                        </div>
+                        <div class="conditions__cards-block">
+                           <!-- Оболочка слайдера -->
+                           <div class="conditions__slider swiper">
+                              <!-- Двигающееся часть слайдера -->
+                              <div class="conditions__wrapper swiper-wrapper">
+                                 <!-- Слайд -->
+                                 <div class="conditions__slide swiper-slide">
+                                    <p id="conditionSlideTitle1" class="conditions__slide-title">BASIC INTEREST RATE</p>
+                                    <p id="conditionSlideSubTitle1" class="conditions__slide-rate">
+                                       +1% every 24 hours (+0.0416% hourly)
+                                    </p>
+                                    <p id="conditionSlideSubText1" class="conditions__slide-descr">
+                                       BNB smart-contract calculate profit up to every deposit since the ent eee date it was made. Every
+                                       hour you will get +0.0416%, every day +1%.
+                                    </p>
+                                 </div>
+                                 <div class="conditions__slide swiper-slide">
+                                    <p id="conditionSlideTitle2" class="conditions__slide-title">PERSONAL HOLD-BONUS</p>
+                                    <p id="conditionSlideSubTitle2" class="conditions__slide-rate">
+                                       +0.1% for every 24 hours without withdraw
+                                    </p>
+                                    <p id="conditionSlideSubText2" class="conditions__slide-descr">
+                                       Smart-contract calculates hold-bonus from your deposit, or last withdraw date. If you did not
+                                       request payment, it will charge you an additional bonus. After 24 hours +0.1%, after 48 hours
+                                       +0.2%, after 72 hours +0.3% and so on.
+                                    </p>
+                                 </div>
+                                 <div class="conditions__slide swiper-slide">
+                                    <p id="conditionSlideTitle3" class="conditions__slide-title">CONTRACT TOTAL AMOUNT BONUS</p>
+                                    <p id="conditionSlideSubTitle3" class="conditions__slide-rate">
+                                       "+0.15% for every 400 BNB on smart-contract
+                                    </p>
+                                    <p id="conditionSlideSubText3" class="conditions__slide-descr">
+                                       Smart-contract check its current balance and charge an additional +0.15% up to your earnings for
+                                       every 400 BNB on balance
+                                    </p>
+                                    <p class="conditions__slide-descr">Current bonus:<span id="current_bonus">0.0</span>%</p>
+                                 </div>
+                              </div>
+                              <div class="swiper-pagination"></div>
+                           </div>
+                        </div>
+                        <div class="conditions__wrapper swiper-wrapper">
+                           <div class="conditions__balance-block">
+                              <p class="conditions__balance-title">Current platform balance BNB:</p>
+                              <div id="site_balance_bnb" class="conditions__balance-button _icon-schedule">0</div>
+                           </div>
+                           <div class="conditions__balance-block">
+                              <p class="conditions__balance-title">Current platform balance BUSD:</p>
+                              <div id="site_balance_busd" class="conditions__balance-button _icon-schedule">0</div>
+                           </div>
+
+                           <div class="conditions__balance-block">
+                              <p class="conditions__balance-title">Current platform users:</p>
+                              <div id="site_users" class="conditions__balance-button _icon-schedule">0</div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- <div class="conditions__animations">
+								<span class="conditions__rigth-coin-wrap"><img src="@img/Home/conditions/coin-animation.svg" alt="coin"
+										class="conditions__rigth-coin"></span>
+								<span class="conditions__rigth-dot-wrap"> <img src="@img/Home/conditions/dot-animation.svg" alt="dot"
+										class="conditions__rigth-dot"></span>
+								<span class="conditions__left-coin-wrap"><img src="@img/Home/conditions/coin-animation.svg" alt="coin"
+										class="conditions__left-coin"></span>
+								<span class="conditions__left-dot-wrap"><img src="@img/Home/conditions/dot-animation.svg" alt="dot"
+										class="conditions__left-dot"></span>
+							</div> -->
+                  </div>
+               </section>
+               <section class="home__how-it-work how-it-work">
+                  <div class="how-it-work__container">
+                     <div class="how-it-work__content">
+                        <h3 id="howWorkTitle" class="how-it-work__title">How it Works?</h3>
+                        <div class="how-it-work__steps-list">
+                           <div class="how-it-work__step how-it-work__step_one step-how-it-works">
+                              <span class="step-how-it-works__number">1</span>
+                              <div class="step-how-it-works__top-image">
+                                 <img src="@img/Home/How-it-works/replenish.svg" alt="replenish" />
+                              </div>
+                              <p id="howWorkItemTitle1" class="step-how-it-works__title">Replenish your BNB wallet</p>
+                              <p id="howWorkItemText1" class="step-how-it-works__descr">and connect it to our website</p>
+                              <a href="/cabinet.html" id="howWorkItemBtn1" class="step-how-it-works__button">Connect</a>
+                           </div>
+                           <div class="how-it-work__step how-it-work__step_two step-how-it-works">
+                              <span class="step-how-it-works__number">2</span>
+                              <div class="step-how-it-works__top-image">
+                                 <img src="@img/Home/How-it-works/buy-one.svg" alt="buy-one" />
+                              </div>
+                              <p id="howWorkItemTitle2" class="step-how-it-works__title">Buy one</p>
+                              <p id="howWorkItemText2" class="step-how-it-works__descr">of the profitable chickens</p>
+                              <div class="step-how-it-works__bottom-img">
+                                 <img src="@img/Home/How-it-works/triple-cock.png" alt="triple-cock" />
+                              </div>
+                           </div>
+                           <div class="how-it-work__step how-it-work__step_three step-how-it-works">
+                              <span class="step-how-it-works__number">3</span>
+                              <div class="step-how-it-works__top-image">
+                                 <img src="@img/Home/How-it-works/replenish.svg" alt="replenish" />
+                              </div>
+                              <p id="howWorkItemTitle3" class="step-how-it-works__title">Receive hourly income</p>
+                              <p id="howWorkItemText3" class="step-how-it-works__descr">and instantly withdraw to your wallet</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+               <section class="home__referral-program referral-program">
+                  <div class="referral-program__container">
+                     <div class="referral-program__content">
+                        <p id="referralTitle" class="referral-program__title">Referral Program</p>
+                        <p id="referralSubTitle" class="referral-program__level-list-name">3 levels of affiliate rewards</p>
+                        <ul class="referral-program__level-list">
+                           <li class="referral-program__level-list-item">
+                              <span class="referral-program__list-icon">1</span><span id="referralPersent1">7% - 1st Level</span>
+                           </li>
+                           <li class="referral-program__level-list-item">
+                              <span class="referral-program__list-icon">2</span><span id="referralPersent2">2% - 2nd Level</span>
+                           </li>
+                           <li class="referral-program__level-list-item">
+                              <span class="referral-program__list-icon">3</span><span id="referralPersent3">1% - 3rd Level</span>
+                           </li>
+                        </ul>
+                        <p id="referralPersentPrompt" class="referral-program__prompt">
+                           * Referral rewards come instantly on your balance and can be withdrawn any time along with earnings.
+                        </p>
+                        <div class="referral-program__info-block">
+                           <p id="referralBigText" class="referral-program__info-title">
+                              Every 2 BNB earned as a referral bonus increases
+                           </p>
+                           <p id="referralItem1" class="referral-program__info-point">1 level for 0.2% ( max bonus 15% )</p>
+                           <!-- <p id="referralItem2" class="referral-program__info-point">2 level by 0.05% ( max bonus 4% )</p> -->
+                        </div>
+                        <a href="/cabinet.html" id="referralBtn" class="referral-program__button">Join</a>
+                     </div>
+                  </div>
+               </section>
+               <!-- <section class="home__audit audit">
+                  <div class="audit__container">
+                     <div class="audit__content">
+                        <h3 id="auditTitle" class="audit__title">Honest and Transparent</h3>
+                        <h4 id="auditSubTitle" class="audit__subtitle">Smart-contract Independent auditions and reviews</h4>
+                        <div class="audit__block">
+                           <div class="audit__image"><img src="@img/Home/audit/laptop.png" alt="laptop"></div>
+                           <div class="audit__list">
+                              <div class="audit__item">
+                                 <p id="auditItemTitle1" class="audit__item-title">Independent company</p>
+                                 <div class="audit__item-website">
+                                    <span class="audit__item-website_company-name">GROX Solutions</span>
+                                    <span id="auditWebsite">(Website:</span>
+                                    <a target="_blank" href="#" class="audit__item-website_link">grox.solutions</a>
+                                    )
+                                 </div>
+                                 <a id="auditBtn1" target="_blank" href="#" class="audit__item-button">Audit Report (PDF)</a>
+                              </div>
+                              <div class="audit__item">
+                                 <p id="auditItemTitle2" class="audit__item-title">Audition status </p>
+                                 <p id="auditSuccesfull" class="audit__item-done _icon-check">Successfully passed</p>
+                                 <a id="auditBtn2" target="_blank" href="#" class="audit__item-button audit__item-button_flag">Audit Report (PDF)</a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+               <section class="home__code code">
+                  <div class="code__container">
+                     <div class="code__content">
+                        <h4 id="codeTitle" class="code__title">Smart-contract code:</h4>
+                        <div class="code__block-list">
+                           <div class="code__block code__block_black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+                              officia natus, minus
+                              dolores cum, autem sint harum aspernatur, nam perspiciatis quo consectetur? Magnam, deserunt cum dolorem
+                              eligendi obcaecati aliquam magni qui, consequatur totam deleniti quas tenetur mollitia temporibus? Ipsam natus
+                              beatae aspernatur facilis nulla laudantium repellendus voluptates quaerat quasi non officiis ipsum provident
+                              consequuntur consectetur nisi deleniti enim facere similique fugit, blanditiis molestiae et odit alias
+                              corporis. Voluptates molestiae quidem explicabo ullam ex quasi voluptatum ipsum officia, iusto sequi repellat
+                              maxime nisi sunt quam iure pariatur vel accusantium praesentium? Rem facilis asperiores animi iure nam ad
+                              officia natus, minus
+                              dolores cum, autem sint harum aspernatur, nam perspiciatis quo consectetur? Magnam, deserunt cum dolorem
+                              eligendi obcaecati aliquam magni qui, consequatur totam deleniti quas tenetur mollitia temporibus? Ipsam natus
+                              beatae aspernatur facilis nulla laudantium repellendus voluptates quaerat quasi non officiis ipsum provident
+                              consequuntur consectetur nisi deleniti enim facere similique fugit, blanditiis molestiae et odit alias
+                              corporis. Voluptates molestiae quidem explicabo ullam ex quasi voluptatum ipsum officia, iusto sequi repellat
+                              maxime nisi sunt quam iure pariatur vel accusantium praesentium? Rem facilis asperiores animi iure nam ad
+                              officia natus, minus
+                              dolores cum, autem sint harum aspernatur, nam perspiciatis quo consectetur? Magnam, deserunt cum dolorem
+                              eligendi obcaecati aliquam magni qui, consequatur totam deleniti quas tenetur mollitia temporibus? Ipsam natus
+                              beatae aspernatur facilis nulla laudantium repellendus voluptates quaerat quasi non officiis ipsum provident
+                              consequuntur consectetur nisi deleniti enim facere similique fugit, blanditiis molestiae et odit alias
+                              corporis. Voluptates molestiae quidem explicabo ullam ex quasi voluptatum ipsum officia, iusto sequi repellat
+                              maxime nisi sunt quam iure pariatur vel accusantium praesentium? Rem facilis asperiores animi iure nam ad
+                              officia natus, minus
+                              dolores cum, autem sint harum aspernatur, nam perspiciatis quo consectetur? Magnam, deserunt cum dolorem
+                              eligendi obcaecati aliquam magni qui, consequatur totam deleniti quas tenetur mollitia temporibus? Ipsam natus
+                              beatae aspernatur facilis nulla laudantium repellendus voluptates quaerat quasi non officiis ipsum provident
+                              consequuntur consectetur nisi deleniti enim facere similique fugit, blanditiis molestiae et odit alias
+                              corporis. Voluptates molestiae quidem explicabo ullam ex quasi voluptatum ipsum officia, iusto sequi repellat
+                              maxime nisi sunt quam iure pariatur vel accusantium praesentium? Rem facilis asperiores animi iure nam ad
+                              distinctio natus dolores quasi.</div>
+                           <div class="code__block code__block_red">
+                              <img src="@img/coin.svg" alt="coin" class="code__block-img">
+                              <p id="codeItemText" class="code__block-text">BNB platform smart-contract is published on BNB blockchain.
+                                 Nobody can change its rules or algorithms, even administration. This provides our participants
+                                 unconditional confidence in safety of their
+                                 funds. Anyone can check smart-contract code and be sure that BNB ploatform is honest.</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+               <section class="home__reviews reviews">
+                  <div class="reviews__content">
+                     <h3 id="reviewsTitle" class="reviews__title">Reviews and Mentionings</h3>
+                     <div class="reviews__slider swiper">
+                        <div class="reviews__wrapper swiper-wrapper">
+                           <div class="reviews__slide swiper-slide">
+                              <img src="@img/Home/reviews/1.svg" alt="logo" class="reviews__logo">
+                           </div>
+                           <div class="reviews__slide swiper-slide">
+                              <img src="@img/Home/reviews/1.svg" alt="logo" class="reviews__logo">
+                           </div>
+                           <div class="reviews__slide swiper-slide">
+                              <img src="@img/Home/reviews/2.svg" alt="logo" class="reviews__logo">
+                           </div>
+                           <div class="reviews__slide swiper-slide">
+                              <img src="@img/Home/reviews/1.svg" alt="logo" class="reviews__logo">
+                           </div>
+                           <div class="reviews__slide swiper-slide">
+                              <img src="@img/Home/reviews/1.svg" alt="logo" class="reviews__logo">
+                           </div>
+                           <div class="reviews__slide swiper-slide">
+                              <img src="@img/Home/reviews/2.svg" alt="logo" class="reviews__logo">
+                           </div>
+                           <div class="reviews__slide swiper-slide">
+                              <img src="@img/chicken.svg" alt="logo" class="reviews__logo">
+                           </div>
+                           <div class="reviews__slide swiper-slide">
+                              <img src="@img/Home/reviews/1.svg" alt="logo" class="reviews__logo">
+                           </div>
+                           <div class="reviews__slide swiper-slide">
+                              <img src="@img/Home/reviews/2.svg" alt="logo" class="reviews__logo">
+                           </div>
+                           <div class="reviews__slide swiper-slide">
+                              <img src="@img/Home/reviews/1.svg" alt="logo" class="reviews__logo">
+                           </div>
+                           <div class="reviews__slide swiper-slide">
+                              <img src="@img/Home/reviews/1.svg" alt="logo" class="reviews__logo">
+                           </div>
+                           <div class="reviews__slide swiper-slide">
+                              <img src="@img/Home/reviews/1.svg" alt="logo" class="reviews__logo">
+                           </div>
+                           <div class="reviews__slide swiper-slide">
+                              <img src="@img/Home/reviews/1.svg" alt="logo" class="reviews__logo">
+                           </div>
+                           <div class="reviews__slide swiper-slide">
+                              <img src="@img/Home/reviews/1.svg" alt="logo" class="reviews__logo">
+                           </div>
+                           <div class="reviews__slide swiper-slide">
+                              <img src="@img/Home/reviews/1.svg" alt="logo" class="reviews__logo">
+                           </div>
+                           <div class="reviews__slide swiper-slide">
+                              <img src="@img/Home/reviews/1.svg" alt="logo" class="reviews__logo">
+                           </div>
+                           <div class="reviews__slide swiper-slide">
+                              <img src="@img/Home/reviews/1.svg" alt="logo" class="reviews__logo">
+                           </div>
+                           <div class="reviews__slide swiper-slide">
+                              <img src="@img/Home/reviews/1.svg" alt="logo" class="reviews__logo">
+                           </div>
+                           <div class="reviews__slide swiper-slide">
+                              <img src="@img/Home/reviews/1.svg" alt="logo" class="reviews__logo">
+                           </div>
+                           <div class="reviews__slide swiper-slide">
+                              <img src="@img/Home/reviews/1.svg" alt="logo" class="reviews__logo">
+                           </div>
+                           <div class="reviews__slide swiper-slide">
+                              <img src="@img/Home/reviews/1.svg" alt="logo" class="reviews__logo">
+                           </div>
+                           <div class="reviews__slide swiper-slide">
+                              <img src="@img/Home/reviews/1.svg" alt="logo" class="reviews__logo">
+                           </div>
+                           <div class="reviews__slide swiper-slide">
+                              <img src="@img/Home/reviews/1.svg" alt="logo" class="reviews__logo">
+                           </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                     </div>
+                  </div>
+               </section> -->
+               <section class="home__replenishment replenishment">
+                  <div class="replenishment__container">
+                     <div class="replenishment__content">
+                        <h3 id="replenishmentTitle" class="replenishment__title">Replenishment of Our Farm</h3>
+                        <div class="replenishment__block">
+                           <ul class="replenishment__list"></ul>
+
+                           <center id="waiting">
+                              <img src="@img/chicken.svg" style="height: 64px; width: 64px" />
+                              <div>loading...</div>
+                           </center>
+                           <button id="replenishmentSeeMore" class="replenishment__button">See more</button>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+               <div class="home__stick-blocks stick-blocks">
+                  <div class="stick-blocks__social">
+                     <a target="_blank" href="https://twitter.com/Chickly_" class="stick-blocks__soc-item"><img src="@img/twitter.svg" alt="" /></a>
+                     <a target="_blank" href="https://discord.gg/chickly" class="stick-blocks__soc-item"><img src="@img/discord.svg" alt="" /></a>
+                     <a target="_blank" href="https://t.me/chickly_nft" class="stick-blocks__soc-item"><img src="@img/telegram-1.svg" alt="" /></a>
+                     <a target="_blank" href="https://t.me/chickly_news" class="stick-blocks__soc-item"><img src="@img/telegram-2.svg" alt="" /></a>
+                  </div>
+                  <div class="stick-blocks__calc">
+                     <a class="stick-blocks__calc-item" href="interest-scheme.html"><img src="@img/calculator.svg" alt="" /></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </main>
+      @@include('html/_footer.htm',{})
+      @@include('html/_popup.htm',{})
+   </div>
+</body>
+
+</html>

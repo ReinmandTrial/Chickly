@@ -1,0 +1,19 @@
+.cabiten-footer {
+   background: rgba(255, 255, 255, 0.7);
+   &__container-cabinet {
+   }
+
+   &__content {
+      padding: rem(30) rem(15);
+      @media (max-width: $tablet) {
+         padding: rem(20) rem(15);
+      }
+   }
+
+   &__text {
+      font-weight: 400;
+      font-size: 16px;
+      text-align: center;
+      color: rgba(40, 40, 40, 0.5);
+   }
+}

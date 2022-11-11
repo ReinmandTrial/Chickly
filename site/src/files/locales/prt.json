@@ -1,0 +1,12 @@
+{
+   "cabinet": {
+      "header": {
+         "nav1": "Início",
+         "nav2": "Meus parceiros",
+         "nav3": "Trade-in",
+         "nav4": "Reinvestir",
+         "wallet": "Saldo da carteira",
+         "exit": "saída"
+      }
+   }
+}

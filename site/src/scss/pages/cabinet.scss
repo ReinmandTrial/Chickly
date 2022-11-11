@@ -1,0 +1,67 @@
+.cabinet {
+   margin-top: rem(150);
+   margin-bottom: rem(40);
+   padding: rem(0) rem(15);
+   @media (max-width: em(1700)) {
+      min-height: rem(1440);
+   }
+   @media (max-width: $tablet) {
+      padding: rem(0) rem(0);
+   }
+   @media (max-width: $mobileSmall) {
+      margin-top: rem(90);
+   }
+   &__container-cabinet {
+      display: grid;
+      grid-template-columns: 445px auto;
+      gap: 30px;
+      position: relative;
+      @media (max-width: em(1700)) {
+         display: block;
+      }
+      @media (max-width: $tablet) {
+         display: flex;
+         flex-direction: column;
+         gap: 40px;
+      }
+   }
+   &__aside {
+      @media (max-width: $tablet) {
+         padding: rem(0) rem(15);
+      }
+   }
+   &__content {
+      overflow: hidden;
+      @media (max-width: em(1700)) {
+         margin-left: 50px;
+      }
+      @media (max-width: $tablet) {
+         margin-left: 0;
+      }
+   }
+   &__page {
+      display: none;
+      &._active-body {
+         display: block;
+      }
+   }
+}
+
+.wrapper-cabinet {
+   &[data-bg='1'] {
+      background: url('@img/cabinet/cabinet-bg1.jpg') 50% 50% / 100% 100% no-repeat;
+      transition: all 0.3s ease 0s;
+   }
+   &[data-bg='2'] {
+      background: url('@img/cabinet/cabinet-bg2.jpg') 50% 50% / 100% 100% no-repeat;
+      transition: all 0.3s ease 0s;
+   }
+   &[data-bg='3'] {
+      background: url('@img/cabinet/cabinet-bg3.jpg') 50% 50% / 100% 100% no-repeat;
+      transition: all 0.3s ease 0s;
+   }
+   &[data-bg='4'] {
+      background: url('@img/cabinet/cabinet-bg4.jpg') 50% 50% / 100% 100% no-repeat;
+      transition: all 0.3s ease 0s;
+   }
+}

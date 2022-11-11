@@ -1,0 +1,197 @@
+.cabinet-trade-in {
+   &__content {
+      position: relative;
+      @media (max-width: $tablet) {
+         padding: rem(0) rem(15);
+      }
+   }
+
+   &__title {
+      font-weight: 500;
+      font-size: rem(35);
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-right: rem(250);
+      @media (max-width: $tablet) {
+         margin-left: 15px;
+      }
+      @media (max-width: $mobile) {
+         text-align: center;
+         position: static;
+         margin: rem(0) rem(0) rem(30) rem(0);
+         padding: rem(0) rem(20);
+      }
+   }
+
+   &__tabs {
+      margin-bottom: rem(50);
+   }
+
+   &__head {
+      background: linear-gradient(213.08deg, #febe01 28.11%, #f37502 96.2%);
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06);
+      border-radius: 50px;
+      max-width: 235px;
+      margin: 0 0 0 auto;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      border: 1px solid #febe01;
+      margin-bottom: rem(30);
+      @media (max-width: $tablet) {
+         margin-right: 15px;
+      }
+      @media (max-width: $mobile) {
+         margin: rem(0) auto rem(30) auto;
+      }
+   }
+
+   &__head-item {
+      flex: 0 0 50%;
+      padding: rem(5) rem(15);
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: rem(10);
+      border-radius: 50px;
+      font-weight: 500;
+      img {
+         width: 32px;
+         height: 32px;
+         transition: all 0.3s ease 0s;
+      }
+      &:hover {
+         img {
+            transform: scale(1.1);
+            transition: all 0.3s ease 0s;
+         }
+      }
+      &._tab-active {
+         background: #f1f1f1;
+         box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06);
+      }
+   }
+
+   &__body {
+   }
+
+   &__body-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+      justify-content: center;
+      gap: 25px;
+      @media (max-width: em(600)) {
+         grid-template-columns: minmax(290px, 350px);
+      }
+      &[hidden] {
+         display: none;
+      }
+   }
+
+   &__body-item {
+   }
+
+   &__paginagion {
+   }
+}
+.trade-in-chickly {
+   &__content {
+      background: #ffffff;
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06);
+      border-radius: 50px;
+      padding: rem(30) rem(50);
+      position: relative;
+      overflow: hidden;
+      @media (max-width:$mobile){
+          padding: rem(20) rem(50);   
+      }
+   }
+
+   &__image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 180px;
+      margin-bottom: rem(30);
+      img {
+         height: 100%;
+         object-fit: contain;
+      }
+   }
+
+   &__prices {
+      display: flex;
+      align-items: center;
+      gap: 10px 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+      border-bottom: 1px solid rgba(255, 191, 1, 0.2);
+      padding-bottom: 15px;
+      margin-bottom: 10px;
+   }
+
+   &__full-sum {
+      font-weight: 500;
+      font-size: 22px;
+      text-decoration-line: line-through;
+      opacity: 0.5;
+   }
+
+   &__sale-sum {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-weight: 500;
+      font-size: 22px;
+      img {
+         width: 25px;
+         height: 25px;
+      }
+   }
+
+   &__profit {
+      font-weight: 500;
+      font-size: 18px;
+      text-align: center;
+      margin-bottom: 20px;
+   }
+
+   &__button {
+      font-size: 18px;
+      color: #fff;
+      background: linear-gradient(213.08deg, #70e705 28.11%, #0e6b12 96.2%);
+      border-radius: 100px;
+      width: 100%;
+      padding: rem(9) rem(20);
+      transition: all 0.3s ease 0s;
+      &:hover {
+         transition: all 0.3s ease 0s;
+         box-shadow: 0px 4px 4px #42ad0b;
+      }
+      &:active {
+         box-shadow: none;
+         transform: translate(0px, 1px);
+      }
+   }
+
+   &__discount-label {
+      position: absolute;
+      background: radial-gradient(78.83% 116.1% at 65.78% 32.76%, #fb6a00 0%, #eb0401 100%);
+      border-radius: 50%;
+      width: 96px;
+      height: 96px;
+      left: -50px;
+      top: -40px;
+      & span {
+         position: absolute;
+         right: 4px;
+         bottom: 19px;
+         font-weight: 500;
+         font-size: 16px;
+         color: #ffffff;
+         transform: rotate(312deg);
+      }
+   }
+}

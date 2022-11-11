@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{ "title":"Cabinet" })
+
+<body>
+   <div data-bg='1' class="wrapper wrapper-cabinet">
+      @@include('html/_cabinet-header.htm',{})
+      <main class="cabinet">
+         <div class="cabinet__container-cabinet">
+            @@include('html/_cabinet-aside.htm',{})
+            <div class="cabinet__content">
+               @@include('html/_cabinet-home.htm',{})
+               @@include('html/_cabinet-partners.htm',{})
+               @@include('html/_cabinet-trade-in.htm',{})
+               @@include('html/_cabinet-reinvest.htm',{})
+            </div>
+         </div>
+      </main>
+      @@include('html/_cabinet-footer.htm',{})
+      @@include('html/_cabinet-popup.htm',{})
+   </div>
+</body>
+
+</html>

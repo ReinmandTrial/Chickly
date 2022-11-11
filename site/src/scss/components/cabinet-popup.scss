@@ -1,0 +1,229 @@
+.cabinet-popup {
+   visibility: hidden;
+   opacity: 0;
+   position: fixed;
+   z-index: 1000;
+   left: 0;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   width: 100%;
+   height: 100%;
+   overflow: auto;
+   background-color: rgba(0, 0, 0, 0.4);
+   transition: all 0.5s ease 0s;
+   &._active {
+      visibility: visible;
+      opacity: 1;
+      transition: all 0.3s ease 0s;
+      .cabinet-popup__content {
+         visibility: visible;
+         transform: scale(1);
+         transition: all 0.5s ease 0s;
+      }
+   }
+   &__body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+   }
+
+   &__content {
+      background: #ffffff;
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06);
+      border-radius: 50px;
+      max-width: 690px;
+      padding: 45px 120px;
+      position: relative;
+      visibility: hidden;
+      transform: scale(0);
+      transition: all 0.3s ease 0s;
+   }
+
+   &__title {
+      font-weight: 700;
+      font-size: 35px;
+      text-align: center;
+      margin-bottom: 20px;
+   }
+   &__curency {
+      font-weight: 600;
+      font-size: 25px;
+      margin-bottom: 5px;
+      text-align: center;
+      color: #f09138;
+   }
+
+   &__input {
+      background: rgba(199, 199, 199, 0.2);
+      border-radius: 100px;
+      width: 100%;
+      padding: 10px 20px;
+      text-align: center;
+      margin-bottom: 25px;
+      &::placeholder {
+         font-size: 18px;
+      }
+   }
+   &__subtitle {
+      font-weight: 700;
+      font-size: 25px;
+      text-align: center;
+      margin-bottom: 15px;
+   }
+
+   &__wallet-number {
+      font-size: 18px;
+      text-align: center;
+      opacity: 0.6;
+      background: rgba(199, 199, 199, 0.2);
+      border-radius: 100px;
+      padding: 10px 20px;
+      margin-bottom: 25px;
+   }
+
+   &__info {
+      font-size: 14px;
+      line-height: 129%;
+      text-align: center;
+      opacity: 0.5;
+   }
+
+   &__buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 50px;
+   }
+
+   &__confirm-btn {
+      background: linear-gradient(213.08deg, #70e705 28.11%, #0e6b12 96.2%);
+      border-radius: 100px;
+      padding: 10px 20px;
+      color: #fff;
+      max-width: 120px;
+      width: 100%;
+      transition: all 0.3s ease 0s;
+      &:hover {
+         background: linear-gradient(213.08deg, #9be05e 28.11%, #286b2b 96.2%);
+         transition: all 0.3s ease 0s;
+      }
+   }
+
+   &__cancel-btn {
+      color: #0e6b12;
+      border: 2px solid #0e6b12;
+      border-radius: 100px;
+      padding: 10px 25px;
+      max-width: 120px;
+      width: 100%;
+      transition: all 0.3s ease 0s;
+      &:hover {
+         background-color: #e4ecdc;
+         transition: all 0.3s ease 0s;
+      }
+   }
+
+   &__close-icon {
+      position: absolute;
+      top: 27px;
+      right: 40px;
+      font-size: 30px;
+      background: transparent;
+   }
+}
+.copied {
+   position: fixed;
+   bottom: -100%;
+   left: 50px;
+   background-color: rgba(0, 0, 0, 0.4);
+   padding: 20px 10px;
+   border-radius: 30px;
+   transition: all 0.3s ease 0s;
+   &._active {
+      bottom: 70px;
+      transition: all 0.3s ease 0s;
+   }
+   &__text {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      font-size: 30px;
+      color: #70e705;
+   }
+}
+.successful-feed {
+   position: fixed;
+   right: 30px;
+   bottom: 20px;
+   background: #ffffff;
+   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06);
+   border-radius: 50px;
+   max-width: 300px;
+   padding: 30px;
+   border: 3px solid #ffbf02;
+   transform: scale(0);
+   visibility: hidden;
+   transition: all 0.3s ease 0s;
+   &._active {
+      transform: scale(1);
+      visibility: visible;
+      transition: all 0.3s ease 0s;
+   }
+   &__text {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 129%;
+   }
+}
+.preloader {
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   z-index: 2000;
+   background: rgba(0, 0, 0, 0.7);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   &__content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+   &__loader {
+      display: block;
+      position: relative;
+      width: 118px;
+      height: 160px;
+      background-color: #fff;
+      border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+      transform-origin: 50% 100%;
+      animation: 1s eggRot linear infinite alternate;
+      &::after {
+         content: '';
+         position: absolute;
+         left: 50%;
+         bottom: 15%;
+         width: 80px;
+         height: 86px;
+         transform: translateX(-50%);
+         background-color: #ffd900;
+         border-radius: 50%;
+      }
+   }
+}
+
+@keyframes eggRot {
+   0% {
+      transform: rotate(-25deg);
+   }
+   100% {
+      transform: rotate(25deg);
+   }
+}
