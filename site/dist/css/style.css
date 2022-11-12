@@ -2298,13 +2298,11 @@ body::after {
 .cabinet-aside__next-btn,
 .cabinet-aside__prew-btn {
   position: absolute;
-  top: 6px;
-  font-size: 30px;
-}
-
-.cabinet-aside__next-btn:disabled,
-.cabinet-aside__prew-btn:disabled {
-  opacity: 0.3;
+  top: 50%;
+  -webkit-transform: translate(0px, -50%);
+      -ms-transform: translate(0px, -50%);
+          transform: translate(0px, -50%);
+  font-size: 35px;
 }
 
 .cabinet-aside__prew-btn {
@@ -8941,17 +8939,18 @@ body::after {
 
   .cabinet-aside {
     background: none;
-    position: static;
+    position: relative;
+    top: unset;
+    left: unset;
     -webkit-box-shadow: none;
             box-shadow: none;
-    padding: 0rem 0rem;
+    padding: 0rem 2.1875rem;
     max-width: none;
     width: 100%;
   }
 
   .cabinet-aside__wrapper.swiper {
     position: relative;
-    padding: 0rem 0.9375rem;
   }
 
   .cabinet-aside__content.swiper-wrapper {
