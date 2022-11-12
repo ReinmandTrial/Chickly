@@ -26,9 +26,11 @@
    }
    @media (max-width: $tablet) {
       background: none;
-      position: static;
+      position: relative;
+      top: unset;
+      left: unset;
       box-shadow: none;
-      padding: rem(0) rem(0);
+      padding: rem(0) rem(35);
       max-width: none;
       width: 100%;
    }
@@ -36,7 +38,6 @@
    &__wrapper.swiper {
       @media (max-width: $tablet) {
          position: relative;
-         padding: rem(0) rem(15);
       }
    }
 
@@ -82,11 +83,10 @@
          display: none;
       }
       position: absolute;
-      top: 6px;
-      font-size: 30px;
-      &:disabled {
-         opacity: 0.3;
-      }
+      top: 50%;
+      transform: translate(0px, -50%);
+      font-size: 35px;
+
    }
 
    &__prew-btn {

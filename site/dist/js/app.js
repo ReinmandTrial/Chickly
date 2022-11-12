@@ -8012,6 +8012,7 @@
                 watchOverflow: true,
                 autoHeight: true,
                 spaceBetween: 40,
+                loop: true,
                 navigation: {
                     prevEl: ".cabinet-aside__prew-btn ",
                     nextEl: ".cabinet-aside__next-btn"
