@@ -15,7 +15,7 @@
          "exit": "Exit"
       },
       "aside": {
-         "spollers": {
+         "swiper": {
             "item1": "Current profit",
             "item2": "Balances",
             "item3": "Statistics",

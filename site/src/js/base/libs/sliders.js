@@ -312,6 +312,28 @@ function initSliders() {
          },
       });
    }
+   if (document.getElementById('cabinetAsideSwiper') && window.matchMedia('(max-width: 991px)').matches) {
+      new Swiper('#cabinetAsideSwiper', {
+         modules: [Navigation],
+         observer: true,
+         observeParents: true,
+         observeSlideChildren: true,
+         speed: 800,
+         grabCursor: true,
+         watchOverflow: true,
+         autoHeight: true,
+         spaceBetween: 40,
+         navigation: {
+            prevEl: '.cabinet-aside__prew-btn ',
+            nextEl: '.cabinet-aside__next-btn',
+         },
+         breakpoints: {
+            991: {
+               slidesPerView: 1,
+            },
+         },
+      });
+   }
 }
 window.addEventListener('load', function () {
    initSliders();
