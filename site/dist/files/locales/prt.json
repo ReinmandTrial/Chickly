@@ -15,6 +15,12 @@
          "exit": "saída"
       },
       "aside": {
+         "spollers": {
+            "item1": "Lucro atual",
+            "item2": "Saldos",
+            "item3": "Estatisticas",
+            "item4": "Compartilhar link com amigos"
+         },
          "profit": {
             "title": "Seu lucro diário atual",
             "link": "Como <br> funciona",

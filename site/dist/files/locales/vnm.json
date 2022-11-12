@@ -15,6 +15,12 @@
          "exit": "Lối ra"
       },
       "aside": {
+         "spollers": {
+            "item1": "Lợi nhuận hiện tại",
+            "item2": "Cân bằng",
+            "item3": "Số liệu thống kê",
+            "item4": "Chia sẻ liên kết với bạn bè"
+         },
          "profit": {
             "title": "Lợi nhuận hàng ngày hiện tại của bạn",
             "link": "Làm thế nào  <br> nó hoạt động",

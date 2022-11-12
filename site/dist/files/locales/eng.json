@@ -15,6 +15,12 @@
          "exit": "Exit"
       },
       "aside": {
+         "spollers": {
+            "item1": "Current profit",
+            "item2": "Balances",
+            "item3": "Statistics",
+            "item4": "Share link with friends"
+         },
          "profit": {
             "title": "Your current daily profit",
             "link": "How <br> It works",
