@@ -75,7 +75,7 @@
          color: #f37502;
          transition: all 0.3s ease 0s;
       }
-      ._spoller-open & {
+      &._spoller-active {
          @media (max-width: $tablet) {
             &::before {
                transform: rotate(-180deg);
@@ -85,20 +85,6 @@
       }
    }
    &__spoller-body {
-      @media (max-width: $tablet) {
-         visibility: hidden;
-         overflow: hidden;
-         max-height: 0;
-         opacity: 0;
-         transition: max-height 0.5s ease 0s, opacity 0.7s ease 0s;
-         ._spoller-open & {
-            visibility: visible;
-            overflow: visible;
-            opacity: 1;
-            max-height: 800px;
-            transition: max-height 0.5s ease 0s, opacity 0.7s ease 0s;
-         }
-      }
    }
 
    &__opener {
