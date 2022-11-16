@@ -26,19 +26,29 @@
    }
    @media (max-width: $tablet) {
       background: none;
-      position: static;
+      position: relative;
+      top: unset;
+      left: unset;
       box-shadow: none;
-      padding: rem(0) rem(0);
+      padding: rem(0) rem(35);
       max-width: none;
       width: 100%;
    }
-   &__wrapper {
+   // Swiper start========================================================================================================================================================
+   &__wrapper.swiper {
+      @media (max-width: $tablet) {
+         position: relative;
+      }
    }
 
-   &__content {
+   &__content.swiper-wrapper {
+      display: block;
+      @media (max-width: $tablet) {
+         display: flex;
+      }
    }
 
-   &__spoller-item {
+   &__swiper-slide {
       @media (max-width: $tablet) {
          width: 100%;
          &:not(:last-child) {
@@ -47,37 +57,46 @@
       }
    }
 
-   &__spoller-head {
+   &__slide-title {
       @media (min-width: $tablet) {
          display: none;
       }
       width: 100%;
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      justify-content: space-between;
       font-size: 22px;
-      background: linear-gradient(213.08deg, #0e6b12 28.11%, #70e705 96.2%);
-      border-radius: 100px;
-      padding: rem(10) rem(20);
-      text-align: left;
+      padding: rem(10) rem(30);
+      text-align: center;
       margin-bottom: rem(10);
       font-weight: 500;
-      @media (max-width: em(575)) {
-         font-size: 18px;
-      }
-      &::before {
-         order: 2;
-         color: #f37502;
-         transition: all 0.3s ease 0s;
-      }
-      &._spoller-active {
-         &::before {
-            transform: rotate(-180deg);
-            transition: all 0.3s ease 0s;
-         }
+      opacity: 0;
+      transform: scale(0);
+      transition: all 0.3s ease 0s;
+      .swiper-slide-active & {
+         opacity: 1;
+         transform: scale(1);
+         transition: all 1s ease 0s;
       }
    }
+
+   &__next-btn,
+   &__prew-btn {
+      @media (min-width: $tablet) {
+         display: none;
+      }
+      position: absolute;
+      top: 50%;
+      transform: translate(0px, -50%);
+      font-size: 35px;
+
+   }
+
+   &__prew-btn {
+      left: 0;
+   }
+
+   &__next-btn {
+      right: 0;
+   }
+   //Swiper end========================================================================================================================================================
 
    &__profit {
       margin-bottom: rem(30);
