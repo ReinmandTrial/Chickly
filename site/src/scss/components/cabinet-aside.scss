@@ -40,6 +40,9 @@
    }
 
    &__spoller-item {
+      &:not(:last-child) {
+         margin-bottom: 30px;
+      }
       @media (max-width: $tablet) {
          width: 100%;
          &:not(:last-child) {
@@ -72,28 +75,32 @@
          color: #f37502;
          transition: all 0.3s ease 0s;
       }
-      &._spoller-active {
-         &::before {
-            transform: rotate(-180deg);
-            transition: all 0.3s ease 0s;
+      ._spoller-open & {
+         @media (max-width: $tablet) {
+            &::before {
+               transform: rotate(-180deg);
+               transition: all 0.3s ease 0s;
+            }
+         }
+      }
+   }
+   &__spoller-body {
+      @media (max-width: $tablet) {
+         visibility: hidden;
+         overflow: hidden;
+         max-height: 0;
+         opacity: 0;
+         transition: max-height 0.5s ease 0s, opacity 0.7s ease 0s;
+         ._spoller-open & {
+            visibility: visible;
+            overflow: visible;
+            opacity: 1;
+            max-height: 800px;
+            transition: max-height 0.5s ease 0s, opacity 0.7s ease 0s;
          }
       }
    }
 
-   &__profit {
-      margin-bottom: rem(30);
-   }
-
-   &__balance {
-      margin-bottom: rem(30);
-   }
-
-   &__statistic {
-      margin-bottom: rem(30);
-   }
-
-   &__referral {
-   }
    &__opener {
       @media (min-width: em(1700)) {
          display: none;
@@ -120,6 +127,7 @@
       }
    }
 }
+
 .aside-profit {
    &__content {
       overflow: hidden;
@@ -251,12 +259,14 @@
    }
 }
 .aside-balance {
-   background: #ffffff;
-   border: 1px solid #ffbf02;
-   border-radius: 50px;
-   padding: rem(30) rem(30);
-   @media (max-width: $mobileSmall) {
-      padding: rem(20) rem(20);
+   &__content {
+      background: #ffffff;
+      border: 1px solid #ffbf02;
+      border-radius: 50px;
+      padding: rem(30) rem(30);
+      @media (max-width: $mobileSmall) {
+         padding: rem(20) rem(20);
+      }
    }
    &__block {
    }

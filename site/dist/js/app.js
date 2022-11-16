@@ -9466,6 +9466,25 @@
                 }), 2e3);
             }
         }
+        if (window.matchMedia("(max-width: 991.98px)").matches) asideSpoillers();
+        function asideSpoillers() {
+            var asideSpoilerList = document.querySelectorAll(".cabinet-aside__spoller-item");
+            asideSpoilerList.forEach((function(item) {
+                item.addEventListener("click", (function(el) {
+                    if (el.target.classList.contains("cabinet-aside__spoller-head") && !item.classList.contains("_spoller-open")) {
+                        closeSpollers();
+                        item.classList.add("_spoller-open");
+                        return;
+                    } else item.classList.remove("_spoller-open");
+                }));
+            }));
+            function closeSpollers() {
+                var spollerList = document.querySelectorAll("._spoller-open");
+                spollerList.forEach((function(el) {
+                    el.classList.remove("_spoller-open");
+                }));
+            }
+        }
         isWebp();
         menuInit();
         spollers();

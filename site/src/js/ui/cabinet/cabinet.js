@@ -111,3 +111,31 @@ function copyRefLink() {
    }
 }
 //copiBtn========================================================================================================================================================
+//asideSpoillers========================================================================================================================================================
+
+if (window.matchMedia('(max-width: 991.98px)').matches) {
+   asideSpoillers();
+}
+
+function asideSpoillers() {
+   const asideSpoilerList = document.querySelectorAll('.cabinet-aside__spoller-item');
+   asideSpoilerList.forEach((item) => {
+      item.addEventListener('click', (el) => {
+         if (el.target.classList.contains('cabinet-aside__spoller-head') && !item.classList.contains('_spoller-open')) {
+            closeSpollers();
+            item.classList.add('_spoller-open');
+            return;
+         } else {
+            item.classList.remove('_spoller-open');
+         }
+      });
+   });
+   function closeSpollers() {
+      const spollerList = document.querySelectorAll('._spoller-open');
+      spollerList.forEach((el) => {
+         el.classList.remove('_spoller-open');
+      });
+   }
+}
+
+//asideSpoillers========================================================================================================================================================

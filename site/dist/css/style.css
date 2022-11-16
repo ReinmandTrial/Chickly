@@ -2262,6 +2262,10 @@ body::after {
   position: relative;
 }
 
+.cabinet-aside__spoller-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
 .cabinet-aside__spoller-head {
   width: 100%;
   display: -webkit-box;
@@ -2292,27 +2296,6 @@ body::after {
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
-}
-
-.cabinet-aside__spoller-head._spoller-active::before {
-  -webkit-transform: rotate(-180deg);
-      -ms-transform: rotate(-180deg);
-          transform: rotate(-180deg);
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-
-.cabinet-aside__profit {
-  margin-bottom: 1.875rem;
-}
-
-.cabinet-aside__balance {
-  margin-bottom: 1.875rem;
-}
-
-.cabinet-aside__statistic {
-  margin-bottom: 1.875rem;
 }
 
 .cabinet-aside__opener {
@@ -2497,7 +2480,7 @@ body::after {
   text-fill-color: transparent;
 }
 
-.aside-balance {
+.aside-balance__content {
   background: #ffffff;
   border: 1px solid #ffbf02;
   border-radius: 50px;
@@ -8941,6 +8924,35 @@ body::after {
     margin-bottom: 15px;
   }
 
+  ._spoller-open .cabinet-aside__spoller-head::before {
+    -webkit-transform: rotate(-180deg);
+        -ms-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+
+  .cabinet-aside__spoller-body {
+    visibility: hidden;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    -webkit-transition: max-height 0.5s ease 0s, opacity 0.7s ease 0s;
+    -o-transition: max-height 0.5s ease 0s, opacity 0.7s ease 0s;
+    transition: max-height 0.5s ease 0s, opacity 0.7s ease 0s;
+  }
+
+  ._spoller-open .cabinet-aside__spoller-body {
+    visibility: visible;
+    overflow: visible;
+    opacity: 1;
+    max-height: 800px;
+    -webkit-transition: max-height 0.5s ease 0s, opacity 0.7s ease 0s;
+    -o-transition: max-height 0.5s ease 0s, opacity 0.7s ease 0s;
+    transition: max-height 0.5s ease 0s, opacity 0.7s ease 0s;
+  }
+
   .cabinet-aside__opener {
     display: none;
   }
@@ -10371,7 +10383,7 @@ body::after {
     font-size: 16px;
   }
 
-  .aside-balance {
+  .aside-balance__content {
     padding: 1.25rem 1.25rem;
   }
 
