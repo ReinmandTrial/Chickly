@@ -26,23 +26,57 @@
    }
    @media (max-width: $tablet) {
       background: none;
-      position: relative;
-      top: unset;
-      left: unset;
+      position: static;
       box-shadow: none;
       padding: rem(0) rem(0);
-      max-width: fit-content;
+      max-width: none;
+      width: 100%;
+      padding: 0px 15px;
    }
    &__wrapper {
-      @media (max-width: $tablet) {
-         position: relative;
-      }
    }
 
    &__content {
-      display: block;
+   }
+
+   &__spoller-item {
       @media (max-width: $tablet) {
-         display: flex;
+         width: 100%;
+         &:not(:last-child) {
+            margin-bottom: 15px;
+         }
+      }
+   }
+
+   &__spoller-head {
+      @media (min-width: $tablet) {
+         display: none;
+      }
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      justify-content: space-between;
+      font-size: 22px;
+      background: linear-gradient(213.08deg, #0e6b12 28.11%, #70e705 96.2%);
+      border-radius: 100px;
+      padding: rem(10) rem(20);
+      text-align: left;
+      margin-bottom: rem(10);
+      font-weight: 500;
+      @media (max-width: em(575)) {
+         font-size: 18px;
+      }
+      &::before {
+         order: 2;
+         color: #f37502;
+         transition: all 0.3s ease 0s;
+      }
+      &._spoller-active {
+         &::before {
+            transform: rotate(-180deg);
+            transition: all 0.3s ease 0s;
+         }
       }
    }
 
@@ -217,7 +251,8 @@
    }
 }
 .aside-balance {
-   background: rgba(255, 191, 2, 0.05);
+   background: #ffffff;
+   border: 1px solid #ffbf02;
    border-radius: 50px;
    padding: rem(30) rem(30);
    @media (max-width: $mobileSmall) {
@@ -284,13 +319,7 @@
    &__value {
       font-weight: 600;
       font-size: 22px;
-      color: #000;
-      @media (max-width: em(1700)) {
-         color: #ffbf02;
-      }
-      @media (max-width: $tablet) {
-         color: #000;
-      }
+      color: #ffbf02;
    }
 
    &__btn {
@@ -331,6 +360,7 @@
       background: #ffffff;
       box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06);
       border-radius: 50px;
+      border: 1px solid #ffbf02;
       padding: rem(30) rem(30);
       @media (max-width: $mobileSmall) {
          padding: rem(30) rem(20);
@@ -387,7 +417,7 @@
 
    &__main-line {
       font-size: 16px;
-      margin: rem(0) rem(-20);
+      margin-right: -20px;
       @media (max-width: $mobileSmall) {
          margin: rem(0) rem(0);
       }
@@ -486,6 +516,7 @@
       box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06);
       border-radius: 50px;
       padding: rem(30) rem(30);
+      border: 1px solid #ffbf02;
       @media (max-width: $mobileSmall) {
          padding: rem(20) rem(20);
       }
