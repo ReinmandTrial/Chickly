@@ -5,10 +5,10 @@
 	<title>Cabinet</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20221116193718">
+	<link rel="stylesheet" href="css/style.min.css?_v=20221116203738">
 	<link rel="shortcut icon" href="favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="js/app.min.js?_v=20221116193718" defer></script>
+	<script src="js/app.min.js?_v=20221116203738" defer></script>
 </head>
 
 <body>
@@ -18,10 +18,10 @@
 				<div class="cabinet-header__content cabinet-header__content_pc-burger">
 					<div class="cabinet-header__menu cabinet-header-menu">
 						<div class="cabinet-header-menu__list">
-							<button data-lg='cabinet.header.nav1' data-goto-top='100' data-goto=".cabinet__content " data-nav-cabinet-btn='1' type="button" class="cabinet-header-menu__item _icon-cabinet-home _active-nav ">Home</button>
+							<button id="navHomeBtn" data-lg='cabinet.header.nav1' data-goto-top='100' data-goto=".cabinet__content " data-nav-cabinet-btn='1' type="button" class="cabinet-header-menu__item _icon-cabinet-home _active-nav ">Home</button>
 							<button data-lg='cabinet.header.nav2' data-goto-top='100' data-goto=".cabinet__content" data-nav-cabinet-btn='2' type="button" class="cabinet-header-menu__item _icon-cabinet-partners ">My Partners</button>
 							<button data-lg='cabinet.header.nav3' data-goto-top='100' data-goto=".cabinet__content" data-nav-cabinet-btn='3' type="button" class="cabinet-header-menu__item _icon-cabinet-trade-in ">Trade-in</button>
-							<button data-lg='cabinet.header.nav4' data-goto-top='100' data-goto=".cabinet__content" data-nav-cabinet-btn='4' type="button" class="cabinet-header-menu__item _icon-cabinet-reinvest ">Reinvest</button>
+							<button id="navReinvestBtn" data-lg='cabinet.header.nav4' data-goto-top='100' data-goto=".cabinet__content" data-nav-cabinet-btn='4' type="button" class="cabinet-header-menu__item _icon-cabinet-reinvest ">Reinvest</button>
 						</div>
 					</div>
 					<div class="cabinet-header__logo-box cabinet-header__logo-box_pc">
@@ -93,9 +93,9 @@
 			<div class="cabinet__container-cabinet">
 				<div class="cabinet__aside cabinet-aside">
 					<div class="cabinet-aside__wrapper">
-						<div data-spollers data-spollers="991.98,max" data-one-spoller data-spollers-speed="700" class="cabinet-aside__content">
-							<div class="cabinet-aside__spoller-item _spoller-open  ">
-								<button data-spoller data-lg='cabinet.aside.spollers.item1' type="button" class="cabinet-aside__spoller-head _icon-arrow-bottom">
+						<div data-spollers data-spollers="991.98,max" data-one-spoller data-spollers-speed="300" class="cabinet-aside__content">
+							<div class="cabinet-aside__spoller-item ">
+								<button data-spoller data-lg='cabinet.aside.spollers.item1' type="button" class="cabinet-aside__spoller-head _icon-arrow-bottom _spoller-active">
 									Current profit
 								</button>
 								<div class="cabinet-aside__spoller-body aside-profit ">
@@ -294,8 +294,8 @@
 							<h1 data-lg='cabinet.home.title' class="cabinet-home__title">Buy NFT</h1>
 							<div data-tabs class="cabinet-home__tabs">
 								<nav data-tabs-titles class="cabinet-home__tabs-head">
-									<button type="button" class="cabinet-home__tabs-title _tab-active"><picture><source srcset="img/bnb.webp" type="image/webp"><img src="img/bnb.png" alt="bnb"></picture>BNB</button>
-									<button type="button" class="cabinet-home__tabs-title "><picture><source srcset="img/busd.webp" type="image/webp"><img src="img/busd.png" alt="busd"></picture>BUSD</button>
+									<button data-val='BNB' type="button" class="cabinet-home__tabs-title _tab-active"><picture><source srcset="img/bnb.webp" type="image/webp"><img src="img/bnb.png" alt="bnb"></picture>BNB</button>
+									<button data-val='BUSD' type="button" class="cabinet-home__tabs-title "><picture><source srcset="img/busd.webp" type="image/webp"><img src="img/busd.png" alt="busd"></picture>BUSD</button>
 								</nav>
 								<div data-tabs-body class="cabinet-home__tabs-body">
 									<div class="cabinet-home__tabs-body-item swiper" id="cabinetHomeSliderBnb">
@@ -867,8 +867,8 @@
 							<h1 data-lg='cabinet.reinvest.title' class="cabinet-reinvest__title">Reinvest</h1>
 							<div data-tabs class="cabinet-reinvest__tabs">
 								<nav data-tabs-titles class="cabinet-reinvest__tabs-head">
-									<button type="button" class="cabinet-reinvest__tabs-title _tab-active"><picture><source srcset="img/bnb.webp" type="image/webp"><img src="img/bnb.png" alt="bnb"></picture>BNB</button>
-									<button type="button" class="cabinet-reinvest__tabs-title "><picture><source srcset="img/busd.webp" type="image/webp"><img src="img/busd.png" alt="busd"></picture>BUSD</button>
+									<button data-val='BNB' type="button" class="cabinet-reinvest__tabs-title _tab-active"><picture><source srcset="img/bnb.webp" type="image/webp"><img src="img/bnb.png" alt="bnb"></picture>BNB</button>
+									<button data-val='BUSD' type="button" class="cabinet-reinvest__tabs-title "><picture><source srcset="img/busd.webp" type="image/webp"><img src="img/busd.png" alt="busd"></picture>BUSD</button>
 								</nav>
 								<div data-tabs-body class="cabinet-reinvest__tabs-body">
 									<div class="cabinet-reinvest__tabs-body-item swiper" id="cabinetReinvestSliderBnb">
