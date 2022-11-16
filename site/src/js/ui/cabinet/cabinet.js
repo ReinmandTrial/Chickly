@@ -2,7 +2,7 @@ import { menuClose } from '../../base/libs/functions.js';
 
 //header balance dropdown========================================================================================================================================================
 currencyMagager();
-export function currencyMagager() {
+function currencyMagager() {
    const currencyElList = document.querySelectorAll('.cabinet-header-ballance');
    const headSumListEl = document.querySelectorAll('.cabinet-header-ballance__sum');
 
