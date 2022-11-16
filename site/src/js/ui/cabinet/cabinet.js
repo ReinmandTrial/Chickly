@@ -264,6 +264,8 @@ if (document.querySelector('.cabinet')) {
    const homeTabsBtn = document.querySelectorAll('.cabinet-home__tabs-title');
    const reivestTabsBtn = document.querySelectorAll('.cabinet-reinvest__tabs-title');
    const navHomeBtnEl = document.getElementById('navHomeBtn');
+   const navPartnersBtnEl = document.getElementById('navPartnersBtn');
+   const navTradeBtnEl = document.getElementById('navTradeBtn');
    const navReinvestBtnEl = document.getElementById('navReinvestBtn');
 
    homeTabsBtn.forEach((btn) => {
@@ -301,5 +303,18 @@ if (document.querySelector('.cabinet')) {
       homeBnbSLider.disable();
       homeBusdSLider.disable();
       reinvestBnbSLider.enable();
+   });
+
+   navPartnersBtnEl.addEventListener('click', () => {
+      homeBnbSLider.disable();
+      homeBusdSLider.disable();
+      reinvestBnbSLider.disable();
+      reinvestBusdSLider.disable();
+   });
+   navTradeBtnEl.addEventListener('click', () => {
+      homeBnbSLider.disable();
+      homeBusdSLider.disable();
+      reinvestBnbSLider.disable();
+      reinvestBusdSLider.disable();
    });
 }

@@ -9452,6 +9452,8 @@
             var homeTabsBtn = document.querySelectorAll(".cabinet-home__tabs-title");
             var reivestTabsBtn = document.querySelectorAll(".cabinet-reinvest__tabs-title");
             var navHomeBtnEl = document.getElementById("navHomeBtn");
+            var navPartnersBtnEl = document.getElementById("navPartnersBtn");
+            var navTradeBtnEl = document.getElementById("navTradeBtn");
             var navReinvestBtnEl = document.getElementById("navReinvestBtn");
             homeTabsBtn.forEach((function(btn) {
                 btn.addEventListener("click", (function(el) {
@@ -9486,6 +9488,18 @@
                 homeBnbSLider.disable();
                 homeBusdSLider.disable();
                 reinvestBnbSLider.enable();
+            }));
+            navPartnersBtnEl.addEventListener("click", (function() {
+                homeBnbSLider.disable();
+                homeBusdSLider.disable();
+                reinvestBnbSLider.disable();
+                reinvestBusdSLider.disable();
+            }));
+            navTradeBtnEl.addEventListener("click", (function() {
+                homeBnbSLider.disable();
+                homeBusdSLider.disable();
+                reinvestBnbSLider.disable();
+                reinvestBusdSLider.disable();
             }));
         }
         isWebp();
