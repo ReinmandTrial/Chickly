@@ -1,0 +1,119 @@
+{
+   "landing": {
+      "banners": {
+         "title": "Banners de afiliados",
+         "label": "Seu link de referência"
+      }
+   },
+   "cabinet": {
+      "header": {
+         "nav1": "Início",
+         "nav2": "Meus parceiros",
+         "nav3": "Trade-in",
+         "nav4": "Reinvestir",
+         "wallet": "Saldo da carteira",
+         "exit": "saída"
+      },
+      "aside": {
+         "spollers": {
+            "item1": "Lucro atual",
+            "item2": "Saldos",
+            "item3": "Estatisticas",
+            "item4": "Compartilhar link com amigos"
+         },
+         "profit": {
+            "title": "Seu lucro diário atual",
+            "link": "Como <br> funciona",
+            "basic": "Lucro básico",
+            "hold": "Bônus de hold",
+            "contract": "Bônus de contrato"
+         },
+         "balance": {
+            "investment": "Saldo do investimento",
+            "referral": "Saldo de indicação",
+            "btn": "Sacar",
+            "text": "Clique no botão Sacar para obter todos os seus ganhos de depósitos e bônus de afiliados de uma só vez com uma única transação. Seu bônus pessoal de hold será redefinido dessa forma."
+         },
+         "statistic": {
+            "number": "Número de depósitos",
+            "last": "Data do último depósito",
+            "invested": "Investido",
+            "earned": "Total ganho",
+            "withdrawn": "Total sacado"
+         },
+         "referral": {
+            "title": "Compartilhar meu link de referência com as pessoas",
+            "btn": "Painel do parceiro"
+         }
+      },
+      "home": {
+         "title": "Comprar NFT",
+         "nft": {
+            "profit": "lucro",
+            "input": "Insira o valor",
+            "btn": "Comprar",
+            "earnings": "Ganhos"
+         },
+         "feed": {
+            "btn": "Alimentação",
+            "text": "As galinhas precisam ser alimentadas para que seu proprietário receba uma porcentagem diária completa do acúmulo de lucro. Para alimentar uma galinha, você precisa acessar sua conta pessoal e pressionar o botão direito."
+         },
+         "active": {
+            "title": "NFT ativo",
+            "search": "Procurar",
+            "name": "Nome",
+            "progress": "Progresso",
+            "profit": "Lucro diário",
+            "accrued": "Acumulado",
+            "date": "Encontro"
+         }
+      },
+      "partners": {
+         "title": "Indique amigos & ganhe bônus",
+         "level": "Nível",
+         "text": "Cada 2 BNB ganhos na forma de bônus de indicação aumenta a taxa de indicação de primeiro nível em 1%",
+         "refTitle": "Compartilhe seu link de indicação com amigos",
+         "refBtn": "Copiar link",
+         "refLink": "Materiais promocionais",
+         "active": "Indicações ativas",
+         "total": "Total referral bonus",
+         "historyTitle": "Referral history",
+         "all": "Tudo",
+         "item": {
+            "ref": "Indicação ",
+            "level": "Nível de indicação",
+            "purchase": "Valor da compra",
+            "bonus": "Seu bônus",
+            "date": "Data"
+         }
+      },
+      "trade-in": {
+         "title": "Trade-in",
+         "profit": "lucro",
+         "btn": "Ativar"
+      },
+      "reinvest": {
+         "title": "Reinvestir",
+         "nft": {
+            "profit": "lucro",
+            "input": "Insira o valor",
+            "btn": "Comprar",
+            "earnings": "Ganhos",
+            "blocked": "Fundos insuficientes"
+         },
+         "text": "Clique no botão Retirar e você receberá instantaneamente todos os seus ganhos de depósitos e bônus de afiliados com um único"
+      },
+      "popups": {
+         "copied": "Link copiado para a área de transferência",
+         "withdraw": {
+            "title": "Confirmar retirada",
+            "subTitle": "Para onde será enviado o dinheiro",
+            "input": "Insira o valor",
+            "text": "Ao retirar fundos desse saldo, seu bônus de retenção será zerado.",
+            "btn1": "Сonfirme",
+            "btn2": "Cancelar"
+         },
+         "feed": "Você alimentou com sucesso seus filhotes! Eles estão felizes e cheios! Por favor, não se esqueça de alimentá-los novamente mais tarde."
+      }
+   }
+}

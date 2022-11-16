@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Cabinet</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="css/style.min.css?_v=20221116135314">
+	<link rel="shortcut icon" href="favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="js/app.min.js?_v=20221116135314" defer></script>
+</head>
+
+<body>
+	<div data-bg='1' class="wrapper wrapper-cabinet">
+		<header class="cabinet-header">
+			<div class="cabinet-header__container-cabinet">
+				<div class="cabinet-header__content cabinet-header__content_pc-burger">
+					<div class="cabinet-header__menu cabinet-header-menu">
+						<div class="cabinet-header-menu__list">
+							<button data-lg='cabinet.header.nav1' data-goto-top='100' data-goto=".cabinet__content " data-nav-cabinet-btn='1' type="button" class="cabinet-header-menu__item _icon-cabinet-home _active-nav ">Home</button>
+							<button data-lg='cabinet.header.nav2' data-goto-top='100' data-goto=".cabinet__content" data-nav-cabinet-btn='2' type="button" class="cabinet-header-menu__item _icon-cabinet-partners ">My Partners</button>
+							<button data-lg='cabinet.header.nav3' data-goto-top='100' data-goto=".cabinet__content" data-nav-cabinet-btn='3' type="button" class="cabinet-header-menu__item _icon-cabinet-trade-in ">Trade-in</button>
+							<button data-lg='cabinet.header.nav4' data-goto-top='100' data-goto=".cabinet__content" data-nav-cabinet-btn='4' type="button" class="cabinet-header-menu__item _icon-cabinet-reinvest ">Reinvest</button>
+						</div>
+					</div>
+					<div class="cabinet-header__logo-box cabinet-header__logo-box_pc">
+						<a href="./index.html" class="cabinet-header__logo"><picture><source srcset="img/logo-beta.webp" type="image/webp"><img src="img/logo-beta.png" alt="logo"></picture></a>
+					</div>
+					<div class="cabinet-header__actions cabinet-header-actions">
+						<div class="cabinet-header-actions__ballance cabinet-header-ballance">
+							<button type="button" class="cabinet-header-ballance__head">
+								<span data-lg='cabinet.header.wallet' class="cabinet-header-ballance__title">Wallet Ballance</span>
+								<span class="cabinet-header-ballance__sum">0.345 BNB</span>
+								<i class="cabinet-header-ballance__icon _icon-arrow-bottom"></i>
+							</button>
+							<div class="cabinet-header-ballance__body">
+								<button data-wallet='bnb' type="button" class="cabinet-header-ballance__body-item">
+									<span data-wallet-sum='bnb' class="cabinet-header-ballance__body-item-sum">0.856 BNB</span>
+								</button>
+								<button data-wallet='busd' type="button" class="cabinet-header-ballance__body-item">
+									<span data-wallet-sum='busd' class="cabinet-header-ballance__body-item-sum">0.011 BUSD</span>
+								</button>
+							</div>
+						</div>
+						<div class="cabinet-header-actions__wallet cabinet-header-wallet">
+							<p class="cabinet-header-wallet__number">bc1peu5hzzyj8cnqm05le6ag7uwry0ysmtf3v4uuxv3v8hqhvsatca8ss2vuwx</p>
+							<button type="button" class="cabinet-header-wallet__logout">
+								<i class="cabinet-header-wallet__logout-icon _icon-exit"></i>
+								<span data-lg='cabinet.header.exit'>Exit</span>
+							</button>
+						</div>
+					</div>
+					<div class="cabinet-header__language language-block">
+						<button type="button" class="language-block__head"><span class="language-block__flag"><picture><source srcset="img/Header/eng.webp" type="image/webp"><img class="language-block__flag-head-img" src="img/Header/eng.png" alt=""></picture></span> <span class="_icon-arrow-bottom"></span>
+						</button>
+						<div class="language-block__body">
+							<button data-lang="eng" id="langEng" type="button" class="language-block__item"><span class="language-block__flag"><picture><source srcset="img/Header/eng.webp" type="image/webp"><img class="language-block__flag-img" src="img/Header/eng.png" alt=""></picture></span><span class="language-block__item-text">eng</span>
+							</button>
+							<button data-lang="esp" id="langEsp" type="button" class="language-block__item"><span class="language-block__flag"><picture><source srcset="img/Header/esp.webp" type="image/webp"><img class="language-block__flag-img" src="img/Header/esp.png" alt=""></picture></span><span class="language-block__item-text">esp</span>
+							</button>
+							<button data-lang="vnm" id="langVnm" type="button" class="language-block__item"><span class="language-block__flag"><picture><source srcset="img/Header/vnm.webp" type="image/webp"><img class="language-block__flag-img" src="img/Header/vnm.png" alt=""></picture></span><span class="language-block__item-text">vnm</span>
+							</button>
+							<button data-lang="prt" id="langPrt" type="button" class="language-block__item"><span class="language-block__flag"><picture><source srcset="img/Header/prt.webp" type="image/webp"><img class="language-block__flag-img" src="img/Header/prt.png" alt=""></picture></span><span class="language-block__item-text">prt</span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="cabinet-header__content cabinet-header__content_mob">
+					<button type="button" class="cabinet-header__burger-icon icon-menu"><span></span></button>
+					<div class="cabinet-header__logo-box cabinet-header__logo-box_mob">
+						<a href="./index.html" class="cabinet-header__logo"><picture><source srcset="img/logo-beta.webp" type="image/webp"><img src="img/logo-beta.png" alt="logo"></picture></a>
+					</div>
+					<div class="cabinet-header-actions__ballance cabinet-header-ballance">
+						<button type="button" class="cabinet-header-ballance__head">
+							<span data-lg='cabinet.header.wallet' class="cabinet-header-ballance__title">Wallet Ballance</span>
+							<span class="cabinet-header-ballance__sum">0.000 BNB</span>
+							<i class="cabinet-header-ballance__icon _icon-arrow-bottom"></i>
+						</button>
+						<div class="cabinet-header-ballance__body">
+							<button data-wallet='bnb' type="button" class="cabinet-header-ballance__body-item">
+								<span data-wallet-sum='bnb' class="cabinet-header-ballance__body-item-sum">0.000 BNB</span>
+							</button>
+							<button data-wallet='busd' type="button" class="cabinet-header-ballance__body-item">
+								<span data-wallet-sum='busd' class="cabinet-header-ballance__body-item-sum">0.000 BUSD</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="cabinet">
+			<div class="cabinet__container-cabinet">
+				<div class="cabinet__aside cabinet-aside">
+					<div class="cabinet-aside__wrapper">
+						<div data-spollers='991.98' data-one-spoller class="cabinet-aside__content">
+							<div class="cabinet-aside__spoller-item">
+								<button data-lg='cabinet.aside.spollers.item1' data-spoller type="button" class="cabinet-aside__spoller-head _icon-arrow-bottom _spoller-active">Current profit</button>
+								<div class="cabinet-aside__profit aside-profit">
+									<div class="aside-profit__content">
+										<div class="aside-profit__top-line">
+											<div class="aside-profit__top-block">
+												<p data-lg='cabinet.aside.profit.title' class="aside-profit__title">Your current daily profit</p>
+												<p class="aside-profit__profit-sum">+ 3.3 %</p>
+											</div>
+											<div class="aside-profit__top-block">
+												<a data-lg='cabinet.aside.profit.link' target="_blank" href="https://chickly-nft.gitbook.io/chickly/intro/what-is-chikly" class="aside-profit__link">
+													How <br> It works
+												</a>
+											</div>
+										</div>
+										<div class="aside-profit__main-line">
+											<div class="aside-profit__main-line-item">
+												<p data-lg='cabinet.aside.profit.basic'>Basic profit</p>
+												<p>+1.0%</p>
+											</div>
+											<div class="aside-profit__main-line-item">
+												<p data-lg='cabinet.aside.profit.hold'>Hold-bonus</p>
+												<p>+0.3%</p>
+											</div>
+											<div class="aside-profit__main-line-item">
+												<p data-lg='cabinet.aside.profit.contract'>Contract bonus</p>
+												<p>+2.0%</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="cabinet-aside__spoller-item">
+								<button data-lg='cabinet.aside.spollers.item2' data-spoller type="button" class="cabinet-aside__spoller-head _icon-arrow-bottom">Balances</button>
+								<div class="cabinet-aside__balance aside-balance">
+									<div class="aside-balance__block">
+										<p data-lg='cabinet.aside.balance.investment' class="aside-balance__title">Investment balance</p>
+										<div class="aside-balance__item">
+											<div class="aside-balance__col">
+												<div class="aside-balance__img"><picture><source srcset="img/bnb.webp" type="image/webp"><img src="img/bnb.png" alt="bnb"></picture></div>
+												<div class="aside-balance__info">
+													<p class="aside-balance__currency">BNB</p>
+													<p class="aside-balance__value">12.91644</p>
+												</div>
+											</div>
+											<div class="aside-balance__col">
+												<button data-lg='cabinet.aside.balance.btn' type="button" class="aside-balance__btn">Withdraw</button>
+											</div>
+										</div>
+										<div class="aside-balance__item">
+											<div class="aside-balance__col">
+												<div class="aside-balance__img"><picture><source srcset="img/busd.webp" type="image/webp"><img src="img/busd.png" alt="busd"></picture></div>
+												<div class="aside-balance__info">
+													<p class="aside-balance__currency">BUSD</p>
+													<p class="aside-balance__value">12.91644</p>
+												</div>
+											</div>
+											<div class="aside-balance__col">
+												<button data-lg='cabinet.aside.balance.btn' type="button" class="aside-balance__btn">Withdraw</button>
+											</div>
+										</div>
+									</div>
+									<p data-lg='cabinet.aside.balance.text' class="aside-balance__text">
+										Click Withdraw button to get all your deposits earnings and affiliate bonuses at once with a single
+										transaction. Your personal hold-bonus will be reset
+										therefore.
+									</p>
+									<div class="aside-balance__block">
+										<p data-lg='cabinet.aside.balance.referral' class="aside-balance__title">Refferal balance</p>
+										<div class="aside-balance__item">
+											<div class="aside-balance__col">
+												<div class="aside-balance__img"><picture><source srcset="img/bnb.webp" type="image/webp"><img src="img/bnb.png" alt="bnb"></picture></div>
+												<div class="aside-balance__info">
+													<p class="aside-balance__currency">BNB</p>
+													<p class="aside-balance__value">12.91644</p>
+												</div>
+											</div>
+											<div class="aside-balance__col">
+												<button data-lg='cabinet.aside.balance.btn' type="button" class="aside-balance__btn">Withdraw</button>
+											</div>
+										</div>
+										<div class="aside-balance__item">
+											<div class="aside-balance__col">
+												<div class="aside-balance__img"><picture><source srcset="img/busd.webp" type="image/webp"><img src="img/busd.png" alt="busd"></picture></div>
+												<div class="aside-balance__info">
+													<p class="aside-balance__currency">BUSD</p>
+													<p class="aside-balance__value">12.91644</p>
+												</div>
+											</div>
+											<div class="aside-balance__col">
+												<button data-lg='cabinet.aside.balance.btn' type="button" class="aside-balance__btn">Withdraw</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="cabinet-aside__spoller-item">
+								<button data-lg='cabinet.aside.spollers.item3' data-spoller type="button" class="cabinet-aside__spoller-head _icon-arrow-bottom">Statistics</button>
+								<div class="cabinet-aside__statistic aside-statistic">
+									<div class="aside-statistic__content">
+										<div class="aside-statistic__top-line">
+											<div class="aside-statistic__top-line-item">
+												<p data-lg='cabinet.aside.statistic.number'>Number of deposits</p>
+												<p>1</p>
+											</div>
+											<div class="aside-statistic__top-line-item">
+												<p data-lg='cabinet.aside.statistic.last'>Last deposit date</p>
+												<p class="aside-statistic__date-time">
+													<span class="_icon-clock">14:19</span>
+													|
+													<span>03.09.2022</span>
+												</p>
+											</div>
+										</div>
+										<div class="aside-statistic__main-line">
+											<div class="aside-statistic__head">
+												<p>BNB</p>
+												<p>BUSD</p>
+											</div>
+											<div class="aside-statistic__body">
+												<div class="aside-statistic__body-row">
+													<p data-lg='cabinet.aside.statistic.invested' class="aside-statistic__row-title">Invested</p>
+													<div class="aside-statistic__body-item">
+														<div class="aside-statistic__body-item-img">
+															<picture><source srcset="img/bnb.webp" type="image/webp"><img src="img/bnb.png" alt="bnb"></picture>
+														</div>
+														<p class="aside-statistic__body-item-val">100 556</p>
+													</div>
+													<div class="aside-statistic__body-item">
+														<div class="aside-statistic__body-item-img">
+															<picture><source srcset="img/busd.webp" type="image/webp"><img src="img/busd.png" alt="bnb"></picture>
+														</div>
+														<p class="aside-statistic__body-item-val">100 556</p>
+													</div>
+												</div>
+												<div class="aside-statistic__body-row">
+													<p data-lg='cabinet.aside.statistic.earned' class="aside-statistic__row-title">Total earned</p>
+													<div class="aside-statistic__body-item">
+														<div class="aside-statistic__body-item-img">
+															<picture><source srcset="img/bnb.webp" type="image/webp"><img src="img/bnb.png" alt="bnb"></picture>
+														</div>
+														<p class="aside-statistic__body-item-val">100 556</p>
+													</div>
+													<div class="aside-statistic__body-item">
+														<div class="aside-statistic__body-item-img">
+															<picture><source srcset="img/busd.webp" type="image/webp"><img src="img/busd.png" alt="bnb"></picture>
+														</div>
+														<p class="aside-statistic__body-item-val">100 556</p>
+													</div>
+												</div>
+												<div class="aside-statistic__body-row">
+													<p data-lg='cabinet.aside.statistic.withdrawn' class="aside-statistic__row-title">Total withdrawn</p>
+													<div class="aside-statistic__body-item">
+														<div class="aside-statistic__body-item-img">
+															<picture><source srcset="img/bnb.webp" type="image/webp"><img src="img/bnb.png" alt="bnb"></picture>
+														</div>
+														<p class="aside-statistic__body-item-val">100 556</p>
+													</div>
+													<div class="aside-statistic__body-item">
+														<div class="aside-statistic__body-item-img">
+															<picture><source srcset="img/busd.webp" type="image/webp"><img src="img/busd.png" alt="bnb"></picture>
+														</div>
+														<p class="aside-statistic__body-item-val">100 556</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="cabinet-aside__spoller-item">
+								<button data-lg='cabinet.aside.spollers.item4' data-spoller type="button" class="cabinet-aside__spoller-head _icon-arrow-bottom">Share link with
+									friends</button>
+								<div class="cabinet-aside__referral aside-referral">
+									<div class="aside-referral__content">
+										<p data-lg='cabinet.aside.referral.title' class="aside-referral__title">Share my referral link with friends</p>
+										<div data-copy-block class="aside-referral__row">
+											<p data-copy-val class="aside-referral__link">https://bitpetie/sdfsdsdf45645https://bitpetie/sdfsdsdf45645</p>
+											<button data-copy-btn type="button" class="aside-referral__copy-btn _icon-copy"></button>
+										</div>
+										<button data-lg='cabinet.aside.referral.btn' data-goto-top='150' data-goto=".cabinet__content" data-link='2' type="button" class="aside-referral__ref-btn">
+											Partner dashboard
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<button type="button" class="cabinet-aside__opener _icon-arrow-rignt"></button>
+				</div>
+				<div class="cabinet__content">
+					<div data-cabinet-body='1' class="cabinet__page cabinet-home  _active-body">
+						<div class="cabinet-home__content">
+							<h1 data-lg='cabinet.home.title' class="cabinet-home__title">Buy NFT</h1>
+							<div data-tabs class="cabinet-home__tabs">
+								<nav data-tabs-titles class="cabinet-home__tabs-head">
+									<button type="button" class="cabinet-home__tabs-title _tab-active"><picture><source srcset="img/bnb.webp" type="image/webp"><img src="img/bnb.png" alt="bnb"></picture>BNB</button>
+									<button type="button" class="cabinet-home__tabs-title "><picture><source srcset="img/busd.webp" type="image/webp"><img src="img/busd.png" alt="busd"></picture>BUSD</button>
+								</nav>
+								<div data-tabs-body class="cabinet-home__tabs-body">
+									<div class="cabinet-home__tabs-body-item swiper" id="cabinetHomeSliderBnb">
+										<div class="cabinet-home__chickly-list swiper-wrapper  ">
+											<div class="cabinet-home__chickly-item home-chickly swiper-slide">
+												<p class="home-chickly__name">Bennie</p>
+												<div class="home-chickly__image"><img src="img/nft-1.svg" alt="nft-1"></div>
+												<div class="home-chickly__cripto-price"><picture><source srcset="img/bnb.webp" type="image/webp"><img src="img/bnb.png" alt="bnb"></picture><span>0.04</span></div>
+												<p class="home-chickly__percent-profit"><span>+170%</span><span data-lg='cabinet.home.nft.profit'>profit</span></p>
+												<input data-lg-placeholder='cabinet.home.nft.input' type="number" placeholder="Enter amount" class="home-chickly__input">
+												<div class="home-chickly__purchase-row">
+													<p class="home-chickly__total-price">$10</p>
+													<button data-lg='cabinet.home.nft.btn' type="button" class="home-chickly__buy-btn">Buy</button>
+												</div>
+												<div class="home-chickly__earning">
+													<p data-lg='cabinet.home.nft.earnings'>Earnings</p>
+													<p>$150</p>
+												</div>
+											</div>
+											<div class="cabinet-home__chickly-item home-chickly swiper-slide">
+												<p class="home-chickly__name">Salsa</p>
+												<div class="home-chickly__image"><img src="img/nft-2.svg" alt="nft-1"></div>
+												<div class="home-chickly__cripto-price"><picture><source srcset="img/bnb.webp" type="image/webp"><img src="img/bnb.png" alt="bnb"></picture><span>0.4</span></div>
+												<p class="home-chickly__percent-profit"><span>+180%</span><span data-lg='cabinet.home.nft.profit'>profit</span></p>
+												<input data-lg-placeholder='cabinet.home.nft.input' type="number" placeholder="Enter amount" class="home-chickly__input">
+												<div class="home-chickly__purchase-row">
+													<p class="home-chickly__total-price">$10</p>
+													<button data-lg='cabinet.home.nft.btn' type="button" class="home-chickly__buy-btn">Buy</button>
+												</div>
+												<div class="home-chickly__earning">
+													<p data-lg='cabinet.home.nft.earnings'>Earnings</p>
+													<p>$150</p>
+												</div>
+											</div>
+											<div class="cabinet-home__chickly-item home-chickly swiper-slide">
+												<p class="home-chickly__name">Bennie</p>
+												<div class="home-chickly__image"><img src="img/nft-3.svg" alt="nft-1"></div>
+												<div class="home-chickly__cripto-price"><picture><source srcset="img/bnb.webp" type="image/webp"><img src="img/bnb.png" alt="bnb"></picture><span>0.04</span></div>
+												<p class="home-chickly__percent-profit"><span>+190%</span><span data-lg='cabinet.home.nft.profit'>profit</span></p>
+												<input data-lg-placeholder='cabinet.home.nft.input' type="number" placeholder="Enter amount" class="home-chickly__input">
+												<div class="home-chickly__purchase-row">
+													<p class="home-chickly__total-price">$10</p>
+													<button data-lg='cabinet.home.nft.btn' type="button" class="home-chickly__buy-btn">Buy</button>
+												</div>
+												<div class="home-chickly__earning">
+													<p data-lg='cabinet.home.nft.earnings'>Earnings</p>
+													<p>$150</p>
+												</div>
+											</div>
+											<div class="cabinet-home__chickly-item home-chickly swiper-slide">
+												<p class="home-chickly__name">Bennie</p>
+												<div class="home-chickly__image"><img src="img/nft-4.svg" alt="nft-1"></div>
+												<div class="home-chickly__cripto-price"><picture><source srcset="img/bnb.webp" type="image/webp"><img src="img/bnb.png" alt="bnb"></picture><span>0.04</span></div>
+												<p class="home-chickly__percent-profit"><span>+200%</span><span data-lg='cabinet.home.nft.profit'>profit</span></p>
+												<input data-lg-placeholder='cabinet.home.nft.input' type="number" placeholder="Enter amount" class="home-chickly__input">
+												<div class="home-chickly__purchase-row">
+													<p class="home-chickly__total-price">$10</p>
+													<button data-lg='cabinet.home.nft.btn' type="button" class="home-chickly__buy-btn">Buy</button>
+												</div>
+												<div class="home-chickly__earning">
+													<p data-lg='cabinet.home.nft.earnings'>Earnings</p>
+													<p>$150</p>
+												</div>
+											</div>
+											<div class="cabinet-home__chickly-item home-chickly swiper-slide">
+												<p class="home-chickly__name">Bennie</p>
+												<div class="home-chickly__image"><img src="img/nft-5.svg" alt="nft-1"></div>
+												<div class="home-chickly__cripto-price"><picture><source srcset="img/bnb.webp" type="image/webp"><img src="img/bnb.png" alt="bnb"></picture><span>0.04</span></div>
+												<p class="home-chickly__percent-profit"><span>+220%</span><span data-lg='cabinet.home.nft.profit'>profit</span></p>
+												<input data-lg-placeholder='cabinet.home.nft.input' type="number" placeholder="Enter amount" class="home-chickly__input">
+												<div class="home-chickly__purchase-row">
+													<p class="home-chickly__total-price">$10</p>
+													<button data-lg='cabinet.home.nft.btn' type="button" class="home-chickly__buy-btn">Buy</button>
+												</div>
+												<div class="home-chickly__earning">
+													<p data-lg='cabinet.home.nft.earnings'>Earnings</p>
+													<p>$150</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="cabinet-home__tabs-body-item swiper" id="cabinetHomeSliderBusd">
+										<div class="cabinet-home__chickly-list swiper-wrapper">
+											<div class="cabinet-home__chickly-item home-chickly swiper-slide">
+												<p class="home-chickly__name">Bennie</p>
+												<div class="home-chickly__image"><img src="img/nft-1.svg" alt="nft-1"></div>
+												<div class="home-chickly__cripto-price"><picture><source srcset="img/busd.webp" type="image/webp"><img src="img/busd.png" alt="busd"></picture><span>10</span></div>
+												<p class="home-chickly__percent-profit"><span>+170%</span><span data-lg='cabinet.home.nft.profit'>profit</span></p>
+												<input data-lg-placeholder='cabinet.home.nft.input' type="number" placeholder="Enter amount" class="home-chickly__input">
+												<div class="home-chickly__purchase-row">
+													<p class="home-chickly__total-price">$10</p>
+													<button data-lg='cabinet.home.nft.btn' type="button" class="home-chickly__buy-btn">Buy</button>
+												</div>
+												<div class="home-chickly__earning">
+													<p data-lg='cabinet.home.nft.earnings'>Earnings</p>
+													<p>$150</p>
+												</div>
+											</div>
+											<div class="cabinet-home__chickly-item home-chickly swiper-slide">
+												<p class="home-chickly__name">Salsa</p>
+												<div class="home-chickly__image"><img src="img/nft-2.svg" alt="nft-1"></div>
+												<div class="home-chickly__cripto-price"><picture><source srcset="img/busd.webp" type="image/webp"><img src="img/busd.png" alt="busd"></picture><span>100</span></div>
+												<p class="home-chickly__percent-profit"><span>+180%</span><span data-lg='cabinet.home.nft.profit'>profit</span></p>
+												<input data-lg-placeholder='cabinet.home.nft.input' type="number" placeholder="Enter amount" class="home-chickly__input">
+												<div class="home-chickly__purchase-row">
+													<p class="home-chickly__total-price">$10</p>
+													<button data-lg='cabinet.home.nft.btn' type="button" class="home-chickly__buy-btn">Buy</button>
+												</div>
+												<div class="home-chickly__earning">
+													<p data-lg='cabinet.home.nft.earnings'>Earnings</p>
+													<p>$150</p>
+												</div>
+											</div>
+											<div class="cabinet-home__chickly-item home-chickly swiper-slide">
+												<p class="home-chickly__name">Bennie</p>
+												<div class="home-chickly__image"><img src="img/nft-3.svg" alt="nft-1"></div>
+												<div class="home-chickly__cripto-price"><picture><source srcset="img/busd.webp" type="image/webp"><img src="img/busd.png" alt="busd"></picture><span>500</span></div>
+												<p class="home-chickly__percent-profit"><span>+190%</span><span data-lg='cabinet.home.nft.profit'>profit</span></p>
+												<input data-lg-placeholder='cabinet.home.nft.input' type="number" placeholder="Enter amount" class="home-chickly__input">
+												<div class="home-chickly__purchase-row">
+													<p class="home-chickly__total-price">$10</p>
+													<button data-lg='cabinet.home.nft.btn' type="button" class="home-chickly__buy-btn">Buy</button>
+												</div>
+												<div class="home-chickly__earning">
+													<p data-lg='cabinet.home.nft.earnings'>Earnings</p>
+													<p>$150</p>
+												</div>
+											</div>
+											<div class="cabinet-home__chickly-item home-chickly swiper-slide">
+												<p class="home-chickly__name">Bennie</p>
+												<div class="home-chickly__image"><img src="img/nft-4.svg" alt="nft-1"></div>
+												<div class="home-chickly__cripto-price"><picture><source srcset="img/busd.webp" type="image/webp"><img src="img/busd.png" alt="busd"></picture><span>3000</span></div>
+												<p class="home-chickly__percent-profit"><span>+200%</span><span data-lg='cabinet.home.nft.profit'>profit</span></p>
+												<input data-lg-placeholder='cabinet.home.nft.input' type="number" placeholder="Enter amount" class="home-chickly__input">
+												<div class="home-chickly__purchase-row">
+													<p class="home-chickly__total-price">$10</p>
+													<button data-lg='cabinet.home.nft.btn' type="button" class="home-chickly__buy-btn">Buy</button>
+												</div>
+												<div class="home-chickly__earning">
+													<p data-lg='cabinet.home.nft.earnings'>Earnings</p>
+													<p>$150</p>
+												</div>
+											</div>
+											<div class="cabinet-home__chickly-item home-chickly swiper-slide">
+												<p class="home-chickly__name">Bennie</p>
+												<div class="home-chickly__image"><img src="img/nft-5.svg" alt="nft-1"></div>
+												<div class="home-chickly__cripto-price"><picture><source srcset="img/busd.webp" type="image/webp"><img src="img/busd.png" alt="busd"></picture><span>10000</span></div>
+												<p class="home-chickly__percent-profit"><span>+220%</span><span data-lg='cabinet.home.nft.profit'>profit</span></p>
+												<input data-lg-placeholder='cabinet.home.nft.input' type="number" placeholder="Enter amount" class="home-chickly__input">
+												<div class="home-chickly__purchase-row">
+													<p class="home-chickly__total-price">$10</p>
+													<button data-lg='cabinet.home.nft.btn' type="button" class="home-chickly__buy-btn">Buy</button>
+												</div>
+												<div class="home-chickly__earning">
+													<p data-lg='cabinet.home.nft.earnings'>Earnings</p>
+													<p>$150</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="cabinet-home__feed cabinet-home-feed">
+								<div class="cabinet-home-feed__content">
+									<p class="cabinet-home-feed__title">Chicken NFT</p>
+									<p class="cabinet-home-feed__timer _icon-clock">1:15:45</p>
+									<button data-lg='cabinet.home.feed.btn' type="button" class="cabinet-home-feed__button">Feed</button>
+									<p data-lg='cabinet.home.feed.text' class="cabinet-home-feed__text">
+										Click Withdraw button, and you will get instantly all your deposits earnings and affiliate bonuses with a single
+									</p>
+								</div>
+							</div>
+							<div class="cabinet-home__active-hft home-active-nft">
+								<div class="home-active-nft__content">
+									<div class="home-active-nft__top-line">
+										<p data-lg='cabinet.home.active.title' class="home-active-nft__title">Active NFT</p>
+										<label class="home-active-nft__search">
+											<input data-lg-placeholder='cabinet.home.active.search' type="text" placeholder="Search" class="home-active-nft__input">
+											<span class="home-active-nft__icon _icon-search"></span>
+										</label>
+									</div>
+									<div class="home-active-nft__table">
+										<div class="home-active-nft__head-table">
+											<p data-lg='cabinet.home.active.name' class="home-active-nft__head-table-item">Name</p>
+											<p data-lg='cabinet.home.active.progress' class="home-active-nft__head-table-item">Progress</p>
+											<p data-lg='cabinet.home.active.profit' class="home-active-nft__head-table-item">Daily profit</p>
+											<p data-lg='cabinet.home.active.accrued' class="home-active-nft__head-table-item">Accrued</p>
+											<p data-lg='cabinet.home.active.date' class="home-active-nft__head-table-item">Date</p>
+										</div>
+										<div class="home-active-nft__body-table">
+											<div class="home-active-nft__body-table-item home-active-item">
+												<div class="home-active-item__content">
+													<div class="home-active-item__col home-active-item__col_info">
+														<p class="home-active-item__number">1</p>
+														<div class="home-active-item__image"><img src="img/nft-1.svg" alt=""></div>
+														<div class="home-active-item__info">
+															<p class="home-active-item__name">Chicken NFT</p>
+															<div class="home-active-item__sum"><picture><source srcset="img/bnb.webp" type="image/webp"><img src="img/bnb.png" alt=""></picture><span>9.95</span></div>
+														</div>
+													</div>
+													<div class="home-active-item__col home-active-item__col_progress">
+														<div class="home-active-item__progress cabinet-progress-bar">
+															<div class="cabinet-progress-bar__body">
+																<div class="cabinet-progress-bar__progresses"></div>
+																<span class="cabinet-progress-bar__progress-percent">50%</span>
+																<div class="cabinet-progress-bar__start-value">
+																	<span>0</span>
+																	<picture><source srcset="img/bnb.webp" type="image/webp"><img class="cabinet-progress-bar__coin" src="img/bnb.png" alt=""></picture>
+																</div>
+																<div class="cabinet-progress-bar__finish-value">
+																	<span>400</span>
+																	<picture><source srcset="img/bnb.webp" type="image/webp"><img class="cabinet-progress-bar__coin" src="img/bnb.png" alt=""></picture>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="home-active-item__col home-active-item__col_profit">
+														<div class="home-active-item__profit">
+															<picture><source srcset="img/bnb.webp" type="image/webp"><img class="home-active-item__profit-coin" src="img/bnb.png" alt="bnb"></picture>
+															<p class="home-active-item__profit-value">9.4000</p>
+														</div>
+													</div>
+													<div class="home-active-item__col home-active-item__col_accrued">
+														<p class="home-active-item__accrued">41</p>
+													</div>
+													<div class="home-active-item__col home-active-item__col_date-time">
+														<p class="home-active-item__date _icon-calendar">21.07.2022</p>
+														<p class="home-active-item__date _icon-clock">1:15:45</p>
+													</div>
+												</div>
+											</div>
+
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="cabinet-home__paginagion cabinet-pagination">
+								<div class="cabinet-pagination__content">
+									<button type="button" class="cabinet-pagination__first _icon-arrow-left-last"></button>
+									<button type="button" class="cabinet-pagination__prev _icon-arrow-left"></button>
+									<ul class="cabinet-pagination__list">
+										<li class="cabinet-pagination__item">1</li>
+										<li class="cabinet-pagination__item _active">2</li>
+										<li class="cabinet-pagination__item">3</li>
+										<li class="cabinet-pagination__item">4</li>
+										<li class="cabinet-pagination__item">...</li>
+										<li class="cabinet-pagination__item">24</li>
+									</ul>
+									<button type="button" class="cabinet-pagination__next _icon-arrow-rignt"></button>
+									<button type="button" class="cabinet-pagination__last _icon-arrow-right-last"></button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div data-cabinet-body='2' class="cabinet__page cabinet-partners ">
+						<div class="cabinet-partners__content">
+							<div class="cabinet-partners__refer-friends refer-friends">
+								<div class="refer-friends__content">
+									<p data-lg='cabinet.partners.title' class="refer-friends__title">Refer Friends & Earn Bonus</p>
+									<div class="refer-friends__level-list">
+										<div class="refer-friends__level-item">
+											<p>1<span data-lg='cabinet.partners.level'>Level</span></p>
+											<p>7%</p>
+										</div>
+										<div class="refer-friends__level-item">
+											<p>2<span data-lg='cabinet.partners.level'>Level</span></p>
+											<p>2%</p>
+										</div>
+										<div class="refer-friends__level-item">
+											<p>3<span data-lg='cabinet.partners.level'>Level</span></p>
+											<p>1%</p>
+										</div>
+									</div>
+									<p data-lg='cabinet.partners.text' class="refer-friends__text">Every 5 BNB earned in the form of a referral bonus increases</p>
+									<p data-lg='cabinet.partners.refTitle' class="refer-friends__ref-link-title">Share my referral link with friends</p>
+									<div data-copy-block class="refer-friends__ref-link-block">
+										<p data-copy-val class="refer-friends__ref-link">https://www.youtube.com/watch?v=A6l8PZLpB84&t=7449s23423 4-0-psdf-0s9 d9f-ssdf sdf sd</p>
+										<button data-lg='cabinet.partners.refBtn' data-copy-btn type="button" class="refer-friends__copy-btn">Copy link</button>
+									</div>
+									<a target="_blank" data-lg='cabinet.partners.refLink' class="refer-friends__promotion" href="./banners.html">Promotional materials</a>
+								</div>
+							</div>
+							<div class="cabinet-partners__statistics refer-statistics">
+								<div class="refer-statistics__content">
+									<div class="refer-statistics__block">
+										<p data-lg='cabinet.partners.active' class="refer-statistics__block-title">Active referrals</p>
+										<div class="refer-statistics__list">
+											<div class="refer-statistics__item">
+												<p class="refer-statistics__val">12</p>
+												<p class="refer-statistics__label">1st lvl</p>
+											</div>
+											<div class="refer-statistics__item">
+												<p class="refer-statistics__val">3</p>
+												<p class="refer-statistics__label">2nd lvl</p>
+											</div>
+											<div class="refer-statistics__item">
+												<p class="refer-statistics__val">12</p>
+												<p class="refer-statistics__label">3rd lvl</p>
+											</div>
+										</div>
+									</div>
+									<div class="refer-statistics__block">
+										<p data-lg='cabinet.partners.total' class="refer-statistics__block-title">Total referral bonus</p>
+										<div class="refer-statistics__list">
+											<div class="refer-statistics__item">
+												<p class="refer-statistics__val">45</p>
+												<p class="refer-statistics__label">BNB</p>
+											</div>
+											<div class="refer-statistics__item">
+												<p class="refer-statistics__val">453</p>
+												<p class="refer-statistics__label">BUSD</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="cabinet-partners__history refer-history">
+								<div class="refer-history__content">
+									<div class="refer-history__top-line">
+										<p data-lg='cabinet.partners.historyTitle' class="refer-history__title">Referral history</p>
+										<div class="refer-history__filter-list">
+											<label class="refer-history__filter-item refer-radio-item">
+												<input checked type="radio" name="refer-filter" class="refer-radio-item__input">
+												<span data-lg='cabinet.partners.all' class="refer-radio-item__style">All</span>
+											</label>
+											<label class="refer-history__filter-item refer-radio-item">
+												<input type="radio" name="refer-filter" class="refer-radio-item__input">
+												<span class="refer-radio-item__style">1</span>
+											</label>
+											<label class="refer-history__filter-item refer-radio-item">
+												<input type="radio" name="refer-filter" class="refer-radio-item__input">
+												<span class="refer-radio-item__style">2</span>
+											</label>
+											<label class="refer-history__filter-item refer-radio-item">
+												<input type="radio" name="refer-filter" class="refer-radio-item__input">
+												<span class="refer-radio-item__style">3</span>
+											</label>
+										</div>
+									</div>
+									<div class="refer-history__table">
+										<div class="refer-history__table-head">
+											<p data-lg='cabinet.partners.item.ref' class="refer-history__table-head-item">Referral</p>
+											<p data-lg='cabinet.partners.item.level' class="refer-history__table-head-item">Referral level</p>
+											<p data-lg='cabinet.partners.item.purchase' class="refer-history__table-head-item">Purchase amount</p>
+											<p data-lg='cabinet.partners.item.bonus' class="refer-history__table-head-item">Your bonus</p>
+											<p data-lg='cabinet.partners.item.date' class="refer-history__table-head-item">Date</p>
+										</div>
+										<div class="refer-history__table-body">
+											<div class="refer-history__table-body-item refer-item">
+												<div class="refer-item__col">
+													<p data-lg='cabinet.partners.item.ref' class="refer-item__mob-title">Referral</p>
+													<p class="refer-item__address">Adress instantly all</p>
+												</div>
+												<div class="refer-item__col refer-item__col_level">
+													<p data-lg='cabinet.partners.item.level' class="refer-item__mob-title">Referral level</p>
+													<p class="refer-item__level"><span>1</span></p>
+												</div>
+												<div class="refer-item__col refer-item__col_amount">
+													<p data-lg='cabinet.partners.item.purchase' class="refer-item__mob-title">Purchase amount</p>
+													<p class="refer-item__amount">100$</p>
+												</div>
+												<div class="refer-item__col refer-item__col_bonus">
+													<p data-lg='cabinet.partners.item.bonus' class="refer-item__mob-title">Your bonus</p>
+													<p class="refer-item__bonus">0.04356</p>
+												</div>
+												<div class="refer-item__col refer-item__col_date-time">
+													<p data-lg='cabinet.partners.item.date' class="refer-item__mob-title">Date</p>
+													<div class="refer-item__date-time">
+														<p class="refer-item__date _icon-calendar">21.07.2022</p>
+														<p class="refer-item__time _icon-clock">1:15:45</p>
+													</div>
+												</div>
+											</div>
+
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="cabinet-partners__paginagion cabinet-pagination">
+								<div class="cabinet-pagination__content">
+									<button type="button" class="cabinet-pagination__first _icon-arrow-left-last"></button>
+									<button type="button" class="cabinet-pagination__prev _icon-arrow-left"></button>
+									<ul class="cabinet-pagination__list">
+										<li class="cabinet-pagination__item">1</li>
+										<li class="cabinet-pagination__item _active">2</li>
+										<li class="cabinet-pagination__item">3</li>
+										<li class="cabinet-pagination__item">4</li>
+										<li class="cabinet-pagination__item">...</li>
+										<li class="cabinet-pagination__item">24</li>
+									</ul>
+									<button type="button" class="cabinet-pagination__next _icon-arrow-rignt"></button>
+									<button type="button" class="cabinet-pagination__last _icon-arrow-right-last"></button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div data-cabinet-body='3' class="cabinet__page cabinet-trade-in ">
+						<div class="cabinet-trade-in__content">
+							<p data-lg='cabinet.trade-in.title' class="cabinet-trade-in__title">Trade-in</p>
+							<div data-tabs class="cabinet-trade-in__tabs">
+								<nav data-tabs-titles class="cabinet-trade-in__head">
+									<button type="button" class="cabinet-trade-in__head-item _tab-active"><picture><source srcset="img/bnb.webp" type="image/webp"><img src="img/bnb.png" alt="bnb"></picture>BNB</button>
+									<button type="button" class="cabinet-trade-in__head-item "><picture><source srcset="img/busd.webp" type="image/webp"><img src="img/busd.png" alt="busd"></picture>BUSD</button>
+								</nav>
+								<div data-tabs-body class="cabinet-trade-in__body">
+									<div class="cabinet-trade-in__body-list ">
+										<div class="cabinet-trade-in__body-item trade-in-chickly">
+											<div class="trade-in-chickly__content">
+												<div class="trade-in-chickly__image"><img src="img/nft-1.svg" alt=""></div>
+												<div class="trade-in-chickly__prices">
+													<p class="trade-in-chickly__full-sum">12$</p>
+													<div class="trade-in-chickly__sale-sum">
+														<picture><source srcset="img/bnb.webp" type="image/webp"><img src="img/bnb.png" alt="bnb"></picture>
+														<span>90$</span>
+													</div>
+												</div>
+												<p class="trade-in-chickly__profit"><span>+200%</span> <span data-lg='cabinet.trade-in.profit'>profit</span></p>
+												<button data-lg='cabinet.trade-in.btn' type="button" class="trade-in-chickly__button">Activate</button>
+												<div class="trade-in-chickly__discount-label"><span>-10%</span></div>
+											</div>
+										</div>
+
+									</div>
+									<div class="cabinet-trade-in__body-list ">
+										<div class="cabinet-trade-in__body-item trade-in-chickly">
+											<div class="trade-in-chickly__content">
+												<div class="trade-in-chickly__image"><img src="img/nft-3.svg" alt=""></div>
+												<div class="trade-in-chickly__prices">
+													<p class="trade-in-chickly__full-sum">12$</p>
+													<div class="trade-in-chickly__sale-sum">
+														<picture><source srcset="img/busd.webp" type="image/webp"><img src="img/busd.png" alt="bnb"></picture>
+														<span>90$</span>
+													</div>
+												</div>
+												<p class="trade-in-chickly__profit"><span>+200%</span> <span>profit</span></p>
+												<button type="button" class="trade-in-chickly__button">Activate</button>
+												<div class="trade-in-chickly__discount-label"><span>-10%</span></div>
+											</div>
+										</div>
+										<div class="cabinet-trade-in__body-item trade-in-chickly">
+											<div class="trade-in-chickly__content">
+												<div class="trade-in-chickly__image"><img src="img/nft-3.svg" alt=""></div>
+												<div class="trade-in-chickly__prices">
+													<p class="trade-in-chickly__full-sum">12$</p>
+													<div class="trade-in-chickly__sale-sum">
+														<picture><source srcset="img/busd.webp" type="image/webp"><img src="img/busd.png" alt="bnb"></picture>
+														<span>90$</span>
+													</div>
+												</div>
+												<p class="trade-in-chickly__profit"><span>+200%</span> <span>profit</span></p>
+												<button type="button" class="trade-in-chickly__button">Activate</button>
+												<div class="trade-in-chickly__discount-label"><span>-10%</span></div>
+											</div>
+										</div>
+										<div class="cabinet-trade-in__body-item trade-in-chickly">
+											<div class="trade-in-chickly__content">
+												<div class="trade-in-chickly__image"><img src="img/nft-3.svg" alt=""></div>
+												<div class="trade-in-chickly__prices">
+													<p class="trade-in-chickly__full-sum">12$</p>
+													<div class="trade-in-chickly__sale-sum">
+														<picture><source srcset="img/busd.webp" type="image/webp"><img src="img/busd.png" alt="bnb"></picture>
+														<span>90$</span>
+													</div>
+												</div>
+												<p class="trade-in-chickly__profit"><span>+200%</span> <span>profit</span></p>
+												<button type="button" class="trade-in-chickly__button">Activate</button>
+												<div class="trade-in-chickly__discount-label"><span>-10%</span></div>
+											</div>
+										</div>
+										<div class="cabinet-trade-in__body-item trade-in-chickly">
+											<div class="trade-in-chickly__content">
+												<div class="trade-in-chickly__image"><img src="img/nft-3.svg" alt=""></div>
+												<div class="trade-in-chickly__prices">
+													<p class="trade-in-chickly__full-sum">12$</p>
+													<div class="trade-in-chickly__sale-sum">
+														<picture><source srcset="img/busd.webp" type="image/webp"><img src="img/busd.png" alt="bnb"></picture>
+														<span>90$</span>
+													</div>
+												</div>
+												<p class="trade-in-chickly__profit"><span>+200%</span> <span>profit</span></p>
+												<button type="button" class="trade-in-chickly__button">Activate</button>
+												<div class="trade-in-chickly__discount-label"><span>-10%</span></div>
+											</div>
+										</div>
+										<div class="cabinet-trade-in__body-item trade-in-chickly">
+											<div class="trade-in-chickly__content">
+												<div class="trade-in-chickly__image"><img src="img/nft-3.svg" alt=""></div>
+												<div class="trade-in-chickly__prices">
+													<p class="trade-in-chickly__full-sum">12$</p>
+													<div class="trade-in-chickly__sale-sum">
+														<picture><source srcset="img/busd.webp" type="image/webp"><img src="img/busd.png" alt="bnb"></picture>
+														<span>90$</span>
+													</div>
+												</div>
+												<p class="trade-in-chickly__profit"><span>+200%</span> <span>profit</span></p>
+												<button type="button" class="trade-in-chickly__button">Activate</button>
+												<div class="trade-in-chickly__discount-label"><span>-10%</span></div>
+											</div>
+										</div>
+										<div class="cabinet-trade-in__body-item trade-in-chickly">
+											<div class="trade-in-chickly__content">
+												<div class="trade-in-chickly__image"><img src="img/nft-3.svg" alt=""></div>
+												<div class="trade-in-chickly__prices">
+													<p class="trade-in-chickly__full-sum">12$</p>
+													<div class="trade-in-chickly__sale-sum">
+														<picture><source srcset="img/busd.webp" type="image/webp"><img src="img/busd.png" alt="bnb"></picture>
+														<span>90$</span>
+													</div>
+												</div>
+												<p class="trade-in-chickly__profit"><span>+200%</span> <span>profit</span></p>
+												<button type="button" class="trade-in-chickly__button">Activate</button>
+												<div class="trade-in-chickly__discount-label"><span>-10%</span></div>
+											</div>
+										</div>
+										<div class="cabinet-trade-in__body-item trade-in-chickly">
+											<div class="trade-in-chickly__content">
+												<div class="trade-in-chickly__image"><img src="img/nft-3.svg" alt=""></div>
+												<div class="trade-in-chickly__prices">
+													<p class="trade-in-chickly__full-sum">12$</p>
+													<div class="trade-in-chickly__sale-sum">
+														<picture><source srcset="img/busd.webp" type="image/webp"><img src="img/busd.png" alt="bnb"></picture>
+														<span>90$</span>
+													</div>
+												</div>
+												<p class="trade-in-chickly__profit"><span>+200%</span> <span>profit</span></p>
+												<button type="button" class="trade-in-chickly__button">Activate</button>
+												<div class="trade-in-chickly__discount-label"><span>-10%</span></div>
+											</div>
+										</div>
+										<div class="cabinet-trade-in__body-item trade-in-chickly">
+											<div class="trade-in-chickly__content">
+												<div class="trade-in-chickly__image"><img src="img/nft-3.svg" alt=""></div>
+												<div class="trade-in-chickly__prices">
+													<p class="trade-in-chickly__full-sum">12$</p>
+													<div class="trade-in-chickly__sale-sum">
+														<picture><source srcset="img/busd.webp" type="image/webp"><img src="img/busd.png" alt="bnb"></picture>
+														<span>90$</span>
+													</div>
+												</div>
+												<p class="trade-in-chickly__profit"><span>+200%</span> <span>profit</span></p>
+												<button type="button" class="trade-in-chickly__button">Activate</button>
+												<div class="trade-in-chickly__discount-label"><span>-10%</span></div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+							<div class="cabinet-trade-in__paginagion cabinet-pagination">
+								<div class="cabinet-pagination__content">
+									<button type="button" class="cabinet-pagination__first _icon-arrow-left-last"></button>
+									<button type="button" class="cabinet-pagination__prev _icon-arrow-left"></button>
+									<ul class="cabinet-pagination__list">
+										<li class="cabinet-pagination__item">1</li>
+										<li class="cabinet-pagination__item _active">2</li>
+										<li class="cabinet-pagination__item">3</li>
+										<li class="cabinet-pagination__item">4</li>
+										<li class="cabinet-pagination__item">...</li>
+										<li class="cabinet-pagination__item">24</li>
+									</ul>
+									<button type="button" class="cabinet-pagination__next _icon-arrow-rignt"></button>
+									<button type="button" class="cabinet-pagination__last _icon-arrow-right-last"></button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div data-cabinet-body='4' class="cabinet__page cabinet-reinvest  ">
+						<div class="cabinet-reinvest__content">
+							<h1 data-lg='cabinet.reinvest.title' class="cabinet-reinvest__title">Reinvest</h1>
+							<div data-tabs class="cabinet-reinvest__tabs">
+								<nav data-tabs-titles class="cabinet-reinvest__tabs-head">
+									<button type="button" class="cabinet-reinvest__tabs-title _tab-active"><picture><source srcset="img/bnb.webp" type="image/webp"><img src="img/bnb.png" alt="bnb"></picture>BNB</button>
+									<button type="button" class="cabinet-reinvest__tabs-title "><picture><source srcset="img/busd.webp" type="image/webp"><img src="img/busd.png" alt="busd"></picture>BUSD</button>
+								</nav>
+								<div data-tabs-body class="cabinet-reinvest__tabs-body">
+									<div class="cabinet-reinvest__tabs-body-item swiper" id="cabinetReinvestSliderBnb">
+										<div class="cabinet-reinvest__chickly-list swiper-wrapper  ">
+											<div class="cabinet-reinvest__chickly-item home-chickly swiper-slide _blocked">
+												<p class="home-chickly__name">Bennie</p>
+												<div class="home-chickly__image"><img src="img/nft-1.svg" alt="nft-1"></div>
+												<div class="home-chickly__cripto-price"><picture><source srcset="img/bnb.webp" type="image/webp"><img src="img/bnb.png" alt="bnb"></picture><span>0.04</span></div>
+												<p class="home-chickly__percent-profit"><span>+170%</span><span data-lg='cabinet.reinvest.nft.profit'>profit</span></p>
+												<input data-lg-placeholder='cabinet.reinvest.nft.input' type="number" placeholder="Enter amount" class="home-chickly__input">
+												<div class="home-chickly__purchase-row">
+													<p class="home-chickly__total-price">$10</p>
+													<button data-lg='cabinet.reinvest.nft.btn' type="button" class="home-chickly__buy-btn">Buy</button>
+												</div>
+												<div class="home-chickly__earning">
+													<p data-lg='cabinet.reinvest.nft.earnings'>Earnings</p>
+													<p>$150</p>
+												</div>
+												<span data-lg='cabinet.reinvest.nft.blocked' class="home-chickly__blocked-text">Insufficient funds</span>
+											</div>
+											<div class="cabinet-reinvest__chickly-item home-chickly swiper-slide">
+												<p class="home-chickly__name">Salsa</p>
+												<div class="home-chickly__image"><img src="img/nft-2.svg" alt="nft-1"></div>
+												<div class="home-chickly__cripto-price"><picture><source srcset="img/bnb.webp" type="image/webp"><img src="img/bnb.png" alt="bnb"></picture><span>0.4</span></div>
+												<p class="home-chickly__percent-profit"><span>+180%</span><span data-lg='cabinet.reinvest.nft.profit'>profit</span></p>
+												<input data-lg-placeholder='cabinet.reinvest.nft.input' type="number" placeholder="Enter amount" class="home-chickly__input">
+												<div class="home-chickly__purchase-row">
+													<p class="home-chickly__total-price">$10</p>
+													<button data-lg='cabinet.reinvest.nft.btn' type="button" class="home-chickly__buy-btn">Buy</button>
+												</div>
+												<div class="home-chickly__earning">
+													<p data-lg='cabinet.reinvest.nft.earnings'>Earnings</p>
+													<p>$150</p>
+												</div>
+												<span data-lg='cabinet.reinvest.nft.blocked' class="home-chickly__blocked-text">Insufficient funds</span>
+											</div>
+											<div class="cabinet-reinvest__chickly-item home-chickly swiper-slide">
+												<p class="home-chickly__name">Bennie</p>
+												<div class="home-chickly__image"><img src="img/nft-3.svg" alt="nft-1"></div>
+												<div class="home-chickly__cripto-price"><picture><source srcset="img/bnb.webp" type="image/webp"><img src="img/bnb.png" alt="bnb"></picture><span>0.04</span></div>
+												<p class="home-chickly__percent-profit"><span>+190%</span><span data-lg='cabinet.reinvest.nft.profit'>profit</span></p>
+												<input data-lg-placeholder='cabinet.reinvest.nft.input' type="number" placeholder="Enter amount" class="home-chickly__input">
+												<div class="home-chickly__purchase-row">
+													<p class="home-chickly__total-price">$10</p>
+													<button data-lg='cabinet.reinvest.nft.btn' type="button" class="home-chickly__buy-btn">Buy</button>
+												</div>
+												<div class="home-chickly__earning">
+													<p data-lg='cabinet.reinvest.nft.earnings'>Earnings</p>
+													<p>$150</p>
+												</div>
+												<span data-lg='cabinet.reinvest.nft.blocked' class="home-chickly__blocked-text">Insufficient funds</span>
+											</div>
+											<div class="cabinet-reinvest__chickly-item home-chickly swiper-slide">
+												<p class="home-chickly__name">Bennie</p>
+												<div class="home-chickly__image"><img src="img/nft-4.svg" alt="nft-1"></div>
+												<div class="home-chickly__cripto-price"><picture><source srcset="img/bnb.webp" type="image/webp"><img src="img/bnb.png" alt="bnb"></picture><span>0.04</span></div>
+												<p class="home-chickly__percent-profit"><span>+200%</span><span data-lg='cabinet.reinvest.nft.profit'>profit</span></p>
+												<input data-lg-placeholder='cabinet.reinvest.nft.input' type="number" placeholder="Enter amount" class="home-chickly__input">
+												<div class="home-chickly__purchase-row">
+													<p class="home-chickly__total-price">$10</p>
+													<button data-lg='cabinet.reinvest.nft.btn' type="button" class="home-chickly__buy-btn">Buy</button>
+												</div>
+												<div class="home-chickly__earning">
+													<p data-lg='cabinet.reinvest.nft.earnings'>Earnings</p>
+													<p>$150</p>
+												</div>
+												<span data-lg='cabinet.reinvest.nft.blocked' class="home-chickly__blocked-text">Insufficient funds</span>
+											</div>
+											<div class="cabinet-reinvest__chickly-item home-chickly swiper-slide">
+												<p class="home-chickly__name">Bennie</p>
+												<div class="home-chickly__image"><img src="img/nft-5.svg" alt="nft-1"></div>
+												<div class="home-chickly__cripto-price"><picture><source srcset="img/bnb.webp" type="image/webp"><img src="img/bnb.png" alt="bnb"></picture><span>0.04</span></div>
+												<p class="home-chickly__percent-profit"><span>+220%</span><span data-lg='cabinet.reinvest.nft.profit'>profit</span></p>
+												<input data-lg-placeholder='cabinet.reinvest.nft.input' type="number" placeholder="Enter amount" class="home-chickly__input">
+												<div class="home-chickly__purchase-row">
+													<p class="home-chickly__total-price">$10</p>
+													<button data-lg='cabinet.reinvest.nft.btn' type="button" class="home-chickly__buy-btn">Buy</button>
+												</div>
+												<div class="home-chickly__earning">
+													<p data-lg='cabinet.reinvest.nft.earnings'>Earnings</p>
+													<p>$150</p>
+												</div>
+												<span data-lg='cabinet.reinvest.nft.blocked' class="home-chickly__blocked-text">Insufficient funds</span>
+											</div>
+										</div>
+									</div>
+									<div class="cabinet-reinvest__tabs-body-item swiper" id="cabinetReinvestSliderBusd">
+										<div class="cabinet-reinvest__chickly-list swiper-wrapper">
+											<div class="cabinet-reinvest__chickly-item home-chickly swiper-slide">
+												<p class="home-chickly__name">Bennie</p>
+												<div class="home-chickly__image"><img src="img/nft-1.svg" alt="nft-1"></div>
+												<div class="home-chickly__cripto-price"><picture><source srcset="img/busd.webp" type="image/webp"><img src="img/busd.png" alt="busd"></picture><span>10</span></div>
+												<p class="home-chickly__percent-profit"><span>+170%</span><span data-lg='cabinet.reinvest.nft.profit'>profit</span></p>
+												<input data-lg-placeholder='cabinet.reinvest.nft.input' type="number" placeholder="Enter amount" class="home-chickly__input">
+												<div class="home-chickly__purchase-row">
+													<p class="home-chickly__total-price">$10</p>
+													<button data-lg='cabinet.reinvest.nft.btn' type="button" class="home-chickly__buy-btn">Buy</button>
+												</div>
+												<div class="home-chickly__earning">
+													<p data-lg='cabinet.reinvest.nft.earnings'>Earnings</p>
+													<p>$150</p>
+												</div>
+												<span data-lg='cabinet.reinvest.nft.blocked' class="home-chickly__blocked-text">Insufficient funds</span>
+											</div>
+											<div class="cabinet-reinvest__chickly-item home-chickly swiper-slide">
+												<p class="home-chickly__name">Salsa</p>
+												<div class="home-chickly__image"><img src="img/nft-2.svg" alt="nft-1"></div>
+												<div class="home-chickly__cripto-price"><picture><source srcset="img/busd.webp" type="image/webp"><img src="img/busd.png" alt="busd"></picture><span>100</span></div>
+												<p class="home-chickly__percent-profit"><span>+180%</span><span data-lg='cabinet.reinvest.nft.profit'>profit</span></p>
+												<input data-lg-placeholder='cabinet.reinvest.nft.input' type="number" placeholder="Enter amount" class="home-chickly__input">
+												<div class="home-chickly__purchase-row">
+													<p class="home-chickly__total-price">$10</p>
+													<button data-lg='cabinet.reinvest.nft.btn' type="button" class="home-chickly__buy-btn">Buy</button>
+												</div>
+												<div class="home-chickly__earning">
+													<p data-lg='cabinet.reinvest.nft.earnings'>Earnings</p>
+													<p>$150</p>
+												</div>
+												<span data-lg='cabinet.reinvest.nft.blocked' class="home-chickly__blocked-text">Insufficient funds</span>
+											</div>
+											<div class="cabinet-reinvest__chickly-item home-chickly swiper-slide">
+												<p class="home-chickly__name">Bennie</p>
+												<div class="home-chickly__image"><img src="img/nft-3.svg" alt="nft-1"></div>
+												<div class="home-chickly__cripto-price"><picture><source srcset="img/busd.webp" type="image/webp"><img src="img/busd.png" alt="busd"></picture><span>500</span></div>
+												<p class="home-chickly__percent-profit"><span>+190%</span><span data-lg='cabinet.reinvest.nft.profit'>profit</span></p>
+												<input data-lg-placeholder='cabinet.reinvest.nft.input' type="number" placeholder="Enter amount" class="home-chickly__input">
+												<div class="home-chickly__purchase-row">
+													<p class="home-chickly__total-price">$10</p>
+													<button data-lg='cabinet.reinvest.nft.btn' type="button" class="home-chickly__buy-btn">Buy</button>
+												</div>
+												<div class="home-chickly__earning">
+													<p data-lg='cabinet.reinvest.nft.earnings'>Earnings</p>
+													<p>$150</p>
+												</div>
+												<span data-lg='cabinet.reinvest.nft.blocked' class="home-chickly__blocked-text">Insufficient funds</span>
+											</div>
+											<div class="cabinet-reinvest__chickly-item home-chickly swiper-slide">
+												<p class="home-chickly__name">Bennie</p>
+												<div class="home-chickly__image"><img src="img/nft-4.svg" alt="nft-1"></div>
+												<div class="home-chickly__cripto-price"><picture><source srcset="img/busd.webp" type="image/webp"><img src="img/busd.png" alt="busd"></picture><span>3000</span></div>
+												<p class="home-chickly__percent-profit"><span>+200%</span><span data-lg='cabinet.reinvest.nft.profit'>profit</span></p>
+												<input data-lg-placeholder='cabinet.reinvest.nft.input' type="number" placeholder="Enter amount" class="home-chickly__input">
+												<div class="home-chickly__purchase-row">
+													<p class="home-chickly__total-price">$10</p>
+													<button data-lg='cabinet.reinvest.nft.btn' type="button" class="home-chickly__buy-btn">Buy</button>
+												</div>
+												<div class="home-chickly__earning">
+													<p data-lg='cabinet.reinvest.nft.earnings'>Earnings</p>
+													<p>$150</p>
+												</div>
+												<span data-lg='cabinet.reinvest.nft.blocked' class="home-chickly__blocked-text">Insufficient funds</span>
+											</div>
+											<div class="cabinet-reinvest__chickly-item home-chickly swiper-slide">
+												<p class="home-chickly__name">Bennie</p>
+												<div class="home-chickly__image"><img src="img/nft-5.svg" alt="nft-1"></div>
+												<div class="home-chickly__cripto-price"><picture><source srcset="img/busd.webp" type="image/webp"><img src="img/busd.png" alt="busd"></picture><span>10000</span></div>
+												<p class="home-chickly__percent-profit"><span>+220%</span><span data-lg='cabinet.reinvest.nft.profit'>profit</span></p>
+												<input data-lg-placeholder='cabinet.reinvest.nft.input' type="number" placeholder="Enter amount" class="home-chickly__input">
+												<div class="home-chickly__purchase-row">
+													<p class="home-chickly__total-price">$10</p>
+													<button data-lg='cabinet.reinvest.nft.btn' type="button" class="home-chickly__buy-btn">Buy</button>
+												</div>
+												<div class="home-chickly__earning">
+													<p data-lg='cabinet.reinvest.nft.earnings'>Earnings</p>
+													<p>$150</p>
+												</div>
+												<span data-lg='cabinet.reinvest.nft.blocked' class="home-chickly__blocked-text">Insufficient funds</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<p data-lg='cabinet.reinvest.text' class="cabinet-reinvest__text">
+								Click Withdraw button, and you will get instantly all your deposits earnings and affiliate bonuses with a single
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="cabiten-footer">
+			<div class="cabiten-footer__container-cabinet">
+				<div class="cabiten-footer__content">
+					<p class="cabiten-footer__text">Copyright © 2022 Logotype. All rights reserved.
+					</p>
+				</div>
+			</div>
+		</footer>
+		<div id="withdrawModal" class="cabinet-popup">
+			<div class="cabinet-popup__body">
+				<div class="cabinet-popup__content">
+					<p data-lg='cabinet.popups.withdraw.title' class="cabinet-popup__title">Confirm withdrawal </p>
+					<p class="cabinet-popup__curency" id="withdraw_currency">BNB</p>
+					<input data-lg-placeholder='cabinet.popups.withdraw.input' class="cabinet-popup__input" placeholder="Enter amount" type="number" min=0 id="withdraw_amount">
+					<p data-lg='cabinet.popups.withdraw.subTitle' class="cabinet-popup__subtitle">Where will the money be sent</p>
+					<p class="cabinet-popup__wallet-number" id="withdraw_wallet"></p>
+					<p data-lg='cabinet.popups.withdraw.text' class="cabinet-popup__info">When withdrawing funds from this balance, your Hold Bonus will reset to zero.
+					</p>
+					<div class="cabinet-popup__buttons">
+						<button data-lg='cabinet.popups.withdraw.btn1' type="button" class="cabinet-popup__confirm-btn">Confim</button>
+						<button data-lg='cabinet.popups.withdraw.btn2' type="button" class="cabinet-popup__cancel-btn">Cancel</button>
+					</div>
+					<button type="button" class="cabinet-popup__close-icon _icon-close" id="close_button"></button>
+				</div>
+			</div>
+		</div>
+
+		<div class="copied">
+			<p data-lg='cabinet.popups.copied' class="copied__text _icon-check">Text copied</p>
+		</div>
+
+		<div class="successful-feed">
+			<p data-lg='cabinet.popups.feed' class="successful-feed__text">You've successfully fed your chiks! They're happy and full! Please don't forget to feed them
+				again later.
+			</p>
+		</div>
+
+
+		<div class="preloader">
+			<div class="preloader__content">
+				<div class="preloader__loader"></div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
