@@ -3078,6 +3078,27 @@ body::after {
   transition: all 0.3s ease 0s;
   opacity: 0;
   border-bottom: 1px solid transparent;
+  border-radius: 0;
+}
+
+.home-active-nft__input::-webkit-input-placeholder {
+  color: #000;
+}
+
+.home-active-nft__input::-moz-placeholder {
+  color: #000;
+}
+
+.home-active-nft__input:-ms-input-placeholder {
+  color: #000;
+}
+
+.home-active-nft__input::-ms-input-placeholder {
+  color: #000;
+}
+
+.home-active-nft__input::placeholder {
+  color: #000;
 }
 
 .home-active-nft__input:focus {
