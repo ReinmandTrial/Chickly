@@ -113,7 +113,6 @@
       }
    }
 }
-
 .aside-profit {
    &__content {
       overflow: hidden;
@@ -255,11 +254,25 @@
       }
    }
    &__block {
+      @media (max-width: 991.98px) {
+         display: grid;
+         grid-template-columns: calc(50% - 15px) calc(50% - 15px);
+         grid-template-rows: auto 1fr;
+         gap: 0px 30px;
+      }
+      @media (max-width: em(400)) {
+         grid-template-columns: calc(50% - 8px) calc(50% - 8px);
+         gap: 0px 15px;
+      }
    }
 
    &__title {
       font-size: rem(22);
       margin-bottom: rem(22);
+      @media (max-width: 991.98px) {
+         grid-column-start: 1;
+         grid-column-end: 3;
+      }
       @media (max-width: $mobileSmall) {
          font-size: rem(18);
          text-align: center;
@@ -274,7 +287,12 @@
       &:not(:last-child) {
          margin-bottom: rem(15);
       }
-      @media (max-width: $mobileSmall) {
+      @media (max-width: 991.98px) {
+         &:not(:last-child) {
+            margin-bottom: 0;
+         }
+      }
+      @media (max-width: $mobile) {
          flex-direction: column;
       }
    }
@@ -283,11 +301,14 @@
          display: flex;
          align-items: center;
          gap: rem(10);
+         @media (max-width: $mobile) {
+            flex: auto;
+         }
       }
       &:last-child {
          flex: 0 0 rem(120);
-         @media (max-width: $mobileSmall) {
-            flex: auto;
+         @media (max-width: $mobile) {
+            flex: 0 0 37px;
             width: 100%;
             display: flex;
             justify-content: center;
@@ -298,6 +319,11 @@
    &__img {
       width: rem(40);
       height: rem(40);
+      flex: none;
+      @media (max-width: em(400)) {
+         width: rem(30);
+         height: rem(30);
+      }
       img {
          max-width: 100%;
          object-fit: cover;
@@ -316,6 +342,10 @@
       font-weight: 600;
       font-size: 22px;
       color: #ffbf02;
+      word-break: break-all;
+      @media (max-width: em(400)) {
+         font-size: 17px;
+      }
    }
 
    &__btn {
@@ -325,9 +355,11 @@
       font-size: 18px;
       text-align: center;
       color: #ffffff;
-      @media (max-width: $mobileSmall) {
+      width: 100%;
+      @media (max-width: em(400)) {
          font-size: rem(16);
-         max-width: 250px;
+         padding: rem(5) rem(10);
+         max-width: 115px;
          width: 100%;
       }
       &:hover {
